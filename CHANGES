@@ -1,0 +1,6 @@
+=== 0.1.0 / 2008-03-28
+
+* Initial release.
+* Shelling out to RI b/c it's easier than using the RDoc API.
+* Not using FastRI b/c no HTML output.
+

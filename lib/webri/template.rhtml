@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+  <title>WebRI</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+
+  <link rel="icon" href="img/ruby_logo.png" type="image/x-icon">
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <SCRIPT src="js/jquery.js" type="text/javascript"></SCRIPT>
+  <SCRIPT src="js/ri.jquery.js" type="text/javascript"></SCRIPT>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      //$("#screenFrame").css('height', $(window).height() + 'px');
+      resizePage();
+    });
+  </script>
+</head>
+
+<body>
+
+<div id="screenFrame">
+
+  <div id="header">
+    <img src="img/ruby_logo.png" align="absmiddle"/> WebRI
+  </div>
+
+  <div id="side">
+    <div style="background: black; color: white; padding-left: 30px; font-weight: bold;"> Class Tree </div>
+
+    <%= tree %>
+  </div>
+
+  <div id="main">
+    <h1>Welcome to WebRI</h1>
+    <h2>Webrick-based RI Browser</h2>
+
+    <p>
+      WebRI provides a web-based interface 
+      to RI documentation.
+    </p>
+
+    <p>
+      WebRI &copy; 2008 Tiger Ops
+    </p>
+  </div>
+
+  <div style="text-align: left; font-size: 8pt; font-weight: bold; padding: 2px;">
+    &nbsp; WebRI &copy; 2008 <a href="http://tigerops.psytower.info">Tiger Ops</a>
+  <div>
+</div>
+
+</body>
+
+</html>
+
