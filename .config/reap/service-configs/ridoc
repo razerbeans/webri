@@ -1,0 +1,5 @@
+---
+ridoc:
+  service: RIDoc
+  exclude  : [ lib/webri/public ]
+
