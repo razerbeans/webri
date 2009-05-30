@@ -35,7 +35,7 @@ pre {
   background   : #efefef;
   margin-top    : 15px;
   margin-bottom : 15px;
-  font-size    : 0.9em;
+  font-size    : 1em;
   font-weight  : bold;
   line-height  : 1.5em;
   padding-top  : 15px;
@@ -62,7 +62,7 @@ td {
 }
 
 .container {
-  width        : 1000px;
+  width        : 730px;
   margin       : 0 auto;
   position     : relative;
 }
@@ -172,7 +172,7 @@ td {
   padding     : 5px;
   text-align  : center;
   color       : gray;
-  font-size   : 1.2em;
-  border-top: 1px solid #dddddd;
+  font-size   : 1em;
+  border-top: 1px solid #ccc;
 }
 
