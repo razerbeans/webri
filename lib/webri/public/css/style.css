@@ -65,6 +65,7 @@ pre {
 .branch{ display: none; }
 
 .leaf { color: #cc0000; }
+.meta_leaf { color: #00cc00; font-weight: bold; }
 
 .link:hover{ text-decoration: underline; }
 

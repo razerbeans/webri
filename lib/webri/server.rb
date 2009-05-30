@@ -30,9 +30,8 @@ module WRI
           method = method.to_sym
         elsif m.index('::')
           type = :class
-          space, method = m.split('::')
-          spaces = space.split('::').collect{|s| s.to_sym }
-          if spaces.last =~ /^[a-z]/
+          spaces = m.split('::').collect{|s| s.to_sym }
+          if spaces.last.to_s =~ /^[a-z]/
             method = spaces.pop
           else
             next # what to do about class/module ?
@@ -140,7 +139,7 @@ puts html
         markup << %[<ul>]
         class_methods.each do |method|
           markup << %[
-            <li class="leaf"> 
+            <li class="meta_leaf"> 
               <span class="link" onClick="lookup(this, '#{full_name}::#{method}');">#{method}</span>
             </li>
           ]
