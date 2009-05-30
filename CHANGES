@@ -1,6 +1,21 @@
+=== 0.3.0 / 2009-05-30
+
+* 1 Major Bug Fix
+ 
+  * Fixed issue that prevented class methods from showing up.
+
+
+=== 0.2.0 / 2008-07-06
+
+* 2 Major Enhancement
+
+  * Shelling out to RI b/c it's easier than using the RDoc API.
+  * Not using FastRI b/c no HTML output.
+  * Initial Release
+
+
 === 0.1.0 / 2008-03-28
 
-* Initial release.
-* Shelling out to RI b/c it's easier than using the RDoc API.
-* Not using FastRI b/c no HTML output.
+  * Happy Birthday!
+
 

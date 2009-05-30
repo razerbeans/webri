@@ -1,13 +1,12 @@
-This is the initial release of WebRI.
+== Release Notes
 
-I threw this together as a proof of concept, but it
-turns out to already be quite usable. I'll add missing
-features and clean it up as time permits. Same goes for
-the website.
+This release simply fixes a bug that prevented class methods from appearing
+in the class hierarchy tree.
 
-Becuase RI itself isn't very fast, if you use WebRI
-against the entire set of installed Ruby libraries
-it can take a few seconds to load up. It would be nice
-to use FastRI instead, for speed, but FastRI does not
-support HTML output as of yet.
+
+### 0.3.0 / 2009-05-30
+
+  * 1 Major Bug Fix
+ 
+    * Fixed issue that prevented class methods from showing up.
 

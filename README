@@ -1,6 +1,6 @@
 = Web RI
 
-  http://tigerops.rubyforge.org/webri/
+  http://webri.rubyforge.org
 
 Webrick-based RI browser
 
@@ -38,6 +38,10 @@ navigate to:
 
 On the left side of the screen you will see a navigation tree, and the right side
 contans an infromation panel.
+
+NOTE: Becuase RI itself isn't very fast, if you use WebRI against the entire set
+of installed Ruby libraries it can take a few seconds to load up. It would be nice
+to use FastRI instead, for speed, but FastRI does not support HTML output as of yet.
 
 == Install
 
