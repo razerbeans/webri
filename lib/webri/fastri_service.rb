@@ -354,7 +354,7 @@ ARGV.each do |term|
 end
 =end
 
-wri = WRI::Server.new(service)
+wri = WebRI::Server.new(service)
 #puts wri.to_html
 
 require 'webrick'

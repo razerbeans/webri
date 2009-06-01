@@ -1,4 +1,5 @@
 .cache
+doc/log
 doc/rdoc
 doc/ri
-log
+doc/webri

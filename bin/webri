@@ -1,3 +1,99 @@
 #!/usr/bin/env ruby
+
+# == Synopsis
+#
+# webri: Serve ri documentation via the Web
+#
+# == Usage
+#
+# webri [OPTIONS] ... [RI_DIR]
+#
+# -h, --help
+#    show help
+#
+# -o, --output OUTPUT_DIR
+#    ouput static files to OUTPUT_DIR
+#
+# RI_DIR: The directory in which to find the ri files generate by RDoc.
+
+require 'getoptlong'
+require 'rdoc/usage'
+
+opts = GetoptLong.new(
+  [ '--help',   '-h', GetoptLong::NO_ARGUMENT ],
+  [ '--output', '-o', GetoptLong::REQUIRED_ARGUMENT ]
+)
+
+dir    = nil
+output = nil
+
+opts.each do |opt, arg|
+  case opt
+  when '--help'
+    RDoc::usage
+  when '--output'
+    output = arg.to_s
+  end
+end
+
+if ARGV.length != 1
+  puts "Missing ri directory argument (try --help)"
+  exit 0
+end
+
+library = ARGV.shift
+
+# --- ---
+
 require 'webri/ri_service'
+
+service = WebRI::RiService.new(library)
+
+if output
+
+  # generate static pages
+
+  require 'webri/generator'
+
+  wri = WebRI::Generator.new(service)
+  wri.generate(output)
+
+else
+
+  # serve dynamically via WEBrick
+
+  require 'webri/server'
+
+  wri = WebRI::Server.new(service)
+  #puts wri.to_html
+
+  require 'webrick'
+  include WEBrick
+
+  p wri.directory + "/public"
+
+  s = HTTPServer.new(
+    :Port            => 8888,
+    :DocumentRoot    => wri.directory + "/public"
+  )
+
+  s.mount_proc("/"){|req, res|
+    res.body = wri.to_html
+    res['Content-Type'] = "text/html"
+  }
+
+  s.mount_proc("/ri"){|req, res|
+    res.body = wri.lookup(req)
+    res['Content-Type'] = "text/html"
+  }
+
+  ## mount subdirectories
+  s.mount("/js",  HTTPServlet::FileHandler, wri.directory + "/public/js")
+  s.mount("/css", HTTPServlet::FileHandler, wri.directory + "/public/css")
+  s.mount("/img", HTTPServlet::FileHandler, wri.directory + "/public/img")
+
+  trap("INT"){ s.shutdown }
+  s.start
+
+end
 
