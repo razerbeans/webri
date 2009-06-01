@@ -1,12 +1,17 @@
 == Release Notes
 
-This release simply fixes a bug that prevented class methods from appearing
-in the class hierarchy tree.
+This release adds a static website generation feature.
+Simple specify the --output directory option on the
+commandline and the WebRI files will be generated to
+that directory. Ex.
+
+  $ cd myproject
+  $ webri --output doc/webri doc/ri
 
 
-### 0.3.0 / 2009-05-30
+### 0.4.0 / 2009-06-14
 
-  * 1 Major Bug Fix
+  * 1 Major Enhancement
  
-    * Fixed issue that prevented class methods from showing up.
+    * Added static website generation.
 
