@@ -8,13 +8,17 @@
 #
 # webri [OPTIONS] ... [RI_DIR]
 #
-# -h, --help
-#    show help
+# OPTIONS:
 #
-# -o, --output OUTPUT_DIR
-#    ouput static files to OUTPUT_DIR
+#   -h, --help
+#      show help
 #
-# RI_DIR: The directory in which to find the ri files generate by RDoc.
+#   -o, --output OUTPUT_DIR
+#      ouput static files to OUTPUT_DIR
+#
+# RI_DIR:
+#
+#   The directory in which to find the ri files generate by RDoc.
 
 require 'getoptlong'
 require 'rdoc/usage'
@@ -36,10 +40,10 @@ opts.each do |opt, arg|
   end
 end
 
-if ARGV.length != 1
-  puts "Missing ri directory argument (try --help)"
-  exit 0
-end
+#if ARGV.length != 1
+#  puts "Missing ri directory argument (try --help)"
+#  exit 0
+#end
 
 library = ARGV.shift
 
@@ -78,14 +82,24 @@ else
   )
 
   s.mount_proc("/"){|req, res|
-    res.body = wri.to_html
-    res['Content-Type'] = "text/html"
+    path = req.path_info.sub(/^\//,'')
+p path
+    #key = req.path_info
+    if path == '' 
+      res.body = wri.to_html
+      res['Content-Type'] = "text/html"
+    else
+      res.body = wri.lookup(path)
+      res['Content-Type'] = "text/html"
+    end
   }
 
-  s.mount_proc("/ri"){|req, res|
-    res.body = wri.lookup(req)
-    res['Content-Type'] = "text/html"
-  }
+#  s.mount_proc("/ri"){|req, res|
+#    #key = File.basename(req.path_info)
+#    #p key
+#    res.body = wri.lookup(req)
+#    res['Content-Type'] = "text/html"
+#  }
 
   ## mount subdirectories
   s.mount("/js",  HTTPServlet::FileHandler, wri.directory + "/public/js")

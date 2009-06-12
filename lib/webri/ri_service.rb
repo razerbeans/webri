@@ -9,8 +9,9 @@ module WebRI
     end
 
     def info(keyword)
+#puts "KEYWORD: #{keyword.inspect}"
       if library
-        `ri -d #{library} -f html #{keyword}`
+        `ri -d #{library} -f html "#{keyword}"`
       else
         `ri -f html #{keyword}`
       end

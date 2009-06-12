@@ -1,46 +1,87 @@
-require 'webri/engine'
+require 'erb'
+require 'yaml'
+require 'cgi'
+require 'webri/opesc'
+require 'webri/heirarchy'
 
 module WebRI
 
-  # This is the static website generator.
+  # Base class for both Server and Generator.
   #
-  class Generator < Engine
+  class Engine
 
     # Reference to CGI Service
     #attr :cgi
 
     # Reference to RI Service
-    #attr :service
+    attr :service
 
     # Directory in which to store generated html files
-    attr :output
+    #attr :output
 
     #
     def initialize(service)
-      super(service)
       #@cgi = {} #CGI.new('html4')
-      #@service = service
-      @directory_depth = 0
+      @service = service
+      #@directory_depth = 0
     end
 
     #
-    #def directory
-    #  @directory ||= File.dirname(__FILE__)
-    #end
+    def directory
+      @directory ||= File.dirname(__FILE__)
+    end
+
+    #
+    def heirarchy
+      @heirarchy ||=(
+        ns = Heirarchy.new(nil)
+        service.names.each do |m|
+          if m.index('#')
+            type = :instance
+            space, method = m.split('#')
+            spaces = space.split('::').collect{|s| s.to_sym }
+            method = method.to_sym
+          elsif m.index('::')
+            type = :class
+            spaces = m.split('::').collect{|s| s.to_sym }
+            if spaces.last.to_s =~ /^[a-z]/
+              method = spaces.pop
+            else
+              next # what to do about class/module ?
+            end
+          else
+            next # what to do abot class/module ?
+          end
+
+          memo = ns
+          spaces.each do |space|
+            memo[space] ||= Heirarchy.new(space, memo)
+            memo = memo[space]
+          end
+
+          if type == :class
+            memo.class_methods << method
+          else
+            memo.instance_methods << method
+          end
+        end
+        ns
+      )
+    end
 
     #
     def tree
       #%[<iframe src="tree.html"></iframe>]
-      @tree ||= heirarchy.to_html_static
+      @tree ||= heirarchy.to_html
     end
 
-=begin
     #
-    def lookup(req)
-      keyw = File.basename(req.path_info)
-      if keyw
-        keyw.sub!('-','#')
-        html = service.info(keyw)
+    def lookup(path)
+# puts "PATH: #{path.inspect}"
+       entry = WebRI.path_to_entry(path)
+# puts "ENTRY: #{keyw.inspect}"
+      if entry
+        html = service.info(entry)
 #puts html
         #term = AnsiSys::Terminal.new.echo(ansi)
         #html = term.render(:html) #=> HTML fragment
@@ -51,20 +92,21 @@ module WebRI
       end
       return html
     end
-=end
-
-    #def template_source
-    #  @template_source ||= File.read(File.join(File.dirname(__FILE__), 'template.rhtml'))
-    #end
 
     #
-    #def to_html
-    #  #filetext = File.read(File.join(File.dirname(__FILE__), 'template.rhtml'))
-    #  template = ERB.new(template_source)
-    #  template.result(binding)
-    #  #heirarchy.to_html
-    #end
+    def template_source
+      @template_source ||= File.read(File.join(File.dirname(__FILE__), 'template.rhtml'))
+    end
 
+    #
+    def to_html
+      #filetext = File.read(File.join(File.dirname(__FILE__), 'template.rhtml'))
+      template = ERB.new(template_source)
+      template.result(binding)
+      #heirarchy.to_html
+    end
+
+=begin
     # generate webpages
     def generate(output=".")
       @output = File.expand_path(output)
@@ -114,14 +156,14 @@ module WebRI
 
       entry.class_methods.each do |name|
         mname = "#{entry.full_name}.#{name}"
-        mfile = File.join(output, "#{entry.file_name}/c-#{esc(name)}.html")
+        mfile = File.join(output, "#{entry.file_name}--#{esc(name)}.html")
         write(mfile, service.info(mname))
         #File.open(mfile, 'w') { |f| f << service.info(mname) } #to_html }
       end
 
       entry.instance_methods.each do |name|
         mname = "#{entry.full_name}.#{name}"
-        mfile = File.join(output, "#{entry.file_name}/i-#{esc(name)}.html")
+        mfile = File.join(output, "#{entry.file_name}-#{esc(name)}.html")
         write(mfile, service.info(mname))
         #File.open(mfile, 'w') { |f| f << service.info(mname) } #to_html }
       end
@@ -136,8 +178,7 @@ module WebRI
 
     #
     def write(file, text)
-      puts file
-      FileUtils.mkdir_p(File.dirname(file))
+      puts mfile
       File.open(file, 'w') { |f| f << text.to_s }
     end
 
@@ -161,76 +202,25 @@ module WebRI
       dir = File.join(directory,'public','js')
       FileUtils.cp_r(dir, output)
     end
+=end
 
     #
     def current_content
       @current_content
     end
 
-=begin
-    # = Generator Heirarchy
     #
-    class Heirarchy
-      attr :name
-      attr :parent
-      attr :subspaces
-      attr :instance_methods
-      attr :class_methods
+    def esc(text)
+      OpEsc.escape(text.to_s)
+      #CGI.escape(text.to_s).gsub('-','%2D')
+    end
 
-      def initialize(name, parent=nil)
-        @name = name
-        @parent = parent if NS===parent
-        @subspaces = {}
-        @class_methods = []
-        @instance_methods = []
-      end
-
-      def key
-        full_name
-      end
-
-      def [](name)
-        @subspaces[name]
-      end
-
-      def []=(name, value)
-        @subspaces[name] = value
-      end
-
-      def root?
-        !parent
-      end
-
-      def full_name
-        if root?
-          nil
-        else
-          [parent.full_name, name].compact.join("::")
-        end
-      end
-
-      def file_name
-        file = full_name
-        file = file.gsub('::', '--')
-        file = file.gsub('.' , '--')
-        file = file.gsub('#' , '-')
-        #file = File.join(output, file + '.html')
-        file
-      end
-
-
-      def esc(text)
-        OpEsc.escape(text.to_s)
-      end
-
-      def inspect
-        "<#{self.class} #{name}>"
-      end
-
-    end #class NS
-=end
-
-  end #class Generator
+    #
+    def self.esc(text)
+      OpEsc.escape(text.to_s)
+      #CGI.escape(text.to_s).gsub('-','%2D')
+    end
+  end #class Engine
 
 end #module WebRI
 
