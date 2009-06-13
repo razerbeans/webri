@@ -83,7 +83,7 @@ module WebRI
         path = WebRI.entry_to_path(full_name)
         markup << %[
          <li class="trigger">
-           <img src="img/dir.gif" onClick="showBranch(this);"/>
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
            <span class="link" onClick="lookup_static(this, '#{path}');">#{name}</span>
         ]
         markup << %[<div class="branch">]

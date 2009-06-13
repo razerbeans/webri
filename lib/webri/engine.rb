@@ -87,7 +87,7 @@ module WebRI
         #term = AnsiSys::Terminal.new.echo(ansi)
         #html = term.render(:html) #=> HTML fragment
         #html = ERB::Util.html_escape(html)
-        html = "#{html}<br/><br/>"
+        html = "#{html}"
       else
         html = "<h1>ERROR</h1>"
       end
@@ -95,9 +95,14 @@ module WebRI
     end
 
     #
-    def template(name)
-      @templates[name] ||= File.read(File.join(directory, 'templates', name + '.html'))
+    def directory
+      File.dirname(__FILE__)
     end
+
+    #
+    #def template(name)
+    #  @templates[name] ||= File.read(File.join(directory, 'templates', name + '.html'))
+    #end
 
     #
     #def to_html
@@ -114,24 +119,24 @@ module WebRI
     end
 
     #
-    #def page_header
-    #  render(template('header'))
-    #end
+    def page_header
+      render(template('header'))
+    end
 
     #
-    #def page_tree
-    #  render(template('tree'))
-    #end
+    def page_tree
+      render(template('tree'))
+    end
 
     #
-    def index
+    def page_index
       render(template('index'))
     end
 
     #
-    #def page_main
-    #  render(template('main'))
-    #end
+    def page_main
+      render(template('main'))
+    end
 
 =begin
     # generate webpages

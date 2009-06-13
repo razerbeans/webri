@@ -1,10 +1,10 @@
-require 'webri/engine'
+require 'webri/server'
 
 module WebRI
 
   # This is the static website generator.
   #
-  class Generator < Engine
+  class Generator < Server
 
     # Reference to CGI Service
     #attr :cgi
@@ -22,11 +22,6 @@ module WebRI
       #@service = service
       @directory_depth = 0
     end
-
-    #
-    #def directory
-    #  @directory ||= File.dirname(__FILE__)
-    #end
 
     #
     def tree
@@ -145,20 +140,13 @@ module WebRI
     def generate_support_files
       FileUtils.mkdir_p(output)
 
-      # generate index file
-      file = File.join(output, 'index.html')
-      File.open(file, 'w') { |f| f << to_html }
+      write(File.join(output, 'index.html'),  page_index)
+      write(File.join(output, 'header.html'), page_header)
+      write(File.join(output, 'tree.html'),   page_tree)
+      write(File.join(output, 'main.html'),   page_main)
 
-      # copy css file
-      dir = File.join(directory,'public','css')
-      FileUtils.cp_r(dir, output)
-
-      # copy images
-      dir = File.join(directory,'public','img')
-      FileUtils.cp_r(dir, output)
-
-      # copy scripts
-      dir = File.join(directory,'public','js')
+      # copy assets
+      dir = File.join(directory, 'assets')
       FileUtils.cp_r(dir, output)
     end
 

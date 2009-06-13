@@ -81,12 +81,10 @@ else
     :DocumentRoot    => wri.directory + "/public"
   )
 
-  s.mount_proc("/"){|req, res|
+  s.mount_proc("/"){ |req, res|
     path = req.path_info.sub(/^\//,'')
-p path
-    #key = req.path_info
     if path == '' 
-      res.body = wri.to_html
+      res.body = wri.index
       res['Content-Type'] = "text/html"
     else
       res.body = wri.lookup(path)
@@ -102,9 +100,9 @@ p path
 #  }
 
   ## mount subdirectories
-  s.mount("/js",  HTTPServlet::FileHandler, wri.directory + "/public/js")
-  s.mount("/css", HTTPServlet::FileHandler, wri.directory + "/public/css")
-  s.mount("/img", HTTPServlet::FileHandler, wri.directory + "/public/img")
+  s.mount("/assets",  HTTPServlet::FileHandler, wri.directory + "/assets")
+  #s.mount("/css", HTTPServlet::FileHandler, wri.directory + "/assets/css")
+  #s.mount("/img", HTTPServlet::FileHandler, wri.directory + "/assets/img")
 
   trap("INT"){ s.shutdown }
   s.start

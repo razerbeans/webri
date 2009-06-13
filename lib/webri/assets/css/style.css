@@ -1,90 +1,50 @@
-body {
+html, body  {
+  height:100%;
   margin: 0;
   padding: 0;
-  height: 100%; /* needed for container min-height */
-  font: normal 12px sans-serif, arial, tahoma, helvetica;
-  background: #fff;
+  border: none;
+  text-align: left;
+  position: relative;
 }
 
-div {
-  margin: 0; padding: 0;
-}
+body { font: normal 12px sans-serif, arial, tahoma, helvetica; background: #fff; }
 
-ul {
-  cursor: pointer; cursor: hand;
-  padding-left: 10px;
-}
+div { margin: 0; padding: 0; }
 
-td {
-  vertical-align: top;
-}
+pre { font-family: monospace; }
 
-li {
-  margin-left: 10px;
-}
+p { padding: 5px 0; }
 
-pre {
-  font-family: monospace;
-}
+/* HEADER */
 
-iframe {
-  height: 100%;
-}
+#header { width: 100%; background: white; height: 100px; }
+#header h1 { margin: 0; padding: 0; font-size: 64px; }
+#header h2 { margin: 0; padding: 0; font-size: 10pt; font-weight: bold; }
+#header .small { font-size: 10pt; }
 
-#screenFrame {
-  position:relative; /* needed for footer positioning*/
-	width: 100%;
-	
-	height:auto !important; /* real browsers */
-	height:100%; /* IE6: treaded as min-height*/
+.small { font-size: 10pt; }
 
-	min-height:100%; /* real browsers */
-  border: 0px solid orange;
-}
-
-#header {
-  width: 100%;
-  background: white;
-}
-
-#header h1 {
-  margin: 0; padding: 0;
-  font-size: 64px;
-}
-
-#header h2 {
-  margin: 0; padding: 0;
-  font-size: 10pt;
-  font-weight: bold;
-}
-
-#header .small {
- font-size: 10pt;
-}
-
-#side {
-  width: 250px;
-  float: left;
-  padding:1em;
-  overflow: scroll;
-  border: 1px solid #ccc;
-  background: white;
-}
+/* MAIN */
 
 #main {
-  overflow: scroll;
-	padding: 15px; /* bottom padding for footer */
+  margin-left: 270px;
+  padding: 10px 15px; /* bottom padding for footer */
   border: 1px solid #ccc;
   background: white;
+  overflow: scroll;
 }
 
-.trigger{ cursor: pointer; cursor: hand; }
+/* TREE */
 
-.branch{ display: none; }
+ul { cursor: pointer; cursor: hand; padding-left: 10px; }
+li { margin-left: 10px; }
 
+#tree { padding: 10px; background: white; float: left; width: 250px; overflow: scroll; border: 1px solid #ccc; }
+
+.trigger { cursor: pointer; cursor: hand; }
+.branch { display: none; }
 .leaf { color: #cc0000; }
 .meta_leaf { color: #00cc00; font-weight: bold; }
-
-.link { font-style: bold; }
+.link { font-weight: bold; }
 .link:hover{ text-decoration: underline; }
 
