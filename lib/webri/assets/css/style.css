@@ -67,14 +67,14 @@ iframe {
   float: left;
   padding:1em;
   overflow: scroll;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   background: white;
 }
 
 #main {
   overflow: scroll;
-	padding:1em 1em; /* bottom padding for footer */
-  border: 1px solid black;
+	padding: 15px; /* bottom padding for footer */
+  border: 1px solid #ccc;
   background: white;
 }
 
@@ -85,5 +85,6 @@ iframe {
 .leaf { color: #cc0000; }
 .meta_leaf { color: #00cc00; font-weight: bold; }
 
+.link { font-style: bold; }
 .link:hover{ text-decoration: underline; }
 
