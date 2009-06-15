@@ -95,7 +95,7 @@ module WebRI
         @current_content = "Welcome"
       end
 
-      file = entry.file_name + '.html'
+      file = entry.file_name
       file = File.join(output, file)
 
       #file = keyword
@@ -105,20 +105,23 @@ module WebRI
       #file = File.join(output, file + '.html')
 
       write(file, service.info(keyword))
-      #File.open(file, 'w') { |f| f << service.info(keyword) } #to_html }
 
-      entry.class_methods.each do |name|
+      cmethods = entry.class_methods.map(&:to_s).sort
+      cmethods.each do |name|
         mname = "#{entry.full_name}.#{name}"
-        mfile = File.join(output, "#{entry.file_name}/c-#{esc(name)}.html")
+        mfile = WebRI.entry_to_path(mname)
+        mfile = File.join(output, mfile)
+        #mfile = File.join(output, "#{entry.file_name}/c-#{esc(name)}.html")
         write(mfile, service.info(mname))
-        #File.open(mfile, 'w') { |f| f << service.info(mname) } #to_html }
       end
 
-      entry.instance_methods.each do |name|
-        mname = "#{entry.full_name}.#{name}"
-        mfile = File.join(output, "#{entry.file_name}/i-#{esc(name)}.html")
+      imethods = entry.instance_methods.map(&:to_s).sort
+      imethods.each do |name|
+        mname = "#{entry.full_name}##{name}"
+        mfile = WebRI.entry_to_path(mname)
+        mfile = File.join(output, mfile)
+        #mfile = File.join(output, "#{entry.file_name}/i-#{esc(name)}.html")
         write(mfile, service.info(mname))
-        #File.open(mfile, 'w') { |f| f << service.info(mname) } #to_html }
       end
 
       entry.subspaces.each do |child_name, child_entry|
@@ -140,10 +143,10 @@ module WebRI
     def generate_support_files
       FileUtils.mkdir_p(output)
 
-      write(File.join(output, 'index.html'),  page_index)
-      write(File.join(output, 'header.html'), page_header)
-      write(File.join(output, 'tree.html'),   page_tree)
-      write(File.join(output, 'main.html'),   page_main)
+      write(File.join(output, 'index.html'),  index)
+      #write(File.join(output, 'header.html'), page_header)
+      #write(File.join(output, 'tree.html'),   page_tree)
+      #write(File.join(output, 'main.html'),   page_main)
 
       # copy assets
       dir = File.join(directory, 'assets')

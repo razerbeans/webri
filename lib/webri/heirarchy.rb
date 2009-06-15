@@ -64,12 +64,13 @@ module WebRI
     # Path name for a given class, module or method.
     #
     def file_name
-      file = full_name
-      file = file.gsub('::', '/')
-      file = file.gsub('#' , '/')
-      file = file.gsub('.' , '-')
-      #file = File.join(output, file + '.html')
-      file
+    #  file = full_name
+    #  file = file.gsub('::', '/')
+    #  file = file.gsub('#' , '/')
+    #  file = file.gsub('.' , '-')
+    #  #file = File.join(output, file + '.html')
+    #  file
+      WebRI.entry_to_path(full_name)
     end
 
     # generate html tree
@@ -79,7 +80,6 @@ module WebRI
       if root?
         markup << %[<div class="root">]
       else
-        #path = "#{file_name}.html"
         path = WebRI.entry_to_path(full_name)
         markup << %[
          <li class="trigger">
@@ -90,8 +90,9 @@ module WebRI
       end
 
       markup << %[<ul>]
-      class_methods.each do |method|
-        #path = "#{file_name}/c-#{esc(method)}.html"
+
+      cmethods = class_methods.map(&:to_s).sort
+      cmethods.each do |method|
         path = WebRI.entry_to_path(full_name + ".#{method}")
         markup << %[
           <li class="meta_leaf"> 
@@ -100,8 +101,8 @@ module WebRI
         ]
       end
 
-      instance_methods.each do |method|
-        #path = "#{file_name}/i-#{esc(method)}.html"
+      imethods = instance_methods.map(&:to_s).sort
+      imethods.each do |method|
         path = WebRI.entry_to_path(full_name + "##{method}")
         markup << %[
           <li class="leaf"> 

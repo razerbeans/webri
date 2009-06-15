@@ -78,12 +78,9 @@ module WebRI
 
     #
     def lookup(path)
-# puts "PATH: #{path.inspect}"
-       entry = WebRI.path_to_entry(path)
-# puts "ENTRY: #{keyw.inspect}"
+      entry = WebRI.path_to_entry(path)
       if entry
         html = service.info(entry)
-#puts html
         #term = AnsiSys::Terminal.new.echo(ansi)
         #html = term.render(:html) #=> HTML fragment
         #html = ERB::Util.html_escape(html)

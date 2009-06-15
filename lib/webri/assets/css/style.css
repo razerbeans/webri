@@ -24,16 +24,6 @@ p { padding: 5px 0; }
 
 .small { font-size: 10pt; }
 
-/* MAIN */
-
-#main {
-  margin-left: 270px;
-  padding: 10px 15px; /* bottom padding for footer */
-  border: 1px solid #ccc;
-  background: white;
-  overflow: scroll;
-}
-
 /* TREE */
 
 ul { cursor: pointer; cursor: hand; padding-left: 10px; }
@@ -47,4 +37,17 @@ li { margin-left: 10px; }
 .meta_leaf { color: #00cc00; font-weight: bold; }
 .link { font-weight: bold; }
 .link:hover{ text-decoration: underline; }
+
+/* MAIN */
+
+#main {
+  margin-left: 260px;
+  padding: 10px 15px; /* bottom padding for footer */
+  border: 1px solid #ccc;
+  background: white;
+  overflow: scroll;
+}
+
+.ad { float: right; padding: 20px 20px 0 0; }
+
 

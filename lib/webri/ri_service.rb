@@ -11,10 +11,11 @@ module WebRI
     def info(keyword)
 #puts "KEYWORD: #{keyword.inspect}"
       if library
-        `ri -d #{library} -f html "#{keyword}"`
+        html = `ri -d #{library} -f html "#{keyword}"`
       else
-        `ri -f html #{keyword}`
+        html = `ri -f html #{keyword}`
       end
+      "<br/>#{html}<br/><br/>"
     end
 
     def names
