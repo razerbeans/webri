@@ -19,12 +19,16 @@ module WebRI
     # Directory in which to store generated html files
     #attr :output
 
+    # Title of docs to add to webpage header.
+    attr :title
+
     #
-    def initialize(service)
+    def initialize(service, options={})
       #@cgi = {} #CGI.new('html4')
       @service = service
       @templates = {}
-      #@directory_depth = 0
+
+      @title = options[:title]
     end
 
     #

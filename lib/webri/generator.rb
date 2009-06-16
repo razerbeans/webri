@@ -16,8 +16,8 @@ module WebRI
     attr :output
 
     #
-    def initialize(service)
-      super(service)
+    def initialize(service, options={})
+      super(service, options)
       #@cgi = {} #CGI.new('html4')
       #@service = service
       @directory_depth = 0

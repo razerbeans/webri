@@ -25,11 +25,13 @@ require 'rdoc/usage'
 
 opts = GetoptLong.new(
   [ '--help',   '-h', GetoptLong::NO_ARGUMENT ],
-  [ '--output', '-o', GetoptLong::REQUIRED_ARGUMENT ]
+  [ '--output', '-o', GetoptLong::REQUIRED_ARGUMENT ],
+  [ '--title',  '-t', GetoptLong::REQUIRED_ARGUMENT ]
 )
 
 dir    = nil
 output = nil
+title  = nil
 
 opts.each do |opt, arg|
   case opt
@@ -37,6 +39,8 @@ opts.each do |opt, arg|
     RDoc::usage
   when '--output'
     output = arg.to_s
+  when '--title'
+    title = arg.to_s
   end
 end
 
@@ -59,7 +63,7 @@ if output
 
   require 'webri/generator'
 
-  wri = WebRI::Generator.new(service)
+  wri = WebRI::Generator.new(service, :title=>title)
   wri.generate(output)
 
 else
@@ -68,7 +72,7 @@ else
 
   require 'webri/server'
 
-  wri = WebRI::Server.new(service)
+  wri = WebRI::Server.new(service, :title=>title)
   #puts wri.to_html
 
   require 'webrick'
