@@ -1,6 +1,6 @@
 ---
 rdoc:
   service  : RDoc
-  template : html
+  template : ~
   inline   : true
   exclude  : [ lib/webri/public ]

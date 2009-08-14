@@ -1,6 +1,7 @@
 MANIFEST
 .cache
-doc/log
+log
+pkg
 doc/rdoc
 doc/ri
 doc/webri

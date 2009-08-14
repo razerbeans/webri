@@ -1,5 +1,7 @@
 ---
-gem:
-  service: Gem
-  include: [bin, lib, meta, test, spec, "[A-Z]*" ]
+box:
+  service  : Box
+  types    : [gem, tar]
+  manifest : true
+  include  : [bin, lib, meta, test, "[A-Z]*" ]
 
