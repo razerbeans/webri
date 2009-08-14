@@ -106,7 +106,7 @@ module WebRI
 
       write(file, service.info(keyword))
 
-      cmethods = entry.class_methods.map(&:to_s).sort
+      cmethods = entry.class_methods.map{ |x| x.to_s }.sort
       cmethods.each do |name|
         mname = "#{entry.full_name}.#{name}"
         mfile = WebRI.entry_to_path(mname)
@@ -115,7 +115,7 @@ module WebRI
         write(mfile, service.info(mname))
       end
 
-      imethods = entry.instance_methods.map(&:to_s).sort
+      imethods = entry.instance_methods.map{ |x| x.to_s }.sort
       imethods.each do |name|
         mname = "#{entry.full_name}##{name}"
         mfile = WebRI.entry_to_path(mname)

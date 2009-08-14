@@ -91,7 +91,7 @@ module WebRI
 
       markup << %[<ul>]
 
-      cmethods = class_methods.map(&:to_s).sort
+      cmethods = class_methods.map{ |x| x.to_s }.sort
       cmethods.each do |method|
         path = WebRI.entry_to_path(full_name + ".#{method}")
         markup << %[
@@ -101,7 +101,7 @@ module WebRI
         ]
       end
 
-      imethods = instance_methods.map(&:to_s).sort
+      imethods = instance_methods.map{ |x| x.to_s }.sort
       imethods.each do |method|
         path = WebRI.entry_to_path(full_name + "##{method}")
         markup << %[

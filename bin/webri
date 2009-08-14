@@ -20,50 +20,70 @@
 #
 #   The directory in which to find the ri files generate by RDoc.
 
-require 'getoptlong'
-require 'rdoc/usage'
+#require 'rdoc/usage'
+require 'optparse'
 
-opts = GetoptLong.new(
-  [ '--help',   '-h', GetoptLong::NO_ARGUMENT ],
-  [ '--output', '-o', GetoptLong::REQUIRED_ARGUMENT ],
-  [ '--title',  '-t', GetoptLong::REQUIRED_ARGUMENT ]
-)
+options = {}
 
-dir    = nil
-output = nil
-title  = nil
+OptionParser.new do |opts|
+  opts.banner = "Usage: webri [options] [ri-dir]"
 
-opts.each do |opt, arg|
-  case opt
-  when '--help'
-    RDoc::usage
-  when '--output'
-    output = arg.to_s
-  when '--title'
-    title = arg.to_s
+  opts.on("-o", "--output DIR", "Output static files to this directory.") do |v|
+    options[:output] = v
   end
-end
+
+  opts.on("-t", "--title TITLE", "Title to use on webpages.") do |v|
+    options[:title] = v
+  end
+
+  opts.separator ""
+  opts.separator "Location options (only apply is no ri-dir is given):"
+
+  opts.on("--[no-]system", "Include documentation from Ruby's standard library.") do |v|
+    options[:system] = v
+  end
+
+  opts.on("--[no-]site", "Include documentation from libraries installed in site locations.") do |v|
+    options[:site] = v
+  end
+
+  opts.on("--[no-]gems", "Include documentation from Ruby's standard library.") do |v|
+    options[:gems] = v
+  end
+
+  opts.on("--[no-]home", "Include documentation stored in ~/.rdoc. Defaults to true.") do |v|
+    options[:home] = v
+  end
+
+  opts.separator ""
+  opts.separator "Common options:"
+
+  opts.on_tail("-h", "--help", "Show this message") do
+    puts opts
+    exit
+  end
+end.parse!
 
 #if ARGV.length != 1
 #  puts "Missing ri directory argument (try --help)"
 #  exit 0
 #end
 
-library = ARGV.shift
+options[:library] = ARGV.shift
 
 # --- ---
 
 require 'webri/ri_service'
 
-service = WebRI::RiService.new(library)
+service = WebRI::RiService.new(options)
 
-if output
+if output = options[:output]
 
   # generate static pages
 
   require 'webri/generator'
 
-  wri = WebRI::Generator.new(service, :title=>title)
+  wri = WebRI::Generator.new(service, :title=>options[:title])
   wri.generate(output)
 
 else
@@ -72,7 +92,7 @@ else
 
   require 'webri/server'
 
-  wri = WebRI::Server.new(service, :title=>title)
+  wri = WebRI::Server.new(service, :title=>options[:title])
   #puts wri.to_html
 
   require 'webrick'
