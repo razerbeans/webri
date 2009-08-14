@@ -42,11 +42,12 @@ module WebRI
         files = files.map do |f|
           case f
           when /\-i.yaml$/
-            File.dirname(f) + '#' + URI.unescape(File.basename(f).chomp('-i.yaml')).gsub('/' , '::')
+            (File.dirname(f) + '#' + URI.unescape(File.basename(f).chomp('-i.yaml'))).gsub('/' , '::')
           when /\-c.yaml$/
-            File.dirname(f) + '::' + URI.unescape(File.basename(f).chomp('-c.yaml')).gsub('/' , '::')
+            (File.dirname(f) + '::' + URI.unescape(File.basename(f).chomp('-c.yaml'))).gsub('/' , '::')
           else
-            nil #File.dirname(f) + ',' + URI.unescape(File.basename(f))
+	    #f.sub(/^cdesc-/,'').gsub('/' , '::')
+            nil
           end
         end.compact
       end
