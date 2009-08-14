@@ -1,17 +1,10 @@
-== Release Notes
+This release fixes WebRI to work with the latest versions of RDoc 2.0+.
+It will no longer work with the older versions.
 
-This release adds a static website generation feature.
-Simple specify the --output directory option on the
-commandline and the WebRI files will be generated to
-that directory. Ex.
+### 0.5.0 / 2009-08-14
 
-  $ cd myproject
-  $ webri --output doc/webri doc/ri
+* 3 Major Enhancements
 
-
-### 0.4.0 / 2009-06-14
-
-  * 1 Major Enhancement
- 
-    * Added static website generation.
-
+    * Updated to work with RDoc 2.3+. It will not work with older versions.
+    * Support for --system, --site, --gems and --home flags.
+    * Methods list are now extracted from ri doc files for speed-up.

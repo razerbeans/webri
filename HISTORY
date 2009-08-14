@@ -1,28 +1,61 @@
-=== 0.4.0 / 2009-06-14
+= Release History
 
-  * 1 Major Enhancement
- 
-    * Added static website generation.
+== 0.5.0 / 2009-08-14
+
+This release fixes WebRI to work with the latest versions of RDoc 2.0+.
+It will no longer work with the older versions.
+
+Changes:
+
+* 3 Major Enhancements
+
+  * Updated to work with RDoc 2.3+. It will not work with older versions.
+  * Support for --system, --site, --gems and --home flags.
+  * Methods list are now extracted from ri doc files for speed-up.
 
 
-=== 0.3.0 / 2009-05-30
+== 0.4.0 / 2009-06-14
+
+This release adds a static website generation feature.
+Simple specify the --output directory option on the
+commandline and the WebRI files will be generated to
+that directory. Ex.
+
+  $ cd myproject
+  $ webri --output doc/webri doc/ri
+
+Changes:
+
+* 1 Major Enhancement
+
+  * Added static website generation.
+
+
+== 0.3.0 / 2009-05-30
+
+This release simply fixes a bug that prevent class methods
+form appearing the class hierarchy.
+
+Changes:
 
 * 1 Major Bug Fix
- 
+
   * Fixed issue that prevented class methods from showing up.
 
 
-=== 0.2.0 / 2008-07-06
+== 0.2.0 / 2008-07-06
 
-* 2 Major Enhancement
+Changes:
+
+* 2 Major Enhancements
 
   * Shelling out to RI b/c it's easier than using the RDoc API.
   * Not using FastRI b/c no HTML output.
   * Initial Release
 
 
-=== 0.1.0 / 2008-03-28
+== 0.1.0 / 2008-03-28
 
-  * Happy Birthday!
+Changes:
 
-
+* Happy Birthday!

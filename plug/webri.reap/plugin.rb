@@ -1,5 +1,3 @@
-# TODO: move this to webri project
-
 module Reap
 module Plugins
 
