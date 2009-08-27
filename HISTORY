@@ -1,5 +1,19 @@
 = Release History
 
+== 0.6 / 2009-08-24
+
+Add autolinking feature to generated HTML. The new code uses Regexps
+to locate class or module names and method names and inserts appropriate
+hyperlinks for them, allowing one to navigate via the page rather than
+solely via the class hierarchy tree.
+
+Changes:
+
+* 1 Major Enhancement
+
+    * Inserts appropriate hyperlinks in ri generated HTML.
+
+
 == 0.5.0 / 2009-08-14
 
 This release fixes WebRI to work with the latest versions of RDoc 2.0+.
