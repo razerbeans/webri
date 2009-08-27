@@ -85,13 +85,51 @@ module WebRI
       entry = WebRI.path_to_entry(path)
       if entry
         html = service.info(entry)
+        html = autolink(html, entry)
+
         #term = AnsiSys::Terminal.new.echo(ansi)
         #html = term.render(:html) #=> HTML fragment
         #html = ERB::Util.html_escape(html)
+
         html = "#{html}<br/><br/>"
       else
         html = "<h1>ERROR</h1>"
       end
+      return html
+    end
+
+    # Search for certain pattersn within the HTML and subs in hyperlinks.
+    #
+    # Eg.
+    #
+    #   <h2>Instance methods:</h2>
+    #   current_content, directory, generate, generate_recurse, generate_tree
+    #
+    def autolink(html, entry)
+      link = entry.gsub('::','/')
+
+      re = Regexp.new(Regexp.escape(entry), Regexp::MULTILINE)
+      if md = re.match(html)
+        title = %[<a class="link title" href="javascript: lookup_static(this, '#{link}.html');">#{md[0]}</a>]
+        html[md.begin(0)...md.end(0)] = title
+      end
+
+      # class methods
+      re = Regexp.new(Regexp.escape("<h2>Class methods:</h2>") + "(.*?)" + Regexp.escape("<"), Regexp::MULTILINE)
+      if md = re.match(html)
+        meths = md[1].split(",").map{|m| m.strip}
+        meths = meths.map{|m| %[<a class="link" href="javascript: lookup_static(this, '#{link}/c-#{m}.html');">#{m}</a>] }
+        html[md.begin(1)...md.end(1)] = meths.join(", ")
+      end
+
+      # instance methods
+      re = Regexp.new(Regexp.escape("<h2>Instance methods:</h2>") + "(.*?)" + Regexp.escape("<"), Regexp::MULTILINE)
+      if md = re.match(html)
+        meths = md[1].split(",").map{|m| m.strip}
+        meths = meths.map{|m| %[<a class="link" href="javascript: lookup_static(this, '#{link}/i-#{m}.html');">#{m}</a>] }
+        html[md.begin(1)...md.end(1)] = meths.join(", ")
+      end
+
       return html
     end
 

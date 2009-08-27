@@ -7,13 +7,19 @@ html, body  {
   position: relative;
 }
 
-body { font: normal 12px sans-serif, arial, tahoma, helvetica; background: #fff; }
+body { 
+  font-family: monospace;
+  font-size: 12px; 
+  background: #fff;
+}
 
 div { margin: 0; padding: 0; }
 
 pre { font-family: monospace; }
 
 p { padding: 5px 0; }
+
+a { text-decoration: none; }
 
 /* HEADER */
 
@@ -26,17 +32,16 @@ p { padding: 5px 0; }
 
 /* TREE */
 
-ul { cursor: pointer; cursor: hand; padding-left: 10px; }
-li { margin-left: 10px; }
-
-#tree { padding: 10px; background: white; float: left; width: 250px; overflow: scroll; border: 1px solid #ccc; }
-
-.trigger { cursor: pointer; cursor: hand; }
-.branch { display: none; }
-.leaf { color: #cc0000; }
-.meta_leaf { color: #00cc00; font-weight: bold; }
-.link { font-weight: bold; }
-.link:hover{ text-decoration: underline; }
+      #tree { padding: 10px; background: white; float: left; width: 250px; overflow: scroll; border: 1px solid #ccc; }
+         ul { cursor: pointer; cursor: hand; padding-left: 10px; }
+         li { margin-left: 10px; }
+   .trigger { cursor: pointer; cursor: hand; }
+    .branch { display: none; }
+      .leaf { color: #cc0000; }
+ .meta_leaf { color: #00cc00; font-weight: bold; }
+     .title { font-size: 1.8em; }
+      .link { font-weight: bold; }
+ .link:hover{ text-decoration: underline; }
 
 /* MAIN */
 
@@ -46,8 +51,9 @@ li { margin-left: 10px; }
   border: 1px solid #ccc;
   background: white;
   overflow: scroll;
+  font-family: monospace;
+  font-size: 14px;
 }
 
 .ad { float: right; padding: 20px 20px 0 0; }
-
 
