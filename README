@@ -6,6 +6,8 @@ Webrick-based RI browser
 
 == Usage
 
+=== Generate RI Docs
+
 WebRI can be used to browse the entire installed object system --eveything
 documented in one of the central RI locations.
 
@@ -21,9 +23,11 @@ the job. Usually the generated documentation is placed in either ri/ or doc/ri/.
 I will use doc/ri/ in the following example, sicen that is my preference. Adjust
 your directory as needed.
 
-Now run:
+=== Using Webri to View Them
 
-  webri doc/ri
+With ri docs generated, you can view them with:
+
+  $ webri doc/ri
 
 You will see a Webrick server start up, informing you of the port being used.
 
@@ -40,16 +44,35 @@ On the left side of the screen you will see a navigation tree, and the right sid
 contans an infromation panel.
 
 NOTE: Becuase RI itself isn't very fast, if you use WebRI against the entire set
-of installed Ruby libraries it can take a few seconds to load up. It would be nice
-to use FastRI instead, for speed, but FastRI does not support HTML output as of yet.
+of installed Ruby libraries it can take a few seconds to load up. (Sure wish
+FastRI turned out for the better.)
 
-== Install
+=== Generating Static Output
+
+You can generate a static set of pages for offline viewing by specifying
+and +output+ option.
+
+  webri -o doc/webri doc/ri
+
+This will create a number of files in the doc/webri directory. Open
++doc/webri/index.html+ to view them.
+
+[ed-- Not yet ready for use]
+There is also a one page generation mode, where the entire set of specified
+ridocs will be placed in a single file.
+
+
+== How to Install
+
+Installation using RubyGems:
 
   gem install webri
 
-== License
 
-  WebRI, Copyright (c) 2008 Tiger Ops
+== Copying
 
-  WebRi is licensed under then terms of Ruby.
+WebRI, Copyright (c) 2008, 2009 Thomas Sawyer
+
+Unless otherwise permited by the author, this sowftware
+is distributed under the terms of the GPL version 3.
 
