@@ -15,6 +15,8 @@ module WebRI
 
     attr_accessor :home
 
+    attr_accessor :ruby
+
     #
     def initialize(options)
       options.each do |k,v|

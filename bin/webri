@@ -32,12 +32,16 @@ OptionParser.new do |opts|
     options[:output] = v
   end
 
+  opts.on("-1", "--onepage", "Generate a single page document.") do |v|
+    options[:onepage] = true
+  end
+
   opts.on("-t", "--title TITLE", "Title to use on webpages.") do |v|
     options[:title] = v
   end
 
   opts.separator ""
-  opts.separator "Location options (only apply is no ri-dir is given):"
+  opts.separator "Location options (only apply if no ri-dir is given):"
 
   opts.on("--[no-]system", "Include documentation from Ruby's standard library.") do |v|
     options[:system] = v
@@ -53,6 +57,13 @@ OptionParser.new do |opts|
 
   opts.on("--[no-]home", "Include documentation stored in ~/.rdoc. Defaults to true.") do |v|
     options[:home] = v
+  end
+
+  opts.on("--ruby", "Same as --system --no-site --no-gems --no-home.") do |v|
+    options[:system] = true
+    options[:site] = false
+    options[:gems] = false
+    options[:home] = false
   end
 
   opts.separator ""
@@ -79,12 +90,17 @@ service = WebRI::RiService.new(options)
 
 if output = options[:output]
 
-  # generate static pages
-
-  require 'webri/generator'
-
-  wri = WebRI::Generator.new(service, :title=>options[:title])
-  wri.generate(output)
+  if options[:onepage]
+    # generate static pages
+    require 'webri/generator1'
+    wri = WebRI::GeneratorOne.new(service, :title=>options[:title])
+    wri.generate(output)
+  else
+    # generate static pages
+    require 'webri/generator'
+    wri = WebRI::Generator.new(service, :title=>options[:title])
+    wri.generate(output)
+  end
 
 else
 
