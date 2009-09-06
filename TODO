@@ -21,3 +21,6 @@ dynamic site I use only for debugging.
 
 Hmmm... Ok. So how about I add it as an additional option.
 
+[NOTE: This is almost done, but all the generation code
+could use bit of reworking to make the code all "pretty".]
+
