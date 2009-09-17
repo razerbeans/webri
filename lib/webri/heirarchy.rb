@@ -73,6 +73,12 @@ module WebRI
       WebRI.entry_to_path(full_name)
     end
 
+    #
+    def inspect
+      "<#{self.class} #{name}>"
+    end
+
+=begin
     # generate html tree
     #
     def to_html
@@ -95,7 +101,7 @@ module WebRI
       cmethods.each do |method|
         path = WebRI.entry_to_path(full_name + ".#{method}")
         markup << %[
-          <li class="meta_leaf"> 
+          <li class="meta_leaf">
             <span class="link" onClick="lookup_static(this, '#{path}');">#{method}</span>
           </li>
         ]
@@ -105,7 +111,7 @@ module WebRI
       imethods.each do |method|
         path = WebRI.entry_to_path(full_name + "##{method}")
         markup << %[
-          <li class="leaf"> 
+          <li class="leaf">
             <span class="link" onClick="lookup_static(this, '#{path}');">#{method}</span>
           </li>
         ]
@@ -129,6 +135,7 @@ module WebRI
 
     #
     alias_method :to_html_static, :to_html
+=end
 
 =begin
     # generate dynamic html tree
@@ -149,7 +156,7 @@ module WebRI
       markup << %[<ul>]
       class_methods.each do |method|
         markup << %[
-          <li class="meta_leaf"> 
+          <li class="meta_leaf">
             <span class="link" onClick="lookup(this, '#{full_name}.#{method}');">#{method}</span>
           </li>
         ]
@@ -157,7 +164,7 @@ module WebRI
 
       instance_methods.each do |method|
         markup << %[
-          <li class="leaf"> 
+          <li class="leaf">
             <span class="link" onClick="lookup(this, '#{full_name}-#{method}');">#{method}</span>
           </li>
         ]
@@ -185,10 +192,6 @@ module WebRI
     #  OpEsc.escape(text.to_s)
     #  #CGI.escape(text.to_s).gsub('-','%2D')
     #end
-
-    def inspect
-      "<#{self.class} #{name}>"
-    end
 
   end #class Heirarchy
 

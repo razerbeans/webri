@@ -24,10 +24,11 @@ module WebRI
     end
 
     #
-    def tree
-      #%[<iframe src="tree.html"></iframe>]
-      @tree ||= heirarchy.to_html_static
-    end
+    #def tree
+    #  #%[<iframe src="tree.html"></iframe>]
+    #  @tree ||= heirarchy.to_html_static
+    #end
+
 
 =begin
     #
@@ -60,7 +61,7 @@ module WebRI
     #  #heirarchy.to_html
     #end
 
-    # generate webpages
+    # Generate webpages.
     def generate(output=".")
       @output = File.expand_path(output)
       # traverse the the hierarchy
@@ -83,7 +84,7 @@ module WebRI
       end
     end
 
-    #
+    # Recrusive HTML generation on a hierarchy entry.
     def generate_recurse(entry)
       keyword = entry.full_name
 
@@ -132,14 +133,7 @@ module WebRI
       end
     end
 
-    #
-    def write(file, text)
-      puts file
-      FileUtils.mkdir_p(File.dirname(file))
-      File.open(file, 'w') { |f| f << text.to_s }
-    end
-
-    #
+    # Generate files.
     def generate_support_files
       FileUtils.mkdir_p(output)
 
@@ -153,73 +147,17 @@ module WebRI
       FileUtils.cp_r(dir, output)
     end
 
+    # Write file.
+    def write(file, text)
+      puts file
+      FileUtils.mkdir_p(File.dirname(file))
+      File.open(file, 'w') { |f| f << text.to_s }
+    end
+
     #
     def current_content
       @current_content
     end
-
-=begin
-    # = Generator Heirarchy
-    #
-    class Heirarchy
-      attr :name
-      attr :parent
-      attr :subspaces
-      attr :instance_methods
-      attr :class_methods
-
-      def initialize(name, parent=nil)
-        @name = name
-        @parent = parent if NS===parent
-        @subspaces = {}
-        @class_methods = []
-        @instance_methods = []
-      end
-
-      def key
-        full_name
-      end
-
-      def [](name)
-        @subspaces[name]
-      end
-
-      def []=(name, value)
-        @subspaces[name] = value
-      end
-
-      def root?
-        !parent
-      end
-
-      def full_name
-        if root?
-          nil
-        else
-          [parent.full_name, name].compact.join("::")
-        end
-      end
-
-      def file_name
-        file = full_name
-        file = file.gsub('::', '--')
-        file = file.gsub('.' , '--')
-        file = file.gsub('#' , '-')
-        #file = File.join(output, file + '.html')
-        file
-      end
-
-
-      def esc(text)
-        OpEsc.escape(text.to_s)
-      end
-
-      def inspect
-        "<#{self.class} #{name}>"
-      end
-
-    end #class NS
-=end
 
   end #class Generator
 

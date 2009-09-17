@@ -31,6 +31,12 @@ module WebRI
       @title = options[:title]
     end
 
+    # Tile of documentation as given by commandline option
+    # or a the namespace of the root entry of the heirarchy.
+    def title
+      @title ||= heirarchy.full_name
+    end
+
     #
     def directory
       @directory ||= File.dirname(__FILE__)
@@ -77,7 +83,61 @@ module WebRI
     #
     def tree
       #%[<iframe src="tree.html"></iframe>]
-      @tree ||= heirarchy.to_html
+      @tree ||= generate_tree(heirarchy) #heirarchy.to_html
+    end
+
+    # generate html tree
+    #
+    def generate_tree(entry)
+      markup = []
+      if entry.root?
+        markup << %[<div class="root">]
+      else
+        path = WebRI.entry_to_path(entry.full_name)
+        markup << %[
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, '#{path}');">#{entry.name}</span>
+        ]
+        markup << %[<div class="branch">]
+      end
+
+      markup << %[<ul>]
+
+      cmethods = entry.class_methods.map{ |x| x.to_s }.sort
+      cmethods.each do |method|
+        path = WebRI.entry_to_path(entry.full_name + ".#{method}")
+        markup << %[
+          <li class="meta_leaf">
+            <span class="link" onClick="lookup_static(this, '#{path}');">#{method}</span>
+          </li>
+        ]
+      end
+
+      imethods = entry.instance_methods.map{ |x| x.to_s }.sort
+      imethods.each do |method|
+        path = WebRI.entry_to_path(entry.full_name + "##{method}")
+        markup << %[
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, '#{path}');">#{method}</span>
+          </li>
+        ]
+      end
+
+      entry.subspaces.to_a.sort{ |a,b| a[0].to_s <=> b[0].to_s }.each do |(name, subspace)|
+      #subspaces.each do |name, subspace|
+        markup << generate_tree(subspace) #subspace.to_html
+      end
+      markup << %[</ul>]
+
+      if entry.root?
+        markup << %[</div>]
+      else
+        markup << %[</div>]
+        markup << %[</li>]
+      end
+
+      return markup.join("\n")
     end
 
     #
@@ -98,7 +158,7 @@ module WebRI
       return html
     end
 
-    # Search for certain pattersn within the HTML and subs in hyperlinks.
+    # Search for certain patterns within the HTML and subs in hyperlinks.
     #
     # Eg.
     #

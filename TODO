@@ -1,26 +1,8 @@
 = WebRI TODO
 
-== One File
+* All three modes now works, they just need a bit of TLC
+to look good and work optiamally.
 
-An idea for a future version... generate all the html into
-a single file, then use CSS and JQeury to completely control
-presentation. That would be pretty cool, as it would mean
-the entire set of documentation is on a single file.
-
-The only problem with this design is that it would mean
-we could not use realtime serving of the docs, like we
-can now using Webrik b/c large programs, like Rails and
-Ruby itself, take a considerable amount of time to generate,
-something like 30 minutes to an hour.
-
-However, shortcomings aside, this might be a great way to
-go. The dynamic server is already a bit slow anyway b/c
-ri itself is slow, and in practice I have found that end
-up utilizing the generated output in the long run. The
-dynamic site I use only for debugging.
-
-Hmmm... Ok. So how about I add it as an additional option.
-
-[NOTE: This is almost done, but all the generation code
-could use bit of reworking to make the code all "pretty".]
+* Would like to add a Rack server, that could be used instead
+of the Webrick server.
 

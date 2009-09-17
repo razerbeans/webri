@@ -31,10 +31,10 @@ module WebRI
     end
 
     #
-    def tree
-      #%[<iframe src="tree.html"></iframe>]
-      @tree ||= heirarchy.to_html_static
-    end
+    #def tree
+    #  #%[<iframe src="tree.html"></iframe>]
+    #  @tree ||= heirarchy.to_html_static
+    #end
 
 =begin
     #
@@ -112,29 +112,33 @@ module WebRI
       #file = file.gsub('#' , '-')
       #file = File.join(output, file + '.html')
 
-      html << %[\n<div id="#{file}" class="slot module" style="display: none;">\n]
+      html << %[<h1>#{entry.full_name}</h1>]
+
+      html << %[\n<div id="#{file}" class="slot module">\n]
       html << service.info(keyword)
       html << %[\n</div>\n]
 
+      #html << %[<h1>Class Methods</h1>]
       cmethods = entry.class_methods.map{ |x| x.to_s }.sort
       cmethods.each do |name|
         mname = "#{entry.full_name}.#{name}"
         mfile = WebRI.entry_to_path(mname)
         #mfile = File.join(output, mfile)
         #mfile = File.join(output, "#{entry.file_name}/c-#{esc(name)}.html")
-        html << %[\n<div id="#{mfile}" class="slot cmethod" style="display: none;">\n]
+        html << %[\n<div id="#{mfile}" name="#{mfile}" class="slot cmethod">\n]
         html << service.info(mname)
         html << %[\n</div>\n]
         #write(mfile, service.info(mname))
       end
 
+      #html << %[<h1>Instance Methods</h1>]
       imethods = entry.instance_methods.map{ |x| x.to_s }.sort
       imethods.each do |name|
         mname = "#{entry.full_name}##{name}"
         mfile = WebRI.entry_to_path(mname)
         #mfile = File.join(output, mfile)
         #mfile = File.join(output, "#{entry.file_name}/i-#{esc(name)}.html")
-        html << %[\n<div id="#{mfile}" class="slot imethod" style="display: none;">\n]
+        html << %[\n<div id="#{mfile}" name="#{mfile}" class="slot imethod">\n]
         html << service.info(mname)
         html << %[\n</div>\n]
         #write(mfile, service.info(mname))
@@ -188,81 +192,18 @@ module WebRI
 
     #
     def css
-      asset('css/style.css')
+      asset('css/style1.css')
     end
 
     #
     def jquery
-      asset('js/jquery.js')
+      '' #  asset('js/jquery.js')
     end
 
     #
     def rijquery
-      asset('js/ri.jquery.js')
+      '' #asset('js/ri.jquery.js')
     end
-
-=begin
-    # = Generator Heirarchy
-    #
-    class Heirarchy
-      attr :name
-      attr :parent
-      attr :subspaces
-      attr :instance_methods
-      attr :class_methods
-
-      def initialize(name, parent=nil)
-        @name = name
-        @parent = parent if NS===parent
-        @subspaces = {}
-        @class_methods = []
-        @instance_methods = []
-      end
-
-      def key
-        full_name
-      end
-
-      def [](name)
-        @subspaces[name]
-      end
-
-      def []=(name, value)
-        @subspaces[name] = value
-      end
-
-      def root?
-        !parent
-      end
-
-      def full_name
-        if root?
-          nil
-        else
-          [parent.full_name, name].compact.join("::")
-        end
-      end
-
-      def file_name
-        file = full_name
-        file = file.gsub('::', '--')
-        file = file.gsub('.' , '--')
-        file = file.gsub('#' , '-')
-        #file = File.join(output, file + '.html')
-        filestyle="display: hidden;"
-      end
-
-
-      def esc(text)
-        OpEsc.escape(text.to_s)
-      end
-
-      def inspect
-        "<#{self.class} #{name}>"
-      end
-
-    end #class NS
-=end
 
   end #class Generator
 
