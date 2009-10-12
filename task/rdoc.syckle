@@ -1,6 +1,6 @@
 ---
 rdoc:
   service  : RDoc
-  template : ~
-  inline   : true
+  template : redfish
   exclude  : [ lib/webri/public ]
+

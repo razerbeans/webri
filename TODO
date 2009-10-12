@@ -6,3 +6,4 @@ to look good and work optiamally.
 * Would like to add a Rack server, that could be used instead
 of the Webrick server.
 
+* Incoporate firefox keyword mode (see MGeorgi Blog)
