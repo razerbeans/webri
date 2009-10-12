@@ -1,10 +1,16 @@
-= Web RI
+= Webri
 
-  http://webri.rubyforge.org
+* http://proutils.github.com/webri
+* http://github.com/proutils/webri
+* http://googlegroups/group/proutils
 
-Webrick-based RI browser
 
-== Usage
+== DESCRIPTION
+
+Webri is a web-based ri browser. It can provided ri documentation dynamically,
+by running a webrick server, or it can generate static pages.
+
+== USAGE
 
 === Generate RI Docs
 
@@ -15,7 +21,7 @@ WebRI can also be used (and this is probably more useful) to browse per-project
 RI documentation. Simply generate the RI docs by navigating to the projects
 root directory and running:
 
-  rdoc --ri --op "doc/ri" lib
+  $ rdoc --ri --op "doc/ri" lib
 
 Sometimes a package will include a convenience script for generating these.
 Try running 'rake -T', or look for a 'script/' or 'task/' executable that does
@@ -52,7 +58,7 @@ FastRI turned out for the better.)
 You can generate a static set of pages for offline viewing by specifying
 and +output+ option.
 
-  webri -o doc/webri doc/ri
+  $ webri -o doc/webri doc/ri
 
 This will create a number of files in the doc/webri directory. Open
 +doc/webri/index.html+ to view them.
@@ -62,17 +68,31 @@ There is also a one page generation mode, where the entire set of specified
 ridocs will be placed in a single file.
 
 
-== How to Install
+== INSTALLATION
 
 Installation using RubyGems:
 
-  gem install webri
+  $ sudo gem install webri
 
 
-== Copying
+== ROADMAP
 
-WebRI, Copyright (c) 2008, 2009 Thomas Sawyer
+Currently Webri churns through a libraries entries one at a time, calling ri on the backend
+again and again. This makes Webri fairly slow. Now that RDoc templates are becoming much easier
+create, Webri may well be transformed into an RDoc template. It's just a matter of figuring
+out how to use a different formatter other than Darkfish. Once that happens, Webri the program
+will migrate into a web-browser extension (Firefox in particular).
 
-Unless otherwise permited by the author, this sowftware
-is distributed under the terms of the GPL version 3.
+
+== COPYING
+
+WebRI Copyright (c) 2009 Thomas Sawyer, MIT License
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
