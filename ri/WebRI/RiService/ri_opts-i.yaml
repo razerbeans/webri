@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: WebRI::RiService#ri_opts
+is_singleton: false
+name: ri_opts
+params: ()
+visibility: private

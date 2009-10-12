@@ -1,0 +1,58 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: 
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Reference to RI Service
+  name: service
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Title of docs to add to webpage header.
+  name: title
+  rw: R
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: esc
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Server class and base class for Generator.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Server class and base class for Generator.
+constants: []
+
+full_name: WebRI::Server
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: autolink
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: current_content
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: directory
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: esc
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_tree
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: heirarchy
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: index
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: lookup
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: render
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: template
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: title
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: tree
+name: Server
+superclass: Object

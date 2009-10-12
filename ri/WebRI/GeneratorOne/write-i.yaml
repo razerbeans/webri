@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: WebRI::GeneratorOne#write
+is_singleton: false
+name: write
+params: (file, text)
+visibility: public

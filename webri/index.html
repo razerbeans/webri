@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+  <title>WebRI</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+
+  <link rel="icon" href="assets/img/ruby_logo.png" type="image/x-icon">
+
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+  <SCRIPT src="assets/js/jquery.js" type="text/javascript"></SCRIPT>
+  <SCRIPT src="assets/js/ri.jquery.js" type="text/javascript"></SCRIPT>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      //$("#screenFrame").css('height', $(window).height() + 'px');
+      resizePage();
+    });
+  </script>
+</head>
+
+<body>
+
+<div id="screen">
+
+  <div id="header">
+    <div class="small ad">
+    </div>
+    <div>
+      <img src="assets/img/ruby_logo.png" align="left"/>
+      <h1>WebRI <span class="small">&copy; 2008 <a href="http://tigerops.org">TigerOps</a></span></h1>
+      <h2></h2>
+    </div>
+  </div>
+
+  <div style="clear: both;"></div>
+
+  <div id="tree">
+    <div class="root">
+<ul>
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI.html');">WebRI</span>
+        
+<div class="branch">
+<ul>
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI/Generator.html');">Generator</span>
+        
+<div class="branch">
+<ul>
+
+          <li class="meta_leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/c-new.html');">new</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-current_content.html');">current_content</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-directory.html');">directory</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-generate.html');">generate</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-generate_recurse.html');">generate_recurse</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-generate_tree.html');">generate_tree</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-heirarchy.html');">heirarchy</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-lookup.html');">lookup</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-to_html.html');">to_html</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-tree.html');">tree</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-tree_file.html');">tree_file</span>
+          </li>
+        
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS.html');">NS</span>
+        
+<div class="branch">
+<ul>
+
+          <li class="meta_leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/c-new.html');">new</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-op_fetch.html');">[]</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-op_store.html');">[]=</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-esc.html');">esc</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-full_name.html');">full_name</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-inspect.html');">inspect</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-key.html');">key</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-root-Q.html');">root?</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-to_html.html');">to_html</span>
+          </li>
+        
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI/RiService.html');">RiService</span>
+        
+<div class="branch">
+<ul>
+
+          <li class="meta_leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/RiService/c-new.html');">new</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/RiService/i-info.html');">info</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/RiService/i-names.html');">names</span>
+          </li>
+        
+</ul>
+</div>
+</li>
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI/Server.html');">Server</span>
+        
+<div class="branch">
+<ul>
+
+          <li class="meta_leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/c-new.html');">new</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/i-directory.html');">directory</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/i-heirarchy.html');">heirarchy</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/i-lookup.html');">lookup</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/i-to_html.html');">to_html</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/i-tree.html');">tree</span>
+          </li>
+        
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS.html');">NS</span>
+        
+<div class="branch">
+<ul>
+
+          <li class="meta_leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/c-new.html');">new</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-op_fetch.html');">[]</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-op_store.html');">[]=</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-esc.html');">esc</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-full_name.html');">full_name</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-inspect.html');">inspect</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-key.html');">key</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-root-Q.html');">root?</span>
+          </li>
+        
+
+          <li class="leaf"> 
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-to_html.html');">to_html</span>
+          </li>
+        
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+  </div>
+
+  <div id="main">
+    <h1>Welcome to WebRI</h1>
+    <h2>Webrick-based RI Browser</h2>
+
+    <p>
+      WebRI provides a web-based interface 
+      to RI documentation.
+    </p>
+
+    <p>
+      WebRI &copy; 2008 <a href="http://tigerops.org">TigerOps</a>
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
+

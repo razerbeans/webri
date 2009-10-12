@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: WebRI::RiService#names_from_library
+is_singleton: false
+name: names_from_library
+params: (lib=nil)
+visibility: public

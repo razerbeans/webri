@@ -1,0 +1,17 @@
+--- !ruby/object:RDoc::RI::ModuleDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: entry_to_path
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path_to_entry
+comment: 
+constants: []
+
+full_name: WebRI
+includes: []
+
+instance_methods: []
+
+name: WebRI

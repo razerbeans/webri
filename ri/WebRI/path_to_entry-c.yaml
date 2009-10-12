@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: WebRI::path_to_entry
+is_singleton: true
+name: path_to_entry
+params: (path)
+visibility: public

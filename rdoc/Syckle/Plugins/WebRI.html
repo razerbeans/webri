@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: Syckle::Plugins::WebRI</title>
+
+  
+    <link rel="SHORTCUT ICON" href="../../images/class.png">
+  
+
+  <link type="text/css" media="screen" rel="stylesheet" href="../../rdoc.css" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+  <div class="head">
+    <h1>
+      
+        <img src="../../images/class.png" align="absmiddle">&nbsp;
+      
+      <a href="../../index.html">WebRI</a>&nbsp;
+      <a href="/">Syckle::Plugins::WebRI</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="../../plug/syckle/services/webri_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="plug/syckle/services/webri.rb">plug/syckle/services/webri.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        <ul>
+          
+          <li class="class">Service</li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li class="method"><a href="#M000049">#clean</a></li>
+          
+          <li class="method"><a href="#M000046">#document</a></li>
+          
+          <li class="method"><a href="#M000045">#initialize_defaults</a></li>
+          
+          <li class="method"><a href="#M000047">#reset</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../README.html">README</a></li>
+        
+          <li class="file"><a href="../../TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="../../lib/webri/assets/css/style_css.html">style.css</a></li>
+        
+          <li class="file"><a href="../../lib/webri/assets/css/style1_css.html">style1.css</a></li>
+        
+          <li class="file"><a href="../../lib/webri/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../lib/webri/assets/img/dir_gif.html">dir.gif</a></li>
+        
+          <li class="file"><a href="../../lib/webri/assets/img/mod_ico.html">mod.ico</a></li>
+        
+          <li class="file"><a href="../../lib/webri/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
+        
+          <li class="file"><a href="../../lib/webri/assets/js/jquery_js.html">jquery.js</a></li>
+        
+          <li class="file"><a href="../../lib/webri/assets/js/ri_jquery_js.html">ri.jquery.js</a></li>
+        
+          <li class="file"><a href="../../lib/webri/templates/index_html.html">index.html</a></li>
+        
+          <li class="file"><a href="../../lib/webri/templates/index1_html.html">index1.html</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="../../WebRI.html">WebRI</a></li>
+        
+          <li class="class"><a href="../../WebRI/Generator.html">WebRI::Generator</a></li>
+        
+          <li class="class"><a href="../../WebRI/GeneratorOne.html">WebRI::GeneratorOne</a></li>
+        
+          <li class="class"><a href="../../WebRI/Heirarchy.html">WebRI::Heirarchy</a></li>
+        
+          <li class="class"><a href="../../WebRI/RiService.html">WebRI::RiService</a></li>
+        
+          <li class="class"><a href="../../WebRI/Server.html">WebRI::Server</a></li>
+        
+          <li class="module"><a href="../../Syckle.html">Syckle</a></li>
+        
+          <li class="module"><a href="../../Syckle/Plugins.html">Syckle::Plugins</a></li>
+        
+          <li class="class"><a href="../../Syckle/Plugins/WebRI.html">Syckle::Plugins::WebRI</a></li>
+        
+          <li class="module"><a href="../../OpEsc.html">OpEsc</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+
+    <div id="validator-badges">
+      Generated with <a href="http://github.com/proutils/rdazzle">Razzle Dazzle Redfish</a><br/><br/>
+      <a href="http://validator.w3.org/check/referer">[Validate]</a>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+
+      <h1><a href="WebRI.html">WebRI</a> Documentation Plugin</h1>
+<p>
+The webri documentation plugin provides services for generating webri
+documentation.
+</p>
+<p>
+By default it generates the documentaiton at doc/webri.
+</p>
+<p>
+This plugin provides three services for both the <tt>main</tt> and
+<tt>site</tt> pipelines.
+</p>
+<ul>
+<li><tt>webri</tt> - Create webri docs
+
+</li>
+<li><tt>reset</tt> - Reset webri docs
+
+</li>
+<li><tt>clean</tt> - Remove webri docs
+
+</li>
+</ul>
+
+    </div>
+
+    <!-- Constants -->
+    
+    <div id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt><a name="DEFAULT_OUTPUT">DEFAULT_OUTPUT</a></dt>
+        
+        <dd class="description"><p>
+Default location to store ri documentation files.
+</p></dd>
+        
+      
+        <dt><a name="DEFAULT_RIDOC">DEFAULT_RIDOC</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+      </dl>
+    </div>
+    
+
+    <!-- Attributes -->
+    
+    <div id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="title-attribute-method" class="method-detail">
+        <a name="title"></a>
+        
+        <a name="title="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">title</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+Title of documents. Defaults to general metadata title field.
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="output-attribute-method" class="method-detail">
+        <a name="output"></a>
+        
+        <a name="output="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">output</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+Where to save rdoc files (doc/webri).
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="ridoc-attribute-method" class="method-detail">
+        <a name="ridoc"></a>
+        
+        <a name="ridoc="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">ridoc</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+Location of ri docs. Defaults to doc/ri. These files must be preset for
+this plugin to work.
+</p>
+        
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- Methods -->
+    
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="clean-method" class="method-detail ">
+        <a name="M000049"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">clean</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Remove ri products.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="clean-source">
+<pre>
+<span class="ruby-comment cmt"># File plug/syckle/services/webri.rb, line 98</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clean</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">output</span>)
+        <span class="ruby-identifier">rm_r</span>(<span class="ruby-identifier">output</span>)
+        <span class="ruby-identifier">status</span> <span class="ruby-node">&quot;Removed #{output}&quot;</span> <span class="ruby-comment cmt">#unless dryrun?</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="document-method" class="method-detail ">
+        <a name="M000046"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">document</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Generate ri documentation. This utilizes rdoc to produce the appropriate
+files.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="document-source">
+<pre>
+<span class="ruby-comment cmt"># File plug/syckle/services/webri.rb, line 60</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">document</span>
+      <span class="ruby-identifier">output</span>  = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">output</span>
+
+      <span class="ruby-comment cmt">#cmdopts = {}</span>
+      <span class="ruby-comment cmt">#cmdopts['o'] = output</span>
+
+      <span class="ruby-comment cmt">#input = files #.collect do |i|</span>
+      <span class="ruby-comment cmt">#  dir?(i) ? File.join(i,'**','*') : i</span>
+      <span class="ruby-comment cmt">#end</span>
+
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">outofdate?</span>(<span class="ruby-identifier">output</span>, <span class="ruby-identifier">ridoc</span>) <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">force?</span>
+        <span class="ruby-identifier">rm_r</span>(<span class="ruby-identifier">output</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">output</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">safe?</span>(<span class="ruby-identifier">output</span>)  <span class="ruby-comment cmt"># remove old webri docs</span>
+
+        <span class="ruby-identifier">status</span> <span class="ruby-node">&quot;Generating #{output} ...&quot;</span>
+
+        <span class="ruby-comment cmt">#vector = [ridoc, cmdopts]</span>
+        <span class="ruby-comment cmt">#if verbose?</span>
+          <span class="ruby-identifier">sh</span> <span class="ruby-node">&quot;webri -o #{output} #{ridoc}&quot;</span>
+        <span class="ruby-comment cmt">#else</span>
+        <span class="ruby-comment cmt">#  silently do</span>
+        <span class="ruby-comment cmt">#    sh &quot;webri #{vector.to_console}&quot;</span>
+        <span class="ruby-comment cmt">#  end</span>
+        <span class="ruby-comment cmt">#end</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">report</span> <span class="ruby-node">&quot;webri docs are current (#{output.sub(Dir.pwd,'')})&quot;</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="initialize-defaults-method" class="method-detail ">
+        <a name="M000045"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">initialize_defaults</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="initialize-defaults-source">
+<pre>
+<span class="ruby-comment cmt"># File plug/syckle/services/webri.rb, line 38</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_defaults</span>
+      <span class="ruby-ivar">@title</span>  = <span class="ruby-identifier">metadata</span>.<span class="ruby-identifier">title</span>
+      <span class="ruby-ivar">@ridoc</span>  = <span class="ruby-constant">DEFAULT_RIDOC</span>
+      <span class="ruby-ivar">@output</span> = <span class="ruby-constant">DEFAULT_OUTPUT</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="reset-method" class="method-detail ">
+        <a name="M000047"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">reset</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Set the output directory&#8217;s mtime to furthest time in past. This
+&#8220;marks&#8221; the documentation as out-of-date.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="reset-source">
+<pre>
+<span class="ruby-comment cmt"># File plug/syckle/services/webri.rb, line 90</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reset</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">output</span>)
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">utime</span>(<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">output</span>)
+        <span class="ruby-identifier">report</span> <span class="ruby-node">&quot;reset #{output}&quot;</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</body>
+</html>

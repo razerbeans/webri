@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: WebRI::Server</title>
+
+  
+    <link rel="SHORTCUT ICON" href="../images/class.png">
+  
+
+  <link type="text/css" media="screen" rel="stylesheet" href="../rdoc.css" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+  <div class="head">
+    <h1>
+      
+        <img src="../images/class.png" align="absmiddle">&nbsp;
+      
+      <a href="../index.html">WebRI</a>&nbsp;
+      <a href="/">WebRI::Server</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="../lib/webri/server_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/webri/server.rb">lib/webri/server.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        <ul>
+          
+          <li class="class">Object</li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li class="method"><a href="#M000031">::esc</a></li>
+          
+          <li class="method"><a href="#M000007">::new</a></li>
+          
+          <li class="method"><a href="#M000018">#autolink</a></li>
+          
+          <li class="method"><a href="#M000029">#current_content</a></li>
+          
+          <li class="method"><a href="#M000010">#directory</a></li>
+          
+          <li class="method"><a href="#M000030">#esc</a></li>
+          
+          <li class="method"><a href="#M000013">#generate_tree</a></li>
+          
+          <li class="method"><a href="#M000011">#heirarchy</a></li>
+          
+          <li class="method"><a href="#M000023">#index</a></li>
+          
+          <li class="method"><a href="#M000016">#lookup</a></li>
+          
+          <li class="method"><a href="#M000022">#render</a></li>
+          
+          <li class="method"><a href="#M000019">#template</a></li>
+          
+          <li class="method"><a href="#M000008">#title</a></li>
+          
+          <li class="method"><a href="#M000012">#tree</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="../lib/webri/assets/css/style_css.html">style.css</a></li>
+        
+          <li class="file"><a href="../lib/webri/assets/css/style1_css.html">style1.css</a></li>
+        
+          <li class="file"><a href="../lib/webri/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../lib/webri/assets/img/dir_gif.html">dir.gif</a></li>
+        
+          <li class="file"><a href="../lib/webri/assets/img/mod_ico.html">mod.ico</a></li>
+        
+          <li class="file"><a href="../lib/webri/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
+        
+          <li class="file"><a href="../lib/webri/assets/js/jquery_js.html">jquery.js</a></li>
+        
+          <li class="file"><a href="../lib/webri/assets/js/ri_jquery_js.html">ri.jquery.js</a></li>
+        
+          <li class="file"><a href="../lib/webri/templates/index_html.html">index.html</a></li>
+        
+          <li class="file"><a href="../lib/webri/templates/index1_html.html">index1.html</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="../WebRI.html">WebRI</a></li>
+        
+          <li class="class"><a href="../WebRI/Generator.html">WebRI::Generator</a></li>
+        
+          <li class="class"><a href="../WebRI/GeneratorOne.html">WebRI::GeneratorOne</a></li>
+        
+          <li class="class"><a href="../WebRI/Heirarchy.html">WebRI::Heirarchy</a></li>
+        
+          <li class="class"><a href="../WebRI/RiService.html">WebRI::RiService</a></li>
+        
+          <li class="class"><a href="../WebRI/Server.html">WebRI::Server</a></li>
+        
+          <li class="module"><a href="../Syckle.html">Syckle</a></li>
+        
+          <li class="module"><a href="../Syckle/Plugins.html">Syckle::Plugins</a></li>
+        
+          <li class="class"><a href="../Syckle/Plugins/WebRI.html">Syckle::Plugins::WebRI</a></li>
+        
+          <li class="module"><a href="../OpEsc.html">OpEsc</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+
+    <div id="validator-badges">
+      Generated with <a href="http://github.com/proutils/rdazzle">Razzle Dazzle Redfish</a><br/><br/>
+      <a href="http://validator.w3.org/check/referer">[Validate]</a>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+        <h1>Server</h1>
+      
+
+      <p>
+<a href="Server.html">Server</a> class and base class for <a
+href="Generator.html">Generator</a>.
+</p>
+
+    </div>
+
+    <!-- Constants -->
+    
+
+    <!-- Attributes -->
+    
+    <div id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="service-attribute-method" class="method-detail">
+        <a name="service"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">service</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+Reference to RI Service
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="title-attribute-method" class="method-detail">
+        <a name="title"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">title</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+Title of docs to add to webpage header.
+</p>
+        
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- Methods -->
+    
+    <div id="public-class-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="esc-method" class="method-detail ">
+        <a name="M000031"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">esc</span><span
+            class="method-args">(text)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="esc-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 345</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">esc</span>(<span class="ruby-identifier">text</span>)
+      <span class="ruby-constant">OpEsc</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">text</span>.<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-comment cmt">#CGI.escape(text.to_s).gsub('-','%2D')</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="new-method" class="method-detail ">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">new</span><span
+            class="method-args">(service, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 26</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">service</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-comment cmt">#@cgi = {} #CGI.new('html4')</span>
+      <span class="ruby-ivar">@service</span> = <span class="ruby-identifier">service</span>
+      <span class="ruby-ivar">@templates</span> = {}
+
+      <span class="ruby-ivar">@title</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:title</span>]
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="autolink-method" class="method-detail ">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">autolink</span><span
+            class="method-args">(html, entry)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Search for certain patterns within the HTML and subs in hyperlinks.
+</p>
+<p>
+Eg.
+</p>
+<pre>
+  &lt;h2&gt;Instance methods:&lt;/h2&gt;
+  current_content, directory, generate, generate_recurse, generate_tree
+</pre>
+          
+
+          
+          <div class="method-source-code"
+            id="autolink-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 168</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">autolink</span>(<span class="ruby-identifier">html</span>, <span class="ruby-identifier">entry</span>)
+      <span class="ruby-identifier">link</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">'::'</span>,<span class="ruby-value str">'/'</span>)
+
+      <span class="ruby-identifier">re</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">entry</span>), <span class="ruby-constant">Regexp</span><span class="ruby-operator">::</span><span class="ruby-constant">MULTILINE</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">md</span> = <span class="ruby-identifier">re</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">html</span>)
+        <span class="ruby-identifier">title</span> = <span class="ruby-node">%[&lt;a class=&quot;link title&quot; href=&quot;javascript: lookup_static(this, '#{link}.html');&quot;&gt;#{md[0]}&lt;/a&gt;]</span>
+        <span class="ruby-identifier">html</span>[<span class="ruby-identifier">md</span>.<span class="ruby-identifier">begin</span>(<span class="ruby-value">0</span>)<span class="ruby-operator">...</span><span class="ruby-identifier">md</span>.<span class="ruby-identifier">end</span>(<span class="ruby-value">0</span>)] = <span class="ruby-identifier">title</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-comment cmt"># class methods</span>
+      <span class="ruby-identifier">re</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-value str">&quot;&lt;h2&gt;Class methods:&lt;/h2&gt;&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;(.*?)&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-value str">&quot;&lt;&quot;</span>), <span class="ruby-constant">Regexp</span><span class="ruby-operator">::</span><span class="ruby-constant">MULTILINE</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">md</span> = <span class="ruby-identifier">re</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">html</span>)
+        <span class="ruby-identifier">meths</span> = <span class="ruby-identifier">md</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;,&quot;</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">strip</span>}
+        <span class="ruby-identifier">meths</span> = <span class="ruby-identifier">meths</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-node">%[&lt;a class=&quot;link&quot; href=&quot;javascript: lookup_static(this, '#{link}/c-#{m}.html');&quot;&gt;#{m}&lt;/a&gt;]</span> }
+        <span class="ruby-identifier">html</span>[<span class="ruby-identifier">md</span>.<span class="ruby-identifier">begin</span>(<span class="ruby-value">1</span>)<span class="ruby-operator">...</span><span class="ruby-identifier">md</span>.<span class="ruby-identifier">end</span>(<span class="ruby-value">1</span>)] = <span class="ruby-identifier">meths</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;, &quot;</span>)
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-comment cmt"># instance methods</span>
+      <span class="ruby-identifier">re</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-value str">&quot;&lt;h2&gt;Instance methods:&lt;/h2&gt;&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;(.*?)&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-value str">&quot;&lt;&quot;</span>), <span class="ruby-constant">Regexp</span><span class="ruby-operator">::</span><span class="ruby-constant">MULTILINE</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">md</span> = <span class="ruby-identifier">re</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">html</span>)
+        <span class="ruby-identifier">meths</span> = <span class="ruby-identifier">md</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;,&quot;</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">strip</span>}
+        <span class="ruby-identifier">meths</span> = <span class="ruby-identifier">meths</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-node">%[&lt;a class=&quot;link&quot; href=&quot;javascript: lookup_static(this, '#{link}/i-#{m}.html');&quot;&gt;#{m}&lt;/a&gt;]</span> }
+        <span class="ruby-identifier">html</span>[<span class="ruby-identifier">md</span>.<span class="ruby-identifier">begin</span>(<span class="ruby-value">1</span>)<span class="ruby-operator">...</span><span class="ruby-identifier">md</span>.<span class="ruby-identifier">end</span>(<span class="ruby-value">1</span>)] = <span class="ruby-identifier">meths</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;, &quot;</span>)
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">html</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="current-content-method" class="method-detail ">
+        <a name="M000029"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">current_content</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="current-content-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 334</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">current_content</span>
+      <span class="ruby-ivar">@current_content</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="directory-method" class="method-detail ">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">directory</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="directory-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 41</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">directory</span>
+      <span class="ruby-ivar">@directory</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword kw">__FILE__</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="esc-method" class="method-detail ">
+        <a name="M000030"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">esc</span><span
+            class="method-args">(text)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="esc-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 339</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">esc</span>(<span class="ruby-identifier">text</span>)
+      <span class="ruby-constant">OpEsc</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">text</span>.<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-comment cmt">#CGI.escape(text.to_s).gsub('-','%2D')</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-tree-method" class="method-detail ">
+        <a name="M000013"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_tree</span><span
+            class="method-args">(entry)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+generate html tree
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-tree-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 91</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_tree</span>(<span class="ruby-identifier">entry</span>)
+      <span class="ruby-identifier">markup</span> = []
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">root?</span>
+        <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">%[&lt;div class=&quot;root&quot;&gt;]</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">path</span> = <span class="ruby-constant">WebRI</span>.<span class="ruby-identifier">entry_to_path</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>)
+        <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%[
+         &lt;li class=&quot;trigger&quot;&gt;
+           &lt;img src=&quot;assets/img/class.png&quot; onClick=&quot;showBranch(this);&quot;/&gt;
+           &lt;span class=&quot;link&quot; onClick=&quot;lookup_static(this, '#{path}');&quot;&gt;#{entry.name}&lt;/span&gt;
+        ]</span>
+        <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">%[&lt;div class=&quot;branch&quot;&gt;]</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">%[&lt;ul&gt;]</span>
+
+      <span class="ruby-identifier">cmethods</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">class_methods</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span> }.<span class="ruby-identifier">sort</span>
+      <span class="ruby-identifier">cmethods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">path</span> = <span class="ruby-constant">WebRI</span>.<span class="ruby-identifier">entry_to_path</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;.#{method}&quot;</span>)
+        <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%[
+          &lt;li class=&quot;meta_leaf&quot;&gt;
+            &lt;span class=&quot;link&quot; onClick=&quot;lookup_static(this, '#{path}');&quot;&gt;#{method}&lt;/span&gt;
+          &lt;/li&gt;
+        ]</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-identifier">imethods</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">instance_methods</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span> }.<span class="ruby-identifier">sort</span>
+      <span class="ruby-identifier">imethods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">method</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">path</span> = <span class="ruby-constant">WebRI</span>.<span class="ruby-identifier">entry_to_path</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;##{method}&quot;</span>)
+        <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%[
+          &lt;li class=&quot;leaf&quot;&gt;
+            &lt;span class=&quot;link&quot; onClick=&quot;lookup_static(this, '#{path}');&quot;&gt;#{method}&lt;/span&gt;
+          &lt;/li&gt;
+        ]</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">subspaces</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">sort</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_s</span> }.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">subspace</span>)<span class="ruby-operator">|</span>
+      <span class="ruby-comment cmt">#subspaces.each do |name, subspace|</span>
+        <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">generate_tree</span>(<span class="ruby-identifier">subspace</span>) <span class="ruby-comment cmt">#subspace.to_html</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">%[&lt;/ul&gt;]</span>
+
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">root?</span>
+        <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">%[&lt;/div&gt;]</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">%[&lt;/div&gt;]</span>
+        <span class="ruby-identifier">markup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">%[&lt;/li&gt;]</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">markup</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="heirarchy-method" class="method-detail ">
+        <a name="M000011"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">heirarchy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="heirarchy-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 46</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">heirarchy</span>
+      <span class="ruby-ivar">@heirarchy</span> <span class="ruby-operator">||=</span>(
+        <span class="ruby-identifier">ns</span> = <span class="ruby-constant">Heirarchy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>)
+        <span class="ruby-identifier">service</span>.<span class="ruby-identifier">names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">index</span>(<span class="ruby-value str">'#'</span>)
+            <span class="ruby-identifier">type</span> = <span class="ruby-identifier">:instance</span>
+            <span class="ruby-identifier">space</span>, <span class="ruby-identifier">method</span> = <span class="ruby-identifier">m</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'#'</span>)
+            <span class="ruby-identifier">spaces</span> = <span class="ruby-identifier">space</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'::'</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_sym</span> }
+            <span class="ruby-identifier">method</span> = <span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_sym</span>
+          <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">index</span>(<span class="ruby-value str">'::'</span>)
+            <span class="ruby-identifier">type</span> = <span class="ruby-identifier">:class</span>
+            <span class="ruby-identifier">spaces</span> = <span class="ruby-identifier">m</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'::'</span>).<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_sym</span> }
+            <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">spaces</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^[a-z]/</span>
+              <span class="ruby-identifier">method</span> = <span class="ruby-identifier">spaces</span>.<span class="ruby-identifier">pop</span>
+            <span class="ruby-keyword kw">else</span>
+              <span class="ruby-keyword kw">next</span> <span class="ruby-comment cmt"># what to do about class/module ?</span>
+            <span class="ruby-keyword kw">end</span>
+          <span class="ruby-keyword kw">else</span>
+            <span class="ruby-keyword kw">next</span> <span class="ruby-comment cmt"># what to do abot class/module ?</span>
+          <span class="ruby-keyword kw">end</span>
+
+          <span class="ruby-identifier">memo</span> = <span class="ruby-identifier">ns</span>
+          <span class="ruby-identifier">spaces</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">space</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">memo</span>[<span class="ruby-identifier">space</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Heirarchy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">space</span>, <span class="ruby-identifier">memo</span>)
+            <span class="ruby-identifier">memo</span> = <span class="ruby-identifier">memo</span>[<span class="ruby-identifier">space</span>]
+          <span class="ruby-keyword kw">end</span>
+
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">:class</span>
+            <span class="ruby-identifier">memo</span>.<span class="ruby-identifier">class_methods</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">method</span>
+          <span class="ruby-keyword kw">else</span>
+            <span class="ruby-identifier">memo</span>.<span class="ruby-identifier">instance_methods</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">method</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-identifier">ns</span>
+      )
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="index-method" class="method-detail ">
+        <a name="M000023"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="index-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 226</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index</span>
+      <span class="ruby-identifier">render</span>(<span class="ruby-identifier">template</span>(<span class="ruby-value str">'index'</span>))
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="lookup-method" class="method-detail ">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">lookup</span><span
+            class="method-args">(path)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="lookup-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 144</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lookup</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">entry</span> = <span class="ruby-constant">WebRI</span>.<span class="ruby-identifier">path_to_entry</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">entry</span>
+        <span class="ruby-identifier">html</span> = <span class="ruby-identifier">service</span>.<span class="ruby-identifier">info</span>(<span class="ruby-identifier">entry</span>)
+        <span class="ruby-identifier">html</span> = <span class="ruby-identifier">autolink</span>(<span class="ruby-identifier">html</span>, <span class="ruby-identifier">entry</span>)
+
+        <span class="ruby-comment cmt">#term = AnsiSys::Terminal.new.echo(ansi)</span>
+        <span class="ruby-comment cmt">#html = term.render(:html) #=&gt; HTML fragment</span>
+        <span class="ruby-comment cmt">#html = ERB::Util.html_escape(html)</span>
+
+        <span class="ruby-identifier">html</span> = <span class="ruby-node">&quot;#{html}&lt;br/&gt;&lt;br/&gt;&quot;</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">html</span> = <span class="ruby-value str">&quot;&lt;h1&gt;ERROR&lt;/h1&gt;&quot;</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">html</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="render-method" class="method-detail ">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">render</span><span
+            class="method-args">(source)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="render-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 210</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render</span>(<span class="ruby-identifier">source</span>)
+      <span class="ruby-identifier">template</span> = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">source</span>)
+      <span class="ruby-identifier">template</span>.<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="template-method" class="method-detail ">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">template</span><span
+            class="method-args">(name)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="template-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 197</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">template</span>(<span class="ruby-identifier">name</span>)
+      <span class="ruby-ivar">@templates</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">directory</span>, <span class="ruby-value str">'templates'</span>, <span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'.html'</span>))
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="title-method" class="method-detail ">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">title</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Tile of documentation as given by commandline option or a the namespace of
+the root entry of the heirarchy.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="title-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 36</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">title</span>
+      <span class="ruby-ivar">@title</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">heirarchy</span>.<span class="ruby-identifier">full_name</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="tree-method" class="method-detail ">
+        <a name="M000012"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">tree</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="tree-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server.rb, line 84</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tree</span>
+      <span class="ruby-comment cmt">#%[&lt;iframe src=&quot;tree.html&quot;&gt;&lt;/iframe&gt;]</span>
+      <span class="ruby-ivar">@tree</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">generate_tree</span>(<span class="ruby-identifier">heirarchy</span>) <span class="ruby-comment cmt">#heirarchy.to_html</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</body>
+</html>

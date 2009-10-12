@@ -1,0 +1,56 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: 
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: class_methods
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: instance_methods
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: name
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: parent
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: subspaces
+  rw: R
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Heirarchy
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Heirarchy
+constants: []
+
+full_name: WebRI::Heirarchy
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: "[]"
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: "[]="
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: file_name
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: full_name
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: inspect
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: key
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: root?
+name: Heirarchy
+superclass: Object

@@ -1,0 +1,16 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Search for certain patterns within the HTML and subs in hyperlinks.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Eg.
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  &lt;h2&gt;Instance methods:&lt;/h2&gt;\n  current_content, directory, generate, generate_recurse, generate_tree\n"
+full_name: WebRI::Server#autolink
+is_singleton: false
+name: autolink
+params: (html, entry)
+visibility: public

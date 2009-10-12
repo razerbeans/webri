@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Path name for a given class, module or method.
+full_name: WebRI::Heirarchy#file_name
+is_singleton: false
+name: file_name
+params: ()
+visibility: public

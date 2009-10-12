@@ -1,0 +1,181 @@
+
+<html>
+
+<head>
+  <title>WebRI</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link href="img/ruby-sm.png" rel="icon"/>
+
+  <META NAME="DESCRIPTION" CONTENT="Web-based ri documentation browser.">
+  <META NAME="KEYWORDS" CONTENT="documentation, ri, rdoc">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="content">
+
+    <div class="header">
+      <div class="title">WebRI</div>
+
+      <div class="about">
+        Browse Object Heirachies the Easy Way
+      </div>
+
+      <div class="warhol">
+      </div>
+    </div>
+
+    <div style="float: right; margin-top: -60px; padding: 10px; font-weight: bold; color: #222;">
+      A <a href="http://tigerops.org"><img src="img/tiger_logo.png" align="absmiddle"/></a> PROJECT
+    </div>
+
+    <div class="menu">
+      <!-- &lt;<a href="http://tigerops.rubyforge.org/">Homepage</a>&gt; -->
+      <a href="rdoc/index.html">Documentation</a> &middot;
+      <a href="http://rubyforge.org/frs/?group_id=6278">Download</a> &middot;
+      <a href="http://rubyforge.org/projects/webri">Development</a>
+    </div>
+
+    <h2>Introduction</h2>
+
+    <p>
+      WebRI can be used to browse the entire installed object system --eveything
+      documented in one of the central RI locations. Just run it from the command line.
+    </p>
+
+    <pre>
+      $ webri
+    </pre>
+
+    <p>
+      WebRI can also be used (and this is probably more useful) to browse per-project
+      RI documentation. Simply generate the RI docs by navigating to the projects
+      root directory and running:
+    </p>
+
+    <pre>
+      $ rdoc --ri --op "doc/ri" lib
+    </pre>
+
+    <p>
+      Sometimes a package will include a convenience script for generating these.
+      Try running 'rake -T', or look for a 'script/' or 'task/' executable that does
+      the job. Usually the generated documentation is placed in either ri/ or doc/ri/.
+      I will use doc/ri/ in the following example, since that is my preference. Adjust
+      your directory as needed.
+    </p>
+
+    <p>
+      Now run:
+    </p>
+
+    <pre>
+      $ webri doc/ri
+    </pre>
+
+    <p>
+      You will see a Webrick server start up, informing you of the port being used.
+    </p>
+
+    <pre>
+      [2008-03-28 12:11:16] INFO  WEBrick 1.3.1
+      [2008-03-28 12:11:16] INFO  ruby 1.8.6 (2007-06-07) [x86_64-linux]
+      [2008-03-28 12:11:21] INFO  WEBrick::HTTPServer#start: pid=8870 port=8888
+    </pre>
+
+    <p>
+      In this example we see the port is the default 8888. Simply open your browser and
+      navigate to:
+    </p>
+
+    <pre>
+      http://localhost:8888/
+    </pre>
+
+    <p>
+      On the left side of the screen you will see a navigation tree, and the right side
+      contans an infromation panel.
+    </p>
+
+
+    <h2>Installation</h2>
+
+    <p>
+      Installing the RubyGem is of course straight forward.
+    </p>
+
+    <pre>
+      sudo gem install webri
+    </pre>
+
+    <p>
+      Manual installation is provided via setup.rb.
+    </p>
+
+
+    <h2>Development</h2>
+
+    <p>
+      WebRI is a <a href="http://tigerops.org">TigerOps</a> project. Developement is hosted
+      by Rubyforge <a href="http://rubyforge.org/projects/webri/">here</a>.
+    </p>
+
+    <p>You can use gitweb to <a href="http://webri.rubyforge.org/git?p=webri.git;a=tree">browse the 'webri' repository</a>.</p>
+
+    <p>To pull the 'webri' repository anonymously, use:</p>
+
+    <pre>
+      git clone git://rubyforge.org/webri.git
+    </pre>
+
+    <p>Developers: You can push to the 'webri' repository using:</p>
+
+    <pre>
+      gitosis@rubyforge.org:webri.git
+    </pre>
+
+    <p>Please contact <b>7rans</b> if you'd like to join the development team.</p>
+
+  </div>
+
+  <br/><br/>
+
+  <div style="text-align: center; border-top: 1px solid #ccc; padding: 40px 0px;">
+    <script type="text/javascript"><!--
+    google_ad_client = "pub-1126154564663472";
+    /* TIGER 728x90 10/28/08 */
+    google_ad_slot = "2386645975";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+    </script>
+    <script type="text/javascript"
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+    <!-- <iframe src="http://tigerops.org/assets/adverts/banner-900-1.html" scrolling="no"></frame> -->
+  </div>
+
+
+  <div class="copyright">
+    <br/><br/>
+    <span style="color: #EF0040;">WebRi</span>, Copyright (c) 2008 Tiger Ops
+    <br/><br/>
+    WebRI is distributed under the terms of the Ruby license. <br/>
+    <br/><br/>
+    Other TigerOps Projects<br/><br/>
+    <a href="http://facets.rubyforge.org">Facets</a>  &middot;
+    <a href="http://quarry.rubyforge.org">Quarry</a> &middot;
+    <a href="http://reap.rubyforge.org">Reap</a> &middot;
+    <a href="http://stick.rubyforge.org">Stick</a> &middot;
+    <a href="http://english.rubyforge.org">English</a>
+  </div>
+
+  <br/><br/>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Recrusive HTML generation on a hierarchy entry.
+full_name: WebRI::Generator#generate_recurse
+is_singleton: false
+name: generate_recurse
+params: (entry)
+visibility: public

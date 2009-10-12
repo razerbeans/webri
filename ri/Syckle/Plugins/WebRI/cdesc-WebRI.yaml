@@ -1,0 +1,116 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: 
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Where to save rdoc files (doc/webri).
+  name: output
+  rw: RW
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Location of ri docs. Defaults to doc/ri. These files must be preset for this plugin to work.
+  name: ridoc
+  rw: RW
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Title of documents. Defaults to general metadata title field.
+  name: title
+  rw: RW
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: WebRI Documentation Plugin
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The webri documentation plugin provides services for generating webri documentation.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: By default it generates the documentaiton at doc/webri.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This plugin provides three services for both the <tt>main</tt> and <tt>site</tt> pipelines.
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "*"
+    body: <tt>webri</tt> - Create webri docs
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "*"
+    body: <tt>reset</tt> - Reset webri docs
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "*"
+    body: <tt>clean</tt> - Remove webri docs
+  type: :BULLET
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: WebRI Documentation Plugin
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The webri documentation plugin provides services for generating webri documentation.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: By default it generates the documentaiton at doc/webri.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This plugin provides three services for both the <tt>main</tt> and <tt>site</tt> pipelines.
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "*"
+    body: <tt>webri</tt> - Create webri docs
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "*"
+    body: <tt>reset</tt> - Reset webri docs
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "*"
+    body: <tt>clean</tt> - Remove webri docs
+  type: :BULLET
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: WebRI Documentation Plugin
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The webri documentation plugin provides services for generating webri documentation.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: By default it generates the documentaiton at doc/webri.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This plugin provides three services for both the <tt>main</tt> and <tt>site</tt> pipelines.
+- !ruby/object:RDoc::Markup::Flow::LIST 
+  contents: 
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "*"
+    body: <tt>webri</tt> - Create webri docs
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "*"
+    body: <tt>reset</tt> - Reset webri docs
+  - !ruby/struct:RDoc::Markup::Flow::LI 
+    label: "*"
+    body: <tt>clean</tt> - Remove webri docs
+  type: :BULLET
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Default location to store ri documentation files.
+  name: DEFAULT_OUTPUT
+  value: "\"doc/webri\""
+- !ruby/object:RDoc::RI::Constant 
+  comment: []
+
+  name: DEFAULT_RIDOC
+  value: "\"doc/ri\""
+full_name: Syckle::Plugins::WebRI
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: clean
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: document
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: initialize_defaults
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: reset
+name: WebRI
+superclass: Service

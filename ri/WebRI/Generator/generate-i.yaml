@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Generate webpages.
+full_name: WebRI::Generator#generate
+is_singleton: false
+name: generate
+params: (output=".")
+visibility: public

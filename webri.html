@@ -1,0 +1,752 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+<title>WebRI</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="icon" href="http://www.ruby-lang.org/favicon.ico" type="image/x-icon">
+
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+<style>
+html, body  {
+  height:100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+  position: relative;
+}
+
+body {
+  font-family: monospace;
+  font-size: 12px;
+  background: #fff;
+}
+
+div { margin: 0; padding: 0; }
+
+pre { font-family: monospace; }
+
+p { padding: 5px 0; }
+
+a { text-decoration: none; }
+
+/* HEADER */
+
+#header { width: 100%; background: white; height: 100px; }
+#header h1 { margin: 0; padding: 0; font-size: 64px; }
+#header h2 { margin: 0; padding: 0; font-size: 10pt; font-weight: bold; }
+#header .small { font-size: 10pt; }
+
+.small { font-size: 10pt; }
+
+/* TREE */
+
+      #tree { padding: 10px; background: white; width: 240px; border: 0px solid #ccc; position: fixed; left: 0; top: 0; }
+         ul { cursor: pointer; cursor: hand; padding-left: 10px; }
+         li { margin-left: 10px; }
+   .trigger { cursor: pointer; cursor: hand; }
+    .branch { }
+      .leaf { color: #cc0000; }
+ .meta_leaf { color: #00cc00; font-weight: bold; }
+     .title { font-size: 1.8em; }
+      .link { font-weight: bold; }
+ .link:hover{ text-decoration: underline; }
+
+/* MAIN */
+
+#main {
+  margin-left: 260px;
+  padding: 10px 15px; /* bottom padding for footer */
+  border: 1px solid #ccc;
+  background: white;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.ad { float: right; padding: 20px 20px 0 0; }
+
+</style>
+
+<script>
+  function lookup_static(elem, path){
+    window.location.hash = path;
+  }
+</script>
+</head>
+
+<body>
+<div id="screen">
+
+  <div id="tree">
+    <div class="root">
+<ul>
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI.html');">WebRI</span>
+        
+<div class="branch">
+<ul>
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI/Generator.html');">Generator</span>
+        
+<div class="branch">
+<ul>
+
+          <li class="meta_leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/c-new.html');">new</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-current_content.html');">current_content</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-directory.html');">directory</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-generate.html');">generate</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-generate_recurse.html');">generate_recurse</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-generate_tree.html');">generate_tree</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-heirarchy.html');">heirarchy</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-lookup.html');">lookup</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-to_html.html');">to_html</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-tree.html');">tree</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/i-tree_file.html');">tree_file</span>
+          </li>
+        
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS.html');">NS</span>
+        
+<div class="branch">
+<ul>
+
+          <li class="meta_leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/c-new.html');">new</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-op_fetch.html');">[]</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-op_store.html');">[]=</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-esc.html');">esc</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-full_name.html');">full_name</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-inspect.html');">inspect</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-key.html');">key</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-root-Q.html');">root?</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Generator/NS/i-to_html.html');">to_html</span>
+          </li>
+        
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI/RiService.html');">RiService</span>
+        
+<div class="branch">
+<ul>
+
+          <li class="meta_leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/RiService/c-new.html');">new</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/RiService/i-info.html');">info</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/RiService/i-names.html');">names</span>
+          </li>
+        
+</ul>
+</div>
+</li>
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI/Server.html');">Server</span>
+        
+<div class="branch">
+<ul>
+
+          <li class="meta_leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/c-new.html');">new</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/i-directory.html');">directory</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/i-heirarchy.html');">heirarchy</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/i-lookup.html');">lookup</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/i-to_html.html');">to_html</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/i-tree.html');">tree</span>
+          </li>
+        
+
+         <li class="trigger">
+           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS.html');">NS</span>
+        
+<div class="branch">
+<ul>
+
+          <li class="meta_leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/c-new.html');">new</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-op_fetch.html');">[]</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-op_store.html');">[]=</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-esc.html');">esc</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-full_name.html');">full_name</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-inspect.html');">inspect</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-key.html');">key</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-root-Q.html');">root?</span>
+          </li>
+        
+
+          <li class="leaf">
+            <span class="link" onClick="lookup_static(this, 'WebRI/Server/NS/i-to_html.html');">to_html</span>
+          </li>
+        
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+  </div>
+
+  <div style="clear: both;"></div>
+
+  <div id="main">
+
+    <div id="header">
+      <div class="small ad">
+      </div>
+      <div>
+        <img src="assets/img/ruby_logo.png" align="left"/>
+        <h1>WebRI API</h1>
+        <h2>WebRI <span class="small">&copy; 2008 <a href="http://tigerops.org">PsyTech</a></span></h1>
+      </div>
+    </div>
+
+    <h1>WebRI</h1>
+<div id="WebRI.html" class="slot module">
+<br/><b>Class: WebRI</b><hr />
+[no description]<hr />
+<br/><br/>
+</div>
+<h1>WebRI::Server</h1>
+<div id="WebRI/Server.html" class="slot module">
+<br/><b>Class: WebRI::Server < Object</b><hr />
+[no description]<hr />
+<p />
+<h2>Attributes:</h2>
+cgi (R):Reference to CGI Service<p />
+service (R):Reference to RI Service<p />
+<p />
+<h2>Class methods:</h2>
+new<p />
+<h2>Instance methods:</h2>
+directory, heirarchy, lookup, to_html, tree<br/><br/>
+</div>
+
+<div id="WebRI/Server/c-new.html" name="WebRI/Server/c-new.html" class="slot cmethod">
+<br/><b>WebRI::Server::new</b><hr />
+WebRI::Server::new(service)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/cdesc-Server.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/i-directory.html" name="WebRI/Server/i-directory.html" class="slot imethod">
+<br/><b>WebRI::Server#directory</b><hr />
+directory()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/cdesc-Server.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/i-heirarchy.html" name="WebRI/Server/i-heirarchy.html" class="slot imethod">
+<br/><b>WebRI::Server#heirarchy</b><hr />
+heirarchy()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/cdesc-Server.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/i-lookup.html" name="WebRI/Server/i-lookup.html" class="slot imethod">
+<br/><b>WebRI::Server#lookup</b><hr />
+lookup(req)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/cdesc-Server.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/i-to_html.html" name="WebRI/Server/i-to_html.html" class="slot imethod">
+<br/><b>WebRI::Server#to_html</b><hr />
+to_html()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/cdesc-Server.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/i-tree.html" name="WebRI/Server/i-tree.html" class="slot imethod">
+<br/><b>WebRI::Server#tree</b><hr />
+tree()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/cdesc-Server.yaml<hr />
+[no description]<br/><br/>
+</div>
+<h1>WebRI::Server::NS</h1>
+<div id="WebRI/Server/NS.html" class="slot module">
+<br/><b>Class: WebRI::Server::NS < Object</b><hr />
+[no description]<hr />
+<p />
+<h2>Attributes:</h2>
+class_methods (R)<br />
+instance_methods (R)<br />
+name (R)<br />
+parent (R)<br />
+subspaces (R)<br />
+<p />
+<h2>Class methods:</h2>
+new<p />
+<h2>Instance methods:</h2>
+[], []=, esc, full_name, inspect, key, root?, to_html<br/><br/>
+</div>
+
+<div id="WebRI/Server/NS/c-new.html" name="WebRI/Server/NS/c-new.html" class="slot cmethod">
+<br/><b>WebRI::Server::NS::new</b><hr />
+WebRI::Server::NS::new(name, parent=nil)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/NS/i-op_fetch.html" name="WebRI/Server/NS/i-op_fetch.html" class="slot imethod">
+<br/><b>WebRI::Server::NS#[]</b><hr />
+[](name)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/NS/i-op_store.html" name="WebRI/Server/NS/i-op_store.html" class="slot imethod">
+<br/><b>WebRI::Server::NS#[]=</b><hr />
+[]=(name, value)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/NS/i-esc.html" name="WebRI/Server/NS/i-esc.html" class="slot imethod">
+<br/><b>WebRI::Server::NS#esc</b><hr />
+esc(text)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/NS/i-full_name.html" name="WebRI/Server/NS/i-full_name.html" class="slot imethod">
+<br/><b>WebRI::Server::NS#full_name</b><hr />
+full_name()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/NS/i-inspect.html" name="WebRI/Server/NS/i-inspect.html" class="slot imethod">
+<br/><b>WebRI::Server::NS#inspect</b><hr />
+inspect()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/NS/i-key.html" name="WebRI/Server/NS/i-key.html" class="slot imethod">
+<br/><b>WebRI::Server::NS#key</b><hr />
+key()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/NS/i-root-Q.html" name="WebRI/Server/NS/i-root-Q.html" class="slot imethod">
+<br/><b>WebRI::Server::NS#root?</b><hr />
+root?()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Server/NS/i-to_html.html" name="WebRI/Server/NS/i-to_html.html" class="slot imethod">
+<br/><b>WebRI::Server::NS#to_html</b><hr />
+to_html()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Server/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+<h1>WebRI::RiService</h1>
+<div id="WebRI/RiService.html" class="slot module">
+<br/><b>Class: WebRI::RiService < Object</b><hr />
+[no description]<hr />
+<p />
+<h2>Attributes:</h2>
+library (R)<br />
+<p />
+<h2>Class methods:</h2>
+new<p />
+<h2>Instance methods:</h2>
+info, names<br/><br/>
+</div>
+
+<div id="WebRI/RiService/c-new.html" name="WebRI/RiService/c-new.html" class="slot cmethod">
+<br/><b>WebRI::RiService::new</b><hr />
+WebRI::RiService::new(library=nil)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/RiService/cdesc-RiService.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/RiService/i-info.html" name="WebRI/RiService/i-info.html" class="slot imethod">
+<br/><b>WebRI::RiService#info</b><hr />
+info(keyword)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/RiService/cdesc-RiService.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/RiService/i-names.html" name="WebRI/RiService/i-names.html" class="slot imethod">
+<br/><b>WebRI::RiService#names</b><hr />
+names()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/RiService/cdesc-RiService.yaml<hr />
+[no description]<br/><br/>
+</div>
+<h1>WebRI::Generator</h1>
+<div id="WebRI/Generator.html" class="slot module">
+<br/><b>Class: WebRI::Generator < Object</b><hr />
+This is the static website generator.<p />
+<hr />
+<p />
+<h2>Attributes:</h2>
+cgi (R):Reference to CGI Service<p />
+output (R):Directory in which to store generated html files<p />
+service (R):Reference to RI Service<p />
+<p />
+<h2>Class methods:</h2>
+new<p />
+<h2>Instance methods:</h2>
+current_content, directory, generate, generate_recurse, generate_tree, heirarchy, lookup, to_html, tree, tree_file<br/><br/>
+</div>
+
+<div id="WebRI/Generator/c-new.html" name="WebRI/Generator/c-new.html" class="slot cmethod">
+<br/><b>WebRI::Generator::new</b><hr />
+WebRI::Generator::new(service)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/i-current_content.html" name="WebRI/Generator/i-current_content.html" class="slot imethod">
+<br/><b>WebRI::Generator#current_content</b><hr />
+current_content()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/i-directory.html" name="WebRI/Generator/i-directory.html" class="slot imethod">
+<br/><b>WebRI::Generator#directory</b><hr />
+directory()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/i-generate.html" name="WebRI/Generator/i-generate.html" class="slot imethod">
+<br/><b>WebRI::Generator#generate</b><hr />
+generate(output=&quot;.&quot;)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+generate webpages<p />
+<br/><br/>
+</div>
+
+<div id="WebRI/Generator/i-generate_recurse.html" name="WebRI/Generator/i-generate_recurse.html" class="slot imethod">
+<br/><b>WebRI::Generator#generate_recurse</b><hr />
+generate_recurse(entry)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/i-generate_tree.html" name="WebRI/Generator/i-generate_tree.html" class="slot imethod">
+<br/><b>WebRI::Generator#generate_tree</b><hr />
+generate_tree()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/i-heirarchy.html" name="WebRI/Generator/i-heirarchy.html" class="slot imethod">
+<br/><b>WebRI::Generator#heirarchy</b><hr />
+heirarchy()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/i-lookup.html" name="WebRI/Generator/i-lookup.html" class="slot imethod">
+<br/><b>WebRI::Generator#lookup</b><hr />
+lookup(req)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/i-to_html.html" name="WebRI/Generator/i-to_html.html" class="slot imethod">
+<br/><b>WebRI::Generator#to_html</b><hr />
+to_html()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/i-tree.html" name="WebRI/Generator/i-tree.html" class="slot imethod">
+<br/><b>WebRI::Generator#tree</b><hr />
+tree()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/i-tree_file.html" name="WebRI/Generator/i-tree_file.html" class="slot imethod">
+<br/><b>WebRI::Generator#tree_file</b><hr />
+tree_file()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/cdesc-Generator.yaml<hr />
+[no description]<br/><br/>
+</div>
+<h1>WebRI::Generator::NS</h1>
+<div id="WebRI/Generator/NS.html" class="slot module">
+<br/><b>Class: WebRI::Generator::NS < Object</b><hr />
+[no description]<hr />
+<p />
+<h2>Attributes:</h2>
+class_methods (R)<br />
+instance_methods (R)<br />
+name (R)<br />
+parent (R)<br />
+subspaces (R)<br />
+<p />
+<h2>Class methods:</h2>
+new<p />
+<h2>Instance methods:</h2>
+[], []=, esc, full_name, inspect, key, root?, to_html<br/><br/>
+</div>
+
+<div id="WebRI/Generator/NS/c-new.html" name="WebRI/Generator/NS/c-new.html" class="slot cmethod">
+<br/><b>WebRI::Generator::NS::new</b><hr />
+WebRI::Generator::NS::new(name, parent=nil)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/NS/i-op_fetch.html" name="WebRI/Generator/NS/i-op_fetch.html" class="slot imethod">
+<br/><b>WebRI::Generator::NS#[]</b><hr />
+[](name)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/NS/i-op_store.html" name="WebRI/Generator/NS/i-op_store.html" class="slot imethod">
+<br/><b>WebRI::Generator::NS#[]=</b><hr />
+[]=(name, value)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/NS/i-esc.html" name="WebRI/Generator/NS/i-esc.html" class="slot imethod">
+<br/><b>WebRI::Generator::NS#esc</b><hr />
+esc(text)<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/NS/i-full_name.html" name="WebRI/Generator/NS/i-full_name.html" class="slot imethod">
+<br/><b>WebRI::Generator::NS#full_name</b><hr />
+full_name()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/NS/i-inspect.html" name="WebRI/Generator/NS/i-inspect.html" class="slot imethod">
+<br/><b>WebRI::Generator::NS#inspect</b><hr />
+inspect()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/NS/i-key.html" name="WebRI/Generator/NS/i-key.html" class="slot imethod">
+<br/><b>WebRI::Generator::NS#key</b><hr />
+key()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/NS/i-root-Q.html" name="WebRI/Generator/NS/i-root-Q.html" class="slot imethod">
+<br/><b>WebRI::Generator::NS#root?</b><hr />
+root?()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/NS/cdesc-NS.yaml<hr />
+[no description]<br/><br/>
+</div>
+
+<div id="WebRI/Generator/NS/i-to_html.html" name="WebRI/Generator/NS/i-to_html.html" class="slot imethod">
+<br/><b>WebRI::Generator::NS#to_html</b><hr />
+to_html()<br />
+<p />
+From /home/trans/Documents/programs/current/proutils/webri/doc/ri/WebRI/Generator/NS/cdesc-NS.yaml<hr />
+generate tree html<p />
+<br/><br/>
+</div>
+
+
+    <div class="slot">
+      <p>Built by WebRI &copy; 2008 <a href="http://tigerops.org">PsyTech</a></p>
+    <div>
+  </div>
+
+</div>
+</body>
+</html>
+

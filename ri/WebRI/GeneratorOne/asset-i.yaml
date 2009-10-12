@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: WebRI::GeneratorOne#asset
+is_singleton: false
+name: asset
+params: (name)
+visibility: public

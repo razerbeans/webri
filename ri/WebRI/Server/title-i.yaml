@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Tile of documentation as given by commandline option or a the namespace of the root entry of the heirarchy.
+full_name: WebRI::Server#title
+is_singleton: false
+name: title
+params: ()
+visibility: public
