@@ -13,7 +13,7 @@ module Syckles
   # * +reset+ - Reset webri docs
   # * +clean+ - Remove webri docs
   #
-  class WebRI < Plugin
+  class WebRI < Service #Plugin
 
     cycle :main, :document
     cycle :site, :document
