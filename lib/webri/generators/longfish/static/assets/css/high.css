@@ -272,10 +272,10 @@ body {
 #content pre.code .keyword, .ruby-keyword, .kw {
   color: #f9bb00;
 }
-#content pre.code .method {
+#content pre.code .method, .ruby-node {
   color: #fff;
 }
-#content pre.code .class {
+#content pre.code .class, .ruby-constant {
   color: #fff;
 }
 #content pre.code .module {
@@ -305,7 +305,7 @@ body {
 #content pre.code .constant, .ruby-constant {
   color: #8aa6c1;
 }
-#content pre.code .regex {
+#content pre.code .regex, .ruby-regexp {
   color: #ca4344;
 }
 #content pre.code .global {
@@ -317,7 +317,7 @@ body {
 #content pre.code .escape {
   color: #eddd3d;
 }
-#content pre.code .attribute {  
+#content pre.code .attribute, .ruby-ivar {  
   color: #8aa6c1;
 }
 #content pre.code.xml-code .string {

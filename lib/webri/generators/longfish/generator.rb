@@ -5,8 +5,15 @@ require 'webri/components/metadata'
 
 module WebRI
 
+  # = Longfish Template
   #
-  class Rubylong < Generator
+  # The Longfish tempolate is based on John Long's design
+  # of the ruby-lang.org website. It was built to supply
+  # Ruby core and stadard documentation with an "offical"
+  # look, but there's no reason you can't use it for your
+  # project too, if you prefer it.
+  #
+  class Longfish < Generator
 
     #include Subversion
     include GitHub

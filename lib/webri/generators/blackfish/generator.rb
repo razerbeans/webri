@@ -4,8 +4,17 @@ require 'webri/components/github'
 
 module WebRI
 
+  # Blackfish is based on Володя Колесников's SDoc
+  # (Copyright (c) 2009 Vladimir Kolesnikov).
   #
-  class Foxsocks < Generator
+  # The SDoc code base was helpful in understanding how to
+  # build an RDoc generator. It was convenient to keep a
+  # copy in with the WebRI code for reference. Later, it was 
+  # easy enough to integrate it with the rest of WebRI
+  # (eg. splitting QuickSearch into a separate component),
+  # and so it stayed as an alernate template.
+  #
+  class Blackfish < WebRI::Generator
 
     include QuickSearch
     include GitHub
@@ -53,3 +62,4 @@ module WebRI
   end
 
 end
+

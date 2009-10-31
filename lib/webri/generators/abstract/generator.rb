@@ -46,10 +46,10 @@ module WebRI
     PATH = Pathname.new(File.dirname(__FILE__))
 
     # Common template directory.
-    PATH_STATIC = PATH + 'static'
+    PATH_STATIC = PATH + 'abstract/static'
 
     # Common template directory.
-    PATH_TEMPLATE = PATH + 'template'
+    PATH_TEMPLATE = PATH + 'abstract/template'
 
     # Directory where generated classes live relative to the root
     DIR_CLASS = 'classes'
@@ -380,12 +380,15 @@ module WebRI
 
     # Path to static files. This is <tt>path + 'static'</tt>.
     def path_static
-      path + 'static'
+      Pathname.new(LOADPATH + "/webri/generators/#{template}/static")
+      #path + '#{template}/static'
     end
 
     # Path to static files. This is <tt>path + 'template'</tt>.
     def path_template
-      path + 'template'
+p LOADPATH + "webri/generators/#{template}/template"
+      Pathname.new(LOADPATH + "/webri/generators/#{template}/template")
+      #path + '#{template}/template'
     end
 
     #
