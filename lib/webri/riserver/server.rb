@@ -1,8 +1,8 @@
 require 'erb'
 require 'yaml'
 require 'cgi'
-require 'webri/opesc'
-require 'webri/heirarchy'
+require 'webri/riserver/opesc'
+require 'webri/riserver/heirarchy'
 
 module WebRI
 

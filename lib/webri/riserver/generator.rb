@@ -1,4 +1,4 @@
-require 'webri/server'
+require 'webri/ri/server/server'
 
 module WebRI
 
