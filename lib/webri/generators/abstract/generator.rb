@@ -43,13 +43,13 @@ module WebRI
     # C O N S T A N T S
     #
 
-    PATH = Pathname.new(File.dirname(__FILE__))
+    #PATH = Pathname.new(File.dirname(__FILE__))
 
     # Common template directory.
-    PATH_STATIC = PATH + 'abstract/static'
+    PATH_STATIC = Pathname.new(LOADPATH + 'webri/generators/abstract/static')
 
     # Common template directory.
-    PATH_TEMPLATE = PATH + 'abstract/template'
+    PATH_TEMPLATE = Pathname.new(LOADPATH + 'webri/generators/abstract/template')
 
     # Directory where generated classes live relative to the root
     DIR_CLASS = 'classes'

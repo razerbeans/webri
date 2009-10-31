@@ -58,7 +58,7 @@
         </form>
 
         <ul class="link-list">
-        <% tree.modules_salient.each do |index_klass| %>
+        <% classes_salient.each do |index_klass| %>
           <li class="<%= index_klass.type %>"><a href="<%= rel_prefix %>/<%= index_klass.path %>"><%= index_klass.full_name %></a></li>
         <% end %>
         </ul>

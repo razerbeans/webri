@@ -550,7 +550,10 @@ div.method-source-code pre {
   margin: 0;
 }
 
-.file #metadata,
+.file #metadata {
+  float: left;
+}
+
 .file-popup #metadata {
   float: right;
 }

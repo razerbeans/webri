@@ -1,5 +1,4 @@
 module WebRI
-module Abstract
 
   #
   module TimeDelta
@@ -28,7 +27,6 @@ module Abstract
 
   end
 
-end
 end
 
 =begin

@@ -1,7 +1,6 @@
 require 'erb'
 
 module WebRI
-module Abstract
 
   # ERBTemplate is used by the generator to build
   # template files. It has access to all the
@@ -115,6 +114,5 @@ module Abstract
 
   end
 
-end
 end
 

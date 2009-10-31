@@ -3,6 +3,13 @@ require 'webri/components/subversion'
 
 module WebRI
 
+  # = Twofish Template
+  #
+  # The Twofish template is a two pane layout, providing
+  # a navigation pane on the left and a document pane to
+  # the right. The navigation pane presents a collapsable
+  # namespace tree which updates the document pane, an iframe,
+  # via targeted a href links.
   #
   class Twofish < Generator
 
