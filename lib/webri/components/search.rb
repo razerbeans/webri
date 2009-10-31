@@ -4,7 +4,7 @@ require 'iconv'
 module WebRI
 
   #
-  class QuickSearch < Component
+  class Search < Component
 
     #
     SEARCH_TREE_FILE  = 'search_tree.js'
