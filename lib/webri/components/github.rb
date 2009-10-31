@@ -1,10 +1,10 @@
-require 'webri/abstract/component'
+require 'webri/components/abstract'
 
 
 module WebRI
 
   #
-  class GitHub < Abstract::Component
+  class GitHub < Component
 
     #
 

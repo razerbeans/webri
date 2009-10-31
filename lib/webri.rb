@@ -12,7 +12,6 @@ begin
   end
 
   require "rdoc/c_parser_fix"
-  #require "webri/generator/rdazzle"
 
   unless defined? $WEBRI_FIXED_RDOC_OPTIONS
     $WEBRI_FIXED_RDOC_OPTIONS = 1
@@ -31,7 +30,7 @@ begin
       def parse(argv)
         rdoc_parse(argv)
         if %w{redfish twofish foxsocks rubylong}.include?(@template)
-          require "webri/#{template}/generator"
+          require "webri/generators/#{template}"
           @generator = WebRI.const_get(@template.capitalize)
         end
       end

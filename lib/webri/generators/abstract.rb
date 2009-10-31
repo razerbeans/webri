@@ -16,28 +16,27 @@ end
 require 'json'
 require 'pp'
 require 'pathname'
-require 'fileutils'
+#require 'fileutils'
 require 'yaml'
 
 require 'rdoc/rdoc'
 require 'rdoc/generator'
 require 'rdoc/generator/markup'
 
-require 'webri/abstract/rdoc'
+require 'webri/extensions/rdoc'
+require 'webri/extensions/fileutils'
 
-require 'webri/abstract/commons'
-require 'webri/abstract/timedelta'
-require 'webri/abstract/erbtemplate'
+require 'webri/generators/abstract/timedelta'
+require 'webri/generators/abstract/erbtemplate'
 
 #
-module WebRI::Abstract
+module WebRI
 
-  # Generator base class.
+  # = Abstract Generator Base Class
   #
   class Generator
 
     #include ERB::Util
-    include Commons
     include TimeDelta
 
     #
@@ -639,6 +638,18 @@ module WebRI::Abstract
     end
   end
 =end
+
+    # Output progress information if rdoc debugging is enabled
+
+    def debug_msg(msg)
+      return unless $DEBUG_RDOC
+      case msg[-1,1]
+        when '.' then tab = "= "
+        when ':' then tab = "== "
+        else          tab = "* "
+      end
+      $stderr.puts(tab + msg)
+    end
 
   end
 

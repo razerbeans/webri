@@ -1,11 +1,10 @@
-require 'webri/abstract/component'
+require 'webri/components/abstract'
 
 
 module WebRI
 
   #
-  class Subversion < Abstract::Component
-
+  class Subversion < Component
 
     #
 

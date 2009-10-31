@@ -1,11 +1,11 @@
-require 'webri/abstract/generator'
-require 'webri/quicksearch/component'
-require 'webri/github/component'
+require 'webri/generators/abstract'
+require 'webri/components/quicksearch'
+require 'webri/components/github'
 
 module WebRI
 
   #
-  class Foxsocks < Abstract::Generator
+  class Foxsocks < Generator
 
     include QuickSearch
     include GitHub

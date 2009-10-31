@@ -1,10 +1,10 @@
-require 'webri/abstract/component'
+require 'webri/components/abstract'
 require 'iconv'
 
 module WebRI
 
   #
-  class QuickSearch < Abstract::Component
+  class QuickSearch < Component
 
     #
     SEARCH_TREE_FILE  = 'search_tree.js'

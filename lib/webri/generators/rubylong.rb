@@ -1,12 +1,12 @@
-require 'webri/abstract/generator'
-#require 'webri/subversion/component'
-require 'webri/github/component'
-require 'webri/metadata/component'
+require 'webri/generators/abstract'
+#require 'webri/components/subversion'
+require 'webri/components/github'
+require 'webri/components/metadata'
 
 module WebRI
 
   #
-  class Rubylong < Abstract::Generator
+  class Rubylong < Generator
 
     #include Subversion
     include GitHub

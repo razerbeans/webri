@@ -1,6 +1,7 @@
-module WebRI
+require 'webri/components/abstract'
 
-  require 'webri/abstract/component'
+
+module WebRI
 
   # TODO: This component is not finished. The actual json produced
   # needs to be fleshed out more, making sure we have all the data
@@ -10,7 +11,7 @@ module WebRI
   # RDoc::TopLevel.json_creatable?, so maybe there's a much better
   # wat to do this component.
   
-  class JSONFile < Abstract::Component
+  class JSONFile < Component
 
     # Save as json.
     def generate

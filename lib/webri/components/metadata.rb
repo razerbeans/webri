@@ -1,9 +1,10 @@
+require 'webri/components/abstract'
 require 'ostruct'
 
 module WebRI
 
   #
-  class Metadata < Abstract::Component
+  class Metadata < Component
 
     #
     def path

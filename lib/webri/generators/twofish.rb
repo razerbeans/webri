@@ -1,10 +1,10 @@
-require 'webri/abstract/generator'
-require 'webri/subversion/component'
+require 'webri/generators/abstract'
+require 'webri/components/subversion'
 
 module WebRI
 
   #
-  class Twofish < Abstract::Generator
+  class Twofish < Generator
 
     include Subversion
 
