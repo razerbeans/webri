@@ -1,7 +1,7 @@
 MANIFEST
 .cache
 log
-pack
+pkg
 doc/rdoc
 doc/ri
 doc/webri
