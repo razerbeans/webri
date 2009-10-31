@@ -46,10 +46,10 @@ module WebRI
     #PATH = Pathname.new(File.dirname(__FILE__))
 
     # Common template directory.
-    PATH_STATIC = Pathname.new(LOADPATH + 'webri/generators/abstract/static')
+    PATH_STATIC = Pathname.new(LOADPATH + '/webri/generators/abstract/static')
 
     # Common template directory.
-    PATH_TEMPLATE = Pathname.new(LOADPATH + 'webri/generators/abstract/template')
+    PATH_TEMPLATE = Pathname.new(LOADPATH + '/webri/generators/abstract/template')
 
     # Directory where generated classes live relative to the root
     DIR_CLASS = 'classes'
@@ -386,7 +386,6 @@ module WebRI
 
     # Path to static files. This is <tt>path + 'template'</tt>.
     def path_template
-p LOADPATH + "webri/generators/#{template}/template"
       Pathname.new(LOADPATH + "/webri/generators/#{template}/template")
       #path + '#{template}/template'
     end
@@ -414,7 +413,7 @@ p LOADPATH + "webri/generators/#{template}/template"
     def generate_commons
       from = Dir[(PATH_STATIC + '**').to_s]
       dest = path_output.to_s
-      show_from = PATH_STATIC.to_s.sub(PATH.parent.to_s+'/','')
+      show_from = PATH_STATIC.to_s.sub(LOADPATH.to_s+'/','')
       debug_msg "Copying #{show_from}/** to #{path_output_relative}/:"
       fileutils.cp_r from, dest, :preserve => true
     end

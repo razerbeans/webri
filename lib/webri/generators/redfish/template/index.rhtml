@@ -10,27 +10,33 @@
 
   <link rel="SHORTCUT ICON" href="assets/img/ruby.png">
 
+  <link type="text/css" rel="stylesheet" href="assets/css/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="assets/js/github.css" title="GitHub" />
+
   <script type="text/javascript" charset="utf-8" src="assets/js/jquery.js"></script>
-  <script type="text/javascript" charset="utf-8" src="assets/js/thickbox.js"></script>
   <script type="text/javascript" charset="utf-8" src="assets/js/quicksearch.js"></script>
   <script type="text/javascript" charset="utf-8" src="assets/js/darkfish.js"></script>
   <script type="text/javascript" charset="utf-8" src="assets/js/highlight.js"></script>
 
   <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready( function() {
       $('#documentation pre').wrapInner('<code></code>');
       hljs.tabReplace = '    ';
       hljs.initHighlightingOnLoad('ruby');
+
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
     });
   </script>
-
-  <link type="text/css" rel="stylesheet" href="assets/css/rdoc.css" media="screen" />
-  <link type="text/css" rel="stylesheet" href="assets/js/github.css" title="GitHub" />
-
-  <% $stderr.sync = true %>
 </head>
 <body class="indexpage">
+<div id="main">
 
+  <% $stderr.sync = true %>
   <div class="head">
     <h1>
       <img src="assets/img/project.png" align="absmiddle">&nbsp;
@@ -44,7 +50,7 @@
       <% simple_files = files.select { |f| f.parser == RDoc::Parser::Simple } %>
       <% unless simple_files.empty? then %>
       <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
+        <h3 class="section-header">Information</h3>
         <ul>
         <% simple_files.each do |f| %>
           <li class="file"><a href="<%= f.path %>"><%= h f.base_name %></a></li>
@@ -82,7 +88,7 @@
               mod.method_list
             end.flatten.sort.each do |method| %>
             <li class="method" style="clear: both;">
-              <span style="float: right; font-size: 0.8em;">&nbsp;<%= method.parent.full_name %></span>
+              <span class="method-parent-aside"><%= method.parent.full_name %></span>
               <a href="<%= method.path %>"><%= method.pretty_name %></a>
             </li>
           <% end %>
@@ -93,12 +99,15 @@
 
     <div id="validator-badges">
       <% if $DEBUG_RDOC %>
-      <div id="debugging-toggle" style="float: right;"><img src="assets/img/bug.png" alt="toggle debugging" height="16" width="16" /></div>
+      <div id="debugging-toggle" style="float: right; margin-right: 5px;">
+        <img src="assets/img/bug.png" alt="[Debug]" height="16" width="16" />
+      </div>
       <% end %>
-
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="assets/img/check.png" alt="[Validate]" height="16" width="16" />
+      </div>
       Generated with <a href="http://github.com/proutils/webri">WebRI RedFish</a> <%= WebRI::VERSION %>
-      <br/><br/>
-      <a href="http://validator.w3.org/check/referer">[Validate]</a>
+      <br/><br/> 
     </div>
   </div>
 
@@ -138,6 +147,7 @@
     <p>This is the API documentation for '<%= options.title %>'.</p>
   <% end %>
 
+</div>
 </body>
 </html>
 

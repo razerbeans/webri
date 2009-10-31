@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -14,14 +13,31 @@
     <link rel="SHORTCUT ICON" href="<%= rel_prefix %>/assets/img/module.png">
   <% end %>
 
-  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/css/rdoc.css" />
+  <link type="text/css" rel="stylesheet" href="<%= rel_prefix %>/assets/css/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="<%= rel_prefix %>/assets/js/github.css" title="GitHub" />
 
   <script type="text/javascript" charset="utf-8" src="<%= rel_prefix %>/assets/js/jquery.js"></script>
-  <script type="text/javascript" charset="utf-8" src="<%= rel_prefix %>/assets/js/thickbox.js"></script>
   <script type="text/javascript" charset="utf-8" src="<%= rel_prefix %>/assets/js/quicksearch.js"></script>
   <script type="text/javascript" charset="utf-8" src="<%= rel_prefix %>/assets/js/darkfish.js"></script>
+  <script type="text/javascript" charset="utf-8" src="<%= rel_prefix %>/assets/js/highlight.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
 </head>
 <body class="<%= klass.type %>">
+<div id="main">
 
   <div class="head">
     <h1>
@@ -169,12 +185,15 @@
 
     <div id="validator-badges">
       <% if $DEBUG_RDOC %>
-      <div id="debugging-toggle" style="float: right;"><img src="<%= rel_prefix %>/assets/img/bug.png"
-        alt="toggle debugging" height="16" width="16" /></div>
+      <div id="debugging-toggle" style="float: right; margin-right: 5px;">
+        <img src="<%= rel_prefix %>/assets/img/bug.png" alt="[Debug]" height="16" width="16" />
+      </div>
       <% end %>
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="<%= rel_prefix %>/assets/img/check.png" alt="[Validate]" height="16" width="16" />
+      </div>
       Generated with <a href="http://github.com/proutils/webri">WebRI Redfish</a> <%= WebRI::VERSION %>
       <br/><br/>
-      <a href="http://validator.w3.org/check/referer">[Validate]</a>
     </div>
   </div>
 
@@ -300,5 +319,7 @@
   <% end %>
   </div>
 
+</main>
 </body>
 </html>
+

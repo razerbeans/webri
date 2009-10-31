@@ -13,7 +13,12 @@
 body {
   background: #efefef;
   font: 14px "Helvetica Neue", Helvetica, Tahoma, sans-serif;
-  padding: 15px 40px;
+  padding: 0 40px 15px 40px;
+}
+
+#main {
+  width: 1024px;
+  margin: 0 auto;
 }
 
 /*
@@ -26,6 +31,8 @@ body.file-popup {
   font-size: 90%;
   margin-left: 0;
 }
+
+img { border: none; }
 
 h1 {
   font-size: 300%;
@@ -62,9 +69,11 @@ ul {
   width: auto;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border: 0px solid #aaa;
-  padding: 0 10px;
-  margin: 0 8px 5px 8px;
+  border-bottom: 0px solid #aaa;
+  border-left: 0px solid #aaa;
+  border-right: 0px solid #aaa;
+  padding: 10px 10px;
+  margin: 0 8px -0.5em 8px;
 }
 
 .head h1 {
@@ -196,13 +205,13 @@ body.file p {
 /* @group Top-Level Structure */
 
 #metadata {
-  float: left;
+  float: right;
   width: 320px;
   margin-top: 10px;
 }
 
 #documentation {
-  margin: 0 1em 5em 360px;
+  margin: 0 360px 5em 1em;
   min-width: 340px;
 }
 
@@ -324,10 +333,27 @@ ul.link-list .type {
 	color: #aaa;
 }
 
+.method-parent-aside {
+  float: right; font-size: 0.7em;
+  font-weight: bold;
+  padding: 0 20px;
+  color: #999;
+}
+
 /* @end */
 
 
 /* @group Documentation Section */
+
+#documentation h1 {
+  margin: 10px 0 10px 0;
+  padding: 0.5em 0.5em;
+  background-color: #dedede;
+  border: 1px solid #bbb;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
 #description {
 	font-size: 100%;
 	color: #333;
@@ -546,12 +572,12 @@ div.method-source-code pre {
 
 /* @group File Popup Contents */
 
-.file #documentation {
+/* .file #documentation {
   margin: 0;
-}
+} */
 
 .file #metadata {
-  float: left;
+  float: right;
 }
 
 .file-popup #metadata {
@@ -607,6 +633,35 @@ div.method-source-code pre {
 }
 
 /* @end */
+
+
+/* @group Debugging Section */
+
+#debugging-toggle {
+	text-align: center;
+}
+#debugging-toggle img {
+	cursor: pointer;
+}
+
+#rdoc-debugging-section-dump {
+	display: none;
+	margin: 0 2em 2em;
+	background: #ccc;
+	border: 1px solid #999;
+}
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -773,22 +828,4 @@ margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = d
 
 /* @end */
 
-/* @group Debugging Section */
 
-#debugging-toggle {
-	text-align: center;
-}
-#debugging-toggle img {
-	cursor: pointer;
-}
-
-#rdoc-debugging-section-dump {
-	display: none;
-	margin: 0 2em 2em;
-	background: #ccc;
-	border: 1px solid #999;
-}
-
-
-
-/* @end */
