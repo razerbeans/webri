@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+newgem = Dir['pkg/webri-*.gem'].sort.last
+
+system "sudo gem uninstall webri"
+system "syckle package -s ridoc -s rdoc"
+system "sudo gem install --no-ri --no-rdoc #{newgem}"
+

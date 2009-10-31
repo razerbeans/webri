@@ -1,5 +1,10 @@
 ---
 testrb:
-  service: testrb
-  active : false
+  service  : testrb
+  tests    : ~
+  exclude  : ~
+  loadpath : ~
+  requires : ~
+  live     : false   
+  active   : false
 

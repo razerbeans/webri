@@ -1,5 +1,11 @@
 ---
 ridoc:
   service: RIDoc
-  exclude  : [ lib/webri/public ]
+  include: ~
+  exclude:
+    - "lib/webri/generators/*/template"
+    - "lib/webri/components/*/static"
+    - "lib/webri/riserver/assets"
+    - "lib/webri/riserver/templates"
+  active : true
 

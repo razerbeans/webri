@@ -1,4 +1,4 @@
-= Webri
+= WebRI
 
 * http://proutils.github.com/webri
 * http://github.com/proutils/webri
@@ -7,33 +7,72 @@
 
 == DESCRIPTION
 
-Webri is a web-based ri browser. It can provided ri documentation dynamically,
-by running a webrick server, or it can generate static pages.
+WebRI is both a dynamic web-based ri-browser which can provided
+ri documentation dynamically, by running a webrick server, and
+a superalatvie Ruby documentation generator with a variety of
+built in templates.
 
-== USAGE
+== FEATURES
 
-=== Generate RI Docs
+* WebRI provides Beautiful Templates, enhanced renditions of some of
+the best designs currently in use.
+* Variety of templates built-in, to meet a varitey of tastes and needs.
+* Under the hood, a component system allows geneators to be more
+easily extended.
 
-WebRI can be used to browse the entire installed object system --eveything
-documented in one of the central RI locations.
 
-WebRI can also be used (and this is probably more useful) to browse per-project
-RI documentation. Simply generate the RI docs by navigating to the projects
-root directory and running:
+== LIMITATIONS
 
-  $ rdoc --ri --op "doc/ri" lib
+Please note that the ri web server and the generation system
+were developed separately, and are not well integrated.
+For this reason (at the very least) the ri server cannot use
+the templates available to the generators. If possible, a future
+version will allow this.
+
+
+== USAGE SYNOPSIS
+
+=== Generate Documentation
+
+WebRI provides a <tt>webri</tt> executable you can use to generate
+documentation. The interface is identical to <tt>rdoc</tt>. Use
+the -T option to specify a template type.
+
+  $ webri -T redfish README lib/
+
+You can use <tt>rdoc</tt> command if you prefer (though in far
+off future versions this may not be the case).
+
+  $ rdoc -T redfish README lib/
+
+WebRI extend RIDoc to recognize the templates that WebRI will handle
+and transfers control to appropriate WebRI generator accordingly.
+
+=== Using the Web Server
+
+WebRI can be used as a dynamic ri browser, either for a single project
+or for a collection of libraries. Indeed, the WebRI server can be used
+to browse the entire installed object system --eveything documented in
+your central install locations. To do the later, simply execute
+<tt>webri-server</tt> with no arguments and open a webrowser to 
+the local port designated (see below).
+
+  $ webr-server
+
+To browse per-project ri documentation, you will first need to locate
+the project's ri files, either by locating them in your system installation
+or by generating them for a project, which can be done using rdoc, eg.
+
+  $ rdoc --ri --op "doc/ri" lib/
 
 Sometimes a package will include a convenience script for generating these.
 Try running 'rake -T', or look for a 'script/' or 'task/' executable that does
 the job. Usually the generated documentation is placed in either ri/ or doc/ri/.
-I will use doc/ri/ in the following example, sicen that is my preference. Adjust
-your directory as needed.
+I will use doc/ri/ in the following example, adjust your directory as needed.
 
-=== Using Webri to View Them
+With ri files loacted you can view them with:
 
-With ri docs generated, you can view them with:
-
-  $ webri doc/ri
+  $ webri-server doc/ri
 
 You will see a Webrick server start up, informing you of the port being used.
 
@@ -49,39 +88,16 @@ navigate to:
 On the left side of the screen you will see a navigation tree, and the right side
 contans an infromation panel.
 
-NOTE: Becuase RI itself isn't very fast, if you use WebRI against the entire set
-of installed Ruby libraries it can take a few seconds to load up. (Sure wish
-FastRI turned out for the better.)
-
-=== Generating Static Output
-
-You can generate a static set of pages for offline viewing by specifying
-and +output+ option.
-
-  $ webri -o doc/webri doc/ri
-
-This will create a number of files in the doc/webri directory. Open
-+doc/webri/index.html+ to view them.
-
-[ed-- Not yet ready for use]
-There is also a one page generation mode, where the entire set of specified
-ridocs will be placed in a single file.
+NOTE: Becuase <tt>ri</tt> itself isn't very fast, if you use WebRI against the
+entire set of installed Ruby libraries it can take a few seconds to load up.
+(Sure wish FastRI turned out for the better.)
 
 
 == INSTALLATION
 
-Installation using RubyGems:
+Installing via RubyGems is per the usual:
 
   $ sudo gem install webri
-
-
-== ROADMAP
-
-Currently Webri churns through a libraries entries one at a time, calling ri on the backend
-again and again. This makes Webri fairly slow. Now that RDoc templates are becoming much easier
-create, Webri may well be transformed into an RDoc template. It's just a matter of figuring
-out how to use a different formatter other than Darkfish. Once that happens, Webri the program
-will migrate into a web-browser extension (Firefox in particular).
 
 
 == COPYING

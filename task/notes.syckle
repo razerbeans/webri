@@ -1,4 +1,9 @@
 ---
 dnote:
   service: DNote
-  active: true
+  loadpath : ~
+  labels   : ~
+  output   : ~
+  format   : ~
+  active   : true
+

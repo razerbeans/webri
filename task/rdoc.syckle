@@ -2,5 +2,13 @@
 rdoc:
   service  : RDoc
   template : redfish
-  exclude  : [ lib/webri/public ]
+  include  : [lib, README, LICENSE]
+  exclude  : 
+    - "lib/webri/generators/*/template"
+    - "lib/webri/components/*/static"
+    - "lib/webri/riserver/assets"
+    - "lib/webri/riserver/templates"
+  main     : ~
+  extra    : ~
+  active   : true
 
