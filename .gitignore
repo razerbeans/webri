@@ -2,6 +2,7 @@ MANIFEST
 .cache
 log
 pkg
+demo/fish-sampler/doc
 doc/rdoc
 doc/ri
 doc/webri
