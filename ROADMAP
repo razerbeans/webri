@@ -1,0 +1,46 @@
+= WebRI ROADMAP
+
+== Current Ideas
+
+* Need a template geared toward tiny projects, that have only a single class
+and/or a few methods. Probably it would a single page site using the README
+and an embedded code section.
+
+* Would like to change to a Rack server instead of the Webrick server.
+
+* Incoporate firefox keyword mode? (see MGeorgi Blog)
+
+
+== Toward Version 2.0
+
+* I am looking at making the next major version of WebRI
+a full AJAX solution. All parsed documentation from RDoc
+will be organized into JSON files with which the HTML5/jQuery
+templates will use to build up the site client-side.
+
+* This has the advantage that an update mode can replace
+the JSON files without replacing the the templates, allowing
+per-project manual design adjustments.
+
+* This course has not been pursued yet b/c at the very least
+the template system I'd like to use (Jam) is not quite
+ready. I hope to have it ready soon. But if it doesn't pan
+then we will use a simple jQuery based system akin to ERB.
+
+
+== Toward Version 3.0
+
+* This may entail forking the RI porition of RDoc and expanding
+it to generate JSON in addition to YAML, which WebRI could
+then use. In doing so maybe we can make RI faster.
+
+* This will effect the interface of the webri tool, to be like
+that of the current webri-server tool, expect that an output
+option would be used. Eg.
+
+  $ webri -o doc/webri doc/ri
+
+* This will also allow for complete harmonization between the ri-server
+with the rdoc generators, so that the ri-server can use any of the
+template formats.
+

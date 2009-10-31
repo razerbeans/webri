@@ -1,0 +1,44 @@
+/* Base Red is: color: #FF226C; */
+
+*{ padding: 0; margin: 0; }
+
+html, body  {
+  height: 100%; width: 100%;
+  margin: 0; padding: 0;
+  border: none;
+  text-align: left;
+  font: 10pt "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+  background: #efefef;
+}
+
+h1 {
+  font-size: 300%;
+  text-shadow: rgba(135,145,135,0.65) 2px 2px 3px;
+  color: #FF226C;
+}
+
+h2,h3,h4 { margin-top: 1.5em; }
+
+p {
+  margin: 1em 0;
+}
+
+pre {
+  padding: 0.5em 0;
+  border: 1px solid #ccc;
+  font-family: monospace;
+}
+
+td {
+  vertical-align: top;
+}
+
+a {
+  color: #FF226C;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px dotted #FF226C;
+}
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+  <title><%= h title %> - WebRI</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=<%= options.charset %>"  />
+
+  <link rel="icon" href="assets/img/ruby_logo.png" type="image/x-icon">
+
+  <link type="text/css" media="screen" rel="stylesheet" href="assets/css/reset.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="assets/css/style.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="assets/css/rdoc.css" />
+
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.jam.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.ri.js"></script>
+  <script type="text/javascript" src="assets/js/thickbox.js"></script>
+  <script type="text/javascript" src="assets/js/quicksearch.js"></script>
+  <script type="text/javascript" src="assets/js/darkfish.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+    });
+  </script>
+</head>
+<body>
+
+<div id="screen">
+  <table cellspacing="15px" style="width: 100%; height: 100%; position: relative;">
+  <tbody style="height: 70%;">
+  <tr>
+  <td colspan="2" style="height: 110px;">
+    <div id="header">
+      <img src="assets/img/ruby_logo.png" align="left"/>
+      <h1><%= h title %></h1>
+      <h2>&nbsp; <%= copyright %></a></h2>
+    </div>
+  </td>
+  </tr>
+
+  <tr>
+  <td style="width: 200px; height: 100%; border: 1px solid #ccc; padding: 10px; background: white;">
+    <div id="tree">
+      <%= html_tree %>
+    </div>
+  </td>
+  <td style="height: 100%;">
+    <iframe id="main" name="main" src="files/README.html" scrolling="auto">
+    </iframe>
+  </td>
+  </tr>
+
+  <tr>
+  <td colspan="2" style="height: 40px;">
+    <div id="footer">
+      <div class="small ad" style="float: right; width: 200px;">
+      </div>
+
+      Generated with <a href="http://github.com/proutils/webri">WebRI TwoFish</a> &nbsp;
+      <a href="http://validator.w3.org/check/referer">[Validate]</a>
+    </div>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+

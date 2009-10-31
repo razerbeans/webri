@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+  <title><%= h title %> - WebRI</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+  <meta http-equiv="Content-Type" content="text/html; charset=<%= options.charset %>"  />
+
+  <link rel="icon" href="<%= rel_prefix %>/assets/img/ruby_logo.png" type="image/x-icon">
+
+  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/css/reset.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/css/style.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/css/rdoc.css" />
+
+  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/jquery.js"></script>
+  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/jquery.jam.js"></script>
+  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/jquery.ri.js"></script>
+  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/thickbox.js"></script>
+  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/quicksearch.js"></script>
+  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/darkfish.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+    });
+  </script>
+</head>
+
+<body>
+
+<div class="<%= klass.type %>">
+
+<!--
+  <div class="head">
+    <h1>
+      <% if klass.type == "class" %>
+        <img src="assets/img/class.png" align="absmiddle">&nbsp;
+      <% else %>
+        <img src="assets/img/module.png" align="absmiddle">&nbsp;
+      <% end %>
+      <a href="index.html"><%= h options.title %></a>&nbsp;
+      <a href="/"><%= klass.full_name %></a>
+    </h1>
+  </div>
+-->
+
+<!--
+  <div id="metadata">
+
+      <% simple_files = files.select {|tl| tl.parser == RDoc::Parser::Simple } %>
+      <% unless simple_files.empty? then %>
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        <% simple_files.each do |file| %>
+          <li class="file"><a href="<%= rel_prefix %>/<%= file.path %>"><%= h file.base_name %></a></li>
+        <% end %>
+        </ul>
+      </div>
+      <% end %>
+-->
+<!--
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="<%= rel_prefix %>/assets/img/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        <% modules_salient.each do |index_klass| %>
+          <li class="<%= index_klass.type %>"><a href="<%= rel_prefix %>/<%= index_klass.path %>"><%= index_klass.full_name %></a></li>
+        <% end %>
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+    </div>
+
+  </div>
+-->
+
+  <div id="documentation">
+
+    <div id="description">
+      <!-- Parent Class -->
+      <% if klass.type == 'class' %>
+        <h1 style="color: #ccc; float: right;">
+          &lt;
+          <% unless String === klass.superclass %>
+            <a href="<%= klass.aref_to klass.superclass.path %>"><%= klass.superclass.full_name %></a>
+          <% else %>
+            <%= klass.superclass %>
+          <% end %>
+        </h1>
+      <% end %>
+
+      <% if /\s*\<h1\>/ !~ klass.description %>
+        <h1><%= klass.name %></h1>
+      <% end %>
+
+      <%= klass.description %>
+    </div>
+
+    <!-- Included Modules -->
+    <% unless klass.includes.empty? %>
+    <div id="includes-section" class="section">
+      <h3 class="section-header">Included Modules</h3>
+      <br/>
+      <ul class="link-list">
+      <% klass.each_include do |inc| %>
+      <% unless String === inc.module %>
+        <li class="module"><a class="include" href="<%= klass.aref_to inc.module.path %>"><%= inc.module.full_name %></a></li>
+      <% else %>
+        <li class="module"><span class="include"><%= inc.name %></span></li>
+      <% end %>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <!-- Constants -->
+    <% unless klass.constants.empty? %>
+    <div id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      <% klass.each_constant do |const| %>
+        <dt><a name="<%= const.name %>"><%= const.name %></a></dt>
+        <% if const.comment %>
+        <dd class="description"><%= const.description.strip %></dd>
+        <% else %>
+        <dd class="description missing-docs">(Not documented)</dd>
+        <% end %>
+      <% end %>
+      </dl>
+    </div>
+    <% end %>
+
+    <!-- Attributes -->
+    <% unless klass.attributes.empty? %>
+    <div id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      <% klass.each_attribute do |attrib| %>
+      <div id="<%= attrib.html_name %>-attribute-method" class="method-detail">
+        <a name="<%= h attrib.name %>"></a>
+        <% if attrib.rw =~ /w/i %>
+        <a name="<%= h attrib.name %>="></a>
+        <% end %>
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name"><%= h attrib.name %></span><span
+            class="attribute-access-type">[<%= attrib.rw %>]</span>
+        </div>
+
+        <div class="method-description">
+        <% if attrib.comment %>
+        <%= attrib.description.strip %>
+        <% else %>
+        <p class="missing-docs">(Not documented)</p>
+        <% end %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+
+    <!-- Methods -->
+    <% klass.methods_by_type.each do |type, visibilities|
+       next if visibilities.empty?
+       visibilities.each do |visibility, methods|
+         next if methods.empty? %>
+    <div id="<%= visibility %>-<%= type %>-method-details" class="method-section section">
+      <h3 class="section-header"><%= visibility.to_s.capitalize %> <%= type.capitalize %> Methods</h3>
+
+    <% methods.each do |method| %>
+      <div id="<%= method.html_name %>-method" class="method-detail <%= method.is_alias_for ? "method-alias" : '' %>">
+        <a name="<%= h method.aref %>"></a>
+
+        <div class="method-heading">
+        <% if method.call_seq %>
+          <span class="method-callseq"><%= method.call_seq.strip.gsub(/->/, '&rarr;').gsub( /^\w.*?\./m, '') %></span>
+          <span class="method-click-advice">click to toggle source</span>
+        <% else %>
+          <span class="method-name"><%= h method.name %></span><span
+            class="method-args"><%= method.params %></span>
+          <span class="method-click-advice">click to toggle source</span>
+        <% end %>
+        </div>
+
+        <div class="method-description">
+          <% if method.comment %>
+          <%= method.description.strip %>
+          <% else %>
+          <p class="missing-docs">(Not documented)</p>
+          <% end %>
+
+          <% if method.token_stream %>
+          <div class="method-source-code"
+            id="<%= method.html_name %>-source">
+<pre>
+<%= method.markup_code %>
+</pre>
+          </div>
+          <% end %>
+        </div>
+
+        <% unless method.aliases.empty? %>
+        <div class="aliases">
+          Also aliased as: <%= method.aliases.map do |aka|
+            %{<a href="#{ klass.aref_to aka.path}">#{h aka.name}</a>}
+          end.join(", ") %>
+        </div>
+        <% end %>
+      </div>
+
+    <% end %>
+    </div>
+    <% end %>
+    <% end %>
+ 
+    <!-- In Files -->
+    <div id="file-list-section" class="section">
+      <h3 class="section-header">In Files</h3>
+      <div class="section-body">
+        <br/>
+        <ul>
+        <% klass.in_files.each do |tl| %>
+          <li class="file">
+            <a href="<%= rel_prefix %>/<%= h tl.path %>" title="<%= h tl.absolute_name %>"><%= h tl.absolute_name %></a>
+          </li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <br/></br>
+
+    <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+    <% if !svninfo(klass).empty? %>
+    <div id="file-svninfo-section" class="section">
+      <h3 class="section-header">Subversion Info</h3>
+      <div class="section-body">
+        <dl class="svninfo">
+          <dt>Rev</dt>
+          <dd><%= svninfo(klass)[:rev] %></dd>
+
+          <dt>Last Checked In</dt>
+          <dd><%= svninfo(klass)[:commitdate].strftime('%Y-%m-%d %H:%M:%S') %>
+            (<%= svninfo(klass)[:commitdelta] %> ago)</dd>
+
+          <dt>Checked in by</dt>
+          <dd><%= svninfo(klass)[:committer] %></dd>
+        </dl>
+      </div>
+    </div>
+    <% end %>
+
+    <% if $DEBUG_RDOC %>
+    <div id="debugging-toggle" class="section">
+      <img src="assets/img/bug.png" alt="toggle debugging" height="16" width="16" onclick="$('#rdoc-debugging-section-dump').toggle();" />
+    </div>
+    <% end %>
+  </div>
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  <% if $DEBUG_RDOC %>
+    <% require 'pp' %>
+    <pre><%= h klass.inspect %></pre>
+    <pre> prefix: <a href="<%= rel_prefix %>"><%= rel_prefix %></a></pre>
+  <% else %>
+    <p>Disabled; run with --debug to generate this.</p>
+  <% end %>
+  </div>
+
+</div>
+
+</body>
+</html>
+
