@@ -3,18 +3,9 @@ require 'ostruct'
 
 module WebRI
 
+  # Metadata mixin, needs #path_base.
   #
-  class Metadata < Component
-
-    #
-    def path
-      @path ||= Pathname.new(__FILE__).parent
-    end
-
-    #
-    def initialize_methods
-      provision :metadata    
-    end
+  module Metadata
 
     #
     def metadata
@@ -29,6 +20,8 @@ module WebRI
         pom = POM::Metadata.load(path_base)
         raise LoadError unless pom.name
         data.title       = pom.title
+        data.version     = pom.version
+        data.subtitle    = pom.subtitle
         data.homepage    = pom.homepage
         data.development = pom.development
         data.mailinglist = pom.mailinglist
@@ -40,6 +33,8 @@ module WebRI
         if file = Dir[path_base + '*.gemspec'].first
           gem = YAML.load(file)
           data.title       = gem.title
+          data.version     = gem.version
+          data.subtitle    = nil
           date.homepage    = gem.homepage
           data.mailinglist = gem.email
           date.development = nil # TODO: how to improve?
@@ -54,6 +49,7 @@ module WebRI
       return data
     end
 
+    #
     def scm
       Dir[File.join(path_base.to_s,"{.svn,.git}")].first
     end
