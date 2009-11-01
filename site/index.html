@@ -4,8 +4,8 @@
 <head>
   <title>WebRI</title>
 
-  <link href="style.css" rel="stylesheet" type="text/css"/>
-  <link href="img/ruby-sm.png" rel="icon"/>
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="assets/img/ruby-sm.png" rel="icon"/>
 
   <META NAME="DESCRIPTION" CONTENT="Web-based ri documentation browser.">
   <META NAME="KEYWORDS" CONTENT="documentation, ri, rdoc">
@@ -13,72 +13,126 @@
 
 <body>
 
+<div class="menu">
+  <!-- &lt;<a href="http://tigerops.rubyforge.org/">Homepage</a>&gt; -->
+  <a href="rdoc/index.html">API Documentation</a> &middot;
+  <a href="http://googlegroups.com/group/proutils">Mailing List</a> &middot;
+  <a href="http://github.com/proutils/webri">Development</a>
+</div>
+
+<div class="header">
+  <div class="title">WebRI</div>
+
+  <div class="subtitle">
+    Razzle Dazzle Your Document Hassle
+  </div>
+</div>
+
 <div class="container">
 
-  <div class="content">
 
-    <div class="header">
-      <div class="title">WebRI</div>
+  <div class="content" style="position: relative;">
 
-      <div class="about">
-        Browse Object Heirachies the Easy Way
-      </div>
-
-      <div class="warhol">
-      </div>
-    </div>
-
-    <div style="float: right; margin-top: -60px; padding: 10px; font-weight: bold; color: #222;">
-      A <a href="http://tigerops.org"><img src="img/tiger_logo.png" align="absmiddle"/></a> PROJECT
-    </div>
-
-    <div class="menu">
-      <!-- &lt;<a href="http://tigerops.rubyforge.org/">Homepage</a>&gt; -->
-      <a href="rdoc/index.html">Documentation</a> &middot;
-      <a href="http://rubyforge.org/frs/?group_id=6278">Download</a> &middot;
-      <a href="http://rubyforge.org/projects/webri">Development</a>
-    </div>
+    <img src="assets/img/onefish.jpg"/>
 
     <h2>Introduction</h2>
 
     <p>
-      WebRI can be used to browse the entire installed object system --eveything
-      documented in one of the central RI locations. Just run it from the command line.
+      WebRI is both a web-based ri-browser which can provided
+      ri documentation dynamically, by running a webrick server, and
+      a superalatvie Ruby documentation generator with a variety of
+      built in templates.
     </p>
+
+    <h3>FEATURES</h3>
+
+    <ul>
+    <li> WebRI provides Beautiful Templates, enhanced renditions of some of the best designs currently in use.</li>
+    <li> Variety of templates built-in, to meet a varitey of tastes and needs.</li>
+    <li> Under the hood, a component system allows geneators to be more easily extended.</li>
+    </ul>
+
+    <h3>LIMITATIONS</h3>
+
+    <p>Please note that the ri web server and the generation system
+    were developed separately, and are not well integrated.
+    For this reason (at the very least) the ri server cannot use
+    the templates available to the generators. If possible, a future
+    version will allow this.</p>
+
+    <br/><br/>
+
+    <img src="assets/img/twofish.jpg"/>
+
+    <h2>Let's Get Started...</h2>
+
+    <p>To install we recommend using RubyGems, which is of course straight forward:</p>
 
     <pre>
-      $ webri
+      $ sudo gem install webri
     </pre>
 
-    <p>
-      WebRI can also be used (and this is probably more useful) to browse per-project
-      RI documentation. Simply generate the RI docs by navigating to the projects
-      root directory and running:
-    </p>
+    <h3>Generate Documentation</h3>
+
+    <p>WebRI provides a <tt>webri</tt> executable you can use to generate
+    documentation. The interface is identical to <tt>rdoc</tt>. Use
+    the -T option to specify a template type.</p>
 
     <pre>
-      $ rdoc --ri --op "doc/ri" lib
+      $ webri -T redfish README lib/
     </pre>
 
-    <p>
-      Sometimes a package will include a convenience script for generating these.
-      Try running 'rake -T', or look for a 'script/' or 'task/' executable that does
-      the job. Usually the generated documentation is placed in either ri/ or doc/ri/.
-      I will use doc/ri/ in the following example, since that is my preference. Adjust
-      your directory as needed.
-    </p>
-
-    <p>
-      Now run:
-    </p>
+    <p>You can use <tt>rdoc</tt> command if you prefer (though in far
+    off future versions this may not be the case).</p>
 
     <pre>
-      $ webri doc/ri
+      $ rdoc -T redfish README lib/</p>
     </pre>
 
-    <p>
-      You will see a Webrick server start up, informing you of the port being used.
-    </p>
+    <p>WebRI extend RIDoc to recognize the templates that WebRI will handle
+    and transfers control to appropriate WebRI generator accordingly.</p>
+
+    <p>Here are samples of three of the built-in WebRI templates:</p>
+
+    <ul>
+    <li><a href="samples/redfish/index.html">RedFish</a></li>
+    <li><a href="samples/blackfish/index.html">BlackFish</a></li>
+    <li><a href="samples/longfish/index.html">LongFish</a></li>
+    </ul>
+
+    <h3>Using the Web Server</h3>
+
+    <p>WebRI can be used as a dynamic ri browser, either for a single project
+    or for a collection of libraries. Indeed, the WebRI server can be used
+    to browse the entire installed object system --eveything documented in
+    your central install locations. To do the later, simply execute
+    <tt>webri-server</tt> with no arguments and open a webrowser to 
+    the local port designated (see below).</p>
+
+    <pre>
+      $ webr-server
+    </pre>
+
+    <p>To browse per-project ri documentation, you will first need to locate
+    the project's ri files, either by locating them in your system installation
+    or by generating them for a project, which can be done using rdoc, eg.</p>
+
+    <pre>
+      $ rdoc --ri --op "doc/ri" lib/
+    </pre>
+
+    <p>Sometimes a package will include a convenience script for generating these.
+    Try running 'rake -T', or look for a 'script/' or 'task/' executable that does
+    the job. Usually the generated documentation is placed in either ri/ or doc/ri/.
+    I will use doc/ri/ in the following example, adjust your directory as needed.</p>
+
+    <p>With ri files loacted you can view them with:</p>
+
+    <pre>
+      $ webri-server doc/ri
+    </pre>
+
+    <p>You will see a Webrick server start up, informing you of the port being used.</p>
 
     <pre>
       [2008-03-28 12:11:16] INFO  WEBrick 1.3.1
@@ -86,64 +140,61 @@
       [2008-03-28 12:11:21] INFO  WEBrick::HTTPServer#start: pid=8870 port=8888
     </pre>
 
-    <p>
-      In this example we see the port is the default 8888. Simply open your browser and
-      navigate to:
-    </p>
+    <p>In this example we see the port is the default 8888. Simply open your browser and
+    navigate to:</p>
 
     <pre>
       http://localhost:8888/
     </pre>
 
-    <p>
-      On the left side of the screen you will see a navigation tree, and the right side
-      contans an infromation panel.
-    </p>
+    <p>On the left side of the screen you will see a navigation tree, and the right side
+    contans an infromation panel.</p>
 
+    <p>NOTE: Becuase <tt>ri</tt> itself isn't very fast, if you use WebRI against the
+    entire set of installed Ruby libraries it can take a few seconds to load up.
+    (Sure wish FastRI turned out for the better.)</p>
 
-    <h2>Installation</h2>
+    <br/><br/>
 
-    <p>
-      Installing the RubyGem is of course straight forward.
-    </p>
-
-    <pre>
-      sudo gem install webri
-    </pre>
-
-    <p>
-      Manual installation is provided via setup.rb.
-    </p>
-
+    <img src="assets/img/bluefish.jpg"/>
 
     <h2>Development</h2>
 
     <p>
-      WebRI is a <a href="http://tigerops.org">TigerOps</a> project. Developement is hosted
-      by Rubyforge <a href="http://rubyforge.org/projects/webri/">here</a>.
+      WebRI is a <a href="http://proutils.github.com">ProUtils</a> project. Developement is hosted
+      on GitHub in a <i>very techincally sophisticated</i> <a href="http://github.com/proutils/webri/">git repository</a>.
+      You can puruse the <a href="http://github.com/proutils/webri/">source code</a> there, and see just how
+      <i>ruby_way</i> it all is.
     </p>
-
-    <p>You can use gitweb to <a href="http://webri.rubyforge.org/git?p=webri.git;a=tree">browse the 'webri' repository</a>.</p>
 
     <p>To pull the 'webri' repository anonymously, use:</p>
 
     <pre>
-      git clone git://rubyforge.org/webri.git
+      git clone git://github.com/proutils/webri.git
     </pre>
 
-    <p>Developers: You can push to the 'webri' repository using:</p>
-
-    <pre>
-      gitosis@rubyforge.org:webri.git
-    </pre>
-
-    <p>Please contact <b>7rans</b> if you'd like to join the development team.</p>
-
+    <p>Please, if see any code that doesn't seem <i>ruby_way</i> enough, <b>fork it and fix it</b> or write up an d
+    <a href="http://">issue ticket</a>, or if all else fails, contact <a href="mailto:transfireATgmail.com">Trans</a>.</p>
   </div>
 
-  <br/><br/>
+  <br/><br/><br/>
+</div>
 
-  <div style="text-align: center; border-top: 1px solid #ccc; padding: 40px 0px;">
+<div class="footer">
+<div class="footer-wrapper" style="width: 730px; margin: 0 auto; padding-top: 40px;">
+  <div class="copyright" style="float: right; width: 300px;">
+    <a href="http://proutils.github.com"><img src="assets/img/proutils-d.png" style="margin: -15px 0 5px 0; height: 50px; text-align: right;"/></a><br/>
+    Project
+  </div>
+
+  <div class="copyright">
+    <span style="color: #EF0040;">WebRI</span>, Copyright (c) 2008, 2009 Thomas Sawyer
+    <br/>
+    <span style="color: #EF0040;">WebRI</span> is distributed under the terms of the Ruby license. <br/>
+    <br/><br/>
+  </div>
+
+  <div style="text-align: center; border: 1px solid #ccc; width: 730px; margin: 0 auto; height: 92px; padding: 0;">
     <script type="text/javascript"><!--
     google_ad_client = "pub-1126154564663472";
     /* TIGER 728x90 10/28/08 */
@@ -157,24 +208,7 @@
     </script>
     <!-- <iframe src="http://tigerops.org/assets/adverts/banner-900-1.html" scrolling="no"></frame> -->
   </div>
-
-
-  <div class="copyright">
-    <br/><br/>
-    <span style="color: #EF0040;">WebRi</span>, Copyright (c) 2008 Tiger Ops
-    <br/><br/>
-    WebRI is distributed under the terms of the Ruby license. <br/>
-    <br/><br/>
-    Other TigerOps Projects<br/><br/>
-    <a href="http://facets.rubyforge.org">Facets</a>  &middot;
-    <a href="http://quarry.rubyforge.org">Quarry</a> &middot;
-    <a href="http://reap.rubyforge.org">Reap</a> &middot;
-    <a href="http://stick.rubyforge.org">Stick</a> &middot;
-    <a href="http://english.rubyforge.org">English</a>
-  </div>
-
-  <br/><br/>
-
+</div>
 </div>
 
 </body>
