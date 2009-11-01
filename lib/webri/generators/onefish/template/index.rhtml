@@ -23,7 +23,7 @@
 	  font-size: 100%; vertical-align: baseline;
 	  background: transparent; }
   body { line-height: 1; }
-  ol, ul { list-style: none; }
+  /* ol, ul { list-style: none; } */
   blockquote, q { quotes: none; }
   blockquote:before, blockquote:after,
   q:before, q:after { content: ''; content: none; }
@@ -37,45 +37,53 @@
 </style>
 
 <style type="text/css">
+              body { font-size: 11pt; }
                  a { color: #303; text-decoration: underline; }
            a:hover { color: #777; text-decoration: underline; }
        body, td, p { font-family: "Bitstream Vera Sans", Verdana, Arial, Helvetica, sans-serif; background: #FFF; color: #222;  margin: 0px; font-size: small; }
-                 p { margin-top: 0.5em; margin-bottom: 0.5em; }
+                 p { margin-top: 0.5em; margin-bottom: 0.5em; line-height: 1.25em; }
+             ul,ol { margin-left: 2em; }
 
              #main { width: 1024px; margin: 0 auto; }
-          #content { margin: 2em; margin-left: 3.5em; margin-right: 3.5em; }
+          #content { margin: 2em 0; }
     #description p { margin-bottom: 0.5em; }
-     .sectiontitle { margin-top: 1em; margin-bottom: 1em; padding: 0.5em; padding-left: 1em; background: #EFEFEF; color: #555; font-weight: bold; font-size: 150%; }
+     .sectiontitle { margin-top: 1em; margin-bottom: 1em; padding: 0.5em; padding-left: 0; background: #FFFFFF; color: #555; font-weight: bold; font-size: 150%; }
           .attr-rw { padding-left: 1em; padding-right: 1em; text-align: center; color: #055; }
         .attr-name { font-weight: bold; }
-        .attr-desc { }
+        .attr-desc { padding-left: 2em; }
       .attr-desc p { margin-top: 0; }
        .attr-value { font-family: monospace; }
 .file-title-prefix { font-size: large; }
        .file-title { font-size: large; font-weight: bold; background: #CCC; color: #FFF; }
-           .banner { background: #ffffff; color: #222; border-bottom: 2px solid #99B; padding: 1em; }
+           .banner { background: #ffffff; color: #222; border-bottom: 1px solid #ccc; padding: 0; margin-top: 4em; }
         .banner td { background: transparent; color: #444; font-weight: bold; }
+       .header-top { font-size: 4em; font-weight: bold; margin: 3em 0 0.5em 0; text-transform: uppercase; color: #555; border-bottom: 1px solid #ccc; }
+        #header h1 { font-size: 5em; }
+           #footer { padding: 100px 0; color: #999; font-weight: bold; }
+              #toc { margin-top: 50px; }
 
                   h1 a, h2 a, .sectiontitle a { color: #404; text-decoration: none; }
 h1 a:hover, h2 a:hover, .sectiontitle a:hover { color: #333; }
 
-         .banner a { color: #DFD; }
-   .banner a:hover { color: #BFB; }
+         .banner a { color: #303; }
+   .banner a:hover { color: #777; }
        .dyn-source { display: none; background: #fffde8; color: #333; border: #ffe0bb dotted 1px; margin: 0.5em 2em 0.5em 2em; padding: 0.5em; }
   .dyn-source .cmt { color: #999; font-style: italic; }
    .dyn-source .kw { color: #070; font-weight: bold; }
-           .method { margin-left: 1em; margin-right: 1em; margin-bottom: 1em; }
-  .description pre { padding: 0.5em; border: #ffe0bb dotted 1px; background: #fffde8; }
-    .method .title { font-family: monospace; font-size: large; border-bottom: 1px dashed black; margin-bottom: 0.3em; margin-left: 0.5em; padding-bottom: 0.1em; color: #444; }
+           .method { margin-left: 0.5em; margin-right: 1em; margin-bottom: 1em; }
+      .method-list { margin-left: 1em; margin-right: 1em; margin-bottom: 1em; }
+  .description pre { padding: 0.5em; border: #ffe0bb dotted 1px; background: #ffffff; font-family: courier, monospace; }
+    .method .title { font-family: monospace; font-size: large; border-bottom: 1px dashed #ccc; margin-bottom: 0.3em; margin-left: 0.5em; padding-bottom: 0.1em; color: #444; }
+           .indent { margin-left: 1em; }
 
 .method .description, .method .sourcecode { margin-left: 1em; }
             .description p, .sourcecode p { margin-bottom: 0.5em; }
         .method .sourcecode p.source-link { text-indent: 0em; margin-top: 0.5em; }
 
       .method .aka { margin-top: 0.3em; margin-left: 1em; font-style: italic; text-indent: 2em; }
-                h1 { padding: 20px 30px; margin-left: -1.0em; font-size: 3em; font-weight: bold; color: #444; background: #EFEFEF; }
-                h2 { padding:0.5em 1em 0.5em 1em; margin-left:-1.5em; font-size:large; font-weight:bold; color:#666; background:#EFEFEF; }
-    h3, h4, h5, h6 { color: #440044; border-bottom: #5522bb solid 1px; }
+                h1 { padding: 20px 0; margin-left: -0.1em; font-size: 3em; font-weight: bold; color: #444; background: #FFFFFF; }
+                h2 { padding: 0.5em 0 0.5em 0em; margin: 1em 0 0 0; font-size:large; font-weight:bold; color:#666; background:#FFFFFF; }
+    h3, h4, h5, h6 { color: #440044; border-bottom: #5522bb solid 0px; margin-top: 1em; }
  .sourcecode > pre { padding: 0.5em; border: 1px dotted black; background: #FFE; }
                 dt { font-weight: bold }
                 dd { margin-bottom: 0.7em; }
@@ -99,18 +107,47 @@ h1 a:hover, h2 a:hover, .sectiontitle a:hover { color: #333; }
       </div>
       <div>
         <img src="assets/img/ruby_logo.png" align="left"/>
-        <h1><%= title %> v.<%= metadata.version %></h1>
+        <h1><%= title %> <% if metadata.version %>v.<%= metadata.version %><% end %></h1>
         <% if metadata.subtitle %>
           <h2><%= metadata.subtitle %></h2>
         <% end %>
-        <h2><span class="small"><%= copyright %></span></h1>
+        <h3><span class="small"><%= copyright %></span></h3>
       </div>
+    </div>
+
+    <div id="toc">
+      <h1>Table of Contents</h1>
+      <ul>
+        <li><h2>Information</h2>
+          <ul>
+            <% files_toplevel.each do |file| %>
+              <li><a href="#<%= h file.path %>"><%= h file.name %></a></li>
+            <% end %>
+          </ul>
+        </li>
+        <li><h2>Class &amp Modules</h2>
+          <ul>
+            <% classes.each do |klass| %>
+              <li><a href="#<%= h klass.path %>"><%= h klass.name %></a></li>
+            <% end %>
+          </ul>
+        </li>
+        <li><h2>Files</h2>
+          <ul>
+            <% (files - files_toplevel).each do |file| %>
+              <li><a href="#<%= h file.path %>"><%= h file.name %></a></li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
     </div>
 
     <!-- TOPLEVEL FILES -->
 
+    <div class="header header-top">Information</div>
+
     <% files_toplevel.each do |file| %>
-      <table border='0' cellpadding='0' cellspacing='0' width="100%" class='banner'>
+      <table id="<%= h file.path %>" border='0' cellpadding='0' cellspacing='0' width="100%" class='banner'>
         <tr><td>
           <table width="100%" border='0' cellpadding='0' cellspacing='0'><tr>
             <td class="file-title" colspan="2"><span class="file-title-prefix">File</span><br /><%= h file.name %></td>
@@ -136,8 +173,10 @@ h1 a:hover, h2 a:hover, .sectiontitle a:hover { color: #333; }
 
     <!-- CLASSES/MODULES -->
 
+    <div class="header header-top">Classes &amp; Modules</div>
+
     <% classes.each do |klass| %>
-      <table width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+      <table id="<%= h klass.path %>" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
           <tr>
               <td class="file-title"><span class="file-title-prefix"><%= klass.module? ? 'Module' : 'Class' %></span><br /><%= h klass.full_name %></td>
               <td align="right">
@@ -146,7 +185,7 @@ h1 a:hover, h2 a:hover, .sectiontitle a:hover { color: #333; }
                           <td>In:</td>
                           <td>
                               <% klass.in_files.each do |file| %>
-                              <a href="<%= "#{rel_prefix}/#{h file.path}" %>"><%= h file.absolute_name %></a>
+                              <a href="#<%= "#{h file.path}" %>"><%= h file.absolute_name %></a>
                               <% end  %>
                           </td>
                       </tr>
@@ -171,7 +210,37 @@ h1 a:hover, h2 a:hover, .sectiontitle a:hover { color: #333; }
       </div>
     <% end %>
 
-    <div class="slot">
+
+    <!-- REGULAR FILES -->
+
+    <div class="header header-top">Files</div>
+
+    <% (files - files_toplevel).each do |file| %>
+      <table id="<%= h file.path %>" border='0' cellpadding='0' cellspacing='0' width="100%" class='banner'>
+        <tr><td>
+          <table width="100%" border='0' cellpadding='0' cellspacing='0'><tr>
+            <td class="file-title" colspan="2"><span class="file-title-prefix">File</span><br /><%= h file.name %></td>
+            <td align="right">
+              <table border='0' cellspacing="0" cellpadding="2">
+                <tr>
+                  <td>Path:</td>
+                  <td><%= h file.relative_name %></td>
+                </tr>
+                <tr>
+                  <td>Modified:</td>
+                  <td><%= file.file_stat.mtime %></td>
+                </tr>
+              </table>
+            </td></tr>
+          </table>
+        </td></tr>
+      </table>
+      <div id="bodyContent">
+          <%= include_template 'context.rhtml', {:context => file, :rel_prefix => rel_prefix} %>
+      </div>
+    <% end %>
+
+    <div id="footer">
       <p>Generated with <a href="http://">WebRI OneFish</a> <%= WebRI::VERSION %></p>
     <div>
   </div>
