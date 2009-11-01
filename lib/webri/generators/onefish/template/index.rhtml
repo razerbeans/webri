@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+<title><%= title %></title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="icon" href="http://www.ruby-lang.org/favicon.ico" type="image/x-icon">
+
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+<!-- RESET -->
+<style type="text/css">
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, font, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td {
+	  margin: 0; padding: 0; border: 0; outline: 0;
+	  font-size: 100%; vertical-align: baseline;
+	  background: transparent; }
+  body { line-height: 1; }
+  ol, ul { list-style: none; }
+  blockquote, q { quotes: none; }
+  blockquote:before, blockquote:after,
+  q:before, q:after { content: ''; content: none; }
+  /* remember to define focus styles! */
+  :focus { outline: 0; }
+  /* remember to highlight inserts somehow! */
+  ins { text-decoration: none; }
+  del { text-decoration: line-through; }
+  /* tables still need 'cellspacing="0"' in the markup */
+  table { border-collapse: collapse; border-spacing: 0; }
+</style>
+
+<style type="text/css">
+                 a { color: #303; text-decoration: underline; }
+           a:hover { color: #777; text-decoration: underline; }
+       body, td, p { font-family: "Bitstream Vera Sans", Verdana, Arial, Helvetica, sans-serif; background: #FFF; color: #222;  margin: 0px; font-size: small; }
+                 p { margin-top: 0.5em; margin-bottom: 0.5em; }
+
+             #main { width: 1024px; margin: 0 auto; }
+          #content { margin: 2em; margin-left: 3.5em; margin-right: 3.5em; }
+    #description p { margin-bottom: 0.5em; }
+     .sectiontitle { margin-top: 1em; margin-bottom: 1em; padding: 0.5em; padding-left: 1em; background: #EFEFEF; color: #555; font-weight: bold; font-size: 150%; }
+          .attr-rw { padding-left: 1em; padding-right: 1em; text-align: center; color: #055; }
+        .attr-name { font-weight: bold; }
+        .attr-desc { }
+      .attr-desc p { margin-top: 0; }
+       .attr-value { font-family: monospace; }
+.file-title-prefix { font-size: large; }
+       .file-title { font-size: large; font-weight: bold; background: #CCC; color: #FFF; }
+           .banner { background: #ffffff; color: #222; border-bottom: 2px solid #99B; padding: 1em; }
+        .banner td { background: transparent; color: #444; font-weight: bold; }
+
+                  h1 a, h2 a, .sectiontitle a { color: #404; text-decoration: none; }
+h1 a:hover, h2 a:hover, .sectiontitle a:hover { color: #333; }
+
+         .banner a { color: #DFD; }
+   .banner a:hover { color: #BFB; }
+       .dyn-source { display: none; background: #fffde8; color: #333; border: #ffe0bb dotted 1px; margin: 0.5em 2em 0.5em 2em; padding: 0.5em; }
+  .dyn-source .cmt { color: #999; font-style: italic; }
+   .dyn-source .kw { color: #070; font-weight: bold; }
+           .method { margin-left: 1em; margin-right: 1em; margin-bottom: 1em; }
+  .description pre { padding: 0.5em; border: #ffe0bb dotted 1px; background: #fffde8; }
+    .method .title { font-family: monospace; font-size: large; border-bottom: 1px dashed black; margin-bottom: 0.3em; margin-left: 0.5em; padding-bottom: 0.1em; color: #444; }
+
+.method .description, .method .sourcecode { margin-left: 1em; }
+            .description p, .sourcecode p { margin-bottom: 0.5em; }
+        .method .sourcecode p.source-link { text-indent: 0em; margin-top: 0.5em; }
+
+      .method .aka { margin-top: 0.3em; margin-left: 1em; font-style: italic; text-indent: 2em; }
+                h1 { padding: 20px 30px; margin-left: -1.0em; font-size: 3em; font-weight: bold; color: #444; background: #EFEFEF; }
+                h2 { padding:0.5em 1em 0.5em 1em; margin-left:-1.5em; font-size:large; font-weight:bold; color:#666; background:#EFEFEF; }
+    h3, h4, h5, h6 { color: #440044; border-bottom: #5522bb solid 1px; }
+ .sourcecode > pre { padding: 0.5em; border: 1px dotted black; background: #FFE; }
+                dt { font-weight: bold }
+                dd { margin-bottom: 0.7em; }
+</style>
+
+</head>
+
+<body>
+<div id="screen">
+
+  <div id="tree">
+    <%= tree %>
+  </div>
+
+  <div style="clear: both;"></div>
+
+  <div id="main">
+
+    <div id="header">
+      <div class="small ad">
+      </div>
+      <div>
+        <img src="assets/img/ruby_logo.png" align="left"/>
+        <h1><%= title %> v.<%= metadata.version %></h1>
+        <% if metadata.subtitle %>
+          <h2><%= metadata.subtitle %></h2>
+        <% end %>
+        <h2><span class="small"><%= copyright %></span></h1>
+      </div>
+    </div>
+
+    <!-- TOPLEVEL FILES -->
+
+    <% files_toplevel.each do |file| %>
+      <table border='0' cellpadding='0' cellspacing='0' width="100%" class='banner'>
+        <tr><td>
+          <table width="100%" border='0' cellpadding='0' cellspacing='0'><tr>
+            <td class="file-title" colspan="2"><span class="file-title-prefix">File</span><br /><%= h file.name %></td>
+            <td align="right">
+              <table border='0' cellspacing="0" cellpadding="2">
+                <tr>
+                  <td>Path:</td>
+                  <td><%= h file.relative_name %></td>
+                </tr>
+                <tr>
+                  <td>Modified:</td>
+                  <td><%= file.file_stat.mtime %></td>
+                </tr>
+              </table>
+            </td></tr>
+          </table>
+        </td></tr>
+      </table>
+      <div id="bodyContent">
+          <%= include_template 'context.rhtml', {:context => file, :rel_prefix => rel_prefix} %>
+      </div>
+    <% end %>
+
+    <!-- CLASSES/MODULES -->
+
+    <% classes.each do |klass| %>
+      <table width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix"><%= klass.module? ? 'Module' : 'Class' %></span><br /><%= h klass.full_name %></td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              <% klass.in_files.each do |file| %>
+                              <a href="<%= "#{rel_prefix}/#{h file.path}" %>"><%= h file.absolute_name %></a>
+                              <% end  %>
+                          </td>
+                      </tr>
+                      <% if klass.type == 'class' %>
+                      <tr>
+                          <td>Parent:</td>
+                          <td>
+                              <% if String === klass.superclass %>
+                              <%= klass.superclass %>
+                              <% elsif !klass.superclass.nil? %>
+                              <a href="<%= klass.aref_to klass.superclass.path %>"><%= h klass.superclass.full_name %></a>
+                              <% end %>
+                          </td>
+                      </tr>
+                      <% end %>
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <%= include_template 'context.rhtml', {:context => klass, :rel_prefix => rel_prefix} %>
+      </div>
+    <% end %>
+
+    <div class="slot">
+      <p>Generated with <a href="http://">WebRI OneFish</a> <%= WebRI::VERSION %></p>
+    <div>
+  </div>
+
+</div>
+</body>
+</html>
+

@@ -29,7 +29,7 @@ begin
 
       def parse(argv)
         rdoc_parse(argv)
-        if %w{redfish twofish blackfish longfish}.include?(@template)
+        if %w{redfish twofish blackfish longfish onefish}.include?(@template)
           require "webri/generators/#{template}"
           @generator = WebRI.const_get(@template.capitalize)
         end
