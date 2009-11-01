@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: group unless group[:methods].size == 0
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "TODO: Does this belong here or in the quicksearch component?"
+full_name: WebRI::Blackfish#each_letter_group
+is_singleton: false
+name: each_letter_group
+params: (methods, &block) {|group unless group[:methods].size == 0| ...}
+visibility: public

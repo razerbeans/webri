@@ -1,0 +1,14 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Path to the static files. This should be defined in the subclass as:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: " def path\n  @path ||= Pathname.new(<em>FILE</em>).parent\n end\n"
+full_name: WebRI::Generator#path
+is_singleton: false
+name: path
+params: ()
+visibility: protected

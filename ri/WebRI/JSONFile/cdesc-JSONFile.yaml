@@ -1,0 +1,46 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "TODO: This component is not finished. The actual json produced needs to be fleshed out more, making sure we have all the data we want in there, and theat it is layedout in the optimal structure."
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "TODO: RDoc has some json related stuff going on. I found RDoc::TopLevel.json_creatable?, so maybe there's a much better wat to do this component."
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "TODO: This component is not finished. The actual json produced needs to be fleshed out more, making sure we have all the data we want in there, and theat it is layedout in the optimal structure."
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "TODO: RDoc has some json related stuff going on. I found RDoc::TopLevel.json_creatable?, so maybe there's a much better wat to do this component."
+constants: []
+
+full_name: WebRI::JSONFile
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: all_methods
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: class_tree
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: classes
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: file_tree
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: files
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_class_tree
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_class_tree_level
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_file_tree
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_file_tree_level
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: save_data
+name: JSONFile
+superclass: Component

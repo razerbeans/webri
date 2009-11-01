@@ -1,0 +1,43 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Longfish Template
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The Longfish tempolate is based on John Long's design of the ruby-lang.org website. It was built to supply Ruby core and stadard documentation with an &quot;offical&quot; look, but there's no reason you can't use it for your project too, if you prefer it.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Longfish Template
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The Longfish tempolate is based on John Long's design of the ruby-lang.org website. It was built to supply Ruby core and stadard documentation with an &quot;offical&quot; look, but there's no reason you can't use it for your project too, if you prefer it.
+constants: []
+
+full_name: WebRI::Longfish
+includes: 
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: GitHub
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: index_description
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: index_title
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: parse_index_header
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: site_community
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: site_homepage
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: site_news
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: site_repository
+name: Longfish
+superclass: Generator

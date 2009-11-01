@@ -7,8 +7,19 @@ class_methods:
 - !ruby/object:RDoc::RI::MethodSummary 
   name: path_to_entry
 comment: 
-constants: []
-
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: require 'webri/components/search' require 'webri/components/github'
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: " ---\n"
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: LOADPATH
+  value: File.dirname(__FILE__)
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: VERSION
+  value: "\"1.0.0\""
 full_name: WebRI
 includes: []
 

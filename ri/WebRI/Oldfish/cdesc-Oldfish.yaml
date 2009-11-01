@@ -1,0 +1,31 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Oldfish Template
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This is intended to house the original 4-pane RDoc template design, for no other reason than for prosterity.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "TODO: Do this."
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Oldfish Template
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This is intended to house the original 4-pane RDoc template design, for no other reason than for prosterity.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "TODO: Do this."
+constants: []
+
+full_name: WebRI::Oldfish
+includes: []
+
+instance_methods: []
+
+name: Oldfish
+superclass: Generator

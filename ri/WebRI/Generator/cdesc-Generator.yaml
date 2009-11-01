@@ -3,10 +3,54 @@ attributes:
 - !ruby/object:RDoc::RI::Attribute 
   comment: 
   - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Component instances.
+  name: components
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: User options from the command line.
+  name: options
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
     body: Directory in which to store generated html files
   name: output
   rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Current pathname.
+  name: path_base
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: The output path.
+  name: path_output
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Component provisions.
+  name: provisions
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: The template type selected to be generated.
+  name: template
+  rw: R
 class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: components
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: for
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: include
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: inherited
 - !ruby/object:RDoc::RI::MethodSummary 
   name: new
 comment: 
@@ -16,20 +60,148 @@ comment:
   width: 
 - !ruby/struct:RDoc::Markup::Flow::P 
   body: This is the static website generator.
-constants: []
-
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Directory where static assets are located in the template
+  name: DIR_ASSETS
+  value: "'assets'"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Directory where generated classes live relative to the root
+  name: DIR_CLASS
+  value: "'classes'"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Directory where generated files live relative to the root
+  name: DIR_FILE
+  value: "'files'"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: PATH
+  value: Pathname.new(File.join(LOADPATH, 'webri', 'generators'))
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Common template directory.
+  name: PATH_STATIC
+  value: PATH + 'abstract/static'
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Common template directory.
+  name: PATH_TEMPLATE
+  value: PATH + 'abstract/template'
 full_name: WebRI::Generator
-includes: []
-
+includes: 
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: Metadata
 instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: class_dir
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: classes
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: classes_hash
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: classes_salient
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: classes_toplevel
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: copyright
 - !ruby/object:RDoc::RI::MethodSummary 
   name: current_content
 - !ruby/object:RDoc::RI::MethodSummary 
+  name: debug_msg
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: erb_template
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: eval_template
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: file_dir
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: files
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: files_hash
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: files_toplevel
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: find_class_named
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: find_file_named
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: find_module_named
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: find_type_named
+- !ruby/object:RDoc::RI::MethodSummary 
   name: generate
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_classes
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_commons
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_components
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_files
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_index
 - !ruby/object:RDoc::RI::MethodSummary 
   name: generate_recurse
 - !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_setup
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_static
+- !ruby/object:RDoc::RI::MethodSummary 
   name: generate_support_files
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_template
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: index_file
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: initialize_components
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: initialize_methods
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: initialize_template
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: json_creatable?
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: methods_all
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: modules
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: modules_hash
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: modules_salient
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: modules_toplevel
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path_output_relative
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path_static
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path_template
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: provision
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: render_template
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: sort_salient
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: title
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: types
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: types_hash
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: types_salient
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: types_toplevel
 - !ruby/object:RDoc::RI::MethodSummary 
   name: write
 name: Generator

@@ -1,0 +1,62 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: []
+
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: []
+
+  name: SEARCH_INDEX_FILE
+  value: "'search_index.js'"
+- !ruby/object:RDoc::RI::Constant 
+  comment: []
+
+  name: SEARCH_TREE_FILE
+  value: "'search_tree.js'"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Used in js to reduce index sizes
+  name: TYPE_CLASS
+  value: "1"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: TYPE_FILE
+  value: "3"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: TYPE_METHOD
+  value: "2"
+full_name: WebRI::Search
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: add_class_search_index
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: add_file_search_index
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: add_method_search_index
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_file_tree
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_file_tree_level
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_search_index
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_search_tree
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_search_tree_level
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: search_string
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: snippet
+name: Search
+superclass: Component

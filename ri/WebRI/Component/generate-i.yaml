@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This is the method that is called by the generator, allowing the component in turn to generate the files it needs. By default this copies the components <tt>static</tt> directory.
+full_name: WebRI::Component#generate
+is_singleton: false
+name: generate
+params: ()
+visibility: public

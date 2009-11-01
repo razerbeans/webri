@@ -1,0 +1,16 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Copy static files to output. All the common static content is stored in the <tt>assets/</tt> directory. WebRI's <tt>assets/</tt> directory more or less follows an <em>Abbreviated Monash</em> convention:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  assets/\n    css/      &lt;- stylesheets\n    json/     &lt;- json data table (*maybe top level is better?)\n    img/      &lt;- images\n    inc/      &lt;- server-side includes\n    js/       &lt;- javascripts\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Components can utilize this method by providing a <tt>path</tt>.
+full_name: WebRI::Component#generate_static
+is_singleton: false
+name: generate_static
+params: ()
+visibility: public

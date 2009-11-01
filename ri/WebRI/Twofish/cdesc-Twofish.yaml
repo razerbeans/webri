@@ -1,0 +1,31 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Twofish Template
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The Twofish template is a two pane layout, providing a navigation pane on the left and a document pane to the right. The navigation pane presents a collapsable namespace tree which updates the document pane, an iframe, via targeted a href links.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Twofish Template
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The Twofish template is a two pane layout, providing a navigation pane on the left and a document pane to the right. The navigation pane presents a collapsable namespace tree which updates the document pane, an iframe, via targeted a href links.
+constants: []
+
+full_name: WebRI::Twofish
+includes: 
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: Subversion
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_html_tree
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: html_tree
+name: Twofish
+superclass: Generator

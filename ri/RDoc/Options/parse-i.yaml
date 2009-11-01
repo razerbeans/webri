@@ -1,0 +1,13 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: 
+- !ruby/object:RDoc::RI::AliasName 
+  name: rdoc_parse
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "FIXME: look up templates dynamically"
+full_name: RDoc::Options#parse
+is_singleton: false
+name: parse
+params: (argv)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: WebRI::JSONFile#generate_file_tree_level
+is_singleton: false
+name: generate_file_tree_level
+params: (path, file, tree)
+visibility: public

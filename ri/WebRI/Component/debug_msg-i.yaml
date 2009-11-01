@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Output progress information if rdoc debugging is enabled
+full_name: WebRI::Component#debug_msg
+is_singleton: false
+name: debug_msg
+params: (msg)
+visibility: public

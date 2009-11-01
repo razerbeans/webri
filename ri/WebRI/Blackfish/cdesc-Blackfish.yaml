@@ -1,0 +1,33 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Blackfish is based on Vladimir Kolesnikov's SDoc (Copyright (c) 2009 Vladimir Kolesnikov).
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The SDoc code base was helpful in understanding how to build an RDoc generator. It was convenient to keep a copy in with the WebRI code for reference. Later, it was easy enough to integrate it with the rest of WebRI (eg. splitting Search into a separate component), and so it has stayed as an alernate template with a few style modifications.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Blackfish is based on Vladimir Kolesnikov's SDoc (Copyright (c) 2009 Vladimir Kolesnikov).
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The SDoc code base was helpful in understanding how to build an RDoc generator. It was convenient to keep a copy in with the WebRI code for reference. Later, it was easy enough to integrate it with the rest of WebRI (eg. splitting Search into a separate component), and so it has stayed as an alernate template with a few style modifications.
+constants: []
+
+full_name: WebRI::Blackfish
+includes: 
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: GitHub
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: Search
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: each_letter_group
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: group_name
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path
+name: Blackfish
+superclass: WebRI::Generator

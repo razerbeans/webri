@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: WebRI::GitHub#github_url_cache
+is_singleton: false
+name: github_url_cache
+params: ()
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: WebRI::GitHub#path_relative_to_repository
+is_singleton: false
+name: path_relative_to_repository
+params: (path)
+visibility: protected

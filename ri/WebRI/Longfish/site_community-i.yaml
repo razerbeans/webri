@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: WebRI::Longfish#site_community
+is_singleton: false
+name: site_community
+params: ()
+visibility: public

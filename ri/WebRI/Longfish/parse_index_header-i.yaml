@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "TODO: Generalize for all generators (?)"
+full_name: WebRI::Longfish#parse_index_header
+is_singleton: false
+name: parse_index_header
+params: ()
+visibility: public

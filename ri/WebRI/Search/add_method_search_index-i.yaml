@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Add methods to search <tt>index</tt> array.
+full_name: WebRI::Search#add_method_search_index
+is_singleton: false
+name: add_method_search_index
+params: (index)
+visibility: public

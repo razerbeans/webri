@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Documented classes and modules sorted by salience first, then by name.
+full_name: WebRI::Generator#classes_salient
+is_singleton: false
+name: classes_salient
+params: ()
+visibility: public

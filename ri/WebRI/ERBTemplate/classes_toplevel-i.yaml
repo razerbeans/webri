@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: WebRI::ERBTemplate#classes_toplevel
+is_singleton: false
+name: classes_toplevel
+params: ()
+visibility: public

@@ -4,7 +4,7 @@ aliases: []
 block_params: 
 comment: 
 - !ruby/struct:RDoc::Markup::Flow::P 
-  body: Remove ri products.
+  body: Remove rdocs products.
 full_name: Syckle::Plugins::WebRI#clean
 is_singleton: false
 name: clean

@@ -1,0 +1,33 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: []
+
+constants: []
+
+full_name: WebRI::GitHub
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: commit_sha1
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: github_url
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: github_url_cache
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: in_dir
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: initialize_methods
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path_relative_to_repository
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path_to_git_dir
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: repository_url
+name: GitHub
+superclass: Component

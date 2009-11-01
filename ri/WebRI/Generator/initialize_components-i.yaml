@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: WebRI::Generator#initialize_components
+is_singleton: false
+name: initialize_components
+params: ()
+visibility: protected

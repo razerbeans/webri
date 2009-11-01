@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Path to static files. This is <tt>path + 'template'</tt>.
+full_name: WebRI::Generator#path_template
+is_singleton: false
+name: path_template
+params: ()
+visibility: protected

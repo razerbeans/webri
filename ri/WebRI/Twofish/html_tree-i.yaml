@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: WebRI::Twofish#html_tree
+is_singleton: false
+name: html_tree
+params: ()
+visibility: public

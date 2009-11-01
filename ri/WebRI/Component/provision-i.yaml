@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Provide a method interface(s) to the generator. This extends the generator's context with component methods. Since ERB templates are rendering in the generator scope, this is useful when a component needs to provide method access to templates.
+full_name: WebRI::Component#provision
+is_singleton: false
+name: provision
+params: (method, &block)
+visibility: public

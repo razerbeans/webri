@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Module: WebRI::Metadata</title>
+
+  
+    <link rel="SHORTCUT ICON" href="../../assets/img/module.png">
+  
+
+  <link type="text/css" rel="stylesheet" href="../../assets/css/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="../../assets/js/github.css" title="GitHub" />
+
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/darkfish.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/highlight.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
+</head>
+<body class="module">
+<div id="main">
+
+  <div class="head">
+    <h1>
+      
+        <img src="../../assets/img/module.png" align="absmiddle">&nbsp;
+      
+      <a href="../../index.html">WebRI</a>&nbsp;
+      <a href="/">WebRI::Metadata</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="../../files/lib/webri/generators/abstract/metadata_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/webri/generators/abstract/metadata.rb">lib/webri/generators/abstract/metadata.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+      <!-- TODO: generalize this for all SCMs -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li class="method"><a href="#M000047">#get_metadata</a></li>
+          
+          <li class="method"><a href="#M000046">#metadata</a></li>
+          
+          <li class="method"><a href="#M000049">#scm</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../files/lib/webri/components/search/static/assets/js/searchdoc_js.html">searchdoc.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/project_png.html">project.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/wrench_png.html">wrench.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/tree_bg_png.html">tree_bg.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/module_png.html">module.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/js/thickbox_js.html">thickbox.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/thickbox_js.html">thickbox.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/onefish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/context_rhtml.html">context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/js/ready_js.html">ready.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/apple-touch-icon_png.html">apple-touch-icon.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/alias_png.html">alias.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/components/search/static/panel_html.html">panel.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/plugin_png.html">plugin.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/favicon_ico.html">favicon.ico</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/js/jquery_js.html">jquery.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/dir_gif.html">dir.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/fade_png.html">fade.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/css/style_css.html">style.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/jquery_jam_js.html">jquery.jam.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/logo-background_jpg.html">logo-background.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/zoom_png.html">zoom.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/favicon_ico.html">favicon.ico</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/module_png.html">module.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/js/highlight_js.html">highlight.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/plugin_png.html">plugin.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/oldfish/TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/bg_top_gif.html">bg_top.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/arrows_png.html">arrows.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns_jpg.html">blue-columns.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/file_png.html">file.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/css/style1_css.html">style1.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_css.html">low.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/screen_css.html">screen.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/shared_css.html">shared.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/date_png.html">date.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/js/jquery_js.html">jquery.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/reset_css.html">reset.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/footer-background_jpg.html">footer-background.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/zoom_png.html">zoom.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/js/ri_jquery_js.html">ri.jquery.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/popup_css.html">popup.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/wrench_png.html">wrench.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/plugin_png.html">plugin.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/project_png.html">project.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/css/main_css.html">main.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/alias_png.html">alias.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-home-page_jpg.html">blue-columns-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/dir_gif.html">dir.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/templates/index_html.html">index.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/css/reset_css.html">reset.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/page_green_png.html">page_green.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/onefish/template/context_rhtml.html">context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/wrench_png.html">wrench.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/jquery_ri_js.html">jquery.ri.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/templates/index1_html.html">index1.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/high_css.html">high.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_vision_screen_css.html">low_vision_screen.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/site-links-background_gif.html">site-links-background.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/style_css.html">style.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/find_png.html">find.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/results_bg_png.html">results_bg.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/code-box-bottom-right_gif.html">code-box-bottom-right.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/README.html">README</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/file_context_rhtml.html">file_context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/file_png.html">file.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/date_png.html">date.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/original_html.html">original.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/js/main_js.html">main.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/date_png.html">date.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-top-home-page_jpg.html">blue-columns-top-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/components/github/static/assets/css/github_css.html">github.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/page_green_png.html">page_green.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/find_png.html">find.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_vision_shared_css.html">low_vision_shared.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/logo_gif.html">logo.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/alias_png.html">alias.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/singleton_png.html">singleton.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_vision_high_css.html">low_vision_high.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/download_gif.html">download.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/project_png.html">project.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/mod_ico.html">mod.ico</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/components/search/static/assets/css/panel_css.html">panel.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/class_context_rhtml.html">class_context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/print_css.html">print.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-bottom-home-page_jpg.html">blue-columns-bottom-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/file_png.html">file.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/code-box-top-left_gif.html">code-box-top-left.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/js/ready_js.html">ready.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/header-background_jpg.html">header-background.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/find_png.html">find.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/module_png.html">module.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+        
+          <li class="file"><a href="../../files/LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/check_png.html">check.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/page_green_png.html">page_green.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/shadow_jpg.html">shadow.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/js/main_js.html">main.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/style1_css.html">style1.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/columns_jpg.html">columns.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/zoom_png.html">zoom.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../../assets/img/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="../../classes/WebRI.html">WebRI</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Blackfish.html">WebRI::Blackfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Component.html">WebRI::Component</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/ERBTemplate.html">WebRI::ERBTemplate</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Generator.html">WebRI::Generator</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/GeneratorOne.html">WebRI::GeneratorOne</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/GitHub.html">WebRI::GitHub</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Heirarchy.html">WebRI::Heirarchy</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/JSONFile.html">WebRI::JSONFile</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Longfish.html">WebRI::Longfish</a></li>
+        
+          <li class="module"><a href="../../classes/WebRI/Metadata.html">WebRI::Metadata</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Newfish.html">WebRI::Newfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Oldfish.html">WebRI::Oldfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Onefish.html">WebRI::Onefish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Redfish.html">WebRI::Redfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/RiService.html">WebRI::RiService</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Search.html">WebRI::Search</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Search/FilesTree.html">WebRI::Search::FilesTree</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Server.html">WebRI::Server</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Subversion.html">WebRI::Subversion</a></li>
+        
+          <li class="module"><a href="../../classes/WebRI/TimeDelta.html">WebRI::TimeDelta</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Twofish.html">WebRI::Twofish</a></li>
+        
+          <li class="module"><a href="../../classes/RDoc.html">RDoc</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/AnyMethod.html">RDoc::AnyMethod</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/ClassModule.html">RDoc::ClassModule</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/Options.html">RDoc::Options</a></li>
+        
+          <li class="module"><a href="../../classes/RDoc/Parser.html">RDoc::Parser</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/Parser/C.html">RDoc::Parser::C</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/TopLevel.html">RDoc::TopLevel</a></li>
+        
+          <li class="class"><a href="../../classes/Object.html">Object</a></li>
+        
+          <li class="module"><a href="../../classes/OpEsc.html">OpEsc</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+    </div>
+
+    <div id="validator-badges">
+      
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="../../assets/img/check.png" alt="[Validate]" height="16" width="16" />
+      </div>
+      Generated with <a href="http://github.com/proutils/webri">WebRI Redfish</a> 1.0.0
+      <br/><br/>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+        <h1>Metadata</h1>
+      
+
+      <p>
+<a href="Metadata.html">Metadata</a> mixin, needs path_base.
+</p>
+
+    </div>
+
+    <!-- Constants -->
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="get-metadata-method" class="method-detail ">
+        <a name="M000047"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">get_metadata</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="get-metadata-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/metadata.rb, line 16</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_metadata</span>
+      <span class="ruby-identifier">data</span> = <span class="ruby-constant">OpenStruct</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-identifier">require</span> <span class="ruby-value str">'pom/metadata'</span>
+        <span class="ruby-identifier">pom</span> = <span class="ruby-constant">POM</span><span class="ruby-operator">::</span><span class="ruby-constant">Metadata</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">path_base</span>)
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">LoadError</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">pom</span>.<span class="ruby-identifier">name</span>
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">title</span>       = <span class="ruby-identifier">pom</span>.<span class="ruby-identifier">title</span>
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">version</span>     = <span class="ruby-identifier">pom</span>.<span class="ruby-identifier">version</span>
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">subtitle</span>    = <span class="ruby-keyword kw">nil</span> <span class="ruby-comment cmt">#pom.subtitle</span>
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">homepage</span>    = <span class="ruby-identifier">pom</span>.<span class="ruby-identifier">homepage</span>
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">development</span> = <span class="ruby-identifier">pom</span>.<span class="ruby-identifier">development</span>
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">mailinglist</span> = <span class="ruby-identifier">pom</span>.<span class="ruby-identifier">mailinglist</span>
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">forum</span>       = <span class="ruby-identifier">pom</span>.<span class="ruby-identifier">forum</span>
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">wiki</span>        = <span class="ruby-identifier">pom</span>.<span class="ruby-identifier">wiki</span>
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">blog</span>        = <span class="ruby-identifier">pom</span>.<span class="ruby-identifier">blog</span>
+        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">copyright</span>   = <span class="ruby-identifier">pom</span>.<span class="ruby-identifier">copyright</span>
+      <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">file</span> = <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">path_base</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'*.gemspec'</span>].<span class="ruby-identifier">first</span>
+          <span class="ruby-identifier">gem</span> = <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+          <span class="ruby-identifier">data</span>.<span class="ruby-identifier">title</span>       = <span class="ruby-identifier">gem</span>.<span class="ruby-identifier">title</span>
+          <span class="ruby-identifier">data</span>.<span class="ruby-identifier">version</span>     = <span class="ruby-identifier">gem</span>.<span class="ruby-identifier">version</span>
+          <span class="ruby-identifier">data</span>.<span class="ruby-identifier">subtitle</span>    = <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-identifier">date</span>.<span class="ruby-identifier">homepage</span>    = <span class="ruby-identifier">gem</span>.<span class="ruby-identifier">homepage</span>
+          <span class="ruby-identifier">data</span>.<span class="ruby-identifier">mailinglist</span> = <span class="ruby-identifier">gem</span>.<span class="ruby-identifier">email</span>
+          <span class="ruby-identifier">date</span>.<span class="ruby-identifier">development</span> = <span class="ruby-keyword kw">nil</span> <span class="ruby-comment cmt"># TODO: how to improve?</span>
+          <span class="ruby-identifier">data</span>.<span class="ruby-identifier">forum</span>       = <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-identifier">data</span>.<span class="ruby-identifier">wiki</span>        = <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-identifier">data</span>.<span class="ruby-identifier">blog</span>        = <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-identifier">data</span>.<span class="ruby-identifier">copyright</span>   = <span class="ruby-keyword kw">nil</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;No Metadata!&quot;</span>
+          <span class="ruby-comment cmt"># TODO: we may be able to develop some other hueristics here, but for now, nope.</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">data</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="metadata-method" class="method-detail ">
+        <a name="M000046"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">metadata</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="metadata-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/metadata.rb, line 11</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">metadata</span>
+      <span class="ruby-ivar">@metadata</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">get_metadata</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="scm-method" class="method-detail ">
+        <a name="M000049"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">scm</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="scm-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/metadata.rb, line 54</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scm</span>
+      <span class="ruby-constant">Dir</span>[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">path_base</span>.<span class="ruby-identifier">to_s</span>,<span class="ruby-value str">&quot;{.svn,.git}&quot;</span>)].<span class="ruby-identifier">first</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</main>
+</body>
+</html>
+

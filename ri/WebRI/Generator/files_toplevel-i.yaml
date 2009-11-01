@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "List of toplevel files. RDoc supplies this via the #generate method."
+full_name: WebRI::Generator#files_toplevel
+is_singleton: false
+name: files_toplevel
+params: ()
+visibility: public

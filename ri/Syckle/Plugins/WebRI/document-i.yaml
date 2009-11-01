@@ -4,9 +4,9 @@ aliases: []
 block_params: 
 comment: 
 - !ruby/struct:RDoc::Markup::Flow::P 
-  body: Generate ri documentation. This utilizes rdoc to produce the appropriate files.
+  body: "Generate Rdoc documentation. Settings are the same as the rdoc command's option, with two exceptions: <tt>inline</tt> for <tt>inline-source</tt> and <tt>output</tt> for <tt>op</tt>."
 full_name: Syckle::Plugins::WebRI#document
 is_singleton: false
 name: document
-params: ()
+params: (options=nil)
 visibility: public

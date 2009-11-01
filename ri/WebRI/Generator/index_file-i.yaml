@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "TODO: Make public?"
+full_name: WebRI::Generator#index_file
+is_singleton: false
+name: index_file
+params: ()
+visibility: protected

@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "TODO: options = { :verbose =&gt; $DEBUG_RDOC, :noop =&gt; $dryrun }"
+full_name: Object#fileutils
+is_singleton: false
+name: fileutils
+params: ()
+visibility: public

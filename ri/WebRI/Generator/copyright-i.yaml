@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "FIXME: Pull copyright from project."
+full_name: WebRI::Generator#copyright
+is_singleton: false
+name: copyright
+params: ()
+visibility: public

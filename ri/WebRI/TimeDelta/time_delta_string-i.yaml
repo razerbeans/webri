@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Return a string describing the amount of time in the given number of seconds in terms a human can understand easily.
+full_name: WebRI::TimeDelta#time_delta_string
+is_singleton: false
+name: time_delta_string
+params: (seconds)
+visibility: public

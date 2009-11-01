@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "In the world of the RDoc Generators #classes is the same as #all_classes_and_modules. Well, except that its sorted too. For classes sans modules, see #types."
+full_name: WebRI::Generator#classes
+is_singleton: false
+name: classes
+params: ()
+visibility: public

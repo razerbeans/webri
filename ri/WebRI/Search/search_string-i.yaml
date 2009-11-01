@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Build search index key.
+full_name: WebRI::Search#search_string
+is_singleton: false
+name: search_string
+params: (string)
+visibility: public

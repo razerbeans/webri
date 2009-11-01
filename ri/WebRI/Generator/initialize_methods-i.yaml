@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Overide this method to set up any rendering provisions.
+full_name: WebRI::Generator#initialize_methods
+is_singleton: false
+name: initialize_methods
+params: ()
+visibility: protected

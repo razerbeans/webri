@@ -1,0 +1,16 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Subcomponents use this to setup template provisions.
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  def initialize_methods\n    provide :svninfo\n  end\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "See the #provide method."
+full_name: WebRI::Component#initialize_methods
+is_singleton: false
+name: initialize_methods
+params: ()
+visibility: public

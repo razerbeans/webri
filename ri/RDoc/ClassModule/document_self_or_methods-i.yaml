@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: RDoc::ClassModule#document_self_or_methods
+is_singleton: false
+name: document_self_or_methods
+params: ()
+visibility: public

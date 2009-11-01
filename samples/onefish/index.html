@@ -1,0 +1,2386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+<title>Fish</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="icon" href="http://www.ruby-lang.org/favicon.ico" type="image/x-icon">
+
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+<!-- RESET -->
+<style type="text/css">
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, font, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td {
+	  margin: 0; padding: 0; border: 0; outline: 0;
+	  font-size: 100%; vertical-align: baseline;
+	  background: transparent; }
+  body { line-height: 1; }
+  /* ol, ul { list-style: none; } */
+  blockquote, q { quotes: none; }
+  blockquote:before, blockquote:after,
+  q:before, q:after { content: ''; content: none; }
+  /* remember to define focus styles! */
+  :focus { outline: 0; }
+  /* remember to highlight inserts somehow! */
+  ins { text-decoration: none; }
+  del { text-decoration: line-through; }
+  /* tables still need 'cellspacing="0"' in the markup */
+  table { border-collapse: collapse; border-spacing: 0; }
+</style>
+
+<style type="text/css">
+              body { font-size: 11pt; }
+                 a { color: #303; text-decoration: underline; }
+           a:hover { color: #777; text-decoration: underline; }
+       body, td, p { font-family: "Bitstream Vera Sans", Verdana, Arial, Helvetica, sans-serif; background: #FFF; color: #222;  margin: 0px; font-size: small; }
+                 p { margin-top: 0.5em; margin-bottom: 0.5em; line-height: 1.25em; }
+             ul,ol { margin-left: 2em; }
+
+             #main { width: 1024px; margin: 0 auto; }
+          #content { margin: 2em 0; }
+    #description p { margin-bottom: 0.5em; }
+     .sectiontitle { margin-top: 1em; margin-bottom: 1em; padding: 0.5em; padding-left: 0; background: #FFFFFF; color: #555; font-weight: bold; font-size: 150%; }
+          .attr-rw { padding-left: 1em; padding-right: 1em; text-align: center; color: #055; }
+        .attr-name { font-weight: bold; }
+        .attr-desc { padding-left: 2em; }
+      .attr-desc p { margin-top: 0; }
+       .attr-value { font-family: monospace; }
+.file-title-prefix { font-size: large; }
+       .file-title { font-size: large; font-weight: bold; background: #CCC; color: #FFF; }
+           .banner { background: #ffffff; color: #222; border-bottom: 1px solid #ccc; padding: 0; margin-top: 4em; }
+        .banner td { background: transparent; color: #444; font-weight: bold; }
+       .header-top { font-size: 4em; font-weight: bold; margin: 3em 0 0.5em 0; text-transform: uppercase; color: #555; border-bottom: 1px solid #ccc; }
+        #header h1 { font-size: 5em; }
+           #footer { padding: 100px 0; color: #999; font-weight: bold; }
+              #toc { margin-top: 50px; }
+
+                  h1 a, h2 a, .sectiontitle a { color: #404; text-decoration: none; }
+h1 a:hover, h2 a:hover, .sectiontitle a:hover { color: #333; }
+
+         .banner a { color: #303; }
+   .banner a:hover { color: #777; }
+       .dyn-source { display: none; background: #fffde8; color: #333; border: #ffe0bb dotted 1px; margin: 0.5em 2em 0.5em 2em; padding: 0.5em; }
+  .dyn-source .cmt { color: #999; font-style: italic; }
+   .dyn-source .kw { color: #070; font-weight: bold; }
+           .method { margin-left: 0.5em; margin-right: 1em; margin-bottom: 1em; }
+      .method-list { margin-left: 1em; margin-right: 1em; margin-bottom: 1em; }
+  .description pre { padding: 0.5em; border: #ffe0bb dotted 1px; background: #ffffff; font-family: courier, monospace; }
+    .method .title { font-family: monospace; font-size: large; border-bottom: 1px dashed #ccc; margin-bottom: 0.3em; margin-left: 0.5em; padding-bottom: 0.1em; color: #444; }
+           .indent { margin-left: 1em; }
+
+.method .description, .method .sourcecode { margin-left: 1em; }
+            .description p, .sourcecode p { margin-bottom: 0.5em; }
+        .method .sourcecode p.source-link { text-indent: 0em; margin-top: 0.5em; }
+
+      .method .aka { margin-top: 0.3em; margin-left: 1em; font-style: italic; text-indent: 2em; }
+                h1 { padding: 20px 0; margin-left: -0.1em; font-size: 3em; font-weight: bold; color: #444; background: #FFFFFF; }
+                h2 { padding: 0.5em 0 0.5em 0em; margin: 1em 0 0 0; font-size:large; font-weight:bold; color:#666; background:#FFFFFF; }
+    h3, h4, h5, h6 { color: #440044; border-bottom: #5522bb solid 0px; margin-top: 1em; }
+ .sourcecode > pre { padding: 0.5em; border: 1px dotted black; background: #FFE; }
+                dt { font-weight: bold }
+                dd { margin-bottom: 0.7em; }
+</style>
+
+</head>
+
+<body>
+<div id="screen">
+
+  <div id="tree">
+    
+  </div>
+
+  <div style="clear: both;"></div>
+
+  <div id="main">
+
+    <div id="header">
+      <div class="small ad">
+      </div>
+      <div>
+        <img src="assets/img/ruby_logo.png" align="left"/>
+        <h1>Fish v.1.0</h1>
+        
+        <h3><span class="small">&copy; 2009</span></h3>
+      </div>
+    </div>
+
+    <div id="toc">
+      <h1>Table of Contents</h1>
+      <ul>
+        <li><h2>Information</h2>
+          <ul>
+            
+              <li><a href="#files/demo/fish-sampler/README.html">README</a></li>
+            
+          </ul>
+        </li>
+        <li><h2>Class &amp Modules</h2>
+          <ul>
+            
+              <li><a href="#classes/FishSampler.html">FishSampler</a></li>
+            
+              <li><a href="#classes/FishSampler/BlueFish.html">BlueFish</a></li>
+            
+              <li><a href="#classes/FishSampler/Fish.html">Fish</a></li>
+            
+              <li><a href="#classes/FishSampler/ManEater.html">ManEater</a></li>
+            
+              <li><a href="#classes/FishSampler/NewFish.html">NewFish</a></li>
+            
+              <li><a href="#classes/FishSampler/OldFish.html">OldFish</a></li>
+            
+              <li><a href="#classes/FishSampler/RedFish.html">RedFish</a></li>
+            
+              <li><a href="#classes/FishSampler/Shark.html">Shark</a></li>
+            
+              <li><a href="#classes/Numeric.html">Numeric</a></li>
+            
+              <li><a href="#classes/Numeric/Multipliers.html">Multipliers</a></li>
+            
+          </ul>
+        </li>
+        <li><h2>Files</h2>
+          <ul>
+            
+              <li><a href="#files/demo/fish-sampler/lib/fish_rb.html">fish.rb</a></li>
+            
+              <li><a href="#files/demo/fish-sampler/lib/multipliers_rb.html">multipliers.rb</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- TOPLEVEL FILES -->
+
+    <div class="header header-top">Information</div>
+
+    
+      <table id="files/demo/fish-sampler/README.html" border='0' cellpadding='0' cellspacing='0' width="100%" class='banner'>
+        <tr><td>
+          <table width="100%" border='0' cellpadding='0' cellspacing='0'><tr>
+            <td class="file-title" colspan="2"><span class="file-title-prefix">File</span><br />README</td>
+            <td align="right">
+              <table border='0' cellspacing="0" cellpadding="2">
+                <tr>
+                  <td>Path:</td>
+                  <td>demo/fish-sampler/README</td>
+                </tr>
+                <tr>
+                  <td>Modified:</td>
+                  <td>Sat Oct 31 11:36:39 -0400 2009</td>
+                </tr>
+              </table>
+            </td></tr>
+          </table>
+        </td></tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <div class="description"><h1>WebRI Fish Sampler</h1>
+<ul>
+<li><a href="http://proutils.github.com/webri">proutils.github.com/webri</a>
+
+</li>
+<li><a href="http://github.com/proutils/webri">github.com/proutils/webri</a>
+
+</li>
+<li><a
+href="http://googlegroups/group/proutils">googlegroups/group/proutils</a>
+
+</li>
+</ul>
+<h2>DESCRIPTION</h2>
+<p>
+WebRI is both a dynamic web-based ri-browser which can provided ri
+documentation dynamically, by running a webrick server, and a superalatvie
+Ruby documentation generator with a variety of built in templates.
+</p>
+<h2>FEATURES</h2>
+<ul>
+<li>WebRI provides Beautiful Templates, enhanced renditions of some of the best
+designs currently in use.
+
+</li>
+<li>Variety of templates built-in, to meet a varitey of tastes and needs.
+
+</li>
+<li>Under the hood, a component system allows geneators to be more easily
+extended.
+
+</li>
+</ul>
+<h2>LIMITATIONS</h2>
+<p>
+Please note that the ri web server and the generation system were developed
+separately, and are not well integrated. For this reason (at the very
+least) the ri server cannot use the templates available to the generators.
+If possible, a future version will allow this.
+</p>
+<h2>USAGE SYNOPSIS</h2>
+<h3>Generate Documentation</h3>
+<p>
+WebRI provides a <tt>webri</tt> executable you can use to generate
+documentation. The interface is identical to <tt>rdoc</tt>. Use the -T
+option to specify a template type.
+</p>
+<pre>
+  $ webri -T redfish README lib/
+</pre>
+<p>
+You can use <tt>rdoc</tt> command if you prefer (though in far off future
+versions this may not be the case).
+</p>
+<pre>
+  $ rdoc -T redfish README lib/
+</pre>
+<p>
+WebRI extend RIDoc to recognize the templates that WebRI will handle and
+transfers control to appropriate WebRI generator accordingly.
+</p>
+<h3>Using the Web Server</h3>
+<p>
+WebRI can be used as a dynamic ri browser, either for a single project or
+for a collection of libraries. Indeed, the WebRI server can be used to
+browse the entire installed object system &#8212;eveything documented in
+your central install locations. To do the later, simply execute
+<tt>webri-server</tt> with no arguments and open a webrowser to the local
+port designated (see below).
+</p>
+<pre>
+  $ webr-server
+</pre>
+<p>
+To browse per-project ri documentation, you will first need to locate the
+project&#8217;s ri files, either by locating them in your system
+installation or by generating them for a project, which can be done using
+rdoc, eg.
+</p>
+<pre>
+  $ rdoc --ri --op &quot;doc/ri&quot; lib/
+</pre>
+<p>
+Sometimes a package will include a convenience script for generating these.
+Try running &#8216;rake -T&#8217;, or look for a &#8216;script/&#8217; or
+&#8216;task/&#8217; executable that does the job. Usually the generated
+documentation is placed in either ri/ or doc/ri/. I will use doc/ri/ in the
+following example, adjust your directory as needed.
+</p>
+<p>
+With ri files loacted you can view them with:
+</p>
+<pre>
+  $ webri-server doc/ri
+</pre>
+<p>
+You will see a Webrick server start up, informing you of the port being
+used.
+</p>
+<pre>
+  [2008-03-28 12:11:16] INFO  WEBrick 1.3.1
+  [2008-03-28 12:11:16] INFO  ruby 1.8.6 (2007-06-07) [x86_64-linux]
+  [2008-03-28 12:11:21] INFO  WEBrick::HTTPServer#start: pid=8870 port=8888
+</pre>
+<p>
+In this example we see the port is the default 8888. Simply open your
+browser and navigate to:
+</p>
+<pre>
+  http://localhost:8888/
+</pre>
+<p>
+On the left side of the screen you will see a navigation tree, and the
+right side contans an infromation panel.
+</p>
+<p>
+NOTE: Becuase <tt>ri</tt> itself isn&#8217;t very fast, if you use WebRI
+against the entire set of installed Ruby libraries it can take a few
+seconds to load up. (Sure wish FastRI turned out for the better.)
+</p>
+<h2>INSTALLATION</h2>
+<p>
+Installing via RubyGems is per the usual:
+</p>
+<pre>
+  $ sudo gem install webri
+</pre>
+<h2>COPYING</h2>
+<p>
+WebRI Copyright &#169; 2009 Thomas Sawyer, MIT License
+</p>
+<p>
+THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+</div>
+
+
+      </div>
+    
+
+    <!-- CLASSES/MODULES -->
+
+    <div class="header header-top">Classes &amp; Modules</div>
+
+    
+      <table id="classes/FishSampler.html" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix">Module</span><br />FishSampler</td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              
+                              <a href="#files/demo/fish-sampler/lib/fish_rb.html">demo/fish-sampler/lib/fish.rb</a>
+                              
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <div class="description"><h1><a href="FishSampler/Fish.html">Fish</a> Sampler</h1>
+<p>
+Let us review... Red fish, Blue fish, One fish, Two fish...
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+
+    
+    <div class="sectiontitle">Classes and Modules</div>
+    <ul>
+        
+        <li><span class="type">MODULE</span> <a href="#classes/FishSampler/ManEater.html">FishSampler::ManEater</a></li>
+        
+        <li><span class="type">CLASS</span> <a href="#classes/FishSampler/BlueFish.html">FishSampler::BlueFish</a></li>
+        
+        <li><span class="type">CLASS</span> <a href="#classes/FishSampler/Fish.html">FishSampler::Fish</a></li>
+        
+        <li><span class="type">CLASS</span> <a href="#classes/FishSampler/NewFish.html">FishSampler::NewFish</a></li>
+        
+        <li><span class="type">CLASS</span> <a href="#classes/FishSampler/OldFish.html">FishSampler::OldFish</a></li>
+        
+        <li><span class="type">CLASS</span> <a href="#classes/FishSampler/RedFish.html">FishSampler::RedFish</a></li>
+        
+        <li><span class="type">CLASS</span> <a href="#classes/FishSampler/Shark.html">FishSampler::Shark</a></li>
+        
+    </ul>
+    
+
+    
+    <div class="sectiontitle">Constants</div>
+    <table border='0' cellpadding='5' class="indent">
+        
+        <tr valign='top'>
+            <td class="attr-name">DEFALULT_QUALITIES</td>
+            <td>=</td>
+            <td class="attr-value">[ :scaly ]</td>
+        </tr>
+        
+        <tr valign='top'>
+            <td>&nbsp;</td>
+            <td colspan="2" class="attr-desc"><p>
+Every fish is scaly.
+</p>
+</td>
+        </tr>
+        
+        
+    </table>
+    
+
+    
+
+    
+    
+    
+</div>
+
+
+      </div>
+    
+      <table id="classes/FishSampler/BlueFish.html" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix">Class</span><br />FishSampler::BlueFish</td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              
+                              <a href="#files/demo/fish-sampler/lib/fish_rb.html">demo/fish-sampler/lib/fish.rb</a>
+                              
+                          </td>
+                      </tr>
+                      
+                      <tr>
+                          <td>Parent:</td>
+                          <td>
+                              
+                              Fish
+                              
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <div class="description"><h1>Blue <a href="Fish.html">Fish</a></h1>
+<p>
+Despite their name most Bluefish aren&#8217;t very blue.
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+        <div class="method-list">
+        
+          <a href="#M000003">initialize_qualities</a> &nbsp;
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="sectiontitle">Attributes</div>
+    <table border='0' cellpadding='5'>
+        
+        <tr valign='top'>
+            <td class='attr-rw'>
+                [RW]
+            </td>
+            <td class='attr-name'>qualities</td>
+            <td class='attr-desc'><p>
+List of various fish qualities.
+</p></td>
+        </tr>
+        
+    </table>
+    
+
+    
+    
+            <div class="sectiontitle">Instance Public methods</div>
+
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000003_source')" id="l_M000003_source">source</a>]</span>
+                    
+                    <a name="M000003"></a><b>initialize_qualities</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+New Blue <a href="Fish.html">Fish</a>
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000003_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/fish.rb, line 56</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_qualities</span>
+      <span class="ruby-keyword kw">super</span>
+      <span class="ruby-ivar">@qualties</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">:blue</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+    
+</div>
+
+
+      </div>
+    
+      <table id="classes/FishSampler/Fish.html" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix">Class</span><br />FishSampler::Fish</td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              
+                              <a href="#files/demo/fish-sampler/lib/fish_rb.html">demo/fish-sampler/lib/fish.rb</a>
+                              
+                          </td>
+                      </tr>
+                      
+                      <tr>
+                          <td>Parent:</td>
+                          <td>
+                              
+                              Object
+                              
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <h1>Fish</h1>
+      <div class="description"><p>
+A fish is any aquatic vertebrate animal that is typically ectothermic (or
+cold-blooded), covered with scales, and equipped with two sets of paired
+fins and several unpaired fins. <a href="Fish.html">Fish</a> are abundant
+in the sea and in fresh water, with species being known from mountain
+streams (e.g., char and gudgeon) as well as in the deepest depths of the
+ocean (e.g., gulpers and anglerfish).
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+        <div class="method-list">
+        
+          <a href="#M000001">initialize_qualities</a> &nbsp;
+        
+          <a href="#M000000">new</a> &nbsp;
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="sectiontitle">Attributes</div>
+    <table border='0' cellpadding='5'>
+        
+        <tr valign='top'>
+            <td class='attr-rw'>
+                [RW]
+            </td>
+            <td class='attr-name'>qualities</td>
+            <td class='attr-desc'><p>
+List of various fish qualities.
+</p></td>
+        </tr>
+        
+    </table>
+    
+
+    
+            <div class="sectiontitle">Class Public methods</div>
+
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000000_source')" id="l_M000000_source">source</a>]</span>
+                    
+                    <a name="M000000"></a><b>new</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+New <a href="Fish.html">Fish</a>
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000000_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/fish.rb, line 21</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+      <span class="ruby-ivar">@qualities</span> = <span class="ruby-constant">DEFALULT_QUALITIES</span>
+      <span class="ruby-identifier">initialize_qualities</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+    
+            <div class="sectiontitle">Instance Public methods</div>
+
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000001_source')" id="l_M000001_source">source</a>]</span>
+                    
+                    <a name="M000001"></a><b>initialize_qualities</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+Override to add qualties.
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000001_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/fish.rb, line 27</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_qualities</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+    
+</div>
+
+
+      </div>
+    
+      <table id="classes/FishSampler/ManEater.html" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix">Module</span><br />FishSampler::ManEater</td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              
+                              <a href="#files/demo/fish-sampler/lib/fish_rb.html">demo/fish-sampler/lib/fish.rb</a>
+                              
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <h1>ManEater</h1>
+      <div class="description"><p>
+Some fish will eat a man!
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+        <div class="method-list">
+        
+          <a href="#M000006">initialize_qualities</a> &nbsp;
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+            <div class="sectiontitle">Instance Public methods</div>
+
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000006_source')" id="l_M000006_source">source</a>]</span>
+                    
+                    <a name="M000006"></a><b>initialize_qualities</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+Man Eaters are scary!
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000006_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/fish.rb, line 89</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_qualities</span>
+      <span class="ruby-keyword kw">super</span>
+      <span class="ruby-ivar">@qualties</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">:scary</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+    
+</div>
+
+
+      </div>
+    
+      <table id="classes/FishSampler/NewFish.html" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix">Class</span><br />FishSampler::NewFish</td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              
+                              <a href="#files/demo/fish-sampler/lib/fish_rb.html">demo/fish-sampler/lib/fish.rb</a>
+                              
+                          </td>
+                      </tr>
+                      
+                      <tr>
+                          <td>Parent:</td>
+                          <td>
+                              
+                              Fish
+                              
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <h1>NewFish</h1>
+      <div class="description"><p>
+It&#8217;s hard to tell new fish form small fish.
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+        <div class="method-list">
+        
+          <a href="#M000005">initialize_qualities</a> &nbsp;
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="sectiontitle">Attributes</div>
+    <table border='0' cellpadding='5'>
+        
+        <tr valign='top'>
+            <td class='attr-rw'>
+                [RW]
+            </td>
+            <td class='attr-name'>qualities</td>
+            <td class='attr-desc'><p>
+List of various fish qualities.
+</p></td>
+        </tr>
+        
+    </table>
+    
+
+    
+    
+            <div class="sectiontitle">Instance Public methods</div>
+
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000005_source')" id="l_M000005_source">source</a>]</span>
+                    
+                    <a name="M000005"></a><b>initialize_qualities</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+New <a href="NewFish.html">NewFish</a>
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000005_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/fish.rb, line 80</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_qualities</span>
+      <span class="ruby-keyword kw">super</span>
+      <span class="ruby-ivar">@qualties</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">:new</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+    
+</div>
+
+
+      </div>
+    
+      <table id="classes/FishSampler/OldFish.html" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix">Class</span><br />FishSampler::OldFish</td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              
+                              <a href="#files/demo/fish-sampler/lib/fish_rb.html">demo/fish-sampler/lib/fish.rb</a>
+                              
+                          </td>
+                      </tr>
+                      
+                      <tr>
+                          <td>Parent:</td>
+                          <td>
+                              
+                              Fish
+                              
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <h1>OldFish</h1>
+      <div class="description"><p>
+<a href="Fish.html">Fish</a> get old too.
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+        <div class="method-list">
+        
+          <a href="#M000004">initialize_qualities</a> &nbsp;
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="sectiontitle">Attributes</div>
+    <table border='0' cellpadding='5'>
+        
+        <tr valign='top'>
+            <td class='attr-rw'>
+                [RW]
+            </td>
+            <td class='attr-name'>qualities</td>
+            <td class='attr-desc'><p>
+List of various fish qualities.
+</p></td>
+        </tr>
+        
+    </table>
+    
+
+    
+    
+            <div class="sectiontitle">Instance Public methods</div>
+
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000004_source')" id="l_M000004_source">source</a>]</span>
+                    
+                    <a name="M000004"></a><b>initialize_qualities</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+New Old <a href="Fish.html">Fish</a>
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000004_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/fish.rb, line 68</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_qualities</span>
+      <span class="ruby-keyword kw">super</span>
+      <span class="ruby-ivar">@qualties</span> = <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">:old</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+    
+</div>
+
+
+      </div>
+    
+      <table id="classes/FishSampler/RedFish.html" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix">Class</span><br />FishSampler::RedFish</td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              
+                              <a href="#files/demo/fish-sampler/lib/fish_rb.html">demo/fish-sampler/lib/fish.rb</a>
+                              
+                          </td>
+                      </tr>
+                      
+                      <tr>
+                          <td>Parent:</td>
+                          <td>
+                              
+                              Object
+                              
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <div class="description"><h1>Brite Red <a href="Fish.html">Fish</a></h1>
+<p>
+Red fish are quite pretty a fairly common.
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+        <div class="method-list">
+        
+          <a href="#M000002">initialize_qualities</a> &nbsp;
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="sectiontitle">Attributes</div>
+    <table border='0' cellpadding='5'>
+        
+        <tr valign='top'>
+            <td class='attr-rw'>
+                [RW]
+            </td>
+            <td class='attr-name'>qualities</td>
+            <td class='attr-desc'><p>
+List of various fish qualities.
+</p></td>
+        </tr>
+        
+    </table>
+    
+
+    
+    
+            <div class="sectiontitle">Instance Public methods</div>
+
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000002_source')" id="l_M000002_source">source</a>]</span>
+                    
+                    <a name="M000002"></a><b>initialize_qualities</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+New Red <a href="Fish.html">Fish</a>
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000002_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/fish.rb, line 42</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_qualities</span>
+      <span class="ruby-keyword kw">super</span>
+      <span class="ruby-ivar">@qualties</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">:red</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+    
+</div>
+
+
+      </div>
+    
+      <table id="classes/FishSampler/Shark.html" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix">Class</span><br />FishSampler::Shark</td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              
+                              <a href="#files/demo/fish-sampler/lib/fish_rb.html">demo/fish-sampler/lib/fish.rb</a>
+                              
+                          </td>
+                      </tr>
+                      
+                      <tr>
+                          <td>Parent:</td>
+                          <td>
+                              
+                              Fish
+                              
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <div class="description"><h1><a href="Shark.html">Shark</a> (Yikes!)</h1>
+<p>
+Sharks (superorder Selachimorpha) are a type of fish with a full
+cartilaginous skeleton and a highly streamlined body. The earliest known
+sharks date from more than 420 million years ago, before the time of the
+dinosaurs.
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+        <div class="method-list">
+        
+          <a href="#M000007">initialize_qualities</a> &nbsp;
+        
+        </div>
+    
+
+    
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+        
+        <li>
+            
+            <a href="#classes/FishSampler.html">FishSampler</a>
+            
+        </li>
+        
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+            <div class="sectiontitle">Instance Public methods</div>
+
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000007_source')" id="l_M000007_source">source</a>]</span>
+                    
+                    <a name="M000007"></a><b>initialize_qualities</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+New <a href="Shark.html">Shark</a>
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000007_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/fish.rb, line 105</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_qualities</span>
+      <span class="ruby-keyword kw">super</span>
+      <span class="ruby-ivar">@qualties</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">:big</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+    
+</div>
+
+
+      </div>
+    
+      <table id="classes/Numeric.html" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix">Class</span><br />Numeric</td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              
+                              <a href="#files/demo/fish-sampler/lib/multipliers_rb.html">demo/fish-sampler/lib/multipliers.rb</a>
+                              
+                          </td>
+                      </tr>
+                      
+                      <tr>
+                          <td>Parent:</td>
+                          <td>
+                              
+                              Object
+                              
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <h1>Numeric</h1>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+        
+        <li>
+            
+            <a href="#classes/Numeric/Multipliers.html">Numeric::Multipliers</a>
+            
+        </li>
+        
+    </ul>
+    
+
+    
+
+    
+    <div class="sectiontitle">Classes and Modules</div>
+    <ul>
+        
+        <li><span class="type">MODULE</span> <a href="#classes/Numeric/Multipliers.html">Numeric::Multipliers</a></li>
+        
+    </ul>
+    
+
+    
+
+    
+
+    
+    
+    
+</div>
+
+
+      </div>
+    
+      <table id="classes/Numeric/Multipliers.html" width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+          <tr>
+              <td class="file-title"><span class="file-title-prefix">Module</span><br />Numeric::Multipliers</td>
+              <td align="right">
+                  <table cellspacing="0" cellpadding="2">
+                      <tr valign="top">
+                          <td>In:</td>
+                          <td>
+                              
+                              <a href="#files/demo/fish-sampler/lib/multipliers_rb.html">demo/fish-sampler/lib/multipliers.rb</a>
+                              
+                          </td>
+                      </tr>
+                      
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <div class="description"><h1><a href="Multipliers.html">Multipliers</a></h1>
+<p>
+Adds methods to <a href="../Numeric.html">Numeric</a> to make working with
+magnitudes (kilo, mega, giga, milli, micro, etc.)
+</p>
+<pre>
+  1.kilo               #=&gt; 1000
+  1.milli              #=&gt; 0.001
+  1.kibi               #=&gt; 1024
+</pre>
+<p>
+To display a value in a certain denomination, simply perform the inverse
+operation by placing the multiplier called on unit (1) in the denominator.
+</p>
+<pre>
+  1000 / 1.kilo        #=&gt; 1
+  1024 / 1.kibi        #=&gt; 1
+</pre>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+        <div class="method-list">
+        
+          <a href="#M000024">atto</a> &nbsp;
+        
+          <a href="#M000018">centi</a> &nbsp;
+        
+          <a href="#M000017">deci</a> &nbsp;
+        
+          <a href="#M000009">deka</a> &nbsp;
+        
+          <a href="#M000016">exa</a> &nbsp;
+        
+          <a href="#M000030">exbi</a> &nbsp;
+        
+          <a href="#M000023">femto</a> &nbsp;
+        
+          <a href="#M000027">gibi</a> &nbsp;
+        
+          <a href="#M000013">giga</a> &nbsp;
+        
+          <a href="#M000010">hecto</a> &nbsp;
+        
+          <a href="#M000025">kibi</a> &nbsp;
+        
+          <a href="#M000011">kilo</a> &nbsp;
+        
+          <a href="#M000026">mebi</a> &nbsp;
+        
+          <a href="#M000012">mega</a> &nbsp;
+        
+          <a href="#M000020">micro</a> &nbsp;
+        
+          <a href="#M000019">milli</a> &nbsp;
+        
+          <a href="#M000021">nano</a> &nbsp;
+        
+          <a href="#M000029">pebi</a> &nbsp;
+        
+          <a href="#M000015">peta</a> &nbsp;
+        
+          <a href="#M000022">pico</a> &nbsp;
+        
+          <a href="#M000028">tebi</a> &nbsp;
+        
+          <a href="#M000014">tera</a> &nbsp;
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+            <div class="sectiontitle">Instance Public methods</div>
+
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000024_source')" id="l_M000024_source">source</a>]</span>
+                    
+                    <a name="M000024"></a><b>atto</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000024_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 76</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">atto</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000018_source')" id="l_M000018_source">source</a>]</span>
+                    
+                    <a name="M000018"></a><b>centi</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000018_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 70</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">centi</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">100</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000017_source')" id="l_M000017_source">source</a>]</span>
+                    
+                    <a name="M000017"></a><b>deci</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+SI Fractional
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000017_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 69</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deci</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000009_source')" id="l_M000009_source">source</a>]</span>
+                    
+                    <a name="M000009"></a><b>deka</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+SI <a href="Multipliers.html">Multipliers</a>
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000009_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 58</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deka</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">10</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000016_source')" id="l_M000016_source">source</a>]</span>
+                    
+                    <a name="M000016"></a><b>exa</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000016_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 65</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exa</span>   ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000030_source')" id="l_M000030_source">source</a>]</span>
+                    
+                    <a name="M000030"></a><b>exbi</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000030_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 85</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exbi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">6</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000023_source')" id="l_M000023_source">source</a>]</span>
+                    
+                    <a name="M000023"></a><b>femto</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000023_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 75</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">femto</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000027_source')" id="l_M000027_source">source</a>]</span>
+                    
+                    <a name="M000027"></a><b>gibi</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000027_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 82</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gibi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">3</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000013_source')" id="l_M000013_source">source</a>]</span>
+                    
+                    <a name="M000013"></a><b>giga</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000013_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 62</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">giga</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000010_source')" id="l_M000010_source">source</a>]</span>
+                    
+                    <a name="M000010"></a><b>hecto</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000010_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 59</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hecto</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">100</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000025_source')" id="l_M000025_source">source</a>]</span>
+                    
+                    <a name="M000025"></a><b>kibi</b>()
+                    
+                </div>
+
+                
+                <div class="description">
+                  
+                  <p>
+SI Binary
+</p>
+
+                </div>
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000025_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 80</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kibi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000011_source')" id="l_M000011_source">source</a>]</span>
+                    
+                    <a name="M000011"></a><b>kilo</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000011_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 60</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kilo</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000026_source')" id="l_M000026_source">source</a>]</span>
+                    
+                    <a name="M000026"></a><b>mebi</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000026_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 81</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mebi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">2</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000012_source')" id="l_M000012_source">source</a>]</span>
+                    
+                    <a name="M000012"></a><b>mega</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000012_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 61</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mega</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000020_source')" id="l_M000020_source">source</a>]</span>
+                    
+                    <a name="M000020"></a><b>micro</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000020_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 72</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">micro</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000019_source')" id="l_M000019_source">source</a>]</span>
+                    
+                    <a name="M000019"></a><b>milli</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000019_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 71</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">milli</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000021_source')" id="l_M000021_source">source</a>]</span>
+                    
+                    <a name="M000021"></a><b>nano</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000021_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 73</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nano</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000029_source')" id="l_M000029_source">source</a>]</span>
+                    
+                    <a name="M000029"></a><b>pebi</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000029_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 84</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pebi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">5</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000015_source')" id="l_M000015_source">source</a>]</span>
+                    
+                    <a name="M000015"></a><b>peta</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000015_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 64</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">peta</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000022_source')" id="l_M000022_source">source</a>]</span>
+                    
+                    <a name="M000022"></a><b>pico</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000022_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 74</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pico</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000028_source')" id="l_M000028_source">source</a>]</span>
+                    
+                    <a name="M000028"></a><b>tebi</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000028_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 83</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tebi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">4</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    <span style="float: right; font-size: small;">[<a href="javascript:toggleSource('M000014_source')" id="l_M000014_source">source</a>]</span>
+                    
+                    <a name="M000014"></a><b>tera</b>()
+                    
+                </div>
+
+                
+
+                <!-- FIXME: Aliases seem to be out-to-lunch. -->
+                
+
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        
+                    </p>
+                    <div id="M000014_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 63</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tera</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+    
+</div>
+
+
+      </div>
+    
+
+
+    <!-- REGULAR FILES -->
+
+    <div class="header header-top">Files</div>
+
+    
+      <table id="files/demo/fish-sampler/lib/fish_rb.html" border='0' cellpadding='0' cellspacing='0' width="100%" class='banner'>
+        <tr><td>
+          <table width="100%" border='0' cellpadding='0' cellspacing='0'><tr>
+            <td class="file-title" colspan="2"><span class="file-title-prefix">File</span><br />fish.rb</td>
+            <td align="right">
+              <table border='0' cellspacing="0" cellpadding="2">
+                <tr>
+                  <td>Path:</td>
+                  <td>demo/fish-sampler/lib/fish.rb</td>
+                </tr>
+                <tr>
+                  <td>Modified:</td>
+                  <td>Sun Nov 01 12:24:18 -0500 2009</td>
+                </tr>
+              </table>
+            </td></tr>
+          </table>
+        </td></tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <div class="description"><h1>Fish Sampler</h1>
+<p>
+Let us review... Red fish, Blue fish, One fish, Two fish...
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+
+    
+    <div class="sectiontitle">Classes and Modules</div>
+    <ul>
+        
+        <li><span class="type">MODULE</span> <a href="#classes/FishSampler.html">FishSampler</a></li>
+        
+    </ul>
+    
+
+    
+
+    
+
+    
+    
+    
+</div>
+
+
+      </div>
+    
+      <table id="files/demo/fish-sampler/lib/multipliers_rb.html" border='0' cellpadding='0' cellspacing='0' width="100%" class='banner'>
+        <tr><td>
+          <table width="100%" border='0' cellpadding='0' cellspacing='0'><tr>
+            <td class="file-title" colspan="2"><span class="file-title-prefix">File</span><br />multipliers.rb</td>
+            <td align="right">
+              <table border='0' cellspacing="0" cellpadding="2">
+                <tr>
+                  <td>Path:</td>
+                  <td>demo/fish-sampler/lib/multipliers.rb</td>
+                </tr>
+                <tr>
+                  <td>Modified:</td>
+                  <td>Tue Oct 27 15:54:12 -0400 2009</td>
+                </tr>
+              </table>
+            </td></tr>
+          </table>
+        </td></tr>
+      </table>
+      <div id="bodyContent">
+          <div id="content">
+    <!-- DESCRIPTION -->
+    
+    
+      <div class="description"><h1>Multipliers</h1>
+<h2>Synopsis</h2>
+<p>
+Adds methods to <a href="../../../../classes/Numeric.html">Numeric</a> to
+make working with magnitudes (kilo, mega, giga, milli, micro, etc.)
+</p>
+<h2>History</h2>
+<pre>
+  Thanks to Rich Kilmer and bytes.rb which inspired this library.
+</pre>
+<h2>Notes</h2>
+<ul>
+<li>This library is not compatible with STICK&#8217;s units.rb (an spin-off of
+Facets old units.rb library). Do not attempt to use both at the same time.
+
+</li>
+</ul>
+<h2>Authors</h2>
+<ul>
+<li>Thomas Sawyer
+
+</li>
+</ul>
+<h2>Copying</h2>
+<p>
+Copyright &#169; 2005 Thomas Sawyer
+</p>
+<p>
+Ruby License
+</p>
+<p>
+This module is free software. You may use, modify, and/or redistribute this
+software under the same terms as Ruby.
+</p>
+<p>
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.
+</p>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+
+    
+    <div class="sectiontitle">Classes and Modules</div>
+    <ul>
+        
+        <li><span class="type">CLASS</span> <a href="#classes/Numeric.html">Numeric</a></li>
+        
+    </ul>
+    
+
+    
+
+    
+
+    
+    
+    
+</div>
+
+
+      </div>
+    
+
+    <div id="footer">
+      <p>Generated with <a href="http://">WebRI OneFish</a> 1.0.0</p>
+    <div>
+  </div>
+
+</div>
+</body>
+</html>
+

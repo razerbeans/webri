@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Components may need to define a method on the rendering context.
+full_name: WebRI::Generator#provision
+is_singleton: false
+name: provision
+params: (method, &block)
+visibility: public

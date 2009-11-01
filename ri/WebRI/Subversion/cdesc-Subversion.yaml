@@ -1,0 +1,27 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: []
+
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: []
+
+  name: SVNID_PATTERN
+  value: "/       \\$Id:\\s         (\\S+)\\s          # filename         (\\d+)\\s          # rev         (\\d{4}-\\d{2}-\\d{2})\\s  # Date (YYYY-MM-DD)         (\\d{2}:\\d{2}:\\d{2}Z)\\s  # Time (HH:MM:SSZ)         (\\w+)\\s           # committer       \\$$     /x"
+full_name: WebRI::Subversion
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: get_svninfo
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: initialize_methods
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: path
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: svninfo
+name: Subversion
+superclass: Component

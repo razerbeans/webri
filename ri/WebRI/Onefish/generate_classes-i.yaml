@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: WebRI::Onefish#generate_classes
+is_singleton: false
+name: generate_classes
+params: ()
+visibility: public

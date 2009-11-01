@@ -1,0 +1,24 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Onefishm as teh name suggests builds a single page.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Onefishm as teh name suggests builds a single page.
+constants: []
+
+full_name: WebRI::Onefish
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_classes
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: generate_files
+name: Onefish
+superclass: WebRI::Generator

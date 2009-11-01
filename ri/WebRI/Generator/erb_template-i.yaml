@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: WebRI::Generator#erb_template
+is_singleton: false
+name: erb_template
+params: ()
+visibility: protected

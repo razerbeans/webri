@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Let the components generate what they need. Iterates through each componenet and calls #generate."
+full_name: WebRI::Generator#generate_components
+is_singleton: false
+name: generate_components
+params: ()
+visibility: protected

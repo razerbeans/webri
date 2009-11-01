@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: WebRI::ERBTemplate</title>
+
+  
+    <link rel="SHORTCUT ICON" href="../../assets/img/class.png">
+  
+
+  <link type="text/css" rel="stylesheet" href="../../assets/css/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="../../assets/js/github.css" title="GitHub" />
+
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/darkfish.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/highlight.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
+</head>
+<body class="class">
+<div id="main">
+
+  <div class="head">
+    <h1>
+      
+        <img src="../../assets/img/class.png" align="absmiddle">&nbsp;
+      
+      <a href="../../index.html">WebRI</a>&nbsp;
+      <a href="/">WebRI::ERBTemplate</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="../../files/lib/webri/generators/abstract/erbtemplate_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/webri/generators/abstract/erbtemplate.rb">lib/webri/generators/abstract/erbtemplate.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+      <!-- TODO: generalize this for all SCMs -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        <ul>
+          
+          <!-- why was this class="link" ? -->
+          <li class="class"><a href="../Object.html">Object</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li class="method"><a href="#M000016">::new</a></li>
+          
+          <li class="method"><a href="#M000022">#class_dir</a></li>
+          
+          <li class="method"><a href="#M000024">#classes</a></li>
+          
+          <li class="method"><a href="#M000027">#classes_hash</a></li>
+          
+          <li class="method"><a href="#M000026">#classes_salient</a></li>
+          
+          <li class="method"><a href="#M000025">#classes_toplevel</a></li>
+          
+          <li class="method"><a href="#M000021">#copyright</a></li>
+          
+          <li class="method"><a href="#M000023">#file_dir</a></li>
+          
+          <li class="method"><a href="#M000037">#files</a></li>
+          
+          <li class="method"><a href="#M000039">#files_hash</a></li>
+          
+          <li class="method"><a href="#M000038">#files_toplevel</a></li>
+          
+          <li class="method"><a href="#M000040">#find_class_named</a></li>
+          
+          <li class="method"><a href="#M000043">#find_file_named</a></li>
+          
+          <li class="method"><a href="#M000041">#find_module_named</a></li>
+          
+          <li class="method"><a href="#M000042">#find_type_named</a></li>
+          
+          <li class="method"><a href="#M000018">#include_template</a></li>
+          
+          <li class="method"><a href="#M000044">#include_template</a></li>
+          
+          <li class="method"><a href="#M000045">#method_missing</a></li>
+          
+          <li class="method"><a href="#M000036">#methods_all</a></li>
+          
+          <li class="method"><a href="#M000028">#modules</a></li>
+          
+          <li class="method"><a href="#M000031">#modules_hash</a></li>
+          
+          <li class="method"><a href="#M000030">#modules_salient</a></li>
+          
+          <li class="method"><a href="#M000029">#modules_toplevel</a></li>
+          
+          <li class="method"><a href="#M000019">#options</a></li>
+          
+          <li class="method"><a href="#M000017">#render</a></li>
+          
+          <li class="method"><a href="#M000020">#title</a></li>
+          
+          <li class="method"><a href="#M000032">#types</a></li>
+          
+          <li class="method"><a href="#M000035">#types_hash</a></li>
+          
+          <li class="method"><a href="#M000034">#types_salient</a></li>
+          
+          <li class="method"><a href="#M000033">#types_toplevel</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li class="module"><span class="include">ERB::Util</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../files/lib/webri/components/search/static/assets/js/searchdoc_js.html">searchdoc.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/project_png.html">project.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/wrench_png.html">wrench.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/tree_bg_png.html">tree_bg.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/module_png.html">module.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/js/thickbox_js.html">thickbox.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/thickbox_js.html">thickbox.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/onefish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/context_rhtml.html">context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/js/ready_js.html">ready.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/apple-touch-icon_png.html">apple-touch-icon.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/alias_png.html">alias.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/components/search/static/panel_html.html">panel.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/plugin_png.html">plugin.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/favicon_ico.html">favicon.ico</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/js/jquery_js.html">jquery.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/dir_gif.html">dir.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/fade_png.html">fade.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/css/style_css.html">style.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/jquery_jam_js.html">jquery.jam.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/logo-background_jpg.html">logo-background.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/zoom_png.html">zoom.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/favicon_ico.html">favicon.ico</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/module_png.html">module.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/js/highlight_js.html">highlight.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/plugin_png.html">plugin.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/oldfish/TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/bg_top_gif.html">bg_top.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/arrows_png.html">arrows.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns_jpg.html">blue-columns.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/file_png.html">file.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/css/style1_css.html">style1.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_css.html">low.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/screen_css.html">screen.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/shared_css.html">shared.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/date_png.html">date.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/js/jquery_js.html">jquery.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/reset_css.html">reset.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/footer-background_jpg.html">footer-background.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/zoom_png.html">zoom.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/js/ri_jquery_js.html">ri.jquery.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/popup_css.html">popup.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/wrench_png.html">wrench.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/plugin_png.html">plugin.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/project_png.html">project.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/css/main_css.html">main.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/alias_png.html">alias.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-home-page_jpg.html">blue-columns-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/dir_gif.html">dir.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/templates/index_html.html">index.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/css/reset_css.html">reset.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/page_green_png.html">page_green.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/onefish/template/context_rhtml.html">context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/wrench_png.html">wrench.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/jquery_ri_js.html">jquery.ri.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/templates/index1_html.html">index1.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/high_css.html">high.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_vision_screen_css.html">low_vision_screen.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/site-links-background_gif.html">site-links-background.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/style_css.html">style.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/find_png.html">find.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/results_bg_png.html">results_bg.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/code-box-bottom-right_gif.html">code-box-bottom-right.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/README.html">README</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/file_context_rhtml.html">file_context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/file_png.html">file.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/date_png.html">date.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/original_html.html">original.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/js/main_js.html">main.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/date_png.html">date.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-top-home-page_jpg.html">blue-columns-top-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/components/github/static/assets/css/github_css.html">github.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/page_green_png.html">page_green.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/find_png.html">find.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_vision_shared_css.html">low_vision_shared.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/logo_gif.html">logo.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/alias_png.html">alias.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/singleton_png.html">singleton.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_vision_high_css.html">low_vision_high.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/download_gif.html">download.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/project_png.html">project.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/mod_ico.html">mod.ico</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/components/search/static/assets/css/panel_css.html">panel.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/class_context_rhtml.html">class_context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/print_css.html">print.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-bottom-home-page_jpg.html">blue-columns-bottom-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/file_png.html">file.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/code-box-top-left_gif.html">code-box-top-left.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/js/ready_js.html">ready.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/header-background_jpg.html">header-background.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/find_png.html">find.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/module_png.html">module.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+        
+          <li class="file"><a href="../../files/LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/check_png.html">check.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/page_green_png.html">page_green.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/shadow_jpg.html">shadow.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/js/main_js.html">main.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/style1_css.html">style1.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/columns_jpg.html">columns.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/zoom_png.html">zoom.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../../assets/img/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="../../classes/WebRI.html">WebRI</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Blackfish.html">WebRI::Blackfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Component.html">WebRI::Component</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/ERBTemplate.html">WebRI::ERBTemplate</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Generator.html">WebRI::Generator</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/GeneratorOne.html">WebRI::GeneratorOne</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/GitHub.html">WebRI::GitHub</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Heirarchy.html">WebRI::Heirarchy</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/JSONFile.html">WebRI::JSONFile</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Longfish.html">WebRI::Longfish</a></li>
+        
+          <li class="module"><a href="../../classes/WebRI/Metadata.html">WebRI::Metadata</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Newfish.html">WebRI::Newfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Oldfish.html">WebRI::Oldfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Onefish.html">WebRI::Onefish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Redfish.html">WebRI::Redfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/RiService.html">WebRI::RiService</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Search.html">WebRI::Search</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Search/FilesTree.html">WebRI::Search::FilesTree</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Server.html">WebRI::Server</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Subversion.html">WebRI::Subversion</a></li>
+        
+          <li class="module"><a href="../../classes/WebRI/TimeDelta.html">WebRI::TimeDelta</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Twofish.html">WebRI::Twofish</a></li>
+        
+          <li class="module"><a href="../../classes/RDoc.html">RDoc</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/AnyMethod.html">RDoc::AnyMethod</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/ClassModule.html">RDoc::ClassModule</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/Options.html">RDoc::Options</a></li>
+        
+          <li class="module"><a href="../../classes/RDoc/Parser.html">RDoc::Parser</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/Parser/C.html">RDoc::Parser::C</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/TopLevel.html">RDoc::TopLevel</a></li>
+        
+          <li class="class"><a href="../../classes/Object.html">Object</a></li>
+        
+          <li class="module"><a href="../../classes/OpEsc.html">OpEsc</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+    </div>
+
+    <div id="validator-badges">
+      
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="../../assets/img/check.png" alt="[Validate]" height="16" width="16" />
+      </div>
+      Generated with <a href="http://github.com/proutils/webri">WebRI Redfish</a> 1.0.0
+      <br/><br/>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+        <h1>ERBTemplate</h1>
+      
+
+      <p>
+<a href="ERBTemplate.html">ERBTemplate</a> is used by the generator to
+build template files. It has access to all the the <em>data methods</em> in
+the generator.
+</p>
+
+    </div>
+
+    <!-- Constants -->
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-class-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="new-method" class="method-detail ">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">new</span><span
+            class="method-args">(generator, provisions)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+New <a href="ERBTemplate.html">ERBTemplate</a> instance.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 15</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">generator</span>, <span class="ruby-identifier">provisions</span>)
+      <span class="ruby-ivar">@generator</span> = <span class="ruby-identifier">generator</span>
+      <span class="ruby-comment cmt"># add component provisions</span>
+      <span class="ruby-identifier">provisions</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+        (<span class="ruby-keyword kw">class</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>; <span class="ruby-keyword kw">self</span>; <span class="ruby-keyword kw">end</span>).<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
+          <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>){ <span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>) }
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="class-dir-method" class="method-detail ">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">class_dir</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="class-dir-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 60</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">class_dir</span> ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">class_dir</span> ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="classes-method" class="method-detail ">
+        <a name="M000024"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">classes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+classes and modules
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="classes-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 66</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">classes</span>                    ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">classes</span>                    ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="classes-hash-method" class="method-detail ">
+        <a name="M000027"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">classes_hash</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="classes-hash-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 69</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">classes_hash</span>               ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">classes_hash</span>               ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="classes-salient-method" class="method-detail ">
+        <a name="M000026"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">classes_salient</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="classes-salient-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 68</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">classes_salient</span>            ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">classes_salient</span>            ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="classes-toplevel-method" class="method-detail ">
+        <a name="M000025"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">classes_toplevel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="classes-toplevel-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 67</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">classes_toplevel</span>           ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">classes_toplevel</span>           ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="copyright-method" class="method-detail ">
+        <a name="M000021"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">copyright</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="copyright-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 58</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copyright</span> ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">copyright</span> ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="file-dir-method" class="method-detail ">
+        <a name="M000023"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">file_dir</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="file-dir-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 61</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_dir</span>  ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">file_dir</span>  ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="files-method" class="method-detail ">
+        <a name="M000037"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">files</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="files-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 87</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">files</span>                      ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">files</span>                      ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="files-hash-method" class="method-detail ">
+        <a name="M000039"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">files_hash</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="files-hash-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 89</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">files_hash</span>                 ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">files_hash</span>                 ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="files-toplevel-method" class="method-detail ">
+        <a name="M000038"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">files_toplevel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="files-toplevel-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 88</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">files_toplevel</span>             ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">files_toplevel</span>             ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="find-class-named-method" class="method-detail ">
+        <a name="M000040"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">find_class_named</span><span
+            class="method-args">(*a,&b)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="find-class-named-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 91</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_class_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)    ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">find_class_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)    ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="find-file-named-method" class="method-detail ">
+        <a name="M000043"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">find_file_named</span><span
+            class="method-args">(*a,&b)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="find-file-named-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 94</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_file_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)     ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">find_file_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)     ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="find-module-named-method" class="method-detail ">
+        <a name="M000041"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">find_module_named</span><span
+            class="method-args">(*a,&b)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="find-module-named-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 92</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_module_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)   ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">find_module_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)   ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="find-type-named-method" class="method-detail ">
+        <a name="M000042"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">find_type_named</span><span
+            class="method-args">(*a,&b)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="find-type-named-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 93</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_type_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)     ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">find_type_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)     ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="include-template-method" class="method-detail ">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">include_template</span><span
+            class="method-args">(*a,&b)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+FIXME: this probably goes not need to double dispatch via generator
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="include-template-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 52</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">include_template</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+      <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">include_template</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="include-template-method" class="method-detail ">
+        <a name="M000044"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">include_template</span><span
+            class="method-args">(template_name, local_assigns={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Load and render the erb template with the given <tt>template_name</tt>
+within current context. Adds all <tt>local_assigns</tt> to context
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="include-template-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 99</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">include_template</span>(<span class="ruby-identifier">template_name</span>, <span class="ruby-identifier">local_assigns</span>={})
+      <span class="ruby-comment cmt">#source = local_assigns.keys.map { |key| &quot;#{key} = local_assigns[:#{key}];&quot; }.join</span>
+      <span class="ruby-comment cmt">#eval(&quot;#{source}; templatefile = path_template + template_name;eval_template(templatefile, binding)&quot;)</span>
+      <span class="ruby-identifier">template_file</span> = <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">:path_template</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">template_name</span>
+      <span class="ruby-identifier">render</span>(<span class="ruby-identifier">template_file</span>, <span class="ruby-identifier">local_assigns</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="method-missing-method" class="method-detail ">
+        <a name="M000045"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">method_missing</span><span
+            class="method-args">(s, *a, &b)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="method-missing-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 108</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">s</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">a</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">s</span>)
+        <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">s</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">a</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="methods-all-method" class="method-detail ">
+        <a name="M000036"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">methods_all</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="methods-all-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 84</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">methods_all</span>                ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">methods_all</span>                ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="modules-method" class="method-detail ">
+        <a name="M000028"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">modules</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+just modules, no classes
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="modules-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 72</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modules</span>                    ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">modules</span>                    ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="modules-hash-method" class="method-detail ">
+        <a name="M000031"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">modules_hash</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="modules-hash-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 75</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modules_hash</span>               ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">modules_hash</span>               ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="modules-salient-method" class="method-detail ">
+        <a name="M000030"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">modules_salient</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="modules-salient-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 74</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modules_salient</span>            ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">modules_salient</span>            ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="modules-toplevel-method" class="method-detail ">
+        <a name="M000029"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">modules_toplevel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="modules-toplevel-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 73</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modules_toplevel</span>           ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">modulews_toplevel</span>          ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="options-method" class="method-detail ">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">options</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="options-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 56</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">options</span>   ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">options</span>   ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="render-method" class="method-detail ">
+        <a name="M000017"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">render</span><span
+            class="method-args">(template_file, local_assigns={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Render a template.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="render-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 27</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render</span>(<span class="ruby-identifier">template_file</span>, <span class="ruby-identifier">local_assigns</span>={})
+      <span class="ruby-identifier">template_source</span> = <span class="ruby-identifier">template_file</span>.<span class="ruby-identifier">read</span>
+      <span class="ruby-identifier">erb</span> = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">template_source</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-value str">'&lt;&gt;'</span>)
+      <span class="ruby-identifier">erb</span>.<span class="ruby-identifier">filename</span> = <span class="ruby-identifier">template_file</span>.<span class="ruby-identifier">to_s</span>
+
+      <span class="ruby-identifier">local_assigns</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+        (<span class="ruby-keyword kw">class</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>; <span class="ruby-keyword kw">self</span>; <span class="ruby-keyword kw">end</span>).<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
+          <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">key</span>){ <span class="ruby-identifier">val</span> }
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-identifier">erb_binding</span> = <span class="ruby-identifier">binding</span>
+        <span class="ruby-comment cmt">#eval code, b</span>
+        <span class="ruby-identifier">erb</span>.<span class="ruby-identifier">result</span>(<span class="ruby-identifier">erb_binding</span>)
+      <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">NoMethodError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-value str">&quot;Error while evaluating %s: %s (at %p)&quot;</span> <span class="ruby-operator">%</span> [
+          <span class="ruby-identifier">template_file</span>.<span class="ruby-identifier">to_s</span>,
+          <span class="ruby-identifier">err</span>.<span class="ruby-identifier">message</span>,
+          <span class="ruby-identifier">eval</span>(<span class="ruby-value str">&quot;_erbout[-50,50]&quot;</span>, <span class="ruby-identifier">erb_binding</span>)
+        ], <span class="ruby-identifier">err</span>.<span class="ruby-identifier">backtrace</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="title-method" class="method-detail ">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">title</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="title-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 57</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">title</span>     ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">title</span>     ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="types-method" class="method-detail ">
+        <a name="M000032"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">types</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+just classes w/o modules
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="types-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 78</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">types</span>                      ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">types</span>                      ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="types-hash-method" class="method-detail ">
+        <a name="M000035"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">types_hash</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="types-hash-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 81</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">types_hash</span>                 ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">types_hash</span>                 ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="types-salient-method" class="method-detail ">
+        <a name="M000034"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">types_salient</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="types-salient-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 80</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">types_salient</span>              ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">types_salient</span>              ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="types-toplevel-method" class="method-detail ">
+        <a name="M000033"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">types_toplevel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="types-toplevel-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/erbtemplate.rb, line 79</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">types_toplevel</span>             ; <span class="ruby-ivar">@generator</span>.<span class="ruby-identifier">types_toplevel</span>             ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</main>
+</body>
+</html>
+

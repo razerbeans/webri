@@ -1,0 +1,39 @@
+--- !ruby/object:RDoc::RI::ModuleDescription 
+attributes: []
+
+class_methods: []
+
+comment: []
+
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: DAYS
+  value: 24 * HOURS
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: HOURS
+  value: 60 * MINUTES
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: MINUTES
+  value: "60"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: MONTHS
+  value: 30 * DAYS
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: WEEKS
+  value: 7 * DAYS
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: YEARS
+  value: 365.25 * DAYS
+full_name: WebRI::TimeDelta
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: time_delta_string
+name: TimeDelta

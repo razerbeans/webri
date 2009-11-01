@@ -1,0 +1,20 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: 
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: children
+  rw: R
+class_methods: []
+
+comment: []
+
+constants: []
+
+full_name: WebRI::Search::FilesTree
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: add
+name: FilesTree
+superclass: Object

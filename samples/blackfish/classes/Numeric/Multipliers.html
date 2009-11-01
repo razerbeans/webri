@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Numeric::Multipliers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../assets/css/main.css" type="text/css" media="screen" />
+    <script src="../../assets/js/main.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>     
+    <table width="100%" border='0' cellpadding='0' cellspacing='0' class='banner'>
+        <tr>
+            <td class="file-title"><span class="file-title-prefix">Module</span><br />Numeric::Multipliers</td>
+            <td align="right">
+                <table cellspacing="0" cellpadding="2">
+                    <tr valign="top">
+                        <td>In:</td>
+                        <td>
+                            
+                            <a href="../../files/demo/fish-sampler/lib/multipliers_rb.html">demo/fish-sampler/lib/multipliers.rb</a>
+                            
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div id="bodyContent">
+        <div id="content">
+    
+    <div class="description"><h1><a href="Multipliers.html">Multipliers</a></h1>
+<p>
+Adds methods to <a href="../Numeric.html">Numeric</a> to make working with
+magnitudes (kilo, mega, giga, milli, micro, etc.)
+</p>
+<pre>
+  1.kilo               #=&gt; 1000
+  1.milli              #=&gt; 0.001
+  1.kibi               #=&gt; 1024
+</pre>
+<p>
+To display a value in a certain denomination, simply perform the inverse
+operation by placing the multiplier called on unit (1) in the denominator.
+</p>
+<pre>
+  1000 / 1.kilo        #=&gt; 1
+  1024 / 1.kibi        #=&gt; 1
+</pre>
+</div>
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+    <ul>
+        
+        <li><a href="#M000024">atto</a></li>
+        
+        <li><a href="#M000018">centi</a></li>
+        
+        <li><a href="#M000017">deci</a></li>
+        
+        <li><a href="#M000009">deka</a></li>
+        
+        <li><a href="#M000016">exa</a></li>
+        
+        <li><a href="#M000030">exbi</a></li>
+        
+        <li><a href="#M000023">femto</a></li>
+        
+        <li><a href="#M000027">gibi</a></li>
+        
+        <li><a href="#M000013">giga</a></li>
+        
+        <li><a href="#M000010">hecto</a></li>
+        
+        <li><a href="#M000025">kibi</a></li>
+        
+        <li><a href="#M000011">kilo</a></li>
+        
+        <li><a href="#M000026">mebi</a></li>
+        
+        <li><a href="#M000012">mega</a></li>
+        
+        <li><a href="#M000020">micro</a></li>
+        
+        <li><a href="#M000019">milli</a></li>
+        
+        <li><a href="#M000021">nano</a></li>
+        
+        <li><a href="#M000029">pebi</a></li>
+        
+        <li><a href="#M000015">peta</a></li>
+        
+        <li><a href="#M000022">pico</a></li>
+        
+        <li><a href="#M000028">tebi</a></li>
+        
+        <li><a href="#M000014">tera</a></li>
+        
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+            <div class="sectiontitle">Public Instance Methods</div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000024"></a><b>atto</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000024_source')" id="l_M000024_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L76" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000024_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 76</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">atto</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000018"></a><b>centi</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000018_source')" id="l_M000018_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L70" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000018_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 70</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">centi</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">100</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000017"></a><b>deci</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  
+                  <p>
+SI Fractional
+</p>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000017_source')" id="l_M000017_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L69" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000017_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 69</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deci</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000009"></a><b>deka</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  
+                  <p>
+SI <a href="Multipliers.html">Multipliers</a>
+</p>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000009_source')" id="l_M000009_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L58" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000009_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 58</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deka</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">10</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000016"></a><b>exa</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000016_source')" id="l_M000016_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L65" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000016_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 65</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exa</span>   ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000030"></a><b>exbi</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000030_source')" id="l_M000030_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L85" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000030_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 85</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exbi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">6</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000023"></a><b>femto</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000023_source')" id="l_M000023_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L75" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000023_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 75</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">femto</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000027"></a><b>gibi</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000027_source')" id="l_M000027_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L82" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000027_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 82</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gibi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">3</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000013"></a><b>giga</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000013_source')" id="l_M000013_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L62" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000013_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 62</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">giga</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000010"></a><b>hecto</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000010_source')" id="l_M000010_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L59" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000010_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 59</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hecto</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">100</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000025"></a><b>kibi</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  
+                  <p>
+SI Binary
+</p>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000025_source')" id="l_M000025_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L80" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000025_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 80</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kibi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000011"></a><b>kilo</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000011_source')" id="l_M000011_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L60" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000011_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 60</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kilo</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000026"></a><b>mebi</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000026_source')" id="l_M000026_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L81" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000026_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 81</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mebi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">2</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000012"></a><b>mega</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000012_source')" id="l_M000012_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L61" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000012_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 61</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mega</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000020"></a><b>micro</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000020_source')" id="l_M000020_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L72" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000020_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 72</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">micro</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000019"></a><b>milli</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000019_source')" id="l_M000019_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L71" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000019_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 71</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">milli</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000021"></a><b>nano</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000021_source')" id="l_M000021_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L73" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000021_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 73</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nano</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000029"></a><b>pebi</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000029_source')" id="l_M000029_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L84" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000029_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 84</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pebi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">5</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000015"></a><b>peta</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000015_source')" id="l_M000015_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L64" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000015_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 64</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">peta</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000022"></a><b>pico</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000022_source')" id="l_M000022_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L74" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000022_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 74</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pico</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000028"></a><b>tebi</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000028_source')" id="l_M000028_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L83" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000028_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 83</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tebi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">4</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title">
+                    
+                    <a name="M000014"></a><b>tera</b>()
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000014_source')" id="l_M000014_source">show</a>
+                        
+                        | <a href="http://github.com/proutils/webri/blob/eb3ae65820b01e0ec2aec9ccb9306df4d7e6eac0/demo/fish-sampler/lib/multipliers.rb#L63" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000014_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 63</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tera</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000000</span> ; <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+</div>
+
+    </div>
+  </body>
+</html>    

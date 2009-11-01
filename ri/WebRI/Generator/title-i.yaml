@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Get title from options or metadata.
+full_name: WebRI::Generator#title
+is_singleton: false
+name: title
+params: ()
+visibility: public

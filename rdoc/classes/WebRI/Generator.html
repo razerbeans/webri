@@ -1,0 +1,3102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: WebRI::Generator</title>
+
+  
+    <link rel="SHORTCUT ICON" href="../../assets/img/class.png">
+  
+
+  <link type="text/css" rel="stylesheet" href="../../assets/css/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="../../assets/js/github.css" title="GitHub" />
+
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/darkfish.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../assets/js/highlight.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
+</head>
+<body class="class">
+<div id="main">
+
+  <div class="head">
+    <h1>
+      
+        <img src="../../assets/img/class.png" align="absmiddle">&nbsp;
+      
+      <a href="../../index.html">WebRI</a>&nbsp;
+      <a href="/">WebRI::Generator</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="../../files/lib/webri/generators/abstract/generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/webri/generators/abstract/generator.rb">lib/webri/generators/abstract/generator.rb</a></li>
+          
+            <li class="file"><a href="../../files/lib/webri/server/generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/webri/server/generator.rb">lib/webri/server/generator.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+      <!-- TODO: generalize this for all SCMs -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        <ul>
+          
+          <li class="class">Server</li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li class="method"><a href="#M000052">::components</a></li>
+          
+          <li class="method"><a href="#M000053">::for</a></li>
+          
+          <li class="method"><a href="#M000051">::include</a></li>
+          
+          <li class="method"><a href="#M000050">::inherited</a></li>
+          
+          <li class="method"><a href="#M000202">::new</a></li>
+          
+          <li class="method"><a href="#M000082">::new</a></li>
+          
+          <li class="method"><a href="#M000077">#class_dir</a></li>
+          
+          <li class="method"><a href="#M000056">#classes</a></li>
+          
+          <li class="method"><a href="#M000059">#classes_hash</a></li>
+          
+          <li class="method"><a href="#M000058">#classes_salient</a></li>
+          
+          <li class="method"><a href="#M000057">#classes_toplevel</a></li>
+          
+          <li class="method"><a href="#M000055">#copyright</a></li>
+          
+          <li class="method"><a href="#M000209">#current_content</a></li>
+          
+          <li class="method"><a href="#M000102">#debug_msg</a></li>
+          
+          <li class="method"><a href="#M000101">#erb_template</a></li>
+          
+          <li class="method"><a href="#M000100">#eval_template</a></li>
+          
+          <li class="method"><a href="#M000078">#file_dir</a></li>
+          
+          <li class="method"><a href="#M000068">#files</a></li>
+          
+          <li class="method"><a href="#M000070">#files_hash</a></li>
+          
+          <li class="method"><a href="#M000069">#files_toplevel</a></li>
+          
+          <li class="method"><a href="#M000072">#find_class_named</a></li>
+          
+          <li class="method"><a href="#M000075">#find_file_named</a></li>
+          
+          <li class="method"><a href="#M000073">#find_module_named</a></li>
+          
+          <li class="method"><a href="#M000074">#find_type_named</a></li>
+          
+          <li class="method"><a href="#M000079">#generate</a></li>
+          
+          <li class="method"><a href="#M000203">#generate</a></li>
+          
+          <li class="method"><a href="#M000096">#generate_classes</a></li>
+          
+          <li class="method"><a href="#M000091">#generate_commons</a></li>
+          
+          <li class="method"><a href="#M000094">#generate_components</a></li>
+          
+          <li class="method"><a href="#M000095">#generate_files</a></li>
+          
+          <li class="method"><a href="#M000097">#generate_index</a></li>
+          
+          <li class="method"><a href="#M000204">#generate_recurse</a></li>
+          
+          <li class="method"><a href="#M000090">#generate_setup</a></li>
+          
+          <li class="method"><a href="#M000092">#generate_static</a></li>
+          
+          <li class="method"><a href="#M000207">#generate_support_files</a></li>
+          
+          <li class="method"><a href="#M000093">#generate_template</a></li>
+          
+          <li class="method"><a href="#M000098">#index_file</a></li>
+          
+          <li class="method"><a href="#M000085">#initialize_components</a></li>
+          
+          <li class="method"><a href="#M000084">#initialize_methods</a></li>
+          
+          <li class="method"><a href="#M000083">#initialize_template</a></li>
+          
+          <li class="method"><a href="#M000076">#json_creatable?</a></li>
+          
+          <li class="method"><a href="#M000071">#methods_all</a></li>
+          
+          <li class="method"><a href="#M000060">#modules</a></li>
+          
+          <li class="method"><a href="#M000063">#modules_hash</a></li>
+          
+          <li class="method"><a href="#M000062">#modules_salient</a></li>
+          
+          <li class="method"><a href="#M000061">#modules_toplevel</a></li>
+          
+          <li class="method"><a href="#M000086">#path</a></li>
+          
+          <li class="method"><a href="#M000089">#path_output_relative</a></li>
+          
+          <li class="method"><a href="#M000087">#path_static</a></li>
+          
+          <li class="method"><a href="#M000088">#path_template</a></li>
+          
+          <li class="method"><a href="#M000080">#provision</a></li>
+          
+          <li class="method"><a href="#M000099">#render_template</a></li>
+          
+          <li class="method"><a href="#M000081">#sort_salient</a></li>
+          
+          <li class="method"><a href="#M000054">#title</a></li>
+          
+          <li class="method"><a href="#M000064">#types</a></li>
+          
+          <li class="method"><a href="#M000067">#types_hash</a></li>
+          
+          <li class="method"><a href="#M000066">#types_salient</a></li>
+          
+          <li class="method"><a href="#M000065">#types_toplevel</a></li>
+          
+          <li class="method"><a href="#M000208">#write</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li class="module"><a class="include" href="TimeDelta.html">WebRI::TimeDelta</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../files/lib/webri/components/search/static/assets/js/searchdoc_js.html">searchdoc.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/project_png.html">project.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/wrench_png.html">wrench.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/tree_bg_png.html">tree_bg.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/module_png.html">module.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/js/thickbox_js.html">thickbox.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/thickbox_js.html">thickbox.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/onefish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/context_rhtml.html">context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/js/ready_js.html">ready.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/apple-touch-icon_png.html">apple-touch-icon.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/alias_png.html">alias.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/components/search/static/panel_html.html">panel.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/plugin_png.html">plugin.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/favicon_ico.html">favicon.ico</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/js/jquery_js.html">jquery.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/dir_gif.html">dir.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/fade_png.html">fade.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/css/style_css.html">style.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/jquery_jam_js.html">jquery.jam.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/logo-background_jpg.html">logo-background.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/zoom_png.html">zoom.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/favicon_ico.html">favicon.ico</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/module_png.html">module.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/js/highlight_js.html">highlight.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/plugin_png.html">plugin.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/oldfish/TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/bg_top_gif.html">bg_top.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/arrows_png.html">arrows.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns_jpg.html">blue-columns.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/file_png.html">file.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/css/style1_css.html">style1.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_css.html">low.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/screen_css.html">screen.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/shared_css.html">shared.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/date_png.html">date.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/js/jquery_js.html">jquery.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/reset_css.html">reset.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/footer-background_jpg.html">footer-background.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/zoom_png.html">zoom.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/js/ri_jquery_js.html">ri.jquery.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/popup_css.html">popup.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/wrench_png.html">wrench.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/plugin_png.html">plugin.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/project_png.html">project.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/css/main_css.html">main.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/alias_png.html">alias.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-home-page_jpg.html">blue-columns-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/dir_gif.html">dir.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/templates/index_html.html">index.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/css/reset_css.html">reset.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/page_green_png.html">page_green.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/onefish/template/context_rhtml.html">context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/wrench_png.html">wrench.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/jquery_ri_js.html">jquery.ri.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/templates/index1_html.html">index1.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/high_css.html">high.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_vision_screen_css.html">low_vision_screen.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/site-links-background_gif.html">site-links-background.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/style_css.html">style.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/find_png.html">find.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/img/results_bg_png.html">results_bg.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/code-box-bottom-right_gif.html">code-box-bottom-right.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/README.html">README</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/file_context_rhtml.html">file_context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/file_png.html">file.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/date_png.html">date.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/original_html.html">original.html</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/js/main_js.html">main.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/date_png.html">date.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-top-home-page_jpg.html">blue-columns-top-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/components/github/static/assets/css/github_css.html">github.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/page_green_png.html">page_green.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/find_png.html">find.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_vision_shared_css.html">low_vision_shared.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/logo_gif.html">logo.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/alias_png.html">alias.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/singleton_png.html">singleton.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/low_vision_high_css.html">low_vision_high.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/download_gif.html">download.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/project_png.html">project.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/mod_ico.html">mod.ico</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/components/search/static/assets/css/panel_css.html">panel.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/template/class_context_rhtml.html">class_context.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/css/print_css.html">print.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-bottom-home-page_jpg.html">blue-columns-bottom-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/file_png.html">file.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/server/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/code-box-top-left_gif.html">code-box-top-left.gif</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/js/ready_js.html">ready.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/header-background_jpg.html">header-background.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/find_png.html">find.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/module_png.html">module.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+        
+          <li class="file"><a href="../../files/LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/newfish/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/check_png.html">check.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/redfish/static/assets/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/page_green_png.html">page_green.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/shadow_jpg.html">shadow.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/blackfish/static/assets/js/main_js.html">main.js</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/css/style1_css.html">style1.css</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/longfish/static/assets/img/columns_jpg.html">columns.jpg</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/abstract/static/assets/img/zoom_png.html">zoom.png</a></li>
+        
+          <li class="file"><a href="../../files/lib/webri/generators/twofish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../../assets/img/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="../../classes/WebRI.html">WebRI</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Blackfish.html">WebRI::Blackfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Component.html">WebRI::Component</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/ERBTemplate.html">WebRI::ERBTemplate</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Generator.html">WebRI::Generator</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/GeneratorOne.html">WebRI::GeneratorOne</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/GitHub.html">WebRI::GitHub</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Heirarchy.html">WebRI::Heirarchy</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/JSONFile.html">WebRI::JSONFile</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Longfish.html">WebRI::Longfish</a></li>
+        
+          <li class="module"><a href="../../classes/WebRI/Metadata.html">WebRI::Metadata</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Newfish.html">WebRI::Newfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Oldfish.html">WebRI::Oldfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Onefish.html">WebRI::Onefish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Redfish.html">WebRI::Redfish</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/RiService.html">WebRI::RiService</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Search.html">WebRI::Search</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Search/FilesTree.html">WebRI::Search::FilesTree</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Server.html">WebRI::Server</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Subversion.html">WebRI::Subversion</a></li>
+        
+          <li class="module"><a href="../../classes/WebRI/TimeDelta.html">WebRI::TimeDelta</a></li>
+        
+          <li class="class"><a href="../../classes/WebRI/Twofish.html">WebRI::Twofish</a></li>
+        
+          <li class="module"><a href="../../classes/RDoc.html">RDoc</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/AnyMethod.html">RDoc::AnyMethod</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/ClassModule.html">RDoc::ClassModule</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/Options.html">RDoc::Options</a></li>
+        
+          <li class="module"><a href="../../classes/RDoc/Parser.html">RDoc::Parser</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/Parser/C.html">RDoc::Parser::C</a></li>
+        
+          <li class="class"><a href="../../classes/RDoc/TopLevel.html">RDoc::TopLevel</a></li>
+        
+          <li class="class"><a href="../../classes/Object.html">Object</a></li>
+        
+          <li class="module"><a href="../../classes/OpEsc.html">OpEsc</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+    </div>
+
+    <div id="validator-badges">
+      
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="../../assets/img/check.png" alt="[Validate]" height="16" width="16" />
+      </div>
+      Generated with <a href="http://github.com/proutils/webri">WebRI Redfish</a> 1.0.0
+      <br/><br/>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+        <h1>Generator</h1>
+      
+
+      <p>
+This is the static website generator.
+</p>
+
+    </div>
+
+    <!-- Constants -->
+    
+    <div id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt><a name="PATH">PATH</a></dt>
+        
+        <dd class="description missing-docs">(Not documented)</dd>
+        
+      
+        <dt><a name="PATH_STATIC">PATH_STATIC</a></dt>
+        
+        <dd class="description"><p>
+Common template directory.
+</p></dd>
+        
+      
+        <dt><a name="PATH_TEMPLATE">PATH_TEMPLATE</a></dt>
+        
+        <dd class="description"><p>
+Common template directory.
+</p></dd>
+        
+      
+        <dt><a name="DIR_CLASS">DIR_CLASS</a></dt>
+        
+        <dd class="description"><p>
+Directory where generated classes live relative to the root
+</p></dd>
+        
+      
+        <dt><a name="DIR_FILE">DIR_FILE</a></dt>
+        
+        <dd class="description"><p>
+Directory where generated files live relative to the root
+</p></dd>
+        
+      
+        <dt><a name="DIR_ASSETS">DIR_ASSETS</a></dt>
+        
+        <dd class="description"><p>
+Directory where static assets are located in the template
+</p></dd>
+        
+      
+      </dl>
+    </div>
+    
+
+    <!-- Attributes -->
+    
+    <div id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="options-attribute-method" class="method-detail">
+        <a name="options"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">options</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+User options from the command line.
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="components-attribute-method" class="method-detail">
+        <a name="components"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">components</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+<a href="Component.html">Component</a> instances.
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="provisions-attribute-method" class="method-detail">
+        <a name="provisions"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">provisions</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+<a href="Component.html">Component</a> provisions.
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="template-attribute-method" class="method-detail">
+        <a name="template"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">template</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+The template type selected to be generated.
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="path-base-attribute-method" class="method-detail">
+        <a name="path_base"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">path_base</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+Current pathname.
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="path-output-attribute-method" class="method-detail">
+        <a name="path_output"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">path_output</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+The output path.
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="output-attribute-method" class="method-detail">
+        <a name="output"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">output</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+Directory in which to store generated html files
+</p>
+        
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- Methods -->
+    
+    <div id="public-class-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="components-method" class="method-detail ">
+        <a name="M000052"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">components</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="components-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 86</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">components</span>
+      <span class="ruby-ivar">@components</span> <span class="ruby-operator">||=</span> []
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="for-method" class="method-detail ">
+        <a name="M000053"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">for</span><span
+            class="method-args">(options)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Standard generator factory method.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="for-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 92</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-keyword kw">for</span>(<span class="ruby-identifier">options</span>)
+      <span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="include-method" class="method-detail ">
+        <a name="M000051"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">include</span><span
+            class="method-args">(*mods)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="include-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 78</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">include</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">mods</span>)
+      <span class="ruby-identifier">comps</span>, <span class="ruby-identifier">mods</span> = <span class="ruby-operator">*</span><span class="ruby-identifier">mods</span>.<span class="ruby-identifier">partition</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">m</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Component</span> }
+      <span class="ruby-identifier">components</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">comps</span>)
+      <span class="ruby-keyword kw">super</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">mods</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="inherited-method" class="method-detail ">
+        <a name="M000050"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">inherited</span><span
+            class="method-args">(base)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+::RDoc::RDoc.add_generator(self)
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="inherited-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 72</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">inherited</span>(<span class="ruby-identifier">base</span>)
+      <span class="ruby-operator">::</span><span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">RDoc</span>.<span class="ruby-identifier">add_generator</span>(<span class="ruby-identifier">base</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="new-method" class="method-detail ">
+        <a name="M000202"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">new</span><span
+            class="method-args">(service, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server/generator.rb, line 19</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">service</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">service</span>, <span class="ruby-identifier">options</span>)
+      <span class="ruby-comment cmt">#@cgi = {} #CGI.new('html4')</span>
+      <span class="ruby-comment cmt">#@service = service</span>
+      <span class="ruby-ivar">@directory_depth</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="new-method" class="method-detail ">
+        <a name="M000082"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">new</span><span
+            class="method-args">(options)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Initialization
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 325</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span>)
+      <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">options</span>
+      <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">diagram</span> = <span class="ruby-keyword kw">false</span>  <span class="ruby-comment cmt"># why?</span>
+
+      <span class="ruby-ivar">@path_base</span>   = <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">pwd</span>.<span class="ruby-identifier">expand_path</span>
+      <span class="ruby-ivar">@path_output</span> = <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@options</span>.<span class="ruby-identifier">op_dir</span>).<span class="ruby-identifier">expand_path</span>(<span class="ruby-ivar">@path_base</span>)
+
+      <span class="ruby-ivar">@provisions</span> = {}
+
+      <span class="ruby-identifier">initialize_template</span>
+      <span class="ruby-identifier">initialize_methods</span>
+      <span class="ruby-identifier">initialize_components</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="class-dir-method" class="method-detail ">
+        <a name="M000077"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">class_dir</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+<a href="../RDoc.html">RDoc</a> needs this to function. ?
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="class-dir-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 258</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">class_dir</span> ; <span class="ruby-constant">DIR_CLASS</span> ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="classes-method" class="method-detail ">
+        <a name="M000056"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">classes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+In the world of the <a href="../RDoc.html">RDoc</a> Generators <a
+href="Generator.html#M000056">classes</a> is the same as
+all_classes_and_modules. Well, except that its sorted too. For classes sans
+modules, see <a href="Generator.html#M000064">types</a>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="classes-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 130</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">classes</span>
+      <span class="ruby-ivar">@classes</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">all_classes_and_modules</span>.<span class="ruby-identifier">sort</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="classes-hash-method" class="method-detail ">
+        <a name="M000059"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">classes_hash</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="classes-hash-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 148</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">classes_hash</span>
+      <span class="ruby-ivar">@classes_hash</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">modules_hash</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">classes_hash</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="classes-salient-method" class="method-detail ">
+        <a name="M000058"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">classes_salient</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Documented classes and modules sorted by salience first, then by name.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="classes-salient-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 142</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">classes_salient</span>
+      <span class="ruby-ivar">@classes_salient</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">sort_salient</span>(<span class="ruby-identifier">classes</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="classes-toplevel-method" class="method-detail ">
+        <a name="M000057"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">classes_toplevel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Only toplevel classes and modules.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="classes-toplevel-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 136</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">classes_toplevel</span>
+      <span class="ruby-ivar">@classes_toplevel</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">classes</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span>(<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">ClassModule</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">parent</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="copyright-method" class="method-detail ">
+        <a name="M000055"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">copyright</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+FIXME: Pull copyright from project.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="copyright-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 117</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copyright</span>
+      <span class="ruby-value str">&quot;(c) 2009&quot;</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-value str">&quot;(c)&quot;</span>, <span class="ruby-value str">&quot;&amp;copy;&quot;</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="current-content-method" class="method-detail ">
+        <a name="M000209"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">current_content</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="current-content-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server/generator.rb, line 158</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">current_content</span>
+      <span class="ruby-ivar">@current_content</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="file-dir-method" class="method-detail ">
+        <a name="M000078"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">file_dir</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+<a href="../RDoc.html">RDoc</a> needs this to function. ?
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="file-dir-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 262</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_dir</span>  ; <span class="ruby-constant">DIR_FILE</span> ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="files-method" class="method-detail ">
+        <a name="M000068"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">files</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="files-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 202</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">files</span>
+      <span class="ruby-ivar">@files</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">files</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="files-hash-method" class="method-detail ">
+        <a name="M000070"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">files_hash</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="files-hash-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 214</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">files_hash</span>
+      <span class="ruby-ivar">@files</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">files_hash</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="files-toplevel-method" class="method-detail ">
+        <a name="M000069"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">files_toplevel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+List of toplevel files. <a href="../RDoc.html">RDoc</a> supplies this via
+the <a href="Generator.html#M000079">generate</a> method.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="files-toplevel-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 208</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">files_toplevel</span>
+      <span class="ruby-ivar">@files_toplevel</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@files_rdoc</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">parser</span> <span class="ruby-operator">==</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Parser</span><span class="ruby-operator">::</span><span class="ruby-constant">Simple</span> }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="find-class-named-method" class="method-detail ">
+        <a name="M000072"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">find_class_named</span><span
+            class="method-args">(*a,&b)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="find-class-named-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 226</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_class_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+      <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">find_class_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">find_module_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="find-file-named-method" class="method-detail ">
+        <a name="M000075"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">find_file_named</span><span
+            class="method-args">(*a,&b)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="find-file-named-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 244</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_file_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+      <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">find_file_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="find-module-named-method" class="method-detail ">
+        <a name="M000073"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">find_module_named</span><span
+            class="method-args">(*a,&b)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="find-module-named-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 232</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_module_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+      <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">find_module_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="find-type-named-method" class="method-detail ">
+        <a name="M000074"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">find_type_named</span><span
+            class="method-args">(*a,&b)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="find-type-named-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 238</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_type_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+      <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">find_class_named</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-method" class="method-detail ">
+        <a name="M000079"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate</span><span
+            class="method-args">(files)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Build the initial indices and output objects based on an array of top level
+objects containing the extracted information.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 269</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate</span>(<span class="ruby-identifier">files</span>)
+      <span class="ruby-ivar">@files_rdoc</span> = <span class="ruby-identifier">files</span>.<span class="ruby-identifier">sort</span>
+      <span class="ruby-identifier">generate_setup</span>
+      <span class="ruby-identifier">generate_commons</span>
+      <span class="ruby-identifier">generate_static</span>
+      <span class="ruby-identifier">generate_template</span>
+      <span class="ruby-identifier">generate_components</span>
+    <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">StandardError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
+      <span class="ruby-identifier">debug_msg</span> <span class="ruby-value str">&quot;%s: %s\n  %s&quot;</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">err</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">err</span>.<span class="ruby-identifier">message</span>, <span class="ruby-identifier">err</span>.<span class="ruby-identifier">backtrace</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n  &quot;</span>) ]
+      <span class="ruby-identifier">raise</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-method" class="method-detail ">
+        <a name="M000203"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate</span><span
+            class="method-args">(output=".")</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Generate webpages.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server/generator.rb, line 65</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate</span>(<span class="ruby-identifier">output</span>=<span class="ruby-value str">&quot;.&quot;</span>)
+      <span class="ruby-ivar">@output</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">output</span>)
+      <span class="ruby-comment cmt"># traverse the the hierarchy</span>
+
+      <span class="ruby-identifier">generate_support_files</span>
+
+      <span class="ruby-comment cmt">#generate_recurse(heirarchy)</span>
+
+<span class="ruby-comment cmt">#      heirarchy.class_methods.each do |name|</span>
+<span class="ruby-comment cmt">#        p name</span>
+<span class="ruby-comment cmt">#      end</span>
+
+<span class="ruby-comment cmt">#      heirarchy.instance_methods.each do |name|</span>
+<span class="ruby-comment cmt">#        p name</span>
+<span class="ruby-comment cmt">#      end</span>
+
+      <span class="ruby-identifier">heirarchy</span>.<span class="ruby-identifier">subspaces</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">entry</span><span class="ruby-operator">|</span>
+        <span class="ruby-comment cmt">#p name, entry</span>
+        <span class="ruby-identifier">generate_recurse</span>(<span class="ruby-identifier">entry</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-recurse-method" class="method-detail ">
+        <a name="M000204"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_recurse</span><span
+            class="method-args">(entry)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Recrusive HTML generation on a hierarchy entry.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-recurse-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server/generator.rb, line 88</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_recurse</span>(<span class="ruby-identifier">entry</span>)
+      <span class="ruby-identifier">keyword</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>
+
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">keyword</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">keyword</span>
+        <span class="ruby-ivar">@current_content</span> = <span class="ruby-identifier">service</span>.<span class="ruby-identifier">info</span>(<span class="ruby-identifier">keyword</span>) <span class="ruby-comment cmt">#lookup(keyword)</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">keyword</span> = <span class="ruby-value str">''</span>
+        <span class="ruby-ivar">@current_content</span> = <span class="ruby-value str">&quot;Welcome&quot;</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-identifier">file</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">file_name</span>
+      <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">output</span>, <span class="ruby-identifier">file</span>)
+
+      <span class="ruby-comment cmt">#file = keyword</span>
+      <span class="ruby-comment cmt">#file = file.gsub('::', '--')</span>
+      <span class="ruby-comment cmt">#file = file.gsub('.' , '--')</span>
+      <span class="ruby-comment cmt">#file = file.gsub('#' , '-')</span>
+      <span class="ruby-comment cmt">#file = File.join(output, file + '.html')</span>
+
+      <span class="ruby-identifier">write</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">service</span>.<span class="ruby-identifier">info</span>(<span class="ruby-identifier">keyword</span>))
+
+      <span class="ruby-identifier">cmethods</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">class_methods</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span> }.<span class="ruby-identifier">sort</span>
+      <span class="ruby-identifier">cmethods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">mname</span> = <span class="ruby-node">&quot;#{entry.full_name}.#{name}&quot;</span>
+        <span class="ruby-identifier">mfile</span> = <span class="ruby-constant">WebRI</span>.<span class="ruby-identifier">entry_to_path</span>(<span class="ruby-identifier">mname</span>)
+        <span class="ruby-identifier">mfile</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">output</span>, <span class="ruby-identifier">mfile</span>)
+        <span class="ruby-comment cmt">#mfile = File.join(output, &quot;#{entry.file_name}/c-#{esc(name)}.html&quot;)</span>
+        <span class="ruby-identifier">write</span>(<span class="ruby-identifier">mfile</span>, <span class="ruby-identifier">service</span>.<span class="ruby-identifier">info</span>(<span class="ruby-identifier">mname</span>))
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-identifier">imethods</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">instance_methods</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span> }.<span class="ruby-identifier">sort</span>
+      <span class="ruby-identifier">imethods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">mname</span> = <span class="ruby-node">&quot;#{entry.full_name}##{name}&quot;</span>
+        <span class="ruby-identifier">mfile</span> = <span class="ruby-constant">WebRI</span>.<span class="ruby-identifier">entry_to_path</span>(<span class="ruby-identifier">mname</span>)
+        <span class="ruby-identifier">mfile</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">output</span>, <span class="ruby-identifier">mfile</span>)
+        <span class="ruby-comment cmt">#mfile = File.join(output, &quot;#{entry.file_name}/i-#{esc(name)}.html&quot;)</span>
+        <span class="ruby-identifier">write</span>(<span class="ruby-identifier">mfile</span>, <span class="ruby-identifier">service</span>.<span class="ruby-identifier">info</span>(<span class="ruby-identifier">mname</span>))
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">subspaces</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child_name</span>, <span class="ruby-identifier">child_entry</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">child_entry</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">entry</span>
+        <span class="ruby-ivar">@directory_depth</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">generate_recurse</span>(<span class="ruby-identifier">child_entry</span>)
+        <span class="ruby-ivar">@directory_depth</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-support-files-method" class="method-detail ">
+        <a name="M000207"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_support_files</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Generate files.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-support-files-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server/generator.rb, line 137</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_support_files</span>
+      <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">output</span>)
+
+      <span class="ruby-identifier">write</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">output</span>, <span class="ruby-value str">'index.html'</span>),  <span class="ruby-identifier">index</span>)
+      <span class="ruby-comment cmt">#write(File.join(output, 'header.html'), page_header)</span>
+      <span class="ruby-comment cmt">#write(File.join(output, 'tree.html'),   page_tree)</span>
+      <span class="ruby-comment cmt">#write(File.join(output, 'main.html'),   page_main)</span>
+
+      <span class="ruby-comment cmt"># copy assets</span>
+      <span class="ruby-identifier">dir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">directory</span>, <span class="ruby-value str">'assets'</span>)
+      <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">cp_r</span>(<span class="ruby-identifier">dir</span>, <span class="ruby-identifier">output</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="json-creatable--method" class="method-detail ">
+        <a name="M000076"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">json_creatable?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+TODO: What&#8217;s this then?
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="json-creatable--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 251</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">json_creatable?</span>
+      <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">json_creatable?</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="methods-all-method" class="method-detail ">
+        <a name="M000071"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">methods_all</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+List of all methods in all classes and modules.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="methods-all-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 220</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">methods_all</span>
+      <span class="ruby-ivar">@methods_all</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">classes</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">method_list</span> }.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">sort</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="modules-method" class="method-detail ">
+        <a name="M000060"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">modules</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="modules-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 154</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modules</span>
+      <span class="ruby-ivar">@modules</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">modules</span>.<span class="ruby-identifier">sort</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="modules-hash-method" class="method-detail ">
+        <a name="M000063"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">modules_hash</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="modules-hash-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 172</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modules_hash</span>
+      <span class="ruby-ivar">@modules_hash</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">modules_hash</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="modules-salient-method" class="method-detail ">
+        <a name="M000062"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">modules_salient</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="modules-salient-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 166</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modules_salient</span>
+      <span class="ruby-ivar">@modules_salient</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">sort_salient</span>(<span class="ruby-identifier">modules</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="modules-toplevel-method" class="method-detail ">
+        <a name="M000061"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">modules_toplevel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="modules-toplevel-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 160</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modules_toplevel</span>
+      <span class="ruby-ivar">@modules_toplevel</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">modules</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span>(<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">ClassModule</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">parent</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="provision-method" class="method-detail ">
+        <a name="M000080"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">provision</span><span
+            class="method-args">(method, &block)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Components may need to define a method on the rendering context.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="provision-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 284</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">provision</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+      <span class="ruby-comment cmt">#if block</span>
+        <span class="ruby-comment cmt">#@provisions[method] = block</span>
+        (<span class="ruby-keyword kw">class</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>; <span class="ruby-keyword kw">self</span>; <span class="ruby-keyword kw">end</span>).<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
+          <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">method</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">a</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-comment cmt">#else</span>
+      <span class="ruby-comment cmt">#  @provisions[method] = lambda do |*a, &amp;b|</span>
+      <span class="ruby-comment cmt">#    __send__(method, *a, &amp;b)</span>
+      <span class="ruby-comment cmt">#  end</span>
+      <span class="ruby-comment cmt">#end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="title-method" class="method-detail ">
+        <a name="M000054"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">title</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Get title from options or metadata.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="title-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 106</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">title</span>
+      <span class="ruby-ivar">@title</span> <span class="ruby-operator">||=</span> (
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">title</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;RDoc Documentation&quot;</span>
+          <span class="ruby-identifier">metadata</span>.<span class="ruby-identifier">title</span> <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;RDoc Documentation&quot;</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">options</span>.<span class="ruby-identifier">title</span>
+        <span class="ruby-keyword kw">end</span>
+      )
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="types-method" class="method-detail ">
+        <a name="M000064"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">types</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="types-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 178</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">types</span>
+      <span class="ruby-ivar">@types</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">classes</span>.<span class="ruby-identifier">sort</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="types-hash-method" class="method-detail ">
+        <a name="M000067"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">types_hash</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="types-hash-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 196</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">types_hash</span>
+      <span class="ruby-ivar">@types_hash</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TopLevel</span>.<span class="ruby-identifier">classes_hash</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="types-salient-method" class="method-detail ">
+        <a name="M000066"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">types_salient</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="types-salient-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 190</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">types_salient</span>
+      <span class="ruby-ivar">@types_salient</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">sort_salient</span>(<span class="ruby-identifier">types</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="types-toplevel-method" class="method-detail ">
+        <a name="M000065"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">types_toplevel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="types-toplevel-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 184</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">types_toplevel</span>
+      <span class="ruby-ivar">@types_toplevel</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">types</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span>(<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">ClassModule</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">parent</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="write-method" class="method-detail ">
+        <a name="M000208"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">write</span><span
+            class="method-args">(file, text)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Write file.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="write-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/server/generator.rb, line 151</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">text</span>)
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">file</span>
+      <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">file</span>))
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-value str">'w'</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">to_s</span> }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="protected-instance-method-details" class="method-section section">
+      <h3 class="section-header">Protected Instance Methods</h3>
+
+    
+      <div id="debug-msg-method" class="method-detail ">
+        <a name="M000102"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">debug_msg</span><span
+            class="method-args">(msg)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Output progress information if rdoc debugging is enabled
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="debug-msg-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 656</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">debug_msg</span>(<span class="ruby-identifier">msg</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">$DEBUG_RDOC</span>
+      <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">msg</span>[<span class="ruby-value">-1</span>,<span class="ruby-value">1</span>]
+        <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'.'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">tab</span> = <span class="ruby-value str">&quot;= &quot;</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-value str">':'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">tab</span> = <span class="ruby-value str">&quot;== &quot;</span>
+        <span class="ruby-keyword kw">else</span>          <span class="ruby-identifier">tab</span> = <span class="ruby-value str">&quot;* &quot;</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-identifier">tab</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">msg</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="erb-template-method" class="method-detail ">
+        <a name="M000101"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">erb_template</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="erb-template-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 622</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">erb_template</span>
+      <span class="ruby-ivar">@erb_template</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">ERBTemplate</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">provisions</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="eval-template-method" class="method-detail ">
+        <a name="M000100"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">eval_template</span><span
+            class="method-args">(templatefile, context)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Load and render the erb template in the given <tt>templatefile</tt> within
+the specified <tt>context</tt> (a Binding object) and return output Both
+<tt>templatefile</tt> and <tt>outfile</tt> should be Pathname-like objects.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="eval-template-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 604</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eval_template</span>(<span class="ruby-identifier">templatefile</span>, <span class="ruby-identifier">context</span>)
+      <span class="ruby-identifier">template_src</span> = <span class="ruby-identifier">templatefile</span>.<span class="ruby-identifier">read</span>
+      <span class="ruby-identifier">template</span> = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">template_src</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-value str">'&lt;&gt;'</span>)
+      <span class="ruby-identifier">template</span>.<span class="ruby-identifier">filename</span> = <span class="ruby-identifier">templatefile</span>.<span class="ruby-identifier">to_s</span>
+
+      <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-identifier">template</span>.<span class="ruby-identifier">result</span>(<span class="ruby-identifier">context</span>)
+      <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">NoMethodError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-value str">&quot;Error while evaluating %s: %s (at %p)&quot;</span> <span class="ruby-operator">%</span> [
+          <span class="ruby-identifier">templatefile</span>.<span class="ruby-identifier">to_s</span>,
+          <span class="ruby-identifier">err</span>.<span class="ruby-identifier">message</span>,
+          <span class="ruby-identifier">eval</span>(<span class="ruby-value str">&quot;_erbout[-50,50]&quot;</span>, <span class="ruby-identifier">context</span>)
+        ], <span class="ruby-identifier">err</span>.<span class="ruby-identifier">backtrace</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-classes-method" class="method-detail ">
+        <a name="M000096"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_classes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Generate a documentation file for each class
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-classes-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 495</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_classes</span>
+      <span class="ruby-identifier">debug_msg</span> <span class="ruby-node">&quot;Generating class documentation in #{path_output_relative}:&quot;</span>
+      <span class="ruby-identifier">templatefile</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">path_template</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'class.rhtml'</span>
+
+      <span class="ruby-identifier">classes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">debug_msg</span> <span class="ruby-value str">&quot;working on %s (%s)&quot;</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">path</span> ]
+        <span class="ruby-identifier">outfile</span>    = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">path_output</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">path</span>
+
+        <span class="ruby-identifier">rel_prefix</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">path_output</span>.<span class="ruby-identifier">relative_path_from</span>(<span class="ruby-identifier">outfile</span>.<span class="ruby-identifier">dirname</span>)
+
+        <span class="ruby-identifier">debug_msg</span> <span class="ruby-node">&quot;rendering #{path_output_relative(outfile)}&quot;</span>
+        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">render_template</span>( <span class="ruby-identifier">templatefile</span>, <span class="ruby-identifier">outfile</span>, <span class="ruby-identifier">:klass=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">klass</span>, <span class="ruby-identifier">:rel_prefix=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">rel_prefix</span> )
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-commons-method" class="method-detail ">
+        <a name="M000091"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_commons</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+This method files copies the common static files of the abstract generator,
+which are overlayed with the files from the subclass. This way there is
+always a standard base to draw upon, and anything the subclass
+doesn&#8217;t like it can override, which provides a sort-of, albeit
+simplistic, file inheritence system.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-commons-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 423</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_commons</span>
+      <span class="ruby-identifier">from</span> = <span class="ruby-constant">Dir</span>[(<span class="ruby-constant">PATH_STATIC</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'**'</span>).<span class="ruby-identifier">to_s</span>]
+      <span class="ruby-identifier">dest</span> = <span class="ruby-identifier">path_output</span>.<span class="ruby-identifier">to_s</span>
+      <span class="ruby-identifier">show_from</span> = <span class="ruby-constant">PATH_STATIC</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-constant">PATH</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-value str">'/'</span>,<span class="ruby-value str">''</span>)
+      <span class="ruby-identifier">debug_msg</span> <span class="ruby-node">&quot;Copying #{show_from}/** to #{path_output_relative}/:&quot;</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">cp_r</span> <span class="ruby-identifier">from</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">:preserve</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-components-method" class="method-detail ">
+        <a name="M000094"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_components</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Let the components generate what they need. Iterates through each
+componenet and calls <a href="Generator.html#M000079">generate</a>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-components-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 463</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_components</span>
+      <span class="ruby-identifier">components</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">component</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">component</span>.<span class="ruby-identifier">generate</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-files-method" class="method-detail ">
+        <a name="M000095"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_files</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Generate a documentation file for each file
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-files-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 477</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_files</span>
+      <span class="ruby-identifier">debug_msg</span> <span class="ruby-node">&quot;Generating file documentation in #{path_output_relative}:&quot;</span>
+      <span class="ruby-identifier">templatefile</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">path_template</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'file.rhtml'</span>
+
+      <span class="ruby-identifier">files</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">outfile</span>     = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">path_output</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">path</span>
+        <span class="ruby-identifier">debug_msg</span> <span class="ruby-value str">&quot;working on %s (%s)&quot;</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">file</span>.<span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">path_output_relative</span>(<span class="ruby-identifier">outfile</span>) ]
+
+        <span class="ruby-identifier">rel_prefix</span>  = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">path_output</span>.<span class="ruby-identifier">relative_path_from</span>( <span class="ruby-identifier">outfile</span>.<span class="ruby-identifier">dirname</span> )
+        <span class="ruby-comment cmt">#context     = binding()</span>
+
+        <span class="ruby-identifier">debug_msg</span> <span class="ruby-node">&quot;rendering #{path_output_relative(outfile)}&quot;</span>
+        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">render_template</span>(<span class="ruby-identifier">templatefile</span>, <span class="ruby-identifier">outfile</span>, <span class="ruby-identifier">:file=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">file</span>, <span class="ruby-identifier">:rel_prefix=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">rel_prefix</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-index-method" class="method-detail ">
+        <a name="M000097"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Create index.html
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-index-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 512</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_index</span>
+      <span class="ruby-identifier">debug_msg</span> <span class="ruby-node">&quot;Generating index file in #{path_output_relative}:&quot;</span>
+      <span class="ruby-identifier">templatefile</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">path_template</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'index.rhtml'</span>
+      <span class="ruby-identifier">outfile</span>      = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">path_output</span>   <span class="ruby-operator">+</span> <span class="ruby-value str">'index.html'</span>
+
+      <span class="ruby-identifier">index_path</span>   = <span class="ruby-identifier">index_file</span>.<span class="ruby-identifier">path</span>
+
+      <span class="ruby-identifier">debug_msg</span> <span class="ruby-node">&quot;rendering #{path_output_relative(outfile)}&quot;</span>
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">render_template</span>(<span class="ruby-identifier">templatefile</span>, <span class="ruby-identifier">outfile</span>, <span class="ruby-identifier">:index_path=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">index_path</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-setup-method" class="method-detail ">
+        <a name="M000090"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_setup</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Prepare generator.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-setup-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 414</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_setup</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-static-method" class="method-detail ">
+        <a name="M000092"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_static</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Copy static files to output. All the common static content is stored in the
+<tt>assets/</tt> directory. WebRI&#8217;s <tt>assets/</tt> directory more
+or less follows an <em>Abbreviated Monash</em> convention:
+</p>
+<pre>
+  assets/
+    css/      &lt;- stylesheets
+    json/     &lt;- json data table (*maybe top level is better?)
+    img/      &lt;- images
+    inc/      &lt;- server-side includes
+    js/       &lt;- javascripts
+</pre>
+<p>
+Components can utilize this method by providing a <tt>path</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-static-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 444</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_static</span>
+      <span class="ruby-identifier">from</span> = <span class="ruby-constant">Dir</span>[(<span class="ruby-identifier">path_static</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'**'</span>).<span class="ruby-identifier">to_s</span>]
+      <span class="ruby-identifier">dest</span> = <span class="ruby-identifier">path_output</span>.<span class="ruby-identifier">to_s</span>
+      <span class="ruby-identifier">show_from</span> = <span class="ruby-identifier">path_static</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-constant">PATH</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-value str">'/'</span>, <span class="ruby-value str">''</span>)
+      <span class="ruby-identifier">debug_msg</span> <span class="ruby-node">&quot;Copying #{show_from}/** to #{path_output_relative}/:&quot;</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">cp_r</span> <span class="ruby-identifier">from</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">:preserve</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="generate-template-method" class="method-detail ">
+        <a name="M000093"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generate_template</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Rendered and save templates.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="generate-template-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 454</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_template</span>
+      <span class="ruby-identifier">generate_files</span>
+      <span class="ruby-identifier">generate_classes</span>
+      <span class="ruby-identifier">generate_index</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="index-file-method" class="method-detail ">
+        <a name="M000098"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">index_file</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+TODO: Make public?
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="index-file-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 525</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_file</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">main_page</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">file</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">full_name</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">main_page</span> }
+        <span class="ruby-identifier">file</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">first</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="initialize-components-method" class="method-detail ">
+        <a name="M000085"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">initialize_components</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="initialize-components-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 353</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_components</span>
+      <span class="ruby-ivar">@components</span> = []
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">components</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">comp</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@components</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">comp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="initialize-methods-method" class="method-detail ">
+        <a name="M000084"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">initialize_methods</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Overide this method to set up any rendering provisions.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="initialize-methods-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 348</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_methods</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="initialize-template-method" class="method-detail ">
+        <a name="M000083"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">initialize_template</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="initialize-template-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 341</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_template</span>
+      <span class="ruby-ivar">@template</span> = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">template</span> <span class="ruby-comment cmt">#|| DEFAULT_TEMPLATE</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;could not find template #{template.inspect}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">path_template</span>.<span class="ruby-identifier">directory?</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="path-method" class="method-detail ">
+        <a name="M000086"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">path</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Path to the static files. This should be defined in the subclass as:
+</p>
+<pre>
+ def path
+  @path ||= Pathname.new(__FILE__).parent
+ end
+</pre>
+          
+
+          
+          <div class="method-source-code"
+            id="path-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 387</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">path</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Must be implemented by subclass!&quot;</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="path-output-relative-method" class="method-detail ">
+        <a name="M000089"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">path_output_relative</span><span
+            class="method-args">(path=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="path-output-relative-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 404</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">path_output_relative</span>(<span class="ruby-identifier">path</span>=<span class="ruby-keyword kw">nil</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">path</span>
+        <span class="ruby-identifier">path</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-identifier">path_base</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-value str">'/'</span>, <span class="ruby-value str">''</span>)
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-ivar">@path_output_relative</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">path_output</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-identifier">path_base</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-value str">'/'</span>, <span class="ruby-value str">''</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="path-static-method" class="method-detail ">
+        <a name="M000087"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">path_static</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Path to static files. This is <tt>path + 'static'</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="path-static-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 392</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">path_static</span>
+      <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">LOADPATH</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;/webri/generators/#{template}/static&quot;</span>)
+      <span class="ruby-comment cmt">#path + '#{template}/static'</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="path-template-method" class="method-detail ">
+        <a name="M000088"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">path_template</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Path to static files. This is <tt>path + 'template'</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="path-template-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 398</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">path_template</span>
+      <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">LOADPATH</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;/webri/generators/#{template}/template&quot;</span>)
+      <span class="ruby-comment cmt">#path + '#{template}/template'</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="render-template-method" class="method-detail ">
+        <a name="M000099"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">render_template</span><span
+            class="method-args">(templatefile, outfile, local_assigns)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Load and render the erb template in the given <tt>templatefile</tt> within
+the specified <tt>context</tt> (a Binding object) and write it out to
+<tt>outfile</tt>. Both <tt>templatefile</tt> and <tt>outfile</tt> should be
+Pathname-like objects.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="render-template-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 574</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render_template</span>(<span class="ruby-identifier">templatefile</span>, <span class="ruby-identifier">outfile</span>, <span class="ruby-identifier">local_assigns</span>)
+      <span class="ruby-identifier">output</span> = <span class="ruby-identifier">erb_template</span>.<span class="ruby-identifier">render</span>(<span class="ruby-identifier">templatefile</span>, <span class="ruby-identifier">local_assigns</span>)
+
+      <span class="ruby-comment cmt">#output = eval_template(templatefile, context)</span>
+      <span class="ruby-comment cmt"># TODO: delete this dirty hack when documentation for example for GeneratorMethods will not be cutted off by &lt;script&gt; tag</span>
+      <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">output</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">:force_encoding</span>
+          <span class="ruby-identifier">encoding</span> = <span class="ruby-identifier">output</span>.<span class="ruby-identifier">encoding</span>
+          <span class="ruby-identifier">output</span> = <span class="ruby-identifier">output</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-value str">'ASCII-8BIT'</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">'&lt;script&gt;'</span>, <span class="ruby-value str">'&amp;lt;script;&amp;gt;'</span>).<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">encoding</span>)
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">output</span> = <span class="ruby-identifier">output</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">'&lt;script&gt;'</span>, <span class="ruby-value str">'&amp;lt;script&amp;gt;'</span>)
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">$dryrun</span>
+        <span class="ruby-identifier">outfile</span>.<span class="ruby-identifier">dirname</span>.<span class="ruby-identifier">mkpath</span>
+        <span class="ruby-identifier">outfile</span>.<span class="ruby-identifier">open</span>( <span class="ruby-value str">'w'</span>, <span class="ruby-value">0644</span> ) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">file</span>.<span class="ruby-identifier">print</span>( <span class="ruby-identifier">output</span> )
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">debug_msg</span> <span class="ruby-value str">&quot;would have written %d bytes to %s&quot;</span> <span class="ruby-operator">%</span>
+        [ <span class="ruby-identifier">output</span>.<span class="ruby-identifier">length</span>, <span class="ruby-identifier">outfile</span> ]
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sort-salient-method" class="method-detail ">
+        <a name="M000081"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sort_salient</span><span
+            class="method-args">(classes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="sort-salient-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/webri/generators/abstract/generator.rb, line 303</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sort_salient</span>(<span class="ruby-identifier">classes</span>)
+      <span class="ruby-identifier">nscounts</span> = <span class="ruby-identifier">classes</span>.<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">counthash</span>, <span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">top_level</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">full_name</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp re">/::.*/</span>, <span class="ruby-value str">''</span> )
+        <span class="ruby-identifier">counthash</span>[<span class="ruby-identifier">top_level</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
+        <span class="ruby-identifier">counthash</span>[<span class="ruby-identifier">top_level</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">counthash</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-comment cmt"># Sort based on how often the top level namespace occurs, and then on the</span>
+      <span class="ruby-comment cmt"># name of the module -- this works for projects that put their stuff into</span>
+      <span class="ruby-comment cmt"># a namespace, of course, but doesn't hurt if they don't.</span>
+      <span class="ruby-identifier">classes</span>.<span class="ruby-identifier">sort_by</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">top_level</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">full_name</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp re">/::.*/</span>, <span class="ruby-value str">''</span> )
+        [<span class="ruby-identifier">nscounts</span>[<span class="ruby-identifier">top_level</span>] <span class="ruby-operator">*</span> <span class="ruby-value">-1</span>, <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">full_name</span>]
+      <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">document_self</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</main>
+</body>
+</html>
+

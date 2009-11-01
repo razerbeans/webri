@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Load and render the erb template in the given <tt>templatefile</tt> within the specified <tt>context</tt> (a Binding object) and return output Both <tt>templatefile</tt> and <tt>outfile</tt> should be Pathname-like objects.
+full_name: WebRI::Generator#eval_template
+is_singleton: false
+name: eval_template
+params: (templatefile, context)
+visibility: protected

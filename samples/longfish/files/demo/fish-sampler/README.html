@@ -1,0 +1,345 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <title>Fish</title>
+
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/low.css">
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/screen.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/print.css" media="print">
+  <link title="Low vision" rel="alternate stylesheet" type="text/css" href="../../../assets/css/low_vision_screen.css" media="screen">
+
+  <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
+
+  <script src="../../../assets/js/main.js" type="text/javascript" charset="utf-8"></script>  
+</head>
+
+<body>
+  <div id="page">
+
+    <div id="header">
+      <div id="logo" style="font-size: 52px; font-family: times, serif; font-style: italic; color: black;">
+        <img src="../../../assets/img/logo.gif" alt="" title="" height="119" align="absmiddle">Fish
+      </div>
+      <div class="site-links">
+<a href="../../../index.html">Index</a><span class="separator"> | </span>
+  <a href="http://webri.rubyforge.org">Home Page</a><span class="separator"> |</span>
+  <a href="http://googlegroups.com/group/proutils">Community</a><span class="separator"> | </span>
+  <a href="http://github.com/proutils/webri">Repository</a><span class="separator"> | </span>
+<a href="http://www.ruby-lang.org/en/about/">About Ruby</a>
+      </div>
+    </div>
+
+    <hr class="hidden-modern">
+
+    <div id="main-wrapper">
+      <div id="main">
+
+        
+
+<div id="content-wrapper">
+
+    <div id="head-wrapper-1">
+        <div id="head-wrapper-2">
+            <div id="head">
+                <h1>WebRI Fish Sampler</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+
+        <!-- DESCRIPTION -->
+
+        
+        <div class="description">
+          
+<ul>
+<li><a href="http://proutils.github.com/webri">proutils.github.com/webri</a>
+
+</li>
+<li><a href="http://github.com/proutils/webri">github.com/proutils/webri</a>
+
+</li>
+<li><a
+href="http://googlegroups/group/proutils">googlegroups/group/proutils</a>
+
+</li>
+</ul>
+<h2>DESCRIPTION</h2>
+<p>
+WebRI is both a dynamic web-based ri-browser which can provided ri
+documentation dynamically, by running a webrick server, and a superalatvie
+Ruby documentation generator with a variety of built in templates.
+</p>
+<h2>FEATURES</h2>
+<ul>
+<li>WebRI provides Beautiful Templates, enhanced renditions of some of the best
+designs currently in use.
+
+</li>
+<li>Variety of templates built-in, to meet a varitey of tastes and needs.
+
+</li>
+<li>Under the hood, a component system allows geneators to be more easily
+extended.
+
+</li>
+</ul>
+<h2>LIMITATIONS</h2>
+<p>
+Please note that the ri web server and the generation system were developed
+separately, and are not well integrated. For this reason (at the very
+least) the ri server cannot use the templates available to the generators.
+If possible, a future version will allow this.
+</p>
+<h2>USAGE SYNOPSIS</h2>
+<h3>Generate Documentation</h3>
+<p>
+WebRI provides a <tt>webri</tt> executable you can use to generate
+documentation. The interface is identical to <tt>rdoc</tt>. Use the -T
+option to specify a template type.
+</p>
+<pre>
+  $ webri -T redfish README lib/
+</pre>
+<p>
+You can use <tt>rdoc</tt> command if you prefer (though in far off future
+versions this may not be the case).
+</p>
+<pre>
+  $ rdoc -T redfish README lib/
+</pre>
+<p>
+WebRI extend RIDoc to recognize the templates that WebRI will handle and
+transfers control to appropriate WebRI generator accordingly.
+</p>
+<h3>Using the Web Server</h3>
+<p>
+WebRI can be used as a dynamic ri browser, either for a single project or
+for a collection of libraries. Indeed, the WebRI server can be used to
+browse the entire installed object system &#8212;eveything documented in
+your central install locations. To do the later, simply execute
+<tt>webri-server</tt> with no arguments and open a webrowser to the local
+port designated (see below).
+</p>
+<pre>
+  $ webr-server
+</pre>
+<p>
+To browse per-project ri documentation, you will first need to locate the
+project&#8217;s ri files, either by locating them in your system
+installation or by generating them for a project, which can be done using
+rdoc, eg.
+</p>
+<pre>
+  $ rdoc --ri --op &quot;doc/ri&quot; lib/
+</pre>
+<p>
+Sometimes a package will include a convenience script for generating these.
+Try running &#8216;rake -T&#8217;, or look for a &#8216;script/&#8217; or
+&#8216;task/&#8217; executable that does the job. Usually the generated
+documentation is placed in either ri/ or doc/ri/. I will use doc/ri/ in the
+following example, adjust your directory as needed.
+</p>
+<p>
+With ri files loacted you can view them with:
+</p>
+<pre>
+  $ webri-server doc/ri
+</pre>
+<p>
+You will see a Webrick server start up, informing you of the port being
+used.
+</p>
+<pre>
+  [2008-03-28 12:11:16] INFO  WEBrick 1.3.1
+  [2008-03-28 12:11:16] INFO  ruby 1.8.6 (2007-06-07) [x86_64-linux]
+  [2008-03-28 12:11:21] INFO  WEBrick::HTTPServer#start: pid=8870 port=8888
+</pre>
+<p>
+In this example we see the port is the default 8888. Simply open your
+browser and navigate to:
+</p>
+<pre>
+  http://localhost:8888/
+</pre>
+<p>
+On the left side of the screen you will see a navigation tree, and the
+right side contans an infromation panel.
+</p>
+<p>
+NOTE: Becuase <tt>ri</tt> itself isn&#8217;t very fast, if you use WebRI
+against the entire set of installed Ruby libraries it can take a few
+seconds to load up. (Sure wish FastRI turned out for the better.)
+</p>
+<h2>INSTALLATION</h2>
+<p>
+Installing via RubyGems is per the usual:
+</p>
+<pre>
+  $ sudo gem install webri
+</pre>
+<h2>COPYING</h2>
+<p>
+WebRI Copyright &#169; 2009 Thomas Sawyer, MIT License
+</p>
+<p>
+THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+</p>
+
+        </div>
+        
+
+        <!-- REQUIRES -->
+
+        
+
+        <!-- CONTENTS -->
+
+        
+        
+
+        <!-- INCLUDED MODULES -->
+
+        
+
+        <!-- DESCRIPTION (of what?) --->
+
+        
+
+      <!-- CLASSES AND MODULES -->
+
+        
+
+        <!-- CONSTANTS -->
+
+        
+
+        <!-- ATTRIBUTES -->
+
+        
+
+        <!-- METHODS -->
+
+        
+        
+        
+
+     </div>
+
+ </div>
+
+<hr class="hidden-modern" />
+
+<div id="sidebar-wrapper">
+
+    <div id="sidebar">
+
+        <div class="navigation">
+          <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+          <fieldset>
+            <legend>Quicksearch</legend>
+            <input type="text" name="quicksearch" value="" class="quicksearch-field" style="width: 95%;" />
+          </fieldset>
+          </form>
+        </div>
+
+        <br/><br/>
+
+        <!-- LAST MODIFIED -->
+
+        <div class="navigation">
+        <h3>Last Modified</h3>
+        <ul>
+          <li class="modified-date">Sat Oct 31 11:36:39 -0400 2009</li>
+        </ul>
+        </div>
+
+        
+
+        <!-- TODO: GitHub ? -->
+
+        <!-- Web CVS -->
+
+        
+    
+
+<!--
+        <!-- PARENT -->
+        
+-->
+
+        <!-- INCLUDED MODULES -->
+
+        
+
+        <!-- CLASSES AND MODULES -->
+
+        
+
+        <!-- METHOD LIST -->
+        
+        
+
+    </div>
+
+</div>
+
+
+
+        <hr class="hidden-modern">
+
+        <div class="foot">
+          <div class="site-links">
+<a href="../../../index.html">Index</a><span class="separator"> | </span>
+  <a href="http://webri.rubyforge.org">Home Page</a><span class="separator"> |</span>
+  <a href="http://googlegroups.com/group/proutils">Community</a><span class="separator"> | </span>
+  <a href="http://github.com/proutils/webri">Repository</a><span class="separator"> | </span>
+<a href="http://www.ruby-lang.org/en/about/">About Ruby</a>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- end main-wrapper -->
+
+    <div id="search-box">
+<form id="search-form" action="http://www.google.com/cse">
+<table class="fieldset">
+  <tbody><tr>
+    <td>
+      <input class="field" name="q" size="31" style="background: white url(http://www.google.com/coop/intl/en/images/google_custom_search_watermark.gif) no-repeat scroll left center; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" onfocus="this.style.background='white'" onblur="if (/^\s*$/.test(this.value)) this.style.background='white url(http://www.google.com/coop/intl/en/images/google_custom_search_watermark.gif) left no-repeat'" type="text">
+    </td>
+    <td>
+      <input name="cx" value="013598269713424429640:g5orptiw95w" type="hidden">
+      <input name="ie" value="UTF-8" type="hidden">
+      <input class="button" name="sa" value="Search" type="submit">
+    </td>
+  </tr>
+</tbody></table>
+</form>
+    </div> <!-- end search-box -->
+
+    <div id="footer">
+      <div class="fine-print">
+<!--
+        <p>Content available in <a href="http://www.ruby-lang.org/en/">English</a>, <a href="http://www.ruby-lang.org/fr/">French</a>, <a href="http://www.ruby-lang.org/ja/">Japanese</a>, <a href="http://www.ruby-lang.org/ko/">Korean</a>, <a href="http://www.ruby-lang.org/pl/">Polish</a>, <a href="http://www.ruby-lang.org/es/">Spanish</a>, <a href="http://www.ruby-lang.org/pt/">Portuguese</a>, <a href="http://www.ruby-lang.org/zh_cn/">Simplified Chinese</a>, <a href="http://www.ruby-lang.org/zh_TW/">Traditional Chinese</a>, <a href="http://www.ruby-lang.org/id/">Bahasa Indonesia</a>, <a href="http://www.ruby-lang.org/de/">German</a>, <a href="http://www.ruby-lang.org/it/">Italian</a> and <a href="http://www.ruby-lang.org/bg/">Bulgarian</a>.</p>
+-->
+        <p>This website is made with Ruby and powered by <a href="http://github.com/proutils/webri">WebRI</a> v1.0.0.
+          It is proudly maintained by <a href="http://rubyidentity.org/">members of the Ruby community</a>. Please contact
+          our <a href="mailto:webmaster@ruby-lang.org">webmaster</a> for questions or comments
+          concerning this website.</p>
+      </div>
+    </div>
+
+  </div> <!-- end page  -->
+</body>
+</html>

@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: RDoc needs this to function. ?
+full_name: WebRI::Generator#file_dir
+is_singleton: false
+name: file_dir
+params: ()
+visibility: public

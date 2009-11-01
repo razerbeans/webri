@@ -1,0 +1,17 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Extend Numeric with time constants
+constants: []
+
+full_name: Numeric
+includes: []
+
+instance_methods: []
+
+name: Numeric
+superclass: Object

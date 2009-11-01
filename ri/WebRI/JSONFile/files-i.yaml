@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: -- FILES ------------------------------------------------------
+full_name: WebRI::JSONFile#files
+is_singleton: false
+name: files
+params: ()
+visibility: public
