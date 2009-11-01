@@ -16,15 +16,15 @@ module WebRI
     include Subversion
 
     #
-    def path
-      @path ||= Pathname.new(__FILE__).parent
-    end
+    #def path
+    #  @path ||= Pathname.new(__FILE__).parent
+    #end
 
     #
 
-    def initialize_methods
-      provision :html_tree
-    end
+    #def initialize_methods
+    #  provision :html_tree
+    #end
 
     #
     #def generate_template

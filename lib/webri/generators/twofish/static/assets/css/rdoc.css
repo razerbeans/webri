@@ -122,28 +122,28 @@ body div.file, body div.class, body div.module {
 
 #metadata li {
   padding-left: 20px;
-  background: url(images/bullet_black.png) no-repeat left 4px;
+  background: url(../img/bullet_black.png) no-repeat left 4px;
   color: #666;
 }
 
 #metadata li.method {
   padding-left: 20px;
-  background: url(images/method.png) no-repeat left 2px;
+  background: url(../img/method.png) no-repeat left 2px;
 }
 
 #metadata li.module {
   padding-left: 20px;
-  background: url(images/module.png) no-repeat left 2px;
+  background: url(../img/module.png) no-repeat left 2px;
 }
 
 #metadata li.class {
   padding-left: 20px;
-  background: url(images/class.png) no-repeat left 2px;
+  background: url(../img/class.png) no-repeat left 2px;
 }
 
 #metadata li.file {
   padding-left: 20px;
-  background: url(images/file.png) no-repeat left 2px;
+  background: url(../img/file.png) no-repeat left 2px;
 }
 
 /* @end */
@@ -497,7 +497,12 @@ div.method-source-code pre {
 .file #metadata,
 .file-popup #metadata {
   float: right;
+	padding: 0.75em;
   margin-right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px; 
 }
 
 .file-popup dl {

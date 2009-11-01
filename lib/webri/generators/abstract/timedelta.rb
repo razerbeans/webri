@@ -11,7 +11,7 @@ module WebRI
 
     # Return a string describing the amount of time in the given number of
     # seconds in terms a human can understand easily.
-    def time_delta_string( seconds )
+    def time_delta_string(seconds)
       return 'less than a minute' if seconds < MINUTES
       return (seconds / MINUTES).to_s + ' minute' + (seconds/60 == 1 ? '' : 's') if seconds < (50 * MINUTES)
       return 'about one hour' if seconds < (90 * MINUTES)

@@ -104,6 +104,21 @@
         </ul>
         <div id="no-class-search-results" style="display: none;">No matching classes.</div>
       </div>
+
+      <!-- METHODS -->
+      <div id="methodindex-section" class="section project-section">
+        <h3 class="section-header">Method Index</h3>
+        <ul>
+          <% RDoc::TopLevel.all_classes_and_modules.map do |mod|
+              mod.method_list
+            end.flatten.sort.each do |method| %>
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside"><%= method.parent.full_name %></span>
+              <a href="<%= method.path %>"><%= method.pretty_name %></a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
 
     <div id="validator-badges">

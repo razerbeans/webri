@@ -114,6 +114,8 @@ module Syckle::Plugins
     def document(options=nil)
       options ||= {}
 
+      # TODO: get rid of options (?) originally they were used for commanline overrides,
+      # but that's not being used anymore, and it's probably better that way.
       title    = options['title']    || self.title
       output   = options['output']   || self.output
       main     = options['main']     || self.main
@@ -122,6 +124,7 @@ module Syckle::Plugins
       exclude  = options['exclude']  || self.exclude
       #adfile   = options['adfile']   || self.adfile
       extra    = options['extra']    || self.extra
+      root     = options['root']     || self.root
 
       # NOTE: Due to a bug in RDOC this needs to be done so that
       # alternate templates can be used.
@@ -133,10 +136,12 @@ module Syckle::Plugins
 
       require 'rdoc/rdoc'
 
+      #output = File.expand_path(output)
+
       # you can specify more than one possibility, first match wins
-      adfile = [adfile].flatten.compact.find do |f|
-        File.exist?(f)
-      end
+      #adfile = [adfile].flatten.compact.find do |f|
+      #  File.exist?(f)
+      #end
 
       main = Dir.glob(main, File::FNM_CASEFOLD).first
 
@@ -176,7 +181,7 @@ module Syckle::Plugins
 
         touch(output)
       else
-        status "RDocs are current (#{output})."
+        status "WebRI RDocs are current (#{output})."
       end
     end
 
@@ -220,11 +225,12 @@ module Syckle::Plugins
           puts "webri " + argv.join(" ")
           #sh(cmd) #shell(cmd)
         else
-          puts "webri " + argv.join(" ") if trace?
-          rdoc = ::RDoc::RDoc.new
-          rdoc.document(argv)
+          cmd = "webri " + argv.join(" ")
+          puts cmd  #if trace?
+          #rdoc = ::RDoc::RDoc.new
+          #rdoc.document(argv)
           #silently do
-          #  sh(cmd) #shell(cmd)
+            sh(cmd) #shell(cmd)
           #end
         end
       #else

@@ -21,7 +21,7 @@ module WebRI
         raise LoadError unless pom.name
         data.title       = pom.title
         data.version     = pom.version
-        data.subtitle    = pom.subtitle
+        data.subtitle    = nil #pom.subtitle
         data.homepage    = pom.homepage
         data.development = pom.development
         data.mailinglist = pom.mailinglist
@@ -43,6 +43,7 @@ module WebRI
           data.blog        = nil
           data.copyright   = nil
         else
+          puts "No Metadata!"
           # TODO: we may be able to develop some other hueristics here, but for now, nope.
         end
       end

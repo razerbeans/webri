@@ -24,9 +24,10 @@ require 'rdoc/generator'
 require 'rdoc/generator/markup'
 
 require 'webri/extensions/rdoc'
+require 'webri/extensions/times'
 require 'webri/extensions/fileutils'
 
-require 'webri/generators/abstract/timedelta'
+require 'webri/generators/abstract/metadata'
 require 'webri/generators/abstract/erbtemplate'
 
 #
@@ -36,8 +37,10 @@ module WebRI
   #
   class Generator
 
+    PATH = Pathname.new(File.join(LOADPATH, 'webri', 'generators'))
+
     #include ERB::Util
-    include TimeDelta
+    include Metadata
 
     #
     # C O N S T A N T S
@@ -46,10 +49,10 @@ module WebRI
     #PATH = Pathname.new(File.dirname(__FILE__))
 
     # Common template directory.
-    PATH_STATIC = Pathname.new(LOADPATH + '/webri/generators/abstract/static')
+    PATH_STATIC = PATH + 'abstract/static'
 
     # Common template directory.
-    PATH_TEMPLATE = Pathname.new(LOADPATH + '/webri/generators/abstract/template')
+    PATH_TEMPLATE = PATH + 'abstract/template'
 
     # Directory where generated classes live relative to the root
     DIR_CLASS = 'classes'
@@ -413,7 +416,7 @@ module WebRI
     def generate_commons
       from = Dir[(PATH_STATIC + '**').to_s]
       dest = path_output.to_s
-      show_from = PATH_STATIC.to_s.sub(LOADPATH.to_s+'/','')
+      show_from = PATH_STATIC.to_s.sub(PATH.to_s+'/','')
       debug_msg "Copying #{show_from}/** to #{path_output_relative}/:"
       fileutils.cp_r from, dest, :preserve => true
     end
@@ -434,7 +437,7 @@ module WebRI
     def generate_static
       from = Dir[(path_static + '**').to_s]
       dest = path_output.to_s
-      show_from = path_static.to_s.sub(path.parent.to_s+'/', '')
+      show_from = path_static.to_s.sub(PATH.to_s+'/', '')
       debug_msg "Copying #{show_from}/** to #{path_output_relative}/:"
       fileutils.cp_r from, dest, :preserve => true
     end

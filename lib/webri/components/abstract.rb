@@ -4,6 +4,8 @@ module WebRI
   #
   class Component
 
+    PATH = Pathname.new(File.join(LOADPATH, 'webri', 'components'))
+
     #
 
     attr :generator
@@ -14,17 +16,6 @@ module WebRI
     def initialize(generator)
       @generator = generator
       initialize_methods
-    end
-
-    # Path to the component. This should be defined in the
-    # subclass as:
-    #
-    #  def path
-    #   @path ||= Pathname.new(__FILE__).parent
-    #  end
-    #
-    def path
-      raise "Must be implemented by subclass!"
     end
 
     # Subcomponents use this to setup template provisions.
@@ -63,7 +54,7 @@ module WebRI
     def generate_static
       from = Dir[(path_static + '**').to_s]
       dest = path_output.to_s
-      show_from = path_static.to_s.sub(path.parent.to_s+'/', '')
+      show_from = path_static.to_s.sub(PATH.to_s+'/', '')
       debug_msg "Copying #{show_from}/** to #{path_output_relative}:"
       fileutils.cp_r from, dest, :preserve => true
     end
@@ -77,7 +68,13 @@ module WebRI
     #
 
     def path_static
-      path + 'static'
+      PATH + "#{name}/static"
+    end
+
+    #
+
+    def name
+      self.class.name.split('::').last.downcase
     end
 
     # Provide a method interface(s) to the generator. This extends

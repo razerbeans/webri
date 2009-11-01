@@ -347,11 +347,14 @@ ul.link-list .type {
 
 #documentation h1 {
   margin: 10px 0 10px 0;
-  padding: 0.5em 0.5em;
-  background-color: #dedede;
-  border: 1px solid #bbb;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  padding: 0.5em 0.1em 0.25em 0.1em;
+  border-bottom: 0px solid #bbb;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#documentation ul {
+  margin-top: 10px;
 }
 
 #description {
@@ -399,18 +402,18 @@ ul.link-list .type {
 }
 #documentation h3.section-header {
   margin-top: 2em;
-  padding: 0.75em 0.5em;
-  background-color: #dedede;
+  padding: 0.75em 0.5em 0.25em 0.5em;
+  /* background-color: #dedede; */
   color: #333;
   font-size: 150%;
-  border: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
 }
 
 #constants-list > dl,
 #attributes-list > dl {
-  margin: 1em 0 2em;
+  margin: 1em 0 2em 2em;
   border: 0;
 }
 #constants-list > dl dt,
@@ -620,17 +623,17 @@ div.method-source-code pre {
 .file #metadata dl dd ul li {
 }
 
-
+/*
 .file h2 {
 	margin-top: 2em;
-	padding: 0.75em 0.5em;
-	background-color: #dedede;
+	padding: 0.75em 0.5em 0.25em 0.1em;
 	color: #333;
 	font-size: 120%;
-	border: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
+*/
 
 /* @end */
 
