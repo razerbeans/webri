@@ -67,7 +67,7 @@ module WebRI
         end
       else
         title = options.title
-        desc = "This is the API documentation for '#{options.title}'."
+        desc = "This is the API documentation for '#{title}'."
       end
       return title, desc
     end
