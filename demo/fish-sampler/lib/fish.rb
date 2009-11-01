@@ -19,13 +19,16 @@ module FishSampler
 
     # New Fish
     def initialize
-      @qualties = DEFALULT_QUALITIES
+      @qualities = DEFALULT_QUALITIES
       initialize_qualities
     end
 
     # Override to add qualties.
     def initialize_qualities
     end
+
+    # Another term for qualities.
+    alias_method :properties, :qualities 
   end
 
   # = Brite Red Fish

@@ -45,22 +45,35 @@
     </p>
 
     <h3>FEATURES</h3>
-
-    <ul>
-    <li> WebRI provides Beautiful Templates, enhanced renditions of some of the best designs currently in use.</li>
-    <li> Variety of templates built-in, to meet a varitey of tastes and needs.</li>
-    <li> Under the hood, a component system allows geneators to be more easily extended.</li>
+    <ul style="margin-top: 1em;">
+    <li> Beautiful Templates, some are enhanced renditions of designs currently in use.</li>
+    <li> Wide Variety of Templates, built-in templates to meet a varitey of tastes and needs.</li>
+    <li> Component System, under-the-hood allows templates to be easily extended.</li>
     </ul>
 
     <h3>LIMITATIONS</h3>
 
     <p>Please note that the ri web server and the generation system
-    were developed separately, and are not well integrated.
-    For this reason (at the very least) the ri server cannot use
-    the templates available to the generators. If possible, a future
-    version will allow this.</p>
+    were developed separately, and are not well integrated as of yet.
+    For this reason the ri server cannot use the templates available
+    to the generators.  No serious issue withstanding, a future version
+    will remedy this.</p>
 
-    <br/><br/>
+    <h3>EXAMPLES</h3>
+
+    <p>Becuase I am sure you want to see exactly waht you are in for, before 
+    trumping through any more wordage, here is a sampling of a number of
+    WebRI's built-in templates:</p>
+
+    <p style="padding: 10px 2em;">
+      <a href="samples/onefish/index.html">OneFish</a> &nbsp;
+      <a href="samples/twofish/index.html">TwoFish</a> &nbsp;
+      <a href="samples/redfish/index.html">RedFish</a> &nbsp;
+      <a href="samples/blackfish/index.html">BlackFish</a> &nbsp;
+      <a href="samples/longfish/index.html">LongFish</a>
+    </p>
+
+    <br/><br/><br/>
 
     <img src="assets/img/twofish.jpg"/>
 
@@ -86,19 +99,18 @@
     off future versions this may not be the case).</p>
 
     <pre>
-      $ rdoc -T redfish README lib/</p>
+      $ rdoc -T redfish README lib/
     </pre>
 
-    <p>WebRI extend RIDoc to recognize the templates that WebRI will handle
-    and transfers control to appropriate WebRI generator accordingly.</p>
+    <p>WebRI extends RDoc to recognize the templates that WebRI will handle
+    and transfers control to the appropriate WebRI generator accordingly.</p>
 
-    <p>Here are samples of three of the built-in WebRI templates:</p>
+    <p>WebRI make use of project metadata if it is available. In particular
+    templates can make excellent use <a href="http://proutils.github.com/pom">POM</a> metadata.
+    But, if POM is not present, WebRI will fallback to a <code>.gemspec</code> file,
+    if one can be found, although the metadata avialable via a gemspec is more 
+    limited than that available via POM.</p>
 
-    <ul>
-    <li><a href="samples/redfish/index.html">RedFish</a></li>
-    <li><a href="samples/blackfish/index.html">BlackFish</a></li>
-    <li><a href="samples/longfish/index.html">LongFish</a></li>
-    </ul>
 
     <h3>Using the Web Server</h3>
 

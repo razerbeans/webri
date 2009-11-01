@@ -17,7 +17,7 @@ p {
   font-size   : 100%;
   color       : #111111;
   font-weight : normal;
-  margin      : 10px 0px 10px 0px;
+  margin      : 10px 0px 18px 0px;
   line-height : 1.5em;
 }
 
@@ -43,7 +43,7 @@ pre {
   font-size    : 12px;
   font-weight  : bold;
   line-height  : 1.5em;
-  padding-top  : 15px;
+  padding-top  : 10px;
   text-align   : left;
 }
 
@@ -107,7 +107,7 @@ td {
   text-align: left;
   border: 1px solid #ccc;
   background: url(../img/star.gif) #efefef;
-  height: 320px;
+  height: 300px;
   text-align: center;
 }
 
@@ -131,15 +131,8 @@ td {
   font-family: Comic Sans MS, cursive;
 }
 
-.warhol {
-  height: 100px;
-  background: url(img/ruby-md.png) -50px top;
-  font-weight: bold;
-  text-align: center;
-}
-
 .menu {
-  padding        : 5px 10px;
+  padding        : 20px 0;
   color          : orange;
   font-size      : 12px;
   text-align     : center;
