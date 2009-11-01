@@ -9,7 +9,6 @@ module WebRI
   class ERBTemplate
 
     include ERB::Util
-    include TimeDelta
 
     # New ERBTemplate instance.
 
