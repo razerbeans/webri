@@ -1,0 +1,35 @@
+
+desc "onefish"
+task :onefish do
+  sh "webri -T onefish --main README README lib"
+end
+
+desc "twofish"
+task :twofish do
+  sh "webri -T twofish --main README README lib"
+end
+
+desc "redfish"
+task :redfish do
+  sh "webri -T redfish --main README README lib"
+end
+
+desc "newfish"
+task :newfish do
+  sh "webri -T newfish --main README README lib"
+end
+
+desc "blackfish"
+task :blackfish do
+  sh "webri -T blackfish --main README README lib"
+end
+
+desc "longfish"
+task :longfish do
+  sh "webri -T longfish --main README README lib"
+end
+
+task :clean do
+  sh "rm -r doc"
+end
+

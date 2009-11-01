@@ -45,7 +45,7 @@ h2,h3,h4 { margin-top: 1.5em; }
 
 a {
   color: #FF226C;
-  color: #669;
+  color: #844;
   text-decoration: none;
 }
 
@@ -71,23 +71,17 @@ ul {
   width: auto;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border-bottom: 0px solid #aaa;
-  border-left: 0px solid #aaa;
-  border-right: 0px solid #aaa;
   padding: 10px 10px;
   margin: 0 8px -0.5em 8px;
 }
 
 .head h1 {
-  color: #FF226C;
   color: #666;
   font-weight: bold;
   font-size: 18px;
 }
 
 .head h1 a {
-  color: #FF226C;
-  color: #666;
   font-weight: bold; 
 }
 
@@ -99,8 +93,8 @@ ul {
 
 .quicksearch-field {
   width: 98%;
-  background: #ddd;
-  border: 1px solid #aaa;
+  /* background: #ddd; */
+  border: 1px solid #ccc;
   height: 1.5em;
   -webkit-border-radius: 4px;
 }
@@ -211,7 +205,8 @@ body.file p {
   float: right;
   width: 320px;
   margin-top: 10px;
-  border-left: 0px solid #aaa;
+  border-left: 1px solid #ccc;
+  padding-left: 12px;
 }
 
 #documentation {
@@ -241,7 +236,7 @@ body.file p {
   background-color: #fff;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border: 0 solid #aaa;
+  border: 0 solid #ccc;
   margin: 0 8px 16px;
   font-size: 90%;
   overflow: hidden;
@@ -256,7 +251,7 @@ body.file p {
   -moz-border-radius-topright: 4px;
   -webkit-border-top-left-radius: 4px;
   -webkit-border-top-right-radius: 4px;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #ccc;
 }
 
 #metadata ul,
@@ -307,10 +302,10 @@ ul.link-list .type {
 */
 
 #project-metadata .section {
-	border: 0px solid #aaa;
+	border: 0px solid #ccc;
 }
 #project-metadata h3.section-header {
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid #ccc;
 	position: relative;
 }
 #project-metadata h3.section-header .search-toggle {
@@ -321,9 +316,9 @@ ul.link-list .type {
 
 #project-metadata form {
 	color: #777;
-	background: #ccc;
+	background: #ffffff;
 	padding: 8px 8px 16px;
-	border-bottom: 1px solid #bbb;
+	border-bottom: 0px solid #ccc;
 }
 #project-metadata fieldset {
 	border: 0;
@@ -341,7 +336,9 @@ ul.link-list .type {
   float: right; font-size: 0.7em;
   font-weight: bold;
   padding: 0 20px;
-  color: #999;
+  color: #aaa;
+  font-family: helvetica;
+  letter-spacing: -1px;
 }
 
 /* @end */
@@ -351,7 +348,7 @@ ul.link-list .type {
 
 #documentation h1 {
   margin: 8px 0 0 0;
-  padding: 0.5em 0.1em 0.25em 0.1em;
+  padding: 0.5em 0.1em 0.1em 0.1em;
   border-bottom: 0px solid #bbb;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
