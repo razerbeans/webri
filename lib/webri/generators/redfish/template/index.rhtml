@@ -6,7 +6,7 @@
 <head>
   <meta content="text/html; charset=<%= options.charset %>" http-equiv="Content-Type" />
 
-  <title><%= h options.title %></title>
+  <title><%= h title %></title>
 
   <link rel="SHORTCUT ICON" href="assets/img/ruby.png">
 
@@ -40,7 +40,7 @@
   <div class="head">
     <h1>
       <img src="assets/img/project.png" align="absmiddle">&nbsp;
-      <a href="index.html"><%= h options.title %></a>
+      <a href="index.html"><%= h title %></a>
     </h1>
   </div>
 
@@ -144,7 +144,7 @@
     <%= main_page.description %>
   </div>
   <% else %>
-    <p>This is the API documentation for '<%= options.title %>'.</p>
+    <p>This is the API documentation for '<%= h title %>'.</p>
   <% end %>
 
 </div>

@@ -6,7 +6,7 @@
 <head>
   <meta content="text/html; charset=<%= options.charset %>" http-equiv="Content-Type" />
 
-  <title>File: <%= file.base_name %> [<%= options.title %>]</title>
+  <title>File: <%= file.base_name %> [<%= title %>]</title>
 
   <link rel="SHORTCUT ICON" href="<%= rel_prefix %>/assets/img/file.png">
 
@@ -40,7 +40,7 @@
   <div class="head">
     <h1>
       <img src="<%= rel_prefix %>/assets/img/file.png" align="absmiddle">&nbsp;
-      <a href="<%= rel_prefix %>/index.html"><%= h options.title %></a>&nbsp;
+      <a href="<%= rel_prefix %>/index.html"><%= h title %></a>&nbsp;
       <a href="/"><%= file.base_name %></a>
     </h1>
   </div>
