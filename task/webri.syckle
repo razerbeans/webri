@@ -1,0 +1,51 @@
+---
+webri-sample-redfish:
+  service  : WebRI
+  title    : Fish Sampler
+  template : redfish
+  include  : [demo/fish-sampler/README, demo/fish-sampler/lib]
+  main     : demo/fish-sampler/README
+  output   : site/samples/redfish
+  extra    : ~
+  active   : true
+
+webri-sample-blackfish:
+  service  : WebRI
+  title    : Fish Sampler
+  template : blackfish
+  include  : [demo/fish-sampler/README, demo/fish-sampler/lib]
+  main     : demo/fish-sampler/README
+  output   : site/samples/blackfish
+  extra    : ~
+  active   : true
+
+webri-sample-longfish:
+  service  : WebRI
+  title    : Fish Sampler
+  template : longfish
+  include  : [demo/fish-sampler/README, demo/fish-sampler/lib]
+  main     : demo/fish-sampler/README
+  output   : site/samples/longfish
+  extra    : ~
+  active   : true
+
+webri-sample-onefish:
+  service  : WebRI
+  title    : Fish Sampler
+  template : onefish
+  include  : [demo/fish-sampler/README, demo/fish-sampler/lib]
+  main     : demo/fish-sampler/README
+  output   : site/samples/onefish
+  extra    : ~
+  active   : true
+
+webri-sample-twofish:
+  service  : WebRI
+  title    : Fish Sampler
+  template : twofish
+  include  : [demo/fish-sampler/README, demo/fish-sampler/lib]
+  main     : demo/fish-sampler/README
+  output   : site/samples/twofish
+  extra    : ~
+  active   : true
+
