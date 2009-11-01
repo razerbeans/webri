@@ -111,7 +111,7 @@
             next if methods.empty? 
             next unless options.show_all || visibility == :public || visibility == :protected || methods.any? {|m| m.force_documentation }
             %>
-            <div class="sectiontitle"><%= type.capitalize %> <%= visibility.to_s.capitalize %> methods</div>
+            <div class="sectiontitle"><%= visibility.to_s.capitalize %> <%= type.capitalize %> Methods</div>
             <% methods.each do |method| %>
             <div class="method">
                 <div class="title">

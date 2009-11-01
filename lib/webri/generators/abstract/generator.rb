@@ -101,9 +101,16 @@ module WebRI
 
     attr :options
 
-    # TODO: Get from metadata -- use POM if available.
+    # Get title from options or metadata.
+
     def title
-      options.title
+      @title ||= (
+        if options.title == "RDoc Documentation"
+          metadata.title || "RDoc Documentation"
+        else
+          options.title
+        end
+      )
     end
 
     # FIXME: Pull copyright from project.
@@ -471,7 +478,7 @@ module WebRI
       debug_msg "Generating file documentation in #{path_output_relative}:"
       templatefile = self.path_template + 'file.rhtml'
 
-      files_toplevel.each do |file|
+      files.each do |file|
         outfile     = self.path_output + file.path
         debug_msg "working on %s (%s)" % [ file.full_name, path_output_relative(outfile) ]
 
