@@ -199,7 +199,7 @@ module WebRI
     # List of toplevel files. RDoc supplies this via the #generate method.
 
     def files_toplevel
-      @files_toplevel
+      @files_toplevel ||= @files_rdoc.select { |f| f.parser == RDoc::Parser::Simple }
     end
 
     #
@@ -259,8 +259,8 @@ module WebRI
     # based on an array of top level objects containing
     # the extracted information.
 
-    def generate(toplevel_files)
-      @files_toplevel = toplevel_files.sort
+    def generate(files)
+      @files_rdoc = files.sort
       generate_setup
       generate_commons
       generate_static

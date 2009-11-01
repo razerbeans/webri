@@ -1,7 +1,6 @@
 require 'webri/generators/abstract'
 #require 'webri/components/subversion'
 require 'webri/components/github'
-require 'webri/components/metadata'
 
 module WebRI
 
@@ -17,7 +16,6 @@ module WebRI
 
     #include Subversion
     include GitHub
-    include Metadata
 
     #
     def path
