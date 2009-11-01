@@ -38,7 +38,7 @@ module WebRI
         :filename    => filename,
         :rev         => Integer( rev ),
         :commitdate  => commitdate,
-        :commitdelta => time_delta_string( Time.now.to_i - commitdate.to_i ),
+        :commitdelta => (Time.now.to_i - commitdate.to_i).time_delta_string,
         :committer   => committer,
       }
     end
