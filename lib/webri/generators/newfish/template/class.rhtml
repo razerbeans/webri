@@ -112,7 +112,7 @@
         <h3 class="section-header">Namespace</h3>
         <ul class="link-list">
           <% (klass.modules.sort + klass.classes.sort).each do |mod| %>
-          <li class="<%= klass.type %>"><a href="<%= klass.aref_to mod.path %>"><%= mod.full_name %></a></li>
+          <li class="<%= mod.type %>"><a href="<%= klass.aref_to mod.path %>"><%= mod.full_name %></a></li>
           <% end %>
         </ul>
       </div>
@@ -124,7 +124,10 @@
         <h3 class="section-header">Methods</h3>
         <ul class="link-list">
           <% klass.each_method do |meth| %>
-          <li class="method"><a href="#<%= meth.aref %>"><%= meth.singleton ? '::' : '#' %><%= meth.name %></a></li>
+            <% t = meth.singleton ? 'singleton' : 'method' %>
+            <li class="<%= t %>">
+              <a href="#<%= meth.aref %>"><%= meth.singleton ? '::' : '#' %><%= meth.name %></a>
+            </li>
           <% end %>
         </ul>
       </div>

@@ -1,4 +1,5 @@
 require 'webri/generators/abstract'
+require 'webri/components/icons'
 require 'webri/components/subversion'
 
 module WebRI
@@ -15,6 +16,7 @@ module WebRI
   #
   class Newfish < Generator
 
+    include Icons
     include Subversion
 
     #

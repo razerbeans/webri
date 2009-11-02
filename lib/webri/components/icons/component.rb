@@ -1,4 +1,4 @@
-require 'webri/componenets/abstract'
+require 'webri/components/abstract'
 
 module WebRI
 
@@ -6,7 +6,7 @@ module WebRI
   # a set of small standard name icons for typical
   # Ruby needs.
 
-  module Icons < Component
+  class Icons < Component
   end
 
 end

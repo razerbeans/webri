@@ -107,7 +107,7 @@ ul {
 
 .missing-docs {
   font-size: 120%;
-  background: white url(images/wrench_orange.png) no-repeat 4px center;
+  background: white url(images/fixme.png) no-repeat 4px center;
   color: #ccc;
   line-height: 2em;
   border: 0px solid #d00;
@@ -176,28 +176,33 @@ body.file p {
 
 #metadata li {
   padding-left: 20px;
-  background: url(images/bullet_black.png) no-repeat left 4px;
+  background: url(../img/bullet.png) no-repeat left 4px;
   color: #666;
 }
 
 #metadata li.method {
   padding-left: 20px;
-  background: url(images/method.png) no-repeat left 2px;
+  background: url(../img/method.png) no-repeat left 2px;
+}
+
+#metadata li.singleton {
+  padding-left: 20px;
+  background: url(../img/singleton.png) no-repeat left 2px;
 }
 
 #metadata li.module {
   padding-left: 20px;
-  background: url(images/module.png) no-repeat left 2px;
+  background: url(../img/module.png) no-repeat left 2px;
 }
 
 #metadata li.class {
   padding-left: 20px;
-  background: url(images/class.png) no-repeat left 2px;
+  background: url(../img/class.png) no-repeat left 2px;
 }
 
 #metadata li.file {
   padding-left: 20px;
-  background: url(images/file.png) no-repeat left 2px;
+  background: url(../img/file.png) no-repeat left 2px;
 }
 
 /* @end */
@@ -257,10 +262,12 @@ body.file p {
   list-style: none;
 }
 
+/*
 #file-metadata ul {
   padding-left: 28px;
-  list-style-image: url(images/page_green.png);
+  list-style-image: url(images/page.png);
 }
+*/
 
 dl.svninfo {
   color: #666;
@@ -331,7 +338,7 @@ ul.link-list .type {
 .method-parent-aside {
   float: right; font-size: 0.7em;
   font-weight: bold;
-  padding: 0 20px;
+  padding: 0 0;
   color: #999;
 }
 
@@ -459,7 +466,7 @@ ul.link-list .type {
 	font-size: 125%;
 	font-weight: bold;
 	color: #333;
-	background: url(images/method.png) no-repeat left bottom;
+	background: url(../img/method.png) no-repeat left bottom;
 }
 #documentation .method-heading a {
 	color: inherit;
@@ -473,7 +480,7 @@ ul.link-list .type {
 	visibility: hidden;
 	padding-right: 20px;
 	line-height: 20px;
-	background: url(images/zoom.png) no-repeat right top;
+	background: url(../img/zoom.png) no-repeat right top;
 }
 #documentation .method-detail:hover .method-click-advice {
 	visibility: visible;
@@ -481,7 +488,7 @@ ul.link-list .type {
 
 #documentation .method-alias .method-heading {
 	color: #666;
-	background: url(images/alias.png) no-repeat left bottom;
+	background: url(../img/alias.png) no-repeat left bottom;
 }
 
 #documentation .method-description,
@@ -503,7 +510,7 @@ ul.link-list .type {
 }
 
 #documentation .attribute-method-heading {
-	background: url(images/attribute.png) no-repeat left bottom;
+	background: url(../ima/attribute.png) no-repeat left bottom;
 }
 #documentation #attribute-method-details .method-detail:hover {
 	background-color: transparent;
@@ -602,7 +609,7 @@ div.method-source-code pre {
 	font-weight: bold;
 	padding-left: 22px;
 	line-height: 20px;
-	background: url(../img/page_white_width.png) no-repeat left top;
+	background: url(../img/stat.png) no-repeat left top;
 }
 .file dt.modified-date {
 	background: url(../img/date.png) no-repeat left top;
@@ -611,7 +618,7 @@ div.method-source-code pre {
 	background: url(../img/plugin.png) no-repeat left top;
 }
 .file dt.scs-url {
-	background: url(../img/wrench.png) no-repeat left top;
+	background: url(../img/tool.png) no-repeat left top;
 }
 
 .file dl dd {
