@@ -222,18 +222,20 @@
 
         <!-- SUPERCLASS -->
         <% if !context.is_a?(RDoc::TopLevel) && context.type == 'class' %>
-        <div class="navigation">
-          <h3>Superclass</h3>
-          <ul>
-          <li>
-          <% unless String === context.superclass %>
-            <a href="<%= context.aref_to context.superclass.path %>"><%= context.superclass.full_name %></a>
-          <% else %>
-            <%= context.superclass %>
+          <% if context.superclass %>
+          <div class="navigation">
+            <h3>Superclass</h3>
+            <ul>
+            <li>
+              <% unless String === context.superclass %>
+                <a href="<%= context.aref_to context.superclass.path %>"><%= context.superclass.full_name %></a>
+              <% else %>
+                <%= context.superclass %>
+              <% end %>
+            </li>
+            </ul>
+          </div>
           <% end %>
-          </li>
-          </ul>
-        </div>
         <% end %>
 
         <!-- INCLUDED MODULES -->
