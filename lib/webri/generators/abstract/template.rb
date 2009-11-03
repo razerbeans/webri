@@ -2,11 +2,13 @@ require 'erb'
 
 module WebRI
 
-  # ERBTemplate is used by the generator to build
+  # = ERB Template
+  #
+  # Template is used by the generator to build
   # template files. It has access to all the
   # the <i>data methods</i> in the generator.
 
-  class ERBTemplate
+  class Template
 
     include ERB::Util
 

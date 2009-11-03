@@ -28,7 +28,7 @@ require 'webri/extensions/times'
 require 'webri/extensions/fileutils'
 
 require 'webri/generators/abstract/metadata'
-require 'webri/generators/abstract/erbtemplate'
+require 'webri/generators/abstract/template'
 
 #
 module WebRI
@@ -270,9 +270,9 @@ module WebRI
       @files_rdoc = files.sort
       generate_setup
       generate_commons
+      generate_components
       generate_static
       generate_template
-      generate_components
     rescue StandardError => err
       debug_msg "%s: %s\n  %s" % [ err.class.name, err.message, err.backtrace.join("\n  ") ]
       raise
@@ -414,7 +414,7 @@ module WebRI
     def generate_setup
     end
 
-    # This method files copies the common static files of the abstract
+    # This method copies the common static files of the abstract
     # generator, which are overlayed with the files from the subclass.
     # This way there is always a standard base to draw upon, and anything
     # the subclass doesn't like it can override, which provides a sort-of,
@@ -620,7 +620,7 @@ module WebRI
     #
 
     def erb_template
-      @erb_template ||= ERBTemplate.new(self, provisions)
+      @erb_template ||= Template.new(self, provisions)
     end
 
 =begin
