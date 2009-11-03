@@ -19,16 +19,6 @@ module WebRI
     include Icons
     include Subversion
 
-    #
-    #def path
-    #  @path ||= Pathname.new(__FILE__).parent
-    #end
-
-    #
-    #def generate_template
-    #  super
-    #end
-
   end
 
 end
