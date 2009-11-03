@@ -33,7 +33,7 @@ module WebRI
 
     #<ul>
     #  <li class="trigger">
-    #    <img src="assets/img/class.png" onClick="showBranch(this);"/>
+    #    <img src="assets/icon/class.png" onClick="showBranch(this);"/>
     #
     #    <span class="link" path="__path__" onClick="lookup_static(this);">__entry.name__</span>
     #    
@@ -70,7 +70,7 @@ module WebRI
         path = entry.path  #WebRI.entry_to_path(entry.full_name)
         markup << %[
          <li class="trigger">
-           <img src="assets/img/class.png" onClick="showBranch(this);"/>
+           <img src="assets/icon/class.png" onClick="showBranch(this);"/>
            <a class="link" href="#{path}" target="main">#{entry.name}</a>
         ]
         markup << %[<div class="branch">]

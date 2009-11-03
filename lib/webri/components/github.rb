@@ -8,22 +8,14 @@ module WebRI
 
     #
 
-    def path
-      @path ||= Pathname.new(__FILE__).parent
-    end
+    #def path
+    #  @path ||= Pathname.new(__FILE__).parent
+    #end
 
     #
     def initialize_methods
       provision :github_url
     end
-
-    #
-    #def generate
-    #  path = PATH_TEMPLATE + 'template/assets'
-    #  dest = path_output + 'assets'
-    #  debug_msg "Copying #{path}/** to #{dest}/**"
-    #  fileutils.cp_r path.to_s, dest.to_s, :preserve => true
-    #end
 
     #
     def github_url(path)
@@ -48,14 +40,8 @@ module WebRI
     def github_url_cache
       @github_url_cache ||= {}
     end
-
-    #
-    #def path_base
-    #  generator.path_base
-    #end
-
     
-    protected
+   protected
     
     def commit_sha1(path)
       name = File.basename(path)

@@ -6,15 +6,25 @@
 
   <title><%= title %></title>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/low.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/screen.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="assets/css/print.css" media="print">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
 
-  <link title="Low vision" rel="alternate stylesheet" type="text/css" href="assets/css/low_vision_screen.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="assets/long/css/low.css" />
+  <link rel="stylesheet" type="text/css" href="assets/long/css/screen.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="assets/long/css/print.css"  media="print" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="alternate stylesheet" type="text/css" href="assets/long/css/low_vision_screen.css" media="screen" title="Low vision" />
 
-  <script src="<%= "assets/js/main.js" %>" type="text/javascript" charset="utf-8"></script>  
+  <script src="assets/jquery.js"      type="text/javascript" charset="utf-8"></script>
+  <script src="assets/main.js"        type="text/javascript" charset="utf-8"></script>
+  <script src="assets/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+	    // hookHighlightSyntax();
+	    hookQuickSearch();
+	    // $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
 </head>
 
 <body>
@@ -22,7 +32,7 @@
 
     <div id="header">
       <div id="logo" style="font-size: 52px; font-family: times, serif; font-style: italic; color: black;">
-        <img src="assets/img/logo.gif" alt="Ruby - A Programmer's Best Friend" title="" height="119" align="absmiddle"><%= title %>
+        <img src="assets/long/img/logo.gif" alt="Ruby - A Programmer's Best Friend" title="" height="119" align="absmiddle"><%= title %>
       </div>
       <div class="site-links">
 <span><strong>Index</strong></span><span class="separator"> | </span>
@@ -69,7 +79,7 @@
 
     <div id="sidebar">
 
-      <div class="navigation">
+      <div class="navigation" style="background-color: transparent;">
         <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
         <fieldset>
           <legend>Quicksearch</legend>
@@ -85,7 +95,7 @@
       <% unless simple_files.empty? then %>
       <div class="navigation">
         <h3 class="section-header">Information</h3>
-        <ul>
+        <ul class="quicksearch-target">
         <% simple_files.each do |f| %>
           <li class="file"><a href="<%= f.path %>"><%= h f.base_name %></a></li>
         <% end %>
@@ -96,7 +106,7 @@
       <!-- CLASS INDEX -->
       <div class="navigation">
         <h3 class="section-header">Class Index</h3>
-        <ul class="link-list">
+        <ul class="quicksearch-target">
         <% classes_salient.each do |index_klass| %>
           <li class="<%= index_klass.type %>"><a href="<%= index_klass.path %>"><%= index_klass.full_name %></a></li>
         <% end %>
@@ -107,10 +117,8 @@
       <!-- METHODS -->
       <div class="navigation">
         <h3 class="section-header">Method Index</h3>
-        <ul>
-          <% RDoc::TopLevel.all_classes_and_modules.map do |mod|
-              mod.method_list
-            end.flatten.sort.each do |method| %>
+        <ul class="quicksearch-target">
+          <% methods_all.each do |method| %>
             <li class="method" style="clear: both;">
               <a href="<%= method.path %>" title="<%= method.parent.full_name %>">
                 <%= method.pretty_name %>
@@ -176,9 +184,9 @@
 -->
         <p>
           <% if $DEBUG_RDOC %>
-          <span id="debugging-toggle"><img src="assets/img/bug.png" alt="[debug]" title="Debug Toggle" height="16" width="16" align="right" style="margin-left: 6px;"/></span>
+          <span id="debugging-toggle"><img src="assets/long/img/bug.png" alt="[debug]" title="Debug Toggle" height="16" width="16" align="right" style="margin-left: 6px;"/></span>
           <% end %>
-          <a href="http://validator.w3.org/check/referer"><img src="assets/img/check.png" alt="[validate]" title="Validate" height="16" width="16" align="right" style="margin-left: 6px;" /></a>
+          <a href="http://validator.w3.org/check/referer"><img src="assets/long/img/check.png" alt="[validate]" title="Validate" height="16" width="16" align="right" style="margin-left: 6px;" /></a>
 
           This website is made with Ruby and powered by <a href="http://github.com/proutils/webri">WebRI</a> v<%= WebRI::VERSION %>.
           It is proudly maintained by <a href="http://rubyidentity.org/">members of the Ruby community</a>. Please contact

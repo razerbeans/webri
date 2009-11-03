@@ -1,27 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-  <title><%= h title %> - WebRI</title>
+  <title><%= klass.name %> [<%= h title %>]</title>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
   <meta http-equiv="Content-Type" content="text/html; charset=<%= options.charset %>"  />
 
-  <link rel="icon" href="<%= rel_prefix %>/assets/img/ruby_logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="<%= rel_prefix %>/assets/favicon.ico" type="image/x-icon">
 
-  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/css/reset.css" />
-  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/css/style.css" />
-  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/css/rdoc.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/reset.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/style.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/rdoc.css" />
 
-  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/jquery.js"></script>
-  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/jquery.jam.js"></script>
-  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/jquery.ri.js"></script>
-  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/thickbox.js"></script>
-  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/quicksearch.js"></script>
-  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/darkfish.js"></script>
+  <script type="text/javascript" src="<%= rel_prefix %>/assets/jquery.js"></script>
+  <script type="text/javascript" src="<%= rel_prefix %>/assets/main.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function(){
+
     });
   </script>
 </head>

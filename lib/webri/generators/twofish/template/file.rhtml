@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-  <meta content="text/html; charset=<%= options.charset %>" http-equiv="Content-Type" />
+  <title><%= file.base_name %> [<%= h title %>]</title>
 
-  <title>File: <%= file.base_name %> [<%= title %>]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=<%= options.charset %>" />
 
-  <link rel="SHORTCUT ICON" href="<%= rel_prefix %>/assets/img/file.png">
+  <link rel="shortcut icon" href="<%= rel_prefix %>/assets/icon/file.png">
 
-  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/css/reset.css" />
-  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/css/style.css" />
-  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/css/rdoc.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/reset.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/style.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="<%= rel_prefix %>/assets/rdoc.css" />
 
-  <script type="text/javascript" charset="utf-8" src="<%= rel_prefix %>/assets/js/jquery.js"></script>
-  <script type="text/javascript" charset="utf-8" src="<%= rel_prefix %>/assets/js/thickbox.js"></script>
-  <script type="text/javascript" charset="utf-8" src="<%= rel_prefix %>/assets/js/quicksearch.js"></script>
-  <script type="text/javascript" charset="utf-8" src="<%= rel_prefix %>/assets/js/darkfish.js"></script>
+  <script type="text/javascript" src="<%= rel_prefix %>/assets/jquery.js"></script>
+  <script type="text/javascript" src="<%= rel_prefix %>/assets/js/main.js"></script>
 </head>
 
 <% if file.parser == RDoc::Parser::Simple %>
@@ -77,7 +73,7 @@
     </div>
 
     <div id="validator-badges">
-      Generated with <a href="http://github.com/proutils/rdazzle">Razzle Dazzle Redfish</a><br/><br/>
+      Generated with <a href="http://proutils.github.com/webri">WebRI Twofish</a><br/><br/>
       <a href="http://validator.w3.org/check/referer">[Validate]</a>
     </div>
   </div>

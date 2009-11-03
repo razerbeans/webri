@@ -21,10 +21,9 @@ module WebRI
     include GitHub
 
     #
-
-    def path
-      @path ||= Pathname.new(__FILE__).parent
-    end
+    #def path
+    #  @path ||= Pathname.new(__FILE__).parent
+    #end
 
     #def generate_template
     #  super
