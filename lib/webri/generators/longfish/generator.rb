@@ -1,4 +1,5 @@
 require 'webri/generators/abstract'
+require 'webri/components/prettify'
 #require 'webri/components/subversion'
 require 'webri/components/github'
 
@@ -15,6 +16,7 @@ module WebRI
   class Longfish < Generator
 
     #include Subversion
+    include Prettify
     include GitHub
 
     #

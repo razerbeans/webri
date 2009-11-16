@@ -200,7 +200,7 @@
 
     <div id="sidebar">
 
-        <div class="navigation">
+        <div class="navigation" style="background-color: transparent;">
           <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
           <fieldset>
             <legend>Quicksearch</legend>
@@ -299,7 +299,7 @@
         <% unless list.empty? %>
         <div class="navigation">
             <h3>Methods</h3>
-            <ul class="menu">
+            <ul class="menu quicksearch-target">
                 <% list.sort{ |a, b| a.name <=> b.name }.each do |method| %>
                 <li><a href="#<%= method.aref %>"><%= method.name %></a></li>
                 <% end %>

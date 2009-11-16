@@ -9,6 +9,10 @@ body {
   padding: 0;
   text-align: center;
 }
+fieldset {
+  border: none;
+  color: white;
+}
 .site-links {
   background-image: url(../img/site-links-background.gif);
   background-position: bottom;
@@ -245,6 +249,8 @@ body {
 }
 #content pre {
   overflow: auto;
+  letter-spacing: 0;
+  font-family: monospace;
 }
 #content pre.code {
   background-color: #213449;
@@ -261,10 +267,10 @@ body {
   background-repeat: no-repeat;
   display: block;
   overflow: auto;
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 115%;
+  font-family: monospace; /* "Lucida Console", Monaco, monospace; */
+  font-size: 100%;
   line-height: 135%;
-  padding: 15px;
+  padding: 10px;
 }
 #content pre.code .comment, .ruby-comment, .cmt {
   color: #428bdd;
@@ -330,7 +336,7 @@ body {
   margin-top: 1em;
 }
 #content dl dd {
-  margin-left: 1.5em;
+  margin-left: 0.1em;
 }
 #content .error {
   color: red;

@@ -140,7 +140,7 @@
                 <dl>
                 <% methods.each do |method| %>
                     <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('<%= method.aref %>_source')" id="l_<%= method.aref %>_source"><img src="<%= rel_prefix %>/assets/img/bullet_toggle_plus.png" alt="[+]"></a>
+                        <a href="javascript:toggleSource('<%= method.aref %>_source')" id="l_<%= method.aref %>_source"><img src="<%= rel_prefix %>/assets/long/img/rb.png" alt="[+]"></a>
                         <%
                             if markup =~ /File\s(\S+), line (\d+)/
                                 path = $1
@@ -155,13 +155,21 @@
 
                     <dt>
                     <% if method.call_seq %>
-                    <a name="<%= method.aref %>"></a><b><%= method.call_seq.gsub(/->/, '&rarr;') %></b>
+                      <% cseq = method.call_seq.gsub(/[-=]>/, '&rarr;').gsub("\n", '<br/>') %>
+                      <a name="<%= method.aref %>"></a><b><%= cseq %></b>
                     <% else %>
-                    <a name="<%= method.aref %>"></a><b><%= h method.name %></b><%= h method.params %>
+                      <a name="<%= method.aref %>"></a><b><%= h method.name %></b><%= h method.params %>
                     <% end %>
                     </dt>
 
                     <dd>
+                    <% if method.token_stream %>
+                      <% markup = method.markup_code %>
+                        <div id="<%= method.aref %>_source" style="display: none;">
+                            <pre class="code"><code><%= method.markup_code %></code></pre>
+                        </div>
+                    <% end %>
+
                     <% if (description = method.description).empty? %>
                       Not Documented
                     <% else %>
@@ -178,12 +186,6 @@
                     </div>
                     <% end %>
 
-                    <% if method.token_stream %>
-                      <% markup = method.markup_code %>
-                        <div id="<%= method.aref %>_source" style="display: none;">
-                            <pre class="code"><code><%= method.markup_code %></code></pre>
-                        </div>
-                    <% end %>
                     </dd>
                 <% end %>
             <% end %>
@@ -199,7 +201,7 @@
 
     <div id="sidebar">
 
-        <div class="navigation">
+        <div class="navigation" style="background-color: transparent;">
           <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
           <fieldset>
             <legend>Quicksearch</legend>
@@ -280,7 +282,7 @@
         <% unless list.empty? %>
         <div class="navigation">
             <h3>Methods</h3>
-            <ul class="menu">
+            <ul class="menu quicksearch-target">
                 <% list.sort{ |a, b| a.name <=> b.name }.each do |method| %>
                 <li><a href="#<%= method.aref %>"><%= method.name %></a></li>
                 <% end %>
