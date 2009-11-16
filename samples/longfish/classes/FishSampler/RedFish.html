@@ -6,14 +6,27 @@
 
   <title>Fish</title>
 
-  <link rel="stylesheet" type="text/css" href="../../assets/css/low.css">
-  <link rel="stylesheet" type="text/css" href="../../assets/css/screen.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="../../assets/css/print.css" media="print">
-  <link title="Low vision" rel="alternate stylesheet" type="text/css" href="../../assets/css/low_vision_screen.css" media="screen">
+  <link rel="shortcut icon" type="image/x-icon" href="../../assets/favicon.ico" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../../assets/long/css/low.css" />
+  <link rel="stylesheet" type="text/css" href="../../assets/long/css/screen.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../../assets/long/css/print.css" media="print" />
+  <link rel="stylesheet" type="text/css" href="../../assets/prettify.css" />
 
-  <script src="../../assets/js/main.js" type="text/javascript" charset="utf-8"></script>  
+  <link rel="alternate stylesheet" type="text/css" href="../../assets/long/css/low_vision_screen.css" media="screen" title="Low vision" />
+
+  <script type="text/javascript" src="../../assets/jquery.js" ></script>
+  <script type="text/javascript" src="../../assets/prettify.js"></script>
+  <script type="text/javascript" src="../../assets/quicksearch.js"></script>
+  <script type="text/javascript" src="../../assets/main.js"></script>  
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+	    hookHighlightSyntax();
+	    hookQuickSearch();
+	    // $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
 </head>
 
 <body>
@@ -21,7 +34,7 @@
 
     <div id="header">
       <div id="logo" style="font-size: 52px; font-family: times, serif; font-style: italic; color: black;">
-        <img src="../../assets/img/logo.gif" alt="" title="" height="119" align="absmiddle">Fish
+        <img src="../../assets/long/img/logo.gif" alt="" title="" height="119" align="absmiddle">Fish
       </div>
       <div class="site-links">
 <a href="../../index.html">Index</a><span class="separator"> | </span>
@@ -115,27 +128,17 @@ List of various fish qualities.
                 <dl>
                 
                     <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000002_source')" id="l_M000002_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
+                        <a href="javascript:toggleSource('M000002_source')" id="l_M000002_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
                         
                     </p>
 
                     <dt>
                     
-                    <a name="M000002"></a><b>initialize_qualities</b>()
+                      <a name="M000002"></a><b>initialize_qualities</b>()
                     
                     </dt>
 
                     <dd>
-                    
-                      
-                      <p>
-New Red <a href="Fish.html">Fish</a>
-</p>
-
-                    
-
-                    
-
                     
                       
                         <div id="M000002_source" style="display: none;">
@@ -146,6 +149,17 @@ New Red <a href="Fish.html">Fish</a>
     <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
+
+                    
+                      
+                      <p>
+New Red <a href="Fish.html">Fish</a>
+</p>
+
+                    
+
+                    
+
                     </dd>
                 
             
@@ -161,7 +175,7 @@ New Red <a href="Fish.html">Fish</a>
 
     <div id="sidebar">
 
-        <div class="navigation">
+        <div class="navigation" style="background-color: transparent;">
           <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
           <fieldset>
             <legend>Quicksearch</legend>
@@ -184,16 +198,18 @@ New Red <a href="Fish.html">Fish</a>
 
         <!-- SUPERCLASS -->
         
-        <div class="navigation">
-          <h3>Superclass</h3>
-          <ul>
-          <li>
           
-            Object
+          <div class="navigation">
+            <h3>Superclass</h3>
+            <ul>
+            <li>
+              
+                Object
+              
+            </li>
+            </ul>
+          </div>
           
-          </li>
-          </ul>
-        </div>
         
 
         <!-- INCLUDED MODULES -->
@@ -209,7 +225,7 @@ New Red <a href="Fish.html">Fish</a>
         
         <div class="navigation">
             <h3>Methods</h3>
-            <ul class="menu">
+            <ul class="menu quicksearch-target">
                 
                 <li><a href="#M000002">initialize_qualities</a></li>
                 

@@ -1,0 +1,21 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The Highlight component provides a complete install of highlight.js (http://softwaremaniacs.org/soft/highlight/en/). The highlight.js script is a good way to add syntax highlighting to your documentation when there are a lot of examples.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The Highlight component provides a complete install of highlight.js (http://softwaremaniacs.org/soft/highlight/en/). The highlight.js script is a good way to add syntax highlighting to your documentation when there are a lot of examples.
+constants: []
+
+full_name: WebRI::Highlight
+includes: []
+
+instance_methods: []
+
+name: Highlight
+superclass: Component

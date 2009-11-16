@@ -27,7 +27,5 @@ instance_methods:
   name: each_letter_group
 - !ruby/object:RDoc::RI::MethodSummary 
   name: group_name
-- !ruby/object:RDoc::RI::MethodSummary 
-  name: path
 name: Blackfish
 superclass: WebRI::Generator

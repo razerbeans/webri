@@ -22,6 +22,8 @@ full_name: WebRI::Longfish
 includes: 
 - !ruby/object:RDoc::RI::IncludedModule 
   name: GitHub
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: Prettify
 instance_methods: 
 - !ruby/object:RDoc::RI::MethodSummary 
   name: index_description

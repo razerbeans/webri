@@ -1,0 +1,21 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Very simple generator component that provides a set of small standard name icons for typical Ruby needs.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Very simple generator component that provides a set of small standard name icons for typical Ruby needs.
+constants: []
+
+full_name: WebRI::Icons
+includes: []
+
+instance_methods: []
+
+name: Icons
+superclass: Component

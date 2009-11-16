@@ -6,14 +6,27 @@
 
   <title>Fish</title>
 
-  <link rel="stylesheet" type="text/css" href="../../assets/css/low.css">
-  <link rel="stylesheet" type="text/css" href="../../assets/css/screen.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="../../assets/css/print.css" media="print">
-  <link title="Low vision" rel="alternate stylesheet" type="text/css" href="../../assets/css/low_vision_screen.css" media="screen">
+  <link rel="shortcut icon" type="image/x-icon" href="../../assets/favicon.ico" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../../assets/long/css/low.css" />
+  <link rel="stylesheet" type="text/css" href="../../assets/long/css/screen.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../../assets/long/css/print.css" media="print" />
+  <link rel="stylesheet" type="text/css" href="../../assets/prettify.css" />
 
-  <script src="../../assets/js/main.js" type="text/javascript" charset="utf-8"></script>  
+  <link rel="alternate stylesheet" type="text/css" href="../../assets/long/css/low_vision_screen.css" media="screen" title="Low vision" />
+
+  <script type="text/javascript" src="../../assets/jquery.js" ></script>
+  <script type="text/javascript" src="../../assets/prettify.js"></script>
+  <script type="text/javascript" src="../../assets/quicksearch.js"></script>
+  <script type="text/javascript" src="../../assets/main.js"></script>  
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+	    hookHighlightSyntax();
+	    hookQuickSearch();
+	    // $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
 </head>
 
 <body>
@@ -21,7 +34,7 @@
 
     <div id="header">
       <div id="logo" style="font-size: 52px; font-family: times, serif; font-style: italic; color: black;">
-        <img src="../../assets/img/logo.gif" alt="" title="" height="119" align="absmiddle">Fish
+        <img src="../../assets/long/img/logo.gif" alt="" title="" height="119" align="absmiddle">Fish
       </div>
       <div class="site-links">
 <a href="../../index.html">Index</a><span class="separator"> | </span>
@@ -114,23 +127,17 @@ operation by placing the multiplier called on unit (1) in the denominator.
                 <dl>
                 
                     <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000024_source')" id="l_M000024_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
+                        <a href="javascript:toggleSource('M000024_source')" id="l_M000024_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
                         
                     </p>
 
                     <dt>
                     
-                    <a name="M000024"></a><b>atto</b>()
+                      <a name="M000024"></a><b>atto</b>()
                     
                     </dt>
 
                     <dd>
-                    
-                      Not Documented
-                    
-
-                    
-
                     
                       
                         <div id="M000024_source" style="display: none;">
@@ -138,26 +145,27 @@ operation by placing the multiplier called on unit (1) in the denominator.
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">atto</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000000000000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000018_source')" id="l_M000018_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000018"></a><b>centi</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000018_source')" id="l_M000018_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000018"></a><b>centi</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000018_source" style="display: none;">
@@ -165,20 +173,35 @@ operation by placing the multiplier called on unit (1) in the denominator.
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">centi</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">100</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
+
+                    
+                      Not Documented
+                    
+
+                    
+
                     </dd>
                 
                     <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000017_source')" id="l_M000017_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
+                        <a href="javascript:toggleSource('M000017_source')" id="l_M000017_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
                         
                     </p>
 
                     <dt>
                     
-                    <a name="M000017"></a><b>deci</b>()
+                      <a name="M000017"></a><b>deci</b>()
                     
                     </dt>
 
                     <dd>
+                    
+                      
+                        <div id="M000017_source" style="display: none;">
+                            <pre class="code"><code><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 69</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deci</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span> ; <span class="ruby-keyword kw">end</span></code></pre>
+                        </div>
+                    
+
                     
                       
                       <p>
@@ -189,27 +212,28 @@ SI Fractional
 
                     
 
-                    
-                      
-                        <div id="M000017_source" style="display: none;">
-                            <pre class="code"><code><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 69</span>
-    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deci</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span> ; <span class="ruby-keyword kw">end</span></code></pre>
-                        </div>
-                    
                     </dd>
                 
                     <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000009_source')" id="l_M000009_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
+                        <a href="javascript:toggleSource('M000007_source')" id="l_M000007_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
                         
                     </p>
 
                     <dt>
                     
-                    <a name="M000009"></a><b>deka</b>()
+                      <a name="M000007"></a><b>deka</b>()
                     
                     </dt>
 
                     <dd>
+                    
+                      
+                        <div id="M000007_source" style="display: none;">
+                            <pre class="code"><code><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 58</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deka</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">10</span> ; <span class="ruby-keyword kw">end</span></code></pre>
+                        </div>
+                    
+
                     
                       
                       <p>
@@ -220,33 +244,20 @@ SI <a href="Multipliers.html">Multipliers</a>
 
                     
 
-                    
-                      
-                        <div id="M000009_source" style="display: none;">
-                            <pre class="code"><code><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 58</span>
-    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deka</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">10</span> ; <span class="ruby-keyword kw">end</span></code></pre>
-                        </div>
-                    
                     </dd>
                 
                     <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000016_source')" id="l_M000016_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
+                        <a href="javascript:toggleSource('M000016_source')" id="l_M000016_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
                         
                     </p>
 
                     <dt>
                     
-                    <a name="M000016"></a><b>exa</b>()
+                      <a name="M000016"></a><b>exa</b>()
                     
                     </dt>
 
                     <dd>
-                    
-                      Not Documented
-                    
-
-                    
-
                     
                       
                         <div id="M000016_source" style="display: none;">
@@ -254,26 +265,27 @@ SI <a href="Multipliers.html">Multipliers</a>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exa</span>   ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000000000000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000030_source')" id="l_M000030_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000030"></a><b>exbi</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000030_source')" id="l_M000030_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000030"></a><b>exbi</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000030_source" style="display: none;">
@@ -281,26 +293,27 @@ SI <a href="Multipliers.html">Multipliers</a>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exbi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">6</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000023_source')" id="l_M000023_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000023"></a><b>femto</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000023_source')" id="l_M000023_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000023"></a><b>femto</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000023_source" style="display: none;">
@@ -308,26 +321,27 @@ SI <a href="Multipliers.html">Multipliers</a>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">femto</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000000000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000027_source')" id="l_M000027_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000027"></a><b>gibi</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000027_source')" id="l_M000027_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000027"></a><b>gibi</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000027_source" style="display: none;">
@@ -335,26 +349,27 @@ SI <a href="Multipliers.html">Multipliers</a>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gibi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">3</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000013_source')" id="l_M000013_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000013"></a><b>giga</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000013_source')" id="l_M000013_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000013"></a><b>giga</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000013_source" style="display: none;">
@@ -362,47 +377,63 @@ SI <a href="Multipliers.html">Multipliers</a>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">giga</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000010_source')" id="l_M000010_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000010"></a><b>hecto</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
-                    
-                      
-                        <div id="M000010_source" style="display: none;">
-                            <pre class="code"><code><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 59</span>
-    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hecto</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">100</span> ; <span class="ruby-keyword kw">end</span></code></pre>
-                        </div>
-                    
                     </dd>
                 
                     <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000025_source')" id="l_M000025_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
+                        <a href="javascript:toggleSource('M000008_source')" id="l_M000008_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
                         
                     </p>
 
                     <dt>
                     
-                    <a name="M000025"></a><b>kibi</b>()
+                      <a name="M000008"></a><b>hecto</b>()
                     
                     </dt>
 
                     <dd>
+                    
+                      
+                        <div id="M000008_source" style="display: none;">
+                            <pre class="code"><code><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 59</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hecto</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">100</span> ; <span class="ruby-keyword kw">end</span></code></pre>
+                        </div>
+                    
+
+                    
+                      Not Documented
+                    
+
+                    
+
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000025_source')" id="l_M000025_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000025"></a><b>kibi</b>()
+                    
+                    </dt>
+
+                    <dd>
+                    
+                      
+                        <div id="M000025_source" style="display: none;">
+                            <pre class="code"><code><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 80</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kibi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span> ; <span class="ruby-keyword kw">end</span></code></pre>
+                        </div>
+                    
+
                     
                       
                       <p>
@@ -413,60 +444,48 @@ SI Binary
 
                     
 
-                    
-                      
-                        <div id="M000025_source" style="display: none;">
-                            <pre class="code"><code><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 80</span>
-    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kibi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span> ; <span class="ruby-keyword kw">end</span></code></pre>
-                        </div>
-                    
                     </dd>
                 
                     <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000011_source')" id="l_M000011_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
+                        <a href="javascript:toggleSource('M000009_source')" id="l_M000009_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
                         
                     </p>
 
                     <dt>
                     
-                    <a name="M000011"></a><b>kilo</b>()
+                      <a name="M000009"></a><b>kilo</b>()
                     
                     </dt>
 
                     <dd>
                     
-                      Not Documented
-                    
-
-                    
-
-                    
                       
-                        <div id="M000011_source" style="display: none;">
+                        <div id="M000009_source" style="display: none;">
                             <pre class="code"><code><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 60</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kilo</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000026_source')" id="l_M000026_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000026"></a><b>mebi</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000026_source')" id="l_M000026_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000026"></a><b>mebi</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000026_source" style="display: none;">
@@ -474,53 +493,55 @@ SI Binary
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mebi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">2</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000012_source')" id="l_M000012_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000012"></a><b>mega</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000010_source')" id="l_M000010_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000010"></a><b>mega</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
-                        <div id="M000012_source" style="display: none;">
+                        <div id="M000010_source" style="display: none;">
                             <pre class="code"><code><span class="ruby-comment cmt"># File demo/fish-sampler/lib/multipliers.rb, line 61</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mega</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000020_source')" id="l_M000020_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000020"></a><b>micro</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000020_source')" id="l_M000020_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000020"></a><b>micro</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000020_source" style="display: none;">
@@ -528,26 +549,27 @@ SI Binary
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">micro</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000019_source')" id="l_M000019_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000019"></a><b>milli</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000019_source')" id="l_M000019_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000019"></a><b>milli</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000019_source" style="display: none;">
@@ -555,26 +577,27 @@ SI Binary
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">milli</span> ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000021_source')" id="l_M000021_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000021"></a><b>nano</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000021_source')" id="l_M000021_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000021"></a><b>nano</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000021_source" style="display: none;">
@@ -582,26 +605,27 @@ SI Binary
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nano</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000029_source')" id="l_M000029_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000029"></a><b>pebi</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000029_source')" id="l_M000029_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000029"></a><b>pebi</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000029_source" style="display: none;">
@@ -609,26 +633,27 @@ SI Binary
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pebi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">5</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000015_source')" id="l_M000015_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000015"></a><b>peta</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000015_source')" id="l_M000015_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000015"></a><b>peta</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000015_source" style="display: none;">
@@ -636,26 +661,27 @@ SI Binary
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">peta</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000000000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000022_source')" id="l_M000022_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000022"></a><b>pico</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000022_source')" id="l_M000022_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000022"></a><b>pico</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000022_source" style="display: none;">
@@ -663,26 +689,27 @@ SI Binary
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pico</span>  ; <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000000000000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000028_source')" id="l_M000028_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000028"></a><b>tebi</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000028_source')" id="l_M000028_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000028"></a><b>tebi</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000028_source" style="display: none;">
@@ -690,26 +717,27 @@ SI Binary
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tebi</span> ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span><span class="ruby-operator">**</span><span class="ruby-value">4</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
-                    </dd>
-                
-                    <p class="source-link" style="float: right;">
-                        <a href="javascript:toggleSource('M000014_source')" id="l_M000014_source"><img src="../../assets/img/bullet_toggle_plus.png" alt="[+]"></a>
-                        
-                    </p>
 
-                    <dt>
-                    
-                    <a name="M000014"></a><b>tera</b>()
-                    
-                    </dt>
-
-                    <dd>
                     
                       Not Documented
                     
 
                     
 
+                    </dd>
+                
+                    <p class="source-link" style="float: right;">
+                        <a href="javascript:toggleSource('M000014_source')" id="l_M000014_source"><img src="../../assets/long/img/rb.png" alt="[+]"></a>
+                        
+                    </p>
+
+                    <dt>
+                    
+                      <a name="M000014"></a><b>tera</b>()
+                    
+                    </dt>
+
+                    <dd>
                     
                       
                         <div id="M000014_source" style="display: none;">
@@ -717,6 +745,13 @@ SI Binary
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tera</span>  ; <span class="ruby-keyword kw">self</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000000000000</span> ; <span class="ruby-keyword kw">end</span></code></pre>
                         </div>
                     
+
+                    
+                      Not Documented
+                    
+
+                    
+
                     </dd>
                 
             
@@ -732,7 +767,7 @@ SI Binary
 
     <div id="sidebar">
 
-        <div class="navigation">
+        <div class="navigation" style="background-color: transparent;">
           <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
           <fieldset>
             <legend>Quicksearch</legend>
@@ -769,7 +804,7 @@ SI Binary
         
         <div class="navigation">
             <h3>Methods</h3>
-            <ul class="menu">
+            <ul class="menu quicksearch-target">
                 
                 <li><a href="#M000024">atto</a></li>
                 
@@ -777,7 +812,7 @@ SI Binary
                 
                 <li><a href="#M000017">deci</a></li>
                 
-                <li><a href="#M000009">deka</a></li>
+                <li><a href="#M000007">deka</a></li>
                 
                 <li><a href="#M000016">exa</a></li>
                 
@@ -789,15 +824,15 @@ SI Binary
                 
                 <li><a href="#M000013">giga</a></li>
                 
-                <li><a href="#M000010">hecto</a></li>
+                <li><a href="#M000008">hecto</a></li>
                 
                 <li><a href="#M000025">kibi</a></li>
                 
-                <li><a href="#M000011">kilo</a></li>
+                <li><a href="#M000009">kilo</a></li>
                 
                 <li><a href="#M000026">mebi</a></li>
                 
-                <li><a href="#M000012">mega</a></li>
+                <li><a href="#M000010">mega</a></li>
                 
                 <li><a href="#M000020">micro</a></li>
                 

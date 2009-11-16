@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -8,28 +7,25 @@
 
   <title>File: newfish.rb [WebRI]</title>
 
-  <link rel="SHORTCUT ICON" href="../../../../assets/img/file.png">
+  <link rel="SHORTCUT ICON" href="../../../../assets/icon/file.png">
 
-  <link type="text/css" rel="stylesheet" href="../../../../assets/css/rdoc.css" media="screen" />
-  <link type="text/css" rel="stylesheet" href="../../../../assets/js/github.css" title="GitHub" />
+  <link type="text/css" rel="stylesheet" href="../../../../assets/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="../../../../assets/highlight/styles/github.css" title="GitHub" />
 
-  <script type="text/javascript" charset="utf-8" src="../../../../assets/js/jquery.js"></script>
-  <script type="text/javascript" charset="utf-8" src="../../../../assets/js/quicksearch.js"></script>
-  <script type="text/javascript" charset="utf-8" src="../../../../assets/js/darkfish.js"></script>
-  <script type="text/javascript" charset="utf-8" src="../../../../assets/js/highlight.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../../../assets/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../../../assets/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../../../assets/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../../../../assets/main.js"></script>
 
   <script type="text/javascript">
     $(document).ready( function() {
-      $('#documentation pre').wrapInner('<code></code>');
-      hljs.tabReplace = '    ';
-      hljs.initHighlightingOnLoad('ruby');
-
+      hookHighlightSyntax();
 	    hookSourceViews();
 	    hookDebuggingToggle();
 	    hookQuickSearch();
 	    highlightLocationTarget();
 
-	    $('ul.link-list a').bind( "click", highlightClickTarget );
+	    $('ul.link-list a').bind("click", highlightClickTarget);
     });
   </script>
 </head>
@@ -39,7 +35,7 @@
 
   <div class="head">
     <h1>
-      <img src="../../../../assets/img/file.png" align="absmiddle">&nbsp;
+      <img src="../../../../assets/icon/file.png" align="absmiddle">&nbsp;
       <a href="../../../../index.html">WebRI</a>&nbsp;
       <a href="/">newfish.rb</a>
     </h1>
@@ -74,337 +70,377 @@
         <h3 class="section-header">Information</h3>
         <ul>
         
-          <li class="file"><a href="../../../../files/lib/webri/components/search/static/assets/js/searchdoc_js.html">searchdoc.js</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/test_html.html">test.html</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/project_png.html">project.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/jquery_ri_js.html">jquery.ri.js</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/wrench_png.html">wrench.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/img/tree_bg_png.html">tree_bg.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/template/index_rhtml.html">index.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/module_png.html">module.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/bug_png.html">bug.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/js/thickbox_js.html">thickbox.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/js/thickbox_js.html">thickbox.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/onefish/template/index_rhtml.html">index.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/template/index_rhtml.html">index.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/template/context_rhtml.html">context.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/js/ready_js.html">ready.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/img/apple-touch-icon_png.html">apple-touch-icon.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/alias_png.html">alias.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/template/index_rhtml.html">index.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/class_png.html">class.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/components/search/static/panel_html.html">panel.html</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/template/file_rhtml.html">file.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/template/file_rhtml.html">file.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/plugin_png.html">plugin.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/img/favicon_ico.html">favicon.ico</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/server/assets/js/jquery_js.html">jquery.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/class_png.html">class.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/server/assets/img/dir_gif.html">dir.gif</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/img/fade_png.html">fade.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/server/assets/css/style_css.html">style.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/js/jquery_jam_js.html">jquery.jam.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/server/assets/img/class_png.html">class.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/template/file_rhtml.html">file.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/logo-background_jpg.html">logo-background.jpg</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/zoom_png.html">zoom.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/img/class_png.html">class.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/favicon_ico.html">favicon.ico</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/module_png.html">module.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/js/highlight_js.html">highlight.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/plugin_png.html">plugin.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/oldfish/TODO.html">TODO</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/method_png.html">method.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/attribute_png.html">attribute.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/img/bg_top_gif.html">bg_top.gif</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/img/arrows_png.html">arrows.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/template/class_rhtml.html">class.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/blue-columns_jpg.html">blue-columns.jpg</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/macFFBgHack_png.html">macFFBgHack.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/file_png.html">file.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/server/assets/css/style1_css.html">style1.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/css/low_css.html">low.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/css/screen_css.html">screen.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/css/shared_css.html">shared.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/attribute_png.html">attribute.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/date_png.html">date.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/js/jquery_js.html">jquery.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/css/reset_css.html">reset.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/footer-background_jpg.html">footer-background.jpg</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/zoom_png.html">zoom.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/server/assets/js/ri_jquery_js.html">ri.jquery.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/css/popup_css.html">popup.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/wrench_png.html">wrench.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/method_png.html">method.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/plugin_png.html">plugin.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/ruby_png.html">ruby.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/project_png.html">project.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/css/main_css.html">main.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/alias_png.html">alias.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-home-page_jpg.html">blue-columns-home-page.jpg</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/img/dir_gif.html">dir.gif</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/method_png.html">method.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/server/templates/index_html.html">index.html</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/img/method_png.html">method.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/css/reset_css.html">reset.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/page_green_png.html">page_green.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/onefish/template/context_rhtml.html">context.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/wrench_png.html">wrench.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/js/jquery_ri_js.html">jquery.ri.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/class_png.html">class.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/server/templates/index1_html.html">index1.html</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/css/high_css.html">high.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/css/low_vision_screen_css.html">low_vision_screen.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/site-links-background_gif.html">site-links-background.gif</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/template/class_rhtml.html">class.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/css/style_css.html">style.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/find_png.html">find.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/img/results_bg_png.html">results_bg.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/code-box-bottom-right_gif.html">code-box-bottom-right.gif</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/template/class_rhtml.html">class.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/README.html">README</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/template/file_context_rhtml.html">file_context.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/template/index_rhtml.html">index.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/file_png.html">file.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/date_png.html">date.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/template/original_html.html">original.html</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/js/main_js.html">main.js</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/date_png.html">date.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/wrench_orange_png.html">wrench_orange.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/template/file_rhtml.html">file.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-top-home-page_jpg.html">blue-columns-top-home-page.jpg</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/quicksearch_js.html">quicksearch.js</a></li>
         
           <li class="file"><a href="../../../../files/lib/webri/generators/redfish/template/file_rhtml.html">file.rhtml</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/components/github/static/assets/css/github_css.html">github.css</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/icon/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/python_js.html">python.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/php_js.html">php.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/ruby_js.html">ruby.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/tool_png.html">tool.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/quicksearch_js.html">quicksearch.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/project_png.html">project.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/code-box-bottom-right_gif.html">code-box-bottom-right.gif</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/brown_papersq_png.html">brown_papersq.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/reset_css.html">reset.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/server/assets/css/style_css.html">style.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/blue-columns-top-home-page_jpg.html">blue-columns-top-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/template/context_rhtml.html">context.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/logo_gif.html">logo.gif</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/search/static/assets/search/search_js.html">search.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/css/high_css.html">high.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/AUTHORS_ru_txt.html">AUTHORS.ru.txt</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/icon/fade_png.html">fade.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/thickbox/static/assets/thickbox_css.html">thickbox.css</a></li>
+        
+          <li class="file"><a href="../../../../files/README.html">README</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/server/templates/index_html.html">index.html</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/github_css.html">github.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/javascript_js.html">javascript.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/blue-columns-bottom-home-page_jpg.html">blue-columns-bottom-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/download_gif.html">download.gif</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/bash_js.html">bash.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/mel_js.html">mel.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/list_png.html">list.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/search/static/assets/search/images/results_bg_png.html">results_bg.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/default_css.html">default.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/zenburn_css.html">zenburn.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/sql_js.html">sql.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/favicon_ico.html">favicon.ico</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/check_png.html">check.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/css/print_css.html">print.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/logo-background_jpg.html">logo-background.jpg</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/oldfish/TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/bullet_png.html">bullet.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/zoom_png.html">zoom.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/alias_png.html">alias.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/rdoc_css.html">rdoc.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/ascetic_css.html">ascetic.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/search/static/assets/search/reset_css.html">reset.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/css/low_css.html">low.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/readme_rus_txt.html">readme.rus.txt</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/blue-columns-home-page_jpg.html">blue-columns-home-page.jpg</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/prettify_css.html">prettify.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/server/assets/js/ri_jquery_js.html">ri.jquery.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/icon/singleton_png.html">singleton.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/columns_jpg.html">columns.jpg</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/main_js.html">main.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/ir_black_css.html">ir_black.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/favicon_ico.html">favicon.ico</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/django_js.html">django.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/template/file_context_rhtml.html">file_context.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/thickbox/static/assets/macFFBgHack_png.html">macFFBgHack.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/far_css.html">far.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/search/static/assets/search/search_css.html">search.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/highlight_pack_js.html">highlight.pack.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/AUTHORS_en_txt.html">AUTHORS.en.txt</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/main_js.html">main.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/check_png.html">check.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/ruby_png.html">ruby.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/stat_png.html">stat.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/export_html.html">export.html</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/lisp_js.html">lisp.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/blue-columns_jpg.html">blue-columns.jpg</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/server/assets/img/dir_gif.html">dir.gif</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/icon/ruby_logo_png.html">ruby_logo.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/css/low_vision_high_css.html">low_vision_high.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/rubylang_css.html">rubylang.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/parser3_js.html">parser3.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/java_js.html">java.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/icon/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/icon/attribute_png.html">attribute.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/axapta_js.html">axapta.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/icon/method_png.html">method.png</a></li>
         
           <li class="file"><a href="../../../../files/lib/webri/generators/newfish/template/class_rhtml.html">class.rhtml</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/page_green_png.html">page_green.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/template/file_rhtml.html">file.rhtml</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/find_png.html">find.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/css/low_vision_shared_css.html">low_vision_shared.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/logo_gif.html">logo.gif</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/alias_png.html">alias.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/ruby_png.html">ruby.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/img/singleton_png.html">singleton.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/template/class_rhtml.html">class.rhtml</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/css/low_vision_high_css.html">low_vision_high.css</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/download_gif.html">download.gif</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/project_png.html">project.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/server/assets/img/mod_ico.html">mod.ico</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/components/search/static/assets/css/panel_css.html">panel.css</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/footer-background_jpg.html">footer-background.jpg</a></li>
         
           <li class="file"><a href="../../../../files/lib/webri/generators/longfish/template/class_context_rhtml.html">class_context.rhtml</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/css/print_css.html">print.css</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/smalltalk_js.html">smalltalk.js</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/blue-columns-bottom-home-page_jpg.html">blue-columns-bottom-home-page.jpg</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/main_js.html">main.js</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/file_png.html">file.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/main_js.html">main.js</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/bullet_toggle_minus_png.html">bullet_toggle_minus.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/rdoc_css.html">rdoc.css</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/bullet_toggle_plus_png.html">bullet_toggle_plus.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/components/search/static/assets/search/images/tree_bg_png.html">tree_bg.png</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/server/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/components/search/static/search_html.html">search.html</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/loadingAnimation_gif.html">loadingAnimation.gif</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/server/assets/img/class_png.html">class.png</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/page_white_width_png.html">page_white_width.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/icon/alias_png.html">alias.png</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/code-box-top-left_gif.html">code-box-top-left.gif</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/server/assets/js/jquery_js.html">jquery.js</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/js/ready_js.html">ready.js</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/css/low_vision_screen_css.html">low_vision_screen.css</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/perl_js.html">perl.js</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/attribute_png.html">attribute.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/bullet_minus_png.html">bullet_minus.png</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/bullet_black_png.html">bullet_black.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/favicon_ico.html">favicon.ico</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/header-background_jpg.html">header-background.jpg</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/components/prettify/static/assets/prettify_css.html">prettify.css</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/find_png.html">find.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/jquery_js.html">jquery.js</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/module_png.html">module.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/template/index_rhtml.html">index.rhtml</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/img/bug_png.html">bug.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/icon/ruby_png.html">ruby.png</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/css/rdoc_css.html">rdoc.css</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/quicksearch_js.html">quicksearch.js</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/js/darkfish_js.html">darkfish.js</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/idea_css.html">idea.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/wp_highlight_js_php.html">wp_highlight.js.php</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/ini_js.html">ini.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/rb_png.html">rb.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/style_css.html">style.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/server/assets/css/style1_css.html">style1.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/vbscript_js.html">vbscript.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/renderman_js.html">renderman.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/sunburst_css.html">sunburst.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/plugin_png.html">plugin.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/css_js.html">css.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/jquery_jam_js.html">jquery.jam.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/header-background_jpg.html">header-background.jpg</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/cs_js.html">cs.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/magula_css.html">magula.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/singleton_png.html">singleton.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/shadow_jpg.html">shadow.jpg</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/apache_js.html">apache.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/main_css.html">main.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/server/assets/img/mod_ico.html">mod.ico</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/1c_js.html">1c.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/dos_js.html">dos.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/dark_css.html">dark.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/icon/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/icon/singleton_png.html">singleton.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/loading_gif.html">loading.gif</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/icon/class_png.html">class.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/search/static/assets/search/images/arrows_png.html">arrows.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/site-links-background_gif.html">site-links-background.gif</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/file_png.html">file.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/diff_js.html">diff.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/main_js.html">main.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/template/file_rhtml.html">file.rhtml</a></li>
         
           <li class="file"><a href="../../../../files/LICENSE.html">LICENSE</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/ruby_png.html">ruby.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/quicksearch_js.html">quicksearch.js</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/static/assets/img/bug_png.html">bug.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/css/low_vision_shared_css.html">low_vision_shared.css</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/check_png.html">check.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/icon/dir_gif.html">dir.gif</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/static/assets/img/bug_png.html">bug.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/components/thickbox/static/assets/thickbox_js.html">thickbox.js</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/page_green_png.html">page_green.png</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/module_png.html">module.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/brown_paper_css.html">brown_paper.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/template/class_rhtml.html">class.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/school_book_css.html">school_book.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/server/templates/index1_html.html">index1.html</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/search/static/assets/search/images/bg_top_gif.html">bg_top.gif</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/newfish/template/file_rhtml.html">file.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/icon/apple-touch-icon_png.html">apple-touch-icon.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/cpp_js.html">cpp.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/fixme_png.html">fixme.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/bullet_plus_png.html">bullet_plus.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/school_book_png.html">school_book.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/date_png.html">date.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/redfish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/readme_eng_txt.html">readme.eng.txt</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/prettify/static/assets/prettify_js.html">prettify.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/onefish/template/context_rhtml.html">context.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/delphi_js.html">delphi.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/html-xml_js.html">html-xml.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/method_png.html">method.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/onefish/template/index_rhtml.html">index.rhtml</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/highlight_js.html">highlight.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/reset_css.html">reset.css</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/server/assets/img/ruby_logo_png.html">ruby_logo.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/bug_png.html">bug.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/profile_js.html">profile.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/languages/avrasm_js.html">avrasm.js</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/page_png.html">page.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/icons/static/assets/icon/find_png.html">find.png</a></li>
+        
+          <li class="file"><a href="../../../../files/lib/webri/components/highlight/static/assets/highlight/styles/vs_css.html">vs.css</a></li>
         
           <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/template/index_rhtml.html">index.rhtml</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/shadow_jpg.html">shadow.jpg</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/template/class_rhtml.html">class.rhtml</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/blackfish/static/assets/js/main_js.html">main.js</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/css/screen_css.html">screen.css</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/css/style1_css.html">style1.css</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/img/code-box-top-left_gif.html">code-box-top-left.gif</a></li>
         
-          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/img/columns_jpg.html">columns.jpg</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/abstract/static/assets/img/zoom_png.html">zoom.png</a></li>
-        
-          <li class="file"><a href="../../../../files/lib/webri/generators/twofish/static/assets/js/quicksearch_js.html">quicksearch.js</a></li>
+          <li class="file"><a href="../../../../files/lib/webri/generators/longfish/static/assets/long/css/shared_css.html">shared.css</a></li>
         
         </ul>
       </div>
@@ -412,7 +448,7 @@
 
       <div id="classindex-section" class="section project-section">
         <h3 class="section-header">Class Index
-          <span class="search-toggle"><img src="../../../../assets/img/find.png"
+          <span class="search-toggle"><img src="../../../../assets/icon/find.png"
             height="16" width="16" alt="[+]"
             title="show/hide quicksearch" /></span></h3>
         <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
@@ -431,8 +467,6 @@
         
           <li class="class"><a href="../../../../classes/WebRI/Component.html">WebRI::Component</a></li>
         
-          <li class="class"><a href="../../../../classes/WebRI/ERBTemplate.html">WebRI::ERBTemplate</a></li>
-        
           <li class="class"><a href="../../../../classes/WebRI/Generator.html">WebRI::Generator</a></li>
         
           <li class="class"><a href="../../../../classes/WebRI/GeneratorOne.html">WebRI::GeneratorOne</a></li>
@@ -440,6 +474,10 @@
           <li class="class"><a href="../../../../classes/WebRI/GitHub.html">WebRI::GitHub</a></li>
         
           <li class="class"><a href="../../../../classes/WebRI/Heirarchy.html">WebRI::Heirarchy</a></li>
+        
+          <li class="class"><a href="../../../../classes/WebRI/Highlight.html">WebRI::Highlight</a></li>
+        
+          <li class="class"><a href="../../../../classes/WebRI/Icons.html">WebRI::Icons</a></li>
         
           <li class="class"><a href="../../../../classes/WebRI/JSONFile.html">WebRI::JSONFile</a></li>
         
@@ -453,6 +491,8 @@
         
           <li class="class"><a href="../../../../classes/WebRI/Onefish.html">WebRI::Onefish</a></li>
         
+          <li class="class"><a href="../../../../classes/WebRI/Prettify.html">WebRI::Prettify</a></li>
+        
           <li class="class"><a href="../../../../classes/WebRI/Redfish.html">WebRI::Redfish</a></li>
         
           <li class="class"><a href="../../../../classes/WebRI/RiService.html">WebRI::RiService</a></li>
@@ -464,6 +504,8 @@
           <li class="class"><a href="../../../../classes/WebRI/Server.html">WebRI::Server</a></li>
         
           <li class="class"><a href="../../../../classes/WebRI/Subversion.html">WebRI::Subversion</a></li>
+        
+          <li class="class"><a href="../../../../classes/WebRI/Template.html">WebRI::Template</a></li>
         
           <li class="module"><a href="../../../../classes/WebRI/TimeDelta.html">WebRI::TimeDelta</a></li>
         
@@ -496,1054 +538,1246 @@
         <h3 class="section-header">Method Index</h3>
         <ul>
           
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000052">::components</a>
+              <a href="classes/WebRI/Generator.html#M000024">::components</a>
             </li>
           
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">WebRI</span>
-              <a href="classes/WebRI.html#M000192">::entry_to_path</a>
+              <a href="classes/WebRI.html#M000189">::entry_to_path</a>
             </li>
           
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000191">::esc</a>
+              <a href="classes/WebRI/Server.html#M000188">::esc</a>
             </li>
           
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">OpEsc</span>
-              <a href="classes/OpEsc.html#M000160">::escape</a>
+              <a href="classes/OpEsc.html#M000157">::escape</a>
             </li>
           
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000053">::for</a>
+              <a href="classes/WebRI/Generator.html#M000025">::for</a>
             </li>
           
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000051">::include</a>
+              <a href="classes/WebRI/Generator.html#M000022">::include</a>
             </li>
           
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000050">::inherited</a>
+              <a href="classes/WebRI/Generator.html#M000021">::inherited</a>
             </li>
           
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000081">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">WebRI::Component</span>
-              <a href="classes/WebRI/Component.html#M000127">::new</a>
+              <a href="classes/WebRI/Component.html#M000133">::new</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000016">::new</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Heirarchy</span>
-              <a href="classes/WebRI/Heirarchy.html#M000194">::new</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000202">::new</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">WebRI::RiService</span>
-              <a href="classes/WebRI/RiService.html#M000162">::new</a>
+              <a href="classes/WebRI/RiService.html#M000159">::new</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000166">::new</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::GeneratorOne</span>
-              <a href="classes/WebRI/GeneratorOne.html#M000174">::new</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000082">::new</a>
+              <a href="classes/WebRI/Generator.html#M000199">::new</a>
             </li>
           
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">WebRI::GeneratorOne</span>
+              <a href="classes/WebRI/GeneratorOne.html#M000171">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Server</span>
+              <a href="classes/WebRI/Server.html#M000165">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Heirarchy</span>
+              <a href="classes/WebRI/Heirarchy.html#M000191">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000019">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">WebRI</span>
-              <a href="classes/WebRI.html#M000193">::path_to_entry</a>
+              <a href="classes/WebRI.html#M000190">::path_to_entry</a>
             </li>
           
-            <li class="method" style="clear: both;">
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">OpEsc</span>
-              <a href="classes/OpEsc.html#M000161">::unescape</a>
+              <a href="classes/OpEsc.html#M000158">::unescape</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Heirarchy</span>
-              <a href="classes/WebRI/Heirarchy.html#M000196">#[]</a>
+              <a href="classes/WebRI/Heirarchy.html#M000193">#[]</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Heirarchy</span>
-              <a href="classes/WebRI/Heirarchy.html#M000197">#[]=</a>
+              <a href="classes/WebRI/Heirarchy.html#M000194">#[]=</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search::FilesTree</span>
-              <a href="classes/WebRI/Search/FilesTree.html#M000125">#add</a>
+              <a href="classes/WebRI/Search/FilesTree.html#M000123">#add</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000120">#add_class_search_index</a>
+              <a href="classes/WebRI/Search.html#M000118">#add_class_search_index</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000119">#add_file_search_index</a>
+              <a href="classes/WebRI/Search.html#M000117">#add_file_search_index</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000121">#add_method_search_index</a>
+              <a href="classes/WebRI/Search.html#M000119">#add_method_search_index</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000159">#all_methods</a>
+              <a href="classes/WebRI/JSONFile.html#M000152">#all_methods</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GeneratorOne</span>
-              <a href="classes/WebRI/GeneratorOne.html#M000185">#asset</a>
+              <a href="classes/WebRI/GeneratorOne.html#M000181">#asset</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000178">#autolink</a>
+              <a href="classes/WebRI/Server.html#M000175">#autolink</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000022">#class_dir</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000029">#class_dir</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000077">#class_dir</a>
+              <a href="classes/WebRI/Generator.html#M000076">#class_dir</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000148">#class_tree</a>
+              <a href="classes/WebRI/JSONFile.html#M000145">#class_tree</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000024">#classes</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000034">#classes</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000056">#classes</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000147">#classes</a>
+              <a href="classes/WebRI/JSONFile.html#M000144">#classes</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000059">#classes_hash</a>
+              <a href="classes/WebRI/Generator.html#M000032">#classes</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000027">#classes_hash</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000026">#classes_salient</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000058">#classes_salient</a>
+              <a href="classes/WebRI/Generator.html#M000039">#classes_hash</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000025">#classes_toplevel</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000040">#classes_hash</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000057">#classes_toplevel</a>
+              <a href="classes/WebRI/Generator.html#M000038">#classes_salient</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000036">#classes_salient</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000035">#classes_toplevel</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000037">#classes_toplevel</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GitHub</span>
-              <a href="classes/WebRI/GitHub.html#M000136">#commit_sha1</a>
+              <a href="classes/WebRI/GitHub.html#M000128">#commit_sha1</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000021">#copyright</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000055">#copyright</a>
+              <a href="classes/WebRI/Generator.html#M000031">#copyright</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000028">#copyright</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GeneratorOne</span>
-              <a href="classes/WebRI/GeneratorOne.html#M000186">#css</a>
+              <a href="classes/WebRI/GeneratorOne.html#M000182">#css</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000209">#current_content</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000189">#current_content</a>
+              <a href="classes/WebRI/Server.html#M000186">#current_content</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::GeneratorOne</span>
-              <a href="classes/WebRI/GeneratorOne.html#M000184">#current_content</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000102">#debug_msg</a>
+              <a href="classes/WebRI/Generator.html#M000206">#current_content</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::GeneratorOne</span>
+              <a href="classes/WebRI/GeneratorOne.html#M000179">#current_content</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000101">#debug_msg</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Component</span>
-              <a href="classes/WebRI/Component.html#M000142">#debug_msg</a>
+              <a href="classes/WebRI/Component.html#M000143">#debug_msg</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000169">#directory</a>
+              <a href="classes/WebRI/Server.html#M000167">#directory</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::ClassModule</span>
               <a href="classes/RDoc/ClassModule.html#M000005">#document_self_or_methods</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Blackfish</span>
-              <a href="classes/WebRI/Blackfish.html#M000104">#each_letter_group</a>
+              <a href="classes/WebRI/Blackfish.html#M000102">#each_letter_group</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000101">#erb_template</a>
+              <a href="classes/WebRI/Generator.html#M000100">#erb_template</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000190">#esc</a>
+              <a href="classes/WebRI/Server.html#M000187">#esc</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000100">#eval_template</a>
+              <a href="classes/WebRI/Generator.html#M000099">#eval_template</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000023">#file_dir</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000078">#file_dir</a>
+              <a href="classes/WebRI/Generator.html#M000077">#file_dir</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000033">#file_dir</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Heirarchy</span>
-              <a href="classes/WebRI/Heirarchy.html#M000200">#file_name</a>
+              <a href="classes/WebRI/Heirarchy.html#M000197">#file_name</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000153">#file_tree</a>
+              <a href="classes/WebRI/JSONFile.html#M000149">#file_tree</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000054">#files</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000152">#files</a>
+              <a href="classes/WebRI/JSONFile.html#M000148">#files</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000068">#files</a>
+              <a href="classes/WebRI/Generator.html#M000063">#files</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000037">#files</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000058">#files_hash</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000039">#files_hash</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000070">#files_hash</a>
+              <a href="classes/WebRI/Generator.html#M000067">#files_hash</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000038">#files_toplevel</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000055">#files_toplevel</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000069">#files_toplevel</a>
+              <a href="classes/WebRI/Generator.html#M000066">#files_toplevel</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">Object</span>
               <a href="classes/Object.html#M000010">#fileutils</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::Parser::C</span>
               <a href="classes/RDoc/Parser/C.html#M000001">#find_class_comment</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::Parser::C</span>
               <a href="classes/RDoc/Parser/C.html#M000000">#find_class_comment</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000040">#find_class_named</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000059">#find_class_named</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000072">#find_class_named</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000075">#find_file_named</a>
+              <a href="classes/WebRI/Generator.html#M000071">#find_class_named</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000043">#find_file_named</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000065">#find_file_named</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000041">#find_module_named</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000073">#find_module_named</a>
+              <a href="classes/WebRI/Generator.html#M000074">#find_file_named</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000060">#find_module_named</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000074">#find_type_named</a>
+              <a href="classes/WebRI/Generator.html#M000072">#find_module_named</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000042">#find_type_named</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000064">#find_type_named</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000073">#find_type_named</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Heirarchy</span>
-              <a href="classes/WebRI/Heirarchy.html#M000199">#full_name</a>
+              <a href="classes/WebRI/Heirarchy.html#M000196">#full_name</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000145">#generate</a>
+              <a href="classes/WebRI/JSONFile.html#M000141">#generate</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000079">#generate</a>
+              <a href="classes/WebRI/Generator.html#M000078">#generate</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000203">#generate</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000115">#generate</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Component</span>
-              <a href="classes/WebRI/Component.html#M000130">#generate</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GeneratorOne</span>
-              <a href="classes/WebRI/GeneratorOne.html#M000175">#generate</a>
+              <a href="classes/WebRI/GeneratorOne.html#M000172">#generate</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000149">#generate_class_tree</a>
+              <span class="method-parent-aside">WebRI::Search</span>
+              <a href="classes/WebRI/Search.html#M000113">#generate</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000150">#generate_class_tree_level</a>
+              <span class="method-parent-aside">WebRI::Component</span>
+              <a href="classes/WebRI/Component.html#M000135">#generate</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000096">#generate_classes</a>
+              <a href="classes/WebRI/Generator.html#M000200">#generate</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::JSONFile</span>
+              <a href="classes/WebRI/JSONFile.html#M000146">#generate_class_tree</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::JSONFile</span>
+              <a href="classes/WebRI/JSONFile.html#M000147">#generate_class_tree_level</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Onefish</span>
               <a href="classes/WebRI/Onefish.html#M000012">#generate_classes</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000091">#generate_commons</a>
+              <a href="classes/WebRI/Generator.html#M000095">#generate_classes</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000094">#generate_components</a>
+              <a href="classes/WebRI/Generator.html#M000090">#generate_commons</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000093">#generate_components</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000123">#generate_file_tree</a>
+              <a href="classes/WebRI/Search.html#M000121">#generate_file_tree</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000154">#generate_file_tree</a>
+              <a href="classes/WebRI/JSONFile.html#M000150">#generate_file_tree</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000124">#generate_file_tree_level</a>
+              <a href="classes/WebRI/Search.html#M000122">#generate_file_tree_level</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000158">#generate_file_tree_level</a>
+              <a href="classes/WebRI/JSONFile.html#M000151">#generate_file_tree_level</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Onefish</span>
               <a href="classes/WebRI/Onefish.html#M000011">#generate_files</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000095">#generate_files</a>
+              <a href="classes/WebRI/Generator.html#M000094">#generate_files</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Twofish</span>
-              <a href="classes/WebRI/Twofish.html#M000015">#generate_html_tree</a>
+              <a href="classes/WebRI/Twofish.html#M000014">#generate_html_tree</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000097">#generate_index</a>
+              <a href="classes/WebRI/Generator.html#M000096">#generate_index</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GeneratorOne</span>
-              <a href="classes/WebRI/GeneratorOne.html#M000177">#generate_recurse</a>
+              <a href="classes/WebRI/GeneratorOne.html#M000173">#generate_recurse</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000204">#generate_recurse</a>
+              <a href="classes/WebRI/Generator.html#M000201">#generate_recurse</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000118">#generate_search_index</a>
+              <a href="classes/WebRI/Search.html#M000116">#generate_search_index</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000116">#generate_search_tree</a>
+              <a href="classes/WebRI/Search.html#M000114">#generate_search_tree</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000117">#generate_search_tree_level</a>
+              <a href="classes/WebRI/Search.html#M000115">#generate_search_tree_level</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000090">#generate_setup</a>
+              <a href="classes/WebRI/Generator.html#M000089">#generate_setup</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000091">#generate_static</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Component</span>
-              <a href="classes/WebRI/Component.html#M000133">#generate_static</a>
+              <a href="classes/WebRI/Component.html#M000136">#generate_static</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000092">#generate_static</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000207">#generate_support_files</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GeneratorOne</span>
-              <a href="classes/WebRI/GeneratorOne.html#M000181">#generate_support_files</a>
+              <a href="classes/WebRI/GeneratorOne.html#M000177">#generate_support_files</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000093">#generate_template</a>
+              <a href="classes/WebRI/Generator.html#M000204">#generate_support_files</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000092">#generate_template</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000173">#generate_tree</a>
+              <a href="classes/WebRI/Server.html#M000170">#generate_tree</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Metadata</span>
-              <a href="classes/WebRI/Metadata.html#M000047">#get_metadata</a>
+              <a href="classes/WebRI/Metadata.html#M000016">#get_metadata</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Subversion</span>
-              <a href="classes/WebRI/Subversion.html#M000157">#get_svninfo</a>
+              <a href="classes/WebRI/Subversion.html#M000156">#get_svninfo</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GitHub</span>
-              <a href="classes/WebRI/GitHub.html#M000132">#github_url</a>
+              <a href="classes/WebRI/GitHub.html#M000126">#github_url</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GitHub</span>
-              <a href="classes/WebRI/GitHub.html#M000135">#github_url_cache</a>
+              <a href="classes/WebRI/GitHub.html#M000127">#github_url_cache</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Blackfish</span>
-              <a href="classes/WebRI/Blackfish.html#M000105">#group_name</a>
+              <a href="classes/WebRI/Blackfish.html#M000103">#group_name</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000170">#heirarchy</a>
+              <a href="classes/WebRI/Server.html#M000168">#heirarchy</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Twofish</span>
-              <a href="classes/WebRI/Twofish.html#M000014">#html_tree</a>
+              <a href="classes/WebRI/Twofish.html#M000013">#html_tree</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GitHub</span>
-              <a href="classes/WebRI/GitHub.html#M000144">#in_dir</a>
+              <a href="classes/WebRI/GitHub.html#M000132">#in_dir</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000044">#include_template</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000068">#include_template</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000018">#include_template</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000023">#include_template</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000183">#index</a>
+              <a href="classes/WebRI/Server.html#M000184">#index</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Longfish</span>
-              <a href="classes/WebRI/Longfish.html#M000112">#index_description</a>
+              <a href="classes/WebRI/Longfish.html#M000110">#index_description</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000098">#index_file</a>
+              <a href="classes/WebRI/Generator.html#M000097">#index_file</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Longfish</span>
-              <a href="classes/WebRI/Longfish.html#M000111">#index_title</a>
+              <a href="classes/WebRI/Longfish.html#M000109">#index_title</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::RiService</span>
-              <a href="classes/WebRI/RiService.html#M000163">#info</a>
+              <a href="classes/WebRI/RiService.html#M000160">#info</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000085">#initialize_components</a>
+              <a href="classes/WebRI/Generator.html#M000084">#initialize_components</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Component</span>
-              <a href="classes/WebRI/Component.html#M000129">#initialize_methods</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GitHub</span>
-              <a href="classes/WebRI/GitHub.html#M000131">#initialize_methods</a>
+              <a href="classes/WebRI/GitHub.html#M000125">#initialize_methods</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000084">#initialize_methods</a>
+              <a href="classes/WebRI/Generator.html#M000083">#initialize_methods</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Component</span>
+              <a href="classes/WebRI/Component.html#M000134">#initialize_methods</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Subversion</span>
-              <a href="classes/WebRI/Subversion.html#M000155">#initialize_methods</a>
+              <a href="classes/WebRI/Subversion.html#M000154">#initialize_methods</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000083">#initialize_template</a>
+              <a href="classes/WebRI/Generator.html#M000082">#initialize_template</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Heirarchy</span>
-              <a href="classes/WebRI/Heirarchy.html#M000201">#inspect</a>
+              <a href="classes/WebRI/Heirarchy.html#M000198">#inspect</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GeneratorOne</span>
-              <a href="classes/WebRI/GeneratorOne.html#M000187">#jquery</a>
+              <a href="classes/WebRI/GeneratorOne.html#M000183">#jquery</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000076">#json_creatable?</a>
+              <a href="classes/WebRI/Generator.html#M000075">#json_creatable?</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Heirarchy</span>
-              <a href="classes/WebRI/Heirarchy.html#M000195">#key</a>
+              <a href="classes/WebRI/Heirarchy.html#M000192">#key</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000176">#lookup</a>
+              <a href="classes/WebRI/Server.html#M000174">#lookup</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Metadata</span>
-              <a href="classes/WebRI/Metadata.html#M000046">#metadata</a>
+              <a href="classes/WebRI/Metadata.html#M000015">#metadata</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000045">#method_missing</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000069">#method_missing</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Component</span>
-              <a href="classes/WebRI/Component.html#M000134">#method_missing</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000036">#methods_all</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000071">#methods_all</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000060">#modules</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000028">#modules</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000063">#modules_hash</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000031">#modules_hash</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000062">#modules_salient</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000030">#modules_salient</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000061">#modules_toplevel</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000029">#modules_toplevel</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Component</span>
-              <a href="classes/WebRI/Component.html#M000138">#name</a>
+              <a href="classes/WebRI/Component.html#M000137">#method_missing</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000053">#methods_all</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000070">#methods_all</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000044">#modules</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000041">#modules</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000051">#modules_hash</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000046">#modules_hash</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000043">#modules_salient</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000050">#modules_salient</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000042">#modules_toplevel</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000045">#modules_toplevel</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Component</span>
+              <a href="classes/WebRI/Component.html#M000139">#name</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::RiService</span>
-              <a href="classes/WebRI/RiService.html#M000164">#names</a>
+              <a href="classes/WebRI/RiService.html#M000161">#names</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::RiService</span>
-              <a href="classes/WebRI/RiService.html#M000167">#names_from_all</a>
+              <a href="classes/WebRI/RiService.html#M000163">#names_from_all</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::RiService</span>
-              <a href="classes/WebRI/RiService.html#M000165">#names_from_library</a>
+              <a href="classes/WebRI/RiService.html#M000162">#names_from_library</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000019">#options</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000026">#options</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::Options</span>
-              <a href="classes/RDoc/Options.html#M000205">#parse</a>
+              <a href="classes/RDoc/Options.html#M000202">#parse</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Longfish</span>
-              <a href="classes/WebRI/Longfish.html#M000113">#parse_index_header</a>
+              <a href="classes/WebRI/Longfish.html#M000111">#parse_index_header</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Longfish</span>
-              <a href="classes/WebRI/Longfish.html#M000106">#path</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Blackfish</span>
-              <a href="classes/WebRI/Blackfish.html#M000103">#path</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Redfish</span>
-              <a href="classes/WebRI/Redfish.html#M000013">#path</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000086">#path</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::GitHub</span>
-              <a href="classes/WebRI/GitHub.html#M000128">#path</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Subversion</span>
-              <a href="classes/WebRI/Subversion.html#M000151">#path</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000114">#path</a>
+              <a href="classes/WebRI/Search.html#M000112">#path</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Longfish</span>
+              <a href="classes/WebRI/Longfish.html#M000104">#path</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000089">#path_output_relative</a>
+              <a href="classes/WebRI/Generator.html#M000085">#path</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Subversion</span>
+              <a href="classes/WebRI/Subversion.html#M000153">#path</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000088">#path_output_relative</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GitHub</span>
-              <a href="classes/WebRI/GitHub.html#M000141">#path_relative_to_repository</a>
+              <a href="classes/WebRI/GitHub.html#M000130">#path_relative_to_repository</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000087">#path_static</a>
+              <a href="classes/WebRI/Generator.html#M000086">#path_static</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Component</span>
-              <a href="classes/WebRI/Component.html#M000137">#path_static</a>
+              <a href="classes/WebRI/Component.html#M000138">#path_static</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000088">#path_template</a>
+              <a href="classes/WebRI/Generator.html#M000087">#path_template</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GitHub</span>
-              <a href="classes/WebRI/GitHub.html#M000143">#path_to_git_dir</a>
+              <a href="classes/WebRI/GitHub.html#M000131">#path_to_git_dir</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000080">#provision</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Component</span>
               <a href="classes/WebRI/Component.html#M000140">#provision</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000079">#provision</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::Options</span>
-              <a href="classes/RDoc/Options.html#M000206">#rdoc_parse</a>
+              <a href="classes/RDoc/Options.html#M000203">#rdoc_parse</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000020">#render</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000182">#render</a>
+              <a href="classes/WebRI/Server.html#M000180">#render</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000017">#render</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000099">#render_template</a>
+              <a href="classes/WebRI/Generator.html#M000098">#render_template</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GitHub</span>
-              <a href="classes/WebRI/GitHub.html#M000139">#repository_url</a>
+              <a href="classes/WebRI/GitHub.html#M000129">#repository_url</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::RiService</span>
-              <a href="classes/WebRI/RiService.html#M000171">#ri_opts</a>
+              <a href="classes/WebRI/RiService.html#M000164">#ri_opts</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GeneratorOne</span>
-              <a href="classes/WebRI/GeneratorOne.html#M000188">#rijquery</a>
+              <a href="classes/WebRI/GeneratorOne.html#M000185">#rijquery</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Heirarchy</span>
-              <a href="classes/WebRI/Heirarchy.html#M000198">#root?</a>
+              <a href="classes/WebRI/Heirarchy.html#M000195">#root?</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::JSONFile</span>
-              <a href="classes/WebRI/JSONFile.html#M000146">#save_data</a>
+              <a href="classes/WebRI/JSONFile.html#M000142">#save_data</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Metadata</span>
-              <a href="classes/WebRI/Metadata.html#M000049">#scm</a>
+              <a href="classes/WebRI/Metadata.html#M000017">#scm</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000122">#search_string</a>
+              <a href="classes/WebRI/Search.html#M000120">#search_string</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Longfish</span>
-              <a href="classes/WebRI/Longfish.html#M000108">#site_community</a>
+              <a href="classes/WebRI/Longfish.html#M000106">#site_community</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Longfish</span>
-              <a href="classes/WebRI/Longfish.html#M000107">#site_homepage</a>
+              <a href="classes/WebRI/Longfish.html#M000105">#site_homepage</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Longfish</span>
-              <a href="classes/WebRI/Longfish.html#M000110">#site_news</a>
+              <a href="classes/WebRI/Longfish.html#M000108">#site_news</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Longfish</span>
-              <a href="classes/WebRI/Longfish.html#M000109">#site_repository</a>
+              <a href="classes/WebRI/Longfish.html#M000107">#site_repository</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Search</span>
-              <a href="classes/WebRI/Search.html#M000126">#snippet</a>
+              <a href="classes/WebRI/Search.html#M000124">#snippet</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000081">#sort_salient</a>
+              <a href="classes/WebRI/Generator.html#M000080">#sort_salient</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Subversion</span>
-              <a href="classes/WebRI/Subversion.html#M000156">#svninfo</a>
+              <a href="classes/WebRI/Subversion.html#M000155">#svninfo</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000180">#template</a>
+              <a href="classes/WebRI/Server.html#M000178">#template</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::TimeDelta</span>
-              <a href="classes/WebRI/TimeDelta.html#M000048">#time_delta_string</a>
+              <a href="classes/WebRI/TimeDelta.html#M000018">#time_delta_string</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000054">#title</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000027">#title</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000020">#title</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000168">#title</a>
+              <a href="classes/WebRI/Server.html#M000166">#title</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">RDoc::TopLevel</span>
-              <a href="classes/RDoc/TopLevel.html#M000002">#to_h</a>
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000030">#title</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::AnyMethod</span>
               <a href="classes/RDoc/AnyMethod.html#M000008">#to_h</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::ClassModule</span>
               <a href="classes/RDoc/ClassModule.html#M000006">#to_h</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">RDoc::TopLevel</span>
+              <a href="classes/RDoc/TopLevel.html#M000002">#to_h</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::ClassModule</span>
               <a href="classes/RDoc/ClassModule.html#M000007">#to_json</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::AnyMethod</span>
               <a href="classes/RDoc/AnyMethod.html#M000009">#to_json</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::TopLevel</span>
               <a href="classes/RDoc/TopLevel.html#M000003">#to_json</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Server</span>
-              <a href="classes/WebRI/Server.html#M000172">#tree</a>
+              <a href="classes/WebRI/Server.html#M000169">#tree</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000032">#types</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000064">#types</a>
+              <a href="classes/WebRI/Generator.html#M000056">#types</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000035">#types_hash</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000047">#types</a>
             </li>
           
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000067">#types_hash</a>
-            </li>
-          
-            <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000034">#types_salient</a>
-            </li>
-          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000066">#types_salient</a>
+              <a href="classes/WebRI/Generator.html#M000062">#types_hash</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">WebRI::ERBTemplate</span>
-              <a href="classes/WebRI/ERBTemplate.html#M000033">#types_toplevel</a>
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000052">#types_hash</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000049">#types_salient</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000065">#types_toplevel</a>
+              <a href="classes/WebRI/Generator.html#M000061">#types_salient</a>
             </li>
           
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Generator</span>
+              <a href="classes/WebRI/Generator.html#M000057">#types_toplevel</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">WebRI::Template</span>
+              <a href="classes/WebRI/Template.html#M000048">#types_toplevel</a>
+            </li>
+          
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">RDoc::ClassModule</span>
               <a href="classes/RDoc/ClassModule.html#M000004">#with_documentation?</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::Generator</span>
-              <a href="classes/WebRI/Generator.html#M000208">#write</a>
+              <a href="classes/WebRI/Generator.html#M000205">#write</a>
             </li>
           
+            
             <li class="method" style="clear: both;">
               <span class="method-parent-aside">WebRI::GeneratorOne</span>
-              <a href="classes/WebRI/GeneratorOne.html#M000179">#write</a>
+              <a href="classes/WebRI/GeneratorOne.html#M000176">#write</a>
             </li>
           
         </ul>
@@ -1553,9 +1787,9 @@
     <div id="validator-badges">
       
       <div style="float: right; margin-right: 5px;">
-        <a href="http://validator.w3.org/check/referer"><img src="../../../../assets/img/check.png" alt="[Validate]" height="16" width="16" />
+        <a href="http://validator.w3.org/check/referer"><img src="../../../../assets/icon/check.png" alt="[Validate]" height="16" width="16" /></a>
       </div>
-      Generated with <a href="http://github.com/proutils/rdazzle">WebRI Redfish</a> 1.0.0
+      Generated with <a href="http://proutils.github.com/webri">WebRI Redfish</a> 1.0.0
       <br/><br/>
     </div>
   </div>

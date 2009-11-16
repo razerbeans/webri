@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: WebRI::Template#file_dir
+is_singleton: false
+name: file_dir
+params: ()
+visibility: public

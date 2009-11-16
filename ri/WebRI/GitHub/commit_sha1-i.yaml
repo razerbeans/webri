@@ -3,12 +3,6 @@ aliases: []
 
 block_params: 
 comment: 
-- !ruby/struct:RDoc::Markup::Flow::P 
-  body: def path_base
-- !ruby/struct:RDoc::Markup::Flow::VERB 
-  body: "  generator.path_base\n"
-- !ruby/struct:RDoc::Markup::Flow::P 
-  body: end
 full_name: WebRI::GitHub#commit_sha1
 is_singleton: false
 name: commit_sha1

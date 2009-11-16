@@ -6,24 +6,24 @@ class_methods: []
 comment: 
 - !ruby/struct:RDoc::Markup::Flow::H 
   level: 1
-  text: Redfish Template
+  text: Newfish Template
 - !ruby/struct:RDoc::Markup::Flow::P 
-  body: Redfish is based on RDoc's default Darkfish generator, heavily modified to provide only a single sidebar con document layout. And, as the name indicates, colorized to be red (instead of green).
-- !ruby/struct:RDoc::Markup::Flow::P 
-  body: You can thank Darkfish, a by extension Redfish, for the &quot;-fish&quot; naming scheme :)
+  body: Newfish is very much like Redfish, but with a cleaner look and feel, eg. no red.
 - !ruby/struct:RDoc::Markup::Flow::RULE 
   width: 
 - !ruby/struct:RDoc::Markup::Flow::H 
   level: 1
-  text: Redfish Template
+  text: Newfish Template
 - !ruby/struct:RDoc::Markup::Flow::P 
-  body: Redfish is based on RDoc's default Darkfish generator, heavily modified to provide only a single sidebar con document layout. And, as the name indicates, colorized to be red (instead of green).
-- !ruby/struct:RDoc::Markup::Flow::P 
-  body: You can thank Darkfish, a by extension Redfish, for the &quot;-fish&quot; naming scheme :)
+  body: Newfish is very much like Redfish, but with a cleaner look and feel, eg. no red.
 constants: []
 
 full_name: WebRI::Newfish
 includes: 
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: Highlight
+- !ruby/object:RDoc::RI::IncludedModule 
+  name: Icons
 - !ruby/object:RDoc::RI::IncludedModule 
   name: Subversion
 instance_methods: []

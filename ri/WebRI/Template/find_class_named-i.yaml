@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: WebRI::Template#find_class_named
+is_singleton: false
+name: find_class_named
+params: (*a,&b)
+visibility: public

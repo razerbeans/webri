@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: WebRI::Template#types_hash
+is_singleton: false
+name: types_hash
+params: ()
+visibility: public

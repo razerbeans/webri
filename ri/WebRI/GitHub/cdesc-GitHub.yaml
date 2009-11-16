@@ -22,8 +22,6 @@ instance_methods:
 - !ruby/object:RDoc::RI::MethodSummary 
   name: initialize_methods
 - !ruby/object:RDoc::RI::MethodSummary 
-  name: path
-- !ruby/object:RDoc::RI::MethodSummary 
   name: path_relative_to_repository
 - !ruby/object:RDoc::RI::MethodSummary 
   name: path_to_git_dir
