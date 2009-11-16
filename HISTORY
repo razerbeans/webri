@@ -1,10 +1,21 @@
 = RELEASE HISTORY
 
-== 1.0 / 2009-10-01
+== 1.1 / 2009-11-16
 
-This second time I've built and RDoc template.
-If RDoc changes everything again I'm going 
-to be quiet frazzled! ;)
+This release improves the projects underlying design, makes minor
+improvements to the templates and adds a couple of new components.
+
+Changes:
+
+* Simplifed generator and component layouts.
+* Added Icon component to provide a semi-standard set of icons.
+* Added Prettify component, which is easier to use than highlight.js. 
+
+
+== 1.0 / 2009-11-01
+
+This second time I've built and RDoc template. If RDoc changes
+everything again I'm going to be quiet frazzled! ;)
 
 Changes:
 
