@@ -8,7 +8,7 @@ begin
 
   module WebRI
     LOADPATH = File.dirname(__FILE__)
-    VERSION  = "1.0.0"  #:till: VERSION="<%= version %>"
+    VERSION  = "1.1"  #:till: VERSION="<%= version %>"
   end
 
   require "rdoc/c_parser_fix"

@@ -1,4 +1,2 @@
-WebRI is Webrick-based RI browser. It makes it fairly
-convenient to browse API documetation in hierachical
-fashion.
-
+WebRI is an RDoc template system with a number of built-in templates.
+It also includes a Webrick-based RI browser.
