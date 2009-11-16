@@ -19,85 +19,86 @@ pre code {
 }
 
 pre code,
-.ruby .subst,
-.xml .title,
-.lisp .title {
+pre code .ruby .subst,
+pre code .xml .title,
+pre code .lisp .title {
   color: black;
 }
 
-.string,
-.title,
-.parent,
-.tag .attribute .value,
-.rules .value,
-.rules .value .number,
-.preprocessor,
-.ruby .symbol,
-.instancevar,
-.aggregate,
-.template_tag,
-.django .variable,
-.smalltalk .class,
-.addition,
-.flow,
-.stream,
-.bash .variable,
-.apache .tag,
-.apache .cbracket {
+pre code .string,
+pre code .title,
+pre code .parent,
+pre code .tag .attribute .value,
+pre code .rules .value,
+pre code .rules .value .number,
+pre code .preprocessor,
+pre code .ruby .symbol,
+pre code .instancevar,
+pre code .aggregate,
+pre code .template_tag,
+pre code .django .variable,
+pre code .smalltalk .class,
+pre code .addition,
+pre code .flow,
+pre code .stream,
+pre code .bash .variable,
+pre code .apache .tag,
+pre code .apache .cbracket {
   color: #800;
 }
 
-.comment,
-.annotation,
-.template_comment,
-.diff .header,
-.chunk {
+pre code .comment,
+pre code .annotation,
+pre code .template_comment,
+pre code .diff .header,
+pre code .chunk {
   color: #888;
 }
 
-.number,
-.date,
-.regexp,
-.literal,
-.smalltalk .symbol,
-.smalltalk .char,
-.change {
+pre code .number,
+pre code .date,
+pre code .regexp,
+pre code .literal,
+pre code .smalltalk .symbol,
+pre code .smalltalk .char,
+pre code .change {
   color: #080;
 }
 
-.label,
-.javadoc,
-.ruby .string,
-.decorator,
-.filter .argument,
-.localvars,
-.array,
-.attr_selector,
-.pseudo,
-.pi,
-.doctype,
-.deletion,
-.envvar,
-.shebang,
-.apache .sqbracket {
+pre code .label,
+pre code .javadoc,
+pre code .ruby .string,
+pre code .decorator,
+pre code .filter .argument,
+pre code .localvars,
+pre code .array,
+pre code .attr_selector,
+pre code .pseudo,
+pre code .pi,
+pre code .doctype,
+pre code .deletion,
+pre code .envvar,
+pre code .shebang,
+pre code .apache .sqbracket {
   color: #88F;
 }
 
-.keyword,
-.id,
-.phpdoc,
-.title,
-.built_in,
-.aggregate,
-.smalltalk .class,
-.winutils,
-.bash .variable,
-.apache .tag {
+pre code .keyword,
+pre code .id,
+pre code .phpdoc,
+pre code .title,
+pre code .built_in,
+pre code .aggregate,
+pre code .smalltalk .class,
+pre code .winutils,
+pre code .bash .variable,
+pre code .apache .tag {
   font-weight: bold;
 }
 
-.html .css,
-.html .javascript,
-.html .vbscript {
+pre code .html .css,
+pre code .html .javascript,
+pre code .html .vbscript {
   opacity: 0.5;
 }
+

@@ -20,94 +20,94 @@ pre code {
   color: #DCDCDC;
 }
 
-.keyword,
-.tag,
-.django .tag,
-.django .keyword,
-.css .class,
-.css .id,
-.lisp .title {
+pre code .keyword,
+pre code .tag,
+pre code .django .tag,
+pre code .django .keyword,
+pre code .css .class,
+pre code .css .id,
+pre code .lisp .title {
   color: #E3CEAB;
 }
 
-.django .template_tag,
-.django .variable,
-.django .filter .argument {
+pre code .django .template_tag,
+pre code .django .variable,
+pre code .django .filter .argument {
   color: #DCDCDC;
 }
 
-.number,
-.date {
+pre code .number,
+pre code .date {
   color: #8CD0D3;
 }
 
-.dos .envvar,
-.dos .stream,
-.variable,
-.apache .sqbracket {
+pre code .dos .envvar,
+pre code .dos .stream,
+pre code .variable,
+pre code .apache .sqbracket {
   color: #EFDCBC;
 }
 
-.dos .flow,
-.diff .change,
-.python .exception,
-.python .built_in,
-.literal {
+pre code .dos .flow,
+pre code .diff .change,
+pre code .python .exception,
+pre code .python .built_in,
+pre code .literal {
   color: #EFEFAF;
 }
 
-.diff .chunk,
-.ruby .subst {
+pre code .diff .chunk,
+pre code .ruby .subst {
   color: #8F8F8F;
 }
 
-.dos .keyword,
-.python .decorator,
-.class .title,
-.function .title,
-.ini .title,
-.diff .header,
-.ruby .class .parent,
-.apache .tag {
+pre code .dos .keyword,
+pre code .python .decorator,
+pre code .class .title,
+pre code .function .title,
+pre code .ini .title,
+pre code .diff .header,
+pre code .ruby .class .parent,
+pre code .apache .tag {
     color: #efef8f;
 }
 
-.dos .winutils,
-.ruby .symbol,
-.ruby .string,
-.ruby .instancevar {
+pre code .dos .winutils,
+pre code .ruby .symbol,
+pre code .ruby .string,
+pre code .ruby .instancevar {
   color: #DCA3A3;
 }
 
-.diff .deletion,
-.string,
-.tag .attribute .value,
-.preprocessor,
-.built_in,
-.sql .aggregate,
-.javadoc,
-.smalltalk .class,
-.smalltalk .localvars,
-.smalltalk .array,
-.css .rules .value,
-.attr_selector,
-.pseudo,
-.apache .cbracket {
+pre code .diff .deletion,
+pre code .string,
+pre code .tag .attribute .value,
+pre code .preprocessor,
+pre code .built_in,
+pre code .sql .aggregate,
+pre code .javadoc,
+pre code .smalltalk .class,
+pre code .smalltalk .localvars,
+pre code .smalltalk .array,
+pre code .css .rules .value,
+pre code .attr_selector,
+pre code .pseudo,
+pre code .apache .cbracket {
   color: #CC9393;
 }
 
-.shebang,
-.diff .addition,
-.comment,
-.java .annotation,
-.template_comment,
-.pi,
-.doctype {
+pre code .shebang,
+pre code .diff .addition,
+pre code .comment,
+pre code .java .annotation,
+pre code .template_comment,
+pre code .pi,
+pre code .doctype {
   color: #7F9F7F;
 }
 
-.html .css,
-.html .javascript {
+pre code .html .css,
+pre code .html .javascript {
   opacity: 0.5;
 }
 

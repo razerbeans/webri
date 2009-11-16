@@ -10,65 +10,101 @@ pre code {
     background: #fff;
 }
 
-.subst, .title {
+pre code .subst,
+pre code .title {
     font-weight: normal;
     color: #000;
 }
 
-.comment, .template_comment, .javadoc, .diff .header {
+pre code .comment,
+pre code .template_comment,
+pre code .javadoc,
+pre code .diff .header {
     color: #808080;
     font-style: italic;
 }
 
-.annotation, .decorator, .preprocessor, .doctype, .pi, .chunk, .shebang, .apache .cbracket {
+pre code .annotation,
+pre code .decorator,
+pre code .preprocessor,
+pre code .doctype,
+pre code .pi,
+pre code .chunk,
+pre code .shebang,
+pre code .apache .cbracket {
     color: #808000;
 }
 
-.tag, .pi {
+pre code .tag,
+pre code .pi {
     background: #efefef;
 }
 
-.tag .title, .id, .attr_selector, .pseudo, .literal, .keyword, .hexcolor, .css .function, .ini .title, .css .class, .list .title {
+pre code .tag .title,
+pre code .id,
+pre code .attr_selector,
+pre code .pseudo,
+pre code .literal,
+pre code .keyword,
+pre code .hexcolor,
+pre code .css .function,
+pre code .ini .title,
+pre code .css .class,
+pre code .list .title {
     font-weight: bold;
     color: #000080;
 }
 
-.attribute, .rules .keyword, .number, .date, .regexp {
+pre code .attribute,
+pre code .rules .keyword,
+pre code .number,
+pre code .date,
+pre code .regexp {
     font-weight: bold;
     color: #0000ff;
 }
 
-.number, .regexp {
+pre code .number,
+pre code .regexp {
     font-weight: normal;
 }
 
-.string, .value, .filter .argument, .css .function .params, .apache .tag {
+pre code .string,
+pre code .value,
+pre code .filter .argument,
+pre code .css .function .params,
+pre code .apache .tag {
     color: #008000;
     font-weight: bold;
 }
 
-.symbol, .char {
+pre code .symbol,
+pre code .char {
     color: #000;
     background: #d0eded;
     font-style: italic;
 }
 
-.phpdoc, .javadoctag {
+pre code .phpdoc,
+pre code .javadoctag {
     text-decoration: underline;
 }
 
-.variable, .envvar, .apache .sqbracket {
+pre code .variable,
+pre code .envvar,
+pre code .apache .sqbracket {
     color: #660e7a;
 }
 
-.addition {
+pre code .addition {
     background: #baeeba;
 }
 
-.deletion {
+pre code .deletion {
     background: #ffc8bd;
 }
 
-.diff .change {
+pre code .diff .change {
     background: #bccff9;
 }
+

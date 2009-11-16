@@ -19,95 +19,96 @@ pre code {
 }
 
 pre code,
-.ruby .subst {
+pre code .ruby .subst {
   color: #0FF;
 }
 
-.string,
-.ruby .string,
-.function .title,
-.class .title,
-.ini .title,
-.tag .attribute .value,
-.css .rules .value,
-.css .rules .value .number,
-.preprocessor,
-.ruby .symbol,
-.built_in,
-.sql .aggregate,
-.django .template_tag,
-.django .variable,
-.smalltalk .class,
-.addition,
-.apache .tag,
-.apache .cbracket {
+pre code .string,
+pre code .ruby .string,
+pre code .function .title,
+pre code .class .title,
+pre code .ini .title,
+pre code .tag .attribute .value,
+pre code .css .rules .value,
+pre code .css .rules .value .number,
+pre code .preprocessor,
+pre code .ruby .symbol,
+pre code .built_in,
+pre code .sql .aggregate,
+pre code .django .template_tag,
+pre code .django .variable,
+pre code .smalltalk .class,
+pre code .addition,
+pre code .apache .tag,
+pre code .apache .cbracket {
   color: #FF0;
 }
 
-.keyword,
-.css .id,
-.function .title,
-.class .title,
-.ini .title,
-.vbscript .built_in,
-.sql .aggregate,
-.rsl .built_in,
-.smalltalk .class,
-.xml .tag .title,
-.winutils,
-.flow,
-.lisp .title,
-.change,
-.envvar,
-.bash .variable {
+pre code .keyword,
+pre code .css .id,
+pre code .function .title,
+pre code .class .title,
+pre code .ini .title,
+pre code .vbscript .built_in,
+pre code .sql .aggregate,
+pre code .rsl .built_in,
+pre code .smalltalk .class,
+pre code .xml .tag .title,
+pre code .winutils,
+pre code .flow,
+pre code .lisp .title,
+pre code .change,
+pre code .envvar,
+pre code .bash .variable {
   color: #FFF;
 }
 
-.comment,
-.phpdoc,
-.javadoc,
-.java .annotation,
-.template_comment,
-.deletion,
-.apache .sqbracket {
+pre code .comment,
+pre code .phpdoc,
+pre code .javadoc,
+pre code .java .annotation,
+pre code .template_comment,
+pre code .deletion,
+pre code .apache .sqbracket {
   color: #888;
 }
 
-.number,
-.date,
-.regexp,
-.literal,
-.smalltalk .symbol,
-.smalltalk .char {
+pre code .number,
+pre code .date,
+pre code .regexp,
+pre code .literal,
+pre code .smalltalk .symbol,
+pre code .smalltalk .char {
   color: #0F0;
 }
 
-.python .decorator,
-.django .filter .argument,
-.smalltalk .localvars,
-.smalltalk .array,
-.attr_selector,
-.pseudo,
-.xml .pi,
-.diff .header,
-.chunk,
-.shebang {
+pre code .python .decorator,
+pre code .django .filter .argument,
+pre code .smalltalk .localvars,
+pre code .smalltalk .array,
+pre code .attr_selector,
+pre code .pseudo,
+pre code .xml .pi,
+pre code .diff .header,
+pre code .chunk,
+pre code .shebang {
   color: #008080;
 }
 
-.keyword,
-.css .id,
-.function .title,
-.class .title,
-.ini .title,
-.vbscript .built_in,
-.sql .aggregate,
-.rsl .built_in,
-.smalltalk .class,
-.xml .tag .title,
-.winutils,
-.flow,
-.lisp .title,
-.apache .tag {
+pre code .keyword,
+pre code .css .id,
+pre code .function .title,
+pre code .class .title,
+pre code .ini .title,
+pre code .vbscript .built_in,
+pre code .sql .aggregate,
+pre code .rsl .built_in,
+pre code .smalltalk .class,
+pre code .xml .tag .title,
+pre code .winutils,
+pre code .flow,
+pre code .lisp .title,
+pre code .apache .tag {
   font-weight: bold;
 }
+
